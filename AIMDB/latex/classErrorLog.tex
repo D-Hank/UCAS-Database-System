@@ -1,0 +1,427 @@
+\hypertarget{classErrorLog}{}\doxysection{Error\+Log Class Reference}
+\label{classErrorLog}\index{ErrorLog@{ErrorLog}}
+
+
+an array of source file names  
+
+
+
+
+{\ttfamily \#include $<$errorlog.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classErrorLog_ae3e7d632730897f580d67c44bbbe2215}{Error\+Log}} (const char $\ast$thread\+\_\+name, int msg\+\_\+cap=256 $\ast$1024)
+\item 
+\mbox{\hyperlink{classErrorLog_a54a16d175632adc35473c718d28e913f}{$\sim$\+Error\+Log}} ()
+\item 
+int \mbox{\hyperlink{classErrorLog_a27cac5ff25c2ca8b2787c72587e7e852}{get\+Error\+Code}} (void)
+\item 
+const char $\ast$ \mbox{\hyperlink{classErrorLog_a7e79ae4b6e9417b2a8c09a0dac619743}{get\+Error\+Msg}} (void)
+\item 
+void \mbox{\hyperlink{classErrorLog_a1c6d3867fc36c07771eddd698d42695b}{log}} (int level, const char $\ast$src\+\_\+name, const int lineno,...)
+\item 
+void \mbox{\hyperlink{classErrorLog_a6f12d8ab52745568a9a98389cbd66c4f}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classErrorLog_a764e480ee5b420c5be96ceaa732f407b}{close\+Log}} (void)
+\item 
+static void \mbox{\hyperlink{classErrorLog_a5ad2be67100d49097713357937f54c47}{flush\+Log}} (void)
+\item 
+static const char $\ast$ \mbox{\hyperlink{classErrorLog_a193efa0876e80726154cce62f2dbf947}{id2\+Name}} (int src\+\_\+id)
+\item 
+static void \mbox{\hyperlink{classErrorLog_a62760139b8a7cc8075e3e1f5477e1207}{init}} (int level, const char $\ast$logfile)
+\item 
+static int \mbox{\hyperlink{classErrorLog_a1dd9b8de2db9cefd982b44b812739aa0}{name2\+Id}} (const char $\ast$src\+\_\+name)
+\item 
+static void \mbox{\hyperlink{classErrorLog_ae7fa7f3d060c15d0fb0801249e16028a}{set\+Level}} (int level)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classErrorLog_a83eecfd0d8235ed9d60d345cb774a010}{el\+\_\+level}}
+\begin{DoxyCompactList}\small\item\em logging level \end{DoxyCompactList}\item 
+static const char $\ast$ \mbox{\hyperlink{classErrorLog_a0c235ac2408ef8b81dda42a25416a7cf}{el\+\_\+level\+\_\+name}} \mbox{[}\mbox{\hyperlink{errorlog_8h_a661825059d32a6648abcbe7ddbe4038e}{EL\+\_\+\+SERIOUS}}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em level =\texorpdfstring{$>$}{>} name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classErrorLog_a89f52b1551b841e7d306df23d94e31f4}{get\+Func\+Name\+GCC}} (char $\ast$bt\+\_\+symbol)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{classErrorLog_ada27280bb884ff3f151816d0bd5a13ee}{el\+\_\+bt\+\_\+buffer}} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em allow up to 256 levels of calls \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{classErrorLog_a302f2e7de4cee9fd1f8fbbb68f6968cd}{el\+\_\+demangle\+\_\+buf}}
+\begin{DoxyCompactList}\small\item\em buffer needed for demangle \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classErrorLog_a272c4b4300fbf2de502edfa8c21d0f70}{el\+\_\+demangle\+\_\+len}}
+\begin{DoxyCompactList}\small\item\em demangle buffer length \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classErrorLog_afc70c62c20e58272e8e87a3c5d1c0500}{el\+\_\+err\+\_\+code}}
+\begin{DoxyCompactList}\small\item\em current error code \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{classErrorLog_a44ac204d72a27fb5ef3d3342c3ba25f7}{el\+\_\+msg\+\_\+buf}}
+\begin{DoxyCompactList}\small\item\em a buffer to hold the error message \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classErrorLog_ad24d9d9b750567c33a461c4808ca576c}{el\+\_\+msg\+\_\+cap}}
+\begin{DoxyCompactList}\small\item\em the message buffer size \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{classErrorLog_a66168fa7406032e9c4e29ba01e3c0936}{el\+\_\+msg\+\_\+cur}}
+\begin{DoxyCompactList}\small\item\em point to the end of the message \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{classErrorLog_a2383e10edc4efebbe7a3e49fdb521fce}{el\+\_\+thread\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em the thread name \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{classErrorLog_aec7fd8cbcffc66d22afbfc8b32577f9a}{el\+\_\+tloc}}
+\begin{DoxyCompactList}\small\item\em local time in seconds at last message \end{DoxyCompactList}\item 
+struct tm \mbox{\hyperlink{classErrorLog_aa4ba923182734bab4305926b58f0ebd1}{el\+\_\+tm}}
+\begin{DoxyCompactList}\small\item\em broken down time at last message \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static FILE $\ast$ \mbox{\hyperlink{classErrorLog_a1731ca615dcff68df4e7888bc69f848a}{el\+\_\+fp}}
+\begin{DoxyCompactList}\small\item\em file handle of el\+\_\+logfile \end{DoxyCompactList}\item 
+static pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{classErrorLog_a61706d666c3f71a7ac8d258f680189ac}{el\+\_\+lock}}
+\begin{DoxyCompactList}\small\item\em protect the global states \end{DoxyCompactList}\item 
+static char $\ast$ \mbox{\hyperlink{classErrorLog_aa6ba1cf0da7e20f0dd54843e5eb143c5}{el\+\_\+logfile}}
+\begin{DoxyCompactList}\small\item\em file path to write log to \end{DoxyCompactList}\item 
+static std\+::unordered\+\_\+map$<$ std\+::string, int $>$ $\ast$ \mbox{\hyperlink{classErrorLog_ab696de54dbb04e7e7c7915e6b141974a}{el\+\_\+name\+\_\+2\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em file name =\texorpdfstring{$>$}{>} id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+an array of source file names 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classErrorLog_ae3e7d632730897f580d67c44bbbe2215}\label{classErrorLog_ae3e7d632730897f580d67c44bbbe2215}} 
+\index{ErrorLog@{ErrorLog}!ErrorLog@{ErrorLog}}
+\index{ErrorLog@{ErrorLog}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{ErrorLog()}{ErrorLog()}}
+{\footnotesize\ttfamily Error\+Log\+::\+Error\+Log (\begin{DoxyParamCaption}\item[{const char $\ast$}]{thread\+\_\+name,  }\item[{int}]{msg\+\_\+cap = {\ttfamily 256~$\ast$~1024} }\end{DoxyParamCaption})}
+
+constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em threadid} & the current thread id to generate the log for \\
+\hline
+{\em level} & the dynamic logging level \\
+\hline
+{\em logfile} & if not NULL then specify the log file path \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classErrorLog_a54a16d175632adc35473c718d28e913f}\label{classErrorLog_a54a16d175632adc35473c718d28e913f}} 
+\index{ErrorLog@{ErrorLog}!````~ErrorLog@{$\sim$ErrorLog}}
+\index{````~ErrorLog@{$\sim$ErrorLog}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{$\sim$ErrorLog()}{~ErrorLog()}}
+{\footnotesize\ttfamily Error\+Log\+::$\sim$\+Error\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classErrorLog_a764e480ee5b420c5be96ceaa732f407b}\label{classErrorLog_a764e480ee5b420c5be96ceaa732f407b}} 
+\index{ErrorLog@{ErrorLog}!closeLog@{closeLog}}
+\index{closeLog@{closeLog}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{closeLog()}{closeLog()}}
+{\footnotesize\ttfamily static void Error\+Log\+::close\+Log (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+close the log file \mbox{\Hypertarget{classErrorLog_a5ad2be67100d49097713357937f54c47}\label{classErrorLog_a5ad2be67100d49097713357937f54c47}} 
+\index{ErrorLog@{ErrorLog}!flushLog@{flushLog}}
+\index{flushLog@{flushLog}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{flushLog()}{flushLog()}}
+{\footnotesize\ttfamily static void Error\+Log\+::flush\+Log (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+flush the log file \mbox{\Hypertarget{classErrorLog_a27cac5ff25c2ca8b2787c72587e7e852}\label{classErrorLog_a27cac5ff25c2ca8b2787c72587e7e852}} 
+\index{ErrorLog@{ErrorLog}!getErrorCode@{getErrorCode}}
+\index{getErrorCode@{getErrorCode}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{getErrorCode()}{getErrorCode()}}
+{\footnotesize\ttfamily int Error\+Log\+::get\+Error\+Code (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the last error code \mbox{\Hypertarget{classErrorLog_a7e79ae4b6e9417b2a8c09a0dac619743}\label{classErrorLog_a7e79ae4b6e9417b2a8c09a0dac619743}} 
+\index{ErrorLog@{ErrorLog}!getErrorMsg@{getErrorMsg}}
+\index{getErrorMsg@{getErrorMsg}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{getErrorMsg()}{getErrorMsg()}}
+{\footnotesize\ttfamily const char $\ast$ Error\+Log\+::get\+Error\+Msg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the error message accumulated since last \mbox{\hyperlink{classErrorLog_a6f12d8ab52745568a9a98389cbd66c4f}{reset()}} \mbox{\Hypertarget{classErrorLog_a89f52b1551b841e7d306df23d94e31f4}\label{classErrorLog_a89f52b1551b841e7d306df23d94e31f4}} 
+\index{ErrorLog@{ErrorLog}!getFuncNameGCC@{getFuncNameGCC}}
+\index{getFuncNameGCC@{getFuncNameGCC}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{getFuncNameGCC()}{getFuncNameGCC()}}
+{\footnotesize\ttfamily int Error\+Log\+::get\+Func\+Name\+GCC (\begin{DoxyParamCaption}\item[{char $\ast$}]{bt\+\_\+symbol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Parse the symbol returned from the backtrace\+\_\+symbols() call. Then demangle the function name if necessary. Note this implementation is GCC specific.
+
+A symbol has the following format\+: \begin{DoxyVerb} binary(function+offset) [return address] 
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em bt\+\_\+symbol} & a symbol returned from backtrace\+\_\+symbols()\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success, output is in el\+\_\+demangle\+\_\+buf \\
+\hline
+{\em -\/1} & function name is not available \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classErrorLog_a193efa0876e80726154cce62f2dbf947}\label{classErrorLog_a193efa0876e80726154cce62f2dbf947}} 
+\index{ErrorLog@{ErrorLog}!id2Name@{id2Name}}
+\index{id2Name@{id2Name}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{id2Name()}{id2Name()}}
+{\footnotesize\ttfamily const char $\ast$ Error\+Log\+::id2\+Name (\begin{DoxyParamCaption}\item[{int}]{src\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+get the file name for a given id
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+\_\+id} & the file id\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em !=\+NULL} & the file name \\
+\hline
+{\em ==\+NULL} & the file id is out of range \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classErrorLog_a62760139b8a7cc8075e3e1f5477e1207}\label{classErrorLog_a62760139b8a7cc8075e3e1f5477e1207}} 
+\index{ErrorLog@{ErrorLog}!init@{init}}
+\index{init@{init}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Error\+Log\+::init (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{const char $\ast$}]{logfile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+global initiator
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & the dynamic logging level \\
+\hline
+{\em logfile} & if not NULL then specify the log file path \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classErrorLog_a1c6d3867fc36c07771eddd698d42695b}\label{classErrorLog_a1c6d3867fc36c07771eddd698d42695b}} 
+\index{ErrorLog@{ErrorLog}!log@{log}}
+\index{log@{log}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Error\+Log\+::log (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{const char $\ast$}]{src\+\_\+name,  }\item[{const int}]{lineno,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Log the message. Stack trace will be generated for error and serious messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & the level of the message \\
+\hline
+{\em src\+\_\+name} & the source file name \\
+\hline
+{\em lineno} & the line number in the source file \\
+\hline
+{\em ...} & printf-\/like format string and arguments \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classErrorLog_a1dd9b8de2db9cefd982b44b812739aa0}\label{classErrorLog_a1dd9b8de2db9cefd982b44b812739aa0}} 
+\index{ErrorLog@{ErrorLog}!name2Id@{name2Id}}
+\index{name2Id@{name2Id}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{name2Id()}{name2Id()}}
+{\footnotesize\ttfamily int Error\+Log\+::name2\+Id (\begin{DoxyParamCaption}\item[{const char $\ast$}]{src\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+get fileid for a given file name
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+\_\+name} & the file name\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & the file id \\
+\hline
+{\em $<$0} & the file name does not exist \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classErrorLog_a6f12d8ab52745568a9a98389cbd66c4f}\label{classErrorLog_a6f12d8ab52745568a9a98389cbd66c4f}} 
+\index{ErrorLog@{ErrorLog}!reset@{reset}}
+\index{reset@{reset}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Error\+Log\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear current error messages. Call this before executing an operation. \mbox{\Hypertarget{classErrorLog_ae7fa7f3d060c15d0fb0801249e16028a}\label{classErrorLog_ae7fa7f3d060c15d0fb0801249e16028a}} 
+\index{ErrorLog@{ErrorLog}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily void Error\+Log\+::set\+Level (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+set the dynamice logging level (this must be at least EL\+\_\+\+LEVEL\+\_\+\+COMPILE) This method is thread safe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & the dynamic logging level \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classErrorLog_ada27280bb884ff3f151816d0bd5a13ee}\label{classErrorLog_ada27280bb884ff3f151816d0bd5a13ee}} 
+\index{ErrorLog@{ErrorLog}!el\_bt\_buffer@{el\_bt\_buffer}}
+\index{el\_bt\_buffer@{el\_bt\_buffer}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_bt\_buffer}{el\_bt\_buffer}}
+{\footnotesize\ttfamily void$\ast$ Error\+Log\+::el\+\_\+bt\+\_\+buffer\mbox{[}256\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+allow up to 256 levels of calls 
+
+\mbox{\Hypertarget{classErrorLog_a302f2e7de4cee9fd1f8fbbb68f6968cd}\label{classErrorLog_a302f2e7de4cee9fd1f8fbbb68f6968cd}} 
+\index{ErrorLog@{ErrorLog}!el\_demangle\_buf@{el\_demangle\_buf}}
+\index{el\_demangle\_buf@{el\_demangle\_buf}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_demangle\_buf}{el\_demangle\_buf}}
+{\footnotesize\ttfamily char$\ast$ Error\+Log\+::el\+\_\+demangle\+\_\+buf\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+buffer needed for demangle 
+
+\mbox{\Hypertarget{classErrorLog_a272c4b4300fbf2de502edfa8c21d0f70}\label{classErrorLog_a272c4b4300fbf2de502edfa8c21d0f70}} 
+\index{ErrorLog@{ErrorLog}!el\_demangle\_len@{el\_demangle\_len}}
+\index{el\_demangle\_len@{el\_demangle\_len}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_demangle\_len}{el\_demangle\_len}}
+{\footnotesize\ttfamily size\+\_\+t Error\+Log\+::el\+\_\+demangle\+\_\+len\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+demangle buffer length 
+
+\mbox{\Hypertarget{classErrorLog_afc70c62c20e58272e8e87a3c5d1c0500}\label{classErrorLog_afc70c62c20e58272e8e87a3c5d1c0500}} 
+\index{ErrorLog@{ErrorLog}!el\_err\_code@{el\_err\_code}}
+\index{el\_err\_code@{el\_err\_code}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_err\_code}{el\_err\_code}}
+{\footnotesize\ttfamily int Error\+Log\+::el\+\_\+err\+\_\+code\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+current error code 
+
+\mbox{\Hypertarget{classErrorLog_a1731ca615dcff68df4e7888bc69f848a}\label{classErrorLog_a1731ca615dcff68df4e7888bc69f848a}} 
+\index{ErrorLog@{ErrorLog}!el\_fp@{el\_fp}}
+\index{el\_fp@{el\_fp}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_fp}{el\_fp}}
+{\footnotesize\ttfamily FILE $\ast$ Error\+Log\+::el\+\_\+fp\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+file handle of el\+\_\+logfile 
+
+\mbox{\Hypertarget{classErrorLog_a83eecfd0d8235ed9d60d345cb774a010}\label{classErrorLog_a83eecfd0d8235ed9d60d345cb774a010}} 
+\index{ErrorLog@{ErrorLog}!el\_level@{el\_level}}
+\index{el\_level@{el\_level}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_level}{el\_level}}
+{\footnotesize\ttfamily int Error\+Log\+::el\+\_\+level\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+logging level 
+
+\mbox{\Hypertarget{classErrorLog_a0c235ac2408ef8b81dda42a25416a7cf}\label{classErrorLog_a0c235ac2408ef8b81dda42a25416a7cf}} 
+\index{ErrorLog@{ErrorLog}!el\_level\_name@{el\_level\_name}}
+\index{el\_level\_name@{el\_level\_name}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_level\_name}{el\_level\_name}}
+{\footnotesize\ttfamily const char $\ast$ Error\+Log\+::el\+\_\+level\+\_\+name\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+level =\texorpdfstring{$>$}{>} name 
+
+\mbox{\Hypertarget{classErrorLog_a61706d666c3f71a7ac8d258f680189ac}\label{classErrorLog_a61706d666c3f71a7ac8d258f680189ac}} 
+\index{ErrorLog@{ErrorLog}!el\_lock@{el\_lock}}
+\index{el\_lock@{el\_lock}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_lock}{el\_lock}}
+{\footnotesize\ttfamily pthread\+\_\+mutex\+\_\+t Error\+Log\+::el\+\_\+lock\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+protect the global states 
+
+\mbox{\Hypertarget{classErrorLog_aa6ba1cf0da7e20f0dd54843e5eb143c5}\label{classErrorLog_aa6ba1cf0da7e20f0dd54843e5eb143c5}} 
+\index{ErrorLog@{ErrorLog}!el\_logfile@{el\_logfile}}
+\index{el\_logfile@{el\_logfile}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_logfile}{el\_logfile}}
+{\footnotesize\ttfamily char $\ast$ Error\+Log\+::el\+\_\+logfile\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+file path to write log to 
+
+\mbox{\Hypertarget{classErrorLog_a44ac204d72a27fb5ef3d3342c3ba25f7}\label{classErrorLog_a44ac204d72a27fb5ef3d3342c3ba25f7}} 
+\index{ErrorLog@{ErrorLog}!el\_msg\_buf@{el\_msg\_buf}}
+\index{el\_msg\_buf@{el\_msg\_buf}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_msg\_buf}{el\_msg\_buf}}
+{\footnotesize\ttfamily char$\ast$ Error\+Log\+::el\+\_\+msg\+\_\+buf\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+a buffer to hold the error message 
+
+\mbox{\Hypertarget{classErrorLog_ad24d9d9b750567c33a461c4808ca576c}\label{classErrorLog_ad24d9d9b750567c33a461c4808ca576c}} 
+\index{ErrorLog@{ErrorLog}!el\_msg\_cap@{el\_msg\_cap}}
+\index{el\_msg\_cap@{el\_msg\_cap}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_msg\_cap}{el\_msg\_cap}}
+{\footnotesize\ttfamily int Error\+Log\+::el\+\_\+msg\+\_\+cap\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the message buffer size 
+
+\mbox{\Hypertarget{classErrorLog_a66168fa7406032e9c4e29ba01e3c0936}\label{classErrorLog_a66168fa7406032e9c4e29ba01e3c0936}} 
+\index{ErrorLog@{ErrorLog}!el\_msg\_cur@{el\_msg\_cur}}
+\index{el\_msg\_cur@{el\_msg\_cur}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_msg\_cur}{el\_msg\_cur}}
+{\footnotesize\ttfamily char$\ast$ Error\+Log\+::el\+\_\+msg\+\_\+cur\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+point to the end of the message 
+
+\mbox{\Hypertarget{classErrorLog_ab696de54dbb04e7e7c7915e6b141974a}\label{classErrorLog_ab696de54dbb04e7e7c7915e6b141974a}} 
+\index{ErrorLog@{ErrorLog}!el\_name\_2\_id@{el\_name\_2\_id}}
+\index{el\_name\_2\_id@{el\_name\_2\_id}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_name\_2\_id}{el\_name\_2\_id}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, int $>$ $\ast$ Error\+Log\+::el\+\_\+name\+\_\+2\+\_\+id\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+file name =\texorpdfstring{$>$}{>} id 
+
+\mbox{\Hypertarget{classErrorLog_a2383e10edc4efebbe7a3e49fdb521fce}\label{classErrorLog_a2383e10edc4efebbe7a3e49fdb521fce}} 
+\index{ErrorLog@{ErrorLog}!el\_thread\_name@{el\_thread\_name}}
+\index{el\_thread\_name@{el\_thread\_name}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_thread\_name}{el\_thread\_name}}
+{\footnotesize\ttfamily char$\ast$ Error\+Log\+::el\+\_\+thread\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the thread name 
+
+\mbox{\Hypertarget{classErrorLog_aec7fd8cbcffc66d22afbfc8b32577f9a}\label{classErrorLog_aec7fd8cbcffc66d22afbfc8b32577f9a}} 
+\index{ErrorLog@{ErrorLog}!el\_tloc@{el\_tloc}}
+\index{el\_tloc@{el\_tloc}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_tloc}{el\_tloc}}
+{\footnotesize\ttfamily time\+\_\+t Error\+Log\+::el\+\_\+tloc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+local time in seconds at last message 
+
+\mbox{\Hypertarget{classErrorLog_aa4ba923182734bab4305926b58f0ebd1}\label{classErrorLog_aa4ba923182734bab4305926b58f0ebd1}} 
+\index{ErrorLog@{ErrorLog}!el\_tm@{el\_tm}}
+\index{el\_tm@{el\_tm}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{el\_tm}{el\_tm}}
+{\footnotesize\ttfamily struct tm Error\+Log\+::el\+\_\+tm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+broken down time at last message 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{errorlog_8h}{errorlog.\+h}}\item 
+system/\mbox{\hyperlink{errorlog_8cc}{errorlog.\+cc}}\end{DoxyCompactItemize}

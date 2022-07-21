@@ -1,0 +1,88 @@
+\hypertarget{mymemory_8h}{}\doxysection{system/mymemory.h File Reference}
+\label{mymemory_8h}\index{system/mymemory.h@{system/mymemory.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMemory}{Memory}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mymemory_8h_a6f398613f4fc8958da8895cf77f6ec4d}{MEMORY\+\_\+\+OK}}~0
+\item 
+\#define \mbox{\hyperlink{mymemory_8h_a182dacc4ff329b1c727af4e25e53e153}{NON\+\_\+\+TABLE\+\_\+\+MEMORY\+\_\+\+ADDR}}~((void$\ast$)0x600000000000)
+\item 
+\#define \mbox{\hyperlink{mymemory_8h_acc57172755f145fab81b5028e1be364c}{TABLE\+\_\+\+MEMORY\+\_\+\+ALLOC\+\_\+\+INC}}~(1L$<$$<$28)
+\item 
+\#define \mbox{\hyperlink{mymemory_8h_a59e83dde3540093959e7dfe7d55fb1d2}{TABLE\+\_\+\+MEMORY\+\_\+\+ALLOC\+\_\+\+MAX}}~(1L$<$$<$34)
+\item 
+\#define \mbox{\hyperlink{mymemory_8h_a10d56e04ec8e27778968a94aacd044a8}{TABLE\+\_\+\+MEMORY\+\_\+\+INIT\+\_\+\+ADDR}}~((void$\ast$)0x700000000000)
+\item 
+\#define \mbox{\hyperlink{mymemory_8h_af2ea52ff3cd1aaa054c197a613ad49fb}{TABLE\+\_\+\+MEMORY\+\_\+\+MAX\+\_\+\+ADDR}}~((void$\ast$)0x7f0000000000)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMemory}{Memory}} \mbox{\hyperlink{mymemory_8h_ab02b3badee65de481b409f3887fb8691}{g\+\_\+memory}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@autrhor liugang(\href{mailto:liugang@ict.ac.cn}{\texttt{ liugang@ict.\+ac.\+cn}}) \begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+\hypertarget{schema_8h_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{schema_8h_DESCRIPTION}
+\mbox{\hyperlink{classMemory}{Memory}} is system own manager to alloc and free slab of different size the minmux size is sizeof(void$\ast$), maxsize is given by m\+\_\+array\+\_\+list size
+
+interface\+: int64\+\_\+t alloc (char $\ast$\&p, int64\+\_\+t size) int64\+\_\+t free (char $\ast$p, int64\+\_\+t size) you should put down the size of memory allocated, when you free back, you need this data 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mymemory_8h_a6f398613f4fc8958da8895cf77f6ec4d}\label{mymemory_8h_a6f398613f4fc8958da8895cf77f6ec4d}} 
+\index{mymemory.h@{mymemory.h}!MEMORY\_OK@{MEMORY\_OK}}
+\index{MEMORY\_OK@{MEMORY\_OK}!mymemory.h@{mymemory.h}}
+\doxysubsubsection{\texorpdfstring{MEMORY\_OK}{MEMORY\_OK}}
+{\footnotesize\ttfamily \#define MEMORY\+\_\+\+OK~0}
+
+\mbox{\Hypertarget{mymemory_8h_a182dacc4ff329b1c727af4e25e53e153}\label{mymemory_8h_a182dacc4ff329b1c727af4e25e53e153}} 
+\index{mymemory.h@{mymemory.h}!NON\_TABLE\_MEMORY\_ADDR@{NON\_TABLE\_MEMORY\_ADDR}}
+\index{NON\_TABLE\_MEMORY\_ADDR@{NON\_TABLE\_MEMORY\_ADDR}!mymemory.h@{mymemory.h}}
+\doxysubsubsection{\texorpdfstring{NON\_TABLE\_MEMORY\_ADDR}{NON\_TABLE\_MEMORY\_ADDR}}
+{\footnotesize\ttfamily \#define NON\+\_\+\+TABLE\+\_\+\+MEMORY\+\_\+\+ADDR~((void$\ast$)0x600000000000)}
+
+\mbox{\Hypertarget{mymemory_8h_acc57172755f145fab81b5028e1be364c}\label{mymemory_8h_acc57172755f145fab81b5028e1be364c}} 
+\index{mymemory.h@{mymemory.h}!TABLE\_MEMORY\_ALLOC\_INC@{TABLE\_MEMORY\_ALLOC\_INC}}
+\index{TABLE\_MEMORY\_ALLOC\_INC@{TABLE\_MEMORY\_ALLOC\_INC}!mymemory.h@{mymemory.h}}
+\doxysubsubsection{\texorpdfstring{TABLE\_MEMORY\_ALLOC\_INC}{TABLE\_MEMORY\_ALLOC\_INC}}
+{\footnotesize\ttfamily \#define TABLE\+\_\+\+MEMORY\+\_\+\+ALLOC\+\_\+\+INC~(1L$<$$<$28)}
+
+\mbox{\Hypertarget{mymemory_8h_a59e83dde3540093959e7dfe7d55fb1d2}\label{mymemory_8h_a59e83dde3540093959e7dfe7d55fb1d2}} 
+\index{mymemory.h@{mymemory.h}!TABLE\_MEMORY\_ALLOC\_MAX@{TABLE\_MEMORY\_ALLOC\_MAX}}
+\index{TABLE\_MEMORY\_ALLOC\_MAX@{TABLE\_MEMORY\_ALLOC\_MAX}!mymemory.h@{mymemory.h}}
+\doxysubsubsection{\texorpdfstring{TABLE\_MEMORY\_ALLOC\_MAX}{TABLE\_MEMORY\_ALLOC\_MAX}}
+{\footnotesize\ttfamily \#define TABLE\+\_\+\+MEMORY\+\_\+\+ALLOC\+\_\+\+MAX~(1L$<$$<$34)}
+
+\mbox{\Hypertarget{mymemory_8h_a10d56e04ec8e27778968a94aacd044a8}\label{mymemory_8h_a10d56e04ec8e27778968a94aacd044a8}} 
+\index{mymemory.h@{mymemory.h}!TABLE\_MEMORY\_INIT\_ADDR@{TABLE\_MEMORY\_INIT\_ADDR}}
+\index{TABLE\_MEMORY\_INIT\_ADDR@{TABLE\_MEMORY\_INIT\_ADDR}!mymemory.h@{mymemory.h}}
+\doxysubsubsection{\texorpdfstring{TABLE\_MEMORY\_INIT\_ADDR}{TABLE\_MEMORY\_INIT\_ADDR}}
+{\footnotesize\ttfamily \#define TABLE\+\_\+\+MEMORY\+\_\+\+INIT\+\_\+\+ADDR~((void$\ast$)0x700000000000)}
+
+\mbox{\Hypertarget{mymemory_8h_af2ea52ff3cd1aaa054c197a613ad49fb}\label{mymemory_8h_af2ea52ff3cd1aaa054c197a613ad49fb}} 
+\index{mymemory.h@{mymemory.h}!TABLE\_MEMORY\_MAX\_ADDR@{TABLE\_MEMORY\_MAX\_ADDR}}
+\index{TABLE\_MEMORY\_MAX\_ADDR@{TABLE\_MEMORY\_MAX\_ADDR}!mymemory.h@{mymemory.h}}
+\doxysubsubsection{\texorpdfstring{TABLE\_MEMORY\_MAX\_ADDR}{TABLE\_MEMORY\_MAX\_ADDR}}
+{\footnotesize\ttfamily \#define TABLE\+\_\+\+MEMORY\+\_\+\+MAX\+\_\+\+ADDR~((void$\ast$)0x7f0000000000)}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{mymemory_8h_ab02b3badee65de481b409f3887fb8691}\label{mymemory_8h_ab02b3badee65de481b409f3887fb8691}} 
+\index{mymemory.h@{mymemory.h}!g\_memory@{g\_memory}}
+\index{g\_memory@{g\_memory}!mymemory.h@{mymemory.h}}
+\doxysubsubsection{\texorpdfstring{g\_memory}{g\_memory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMemory}{Memory}} g\+\_\+memory\hspace{0.3cm}{\ttfamily [extern]}}
+

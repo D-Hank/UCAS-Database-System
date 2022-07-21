@@ -1,0 +1,179 @@
+\hypertarget{classBasicType}{}\doxysection{Basic\+Type Class Reference}
+\label{classBasicType}\index{BasicType@{BasicType}}
+
+
+{\ttfamily \#include $<$datatype.\+h$>$}
+
+Inheritance diagram for Basic\+Type\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.000000cm]{classBasicType}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBasicType_a6c8f9c316edfcaf9b9f38261cf61fef9}{Basic\+Type}} (\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130}{Type\+Code}} typecode, int64\+\_\+t typesize)
+\item 
+virtual \mbox{\hyperlink{classBasicType_a5cec9c934ec8022eed42052e1edd7c20}{$\sim$\+Basic\+Type}} ()
+\item 
+virtual bool \mbox{\hyperlink{classBasicType_a72af042896025d3def191bc479cbac21}{cmp\+EQ}} (void $\ast$data1, void $\ast$data2)
+\item 
+virtual bool \mbox{\hyperlink{classBasicType_a8d0a5515211debf7efaa0887ec014570}{cmp\+GE}} (void $\ast$data1, void $\ast$data2)
+\item 
+virtual bool \mbox{\hyperlink{classBasicType_a26eb6217b104abe851d18864dfc1d4e4}{cmp\+GT}} (void $\ast$data1, void $\ast$data2)
+\item 
+virtual bool \mbox{\hyperlink{classBasicType_ae877a5b8d90493064c7be49f25e54dbb}{cmp\+LE}} (void $\ast$data1, void $\ast$data2)
+\item 
+virtual bool \mbox{\hyperlink{classBasicType_a3e5116955f79f95f5f4697fe06ea8f17}{cmp\+LT}} (void $\ast$data1, void $\ast$data2)
+\item 
+virtual int \mbox{\hyperlink{classBasicType_a349331dad71fea0c2731b9caec87661d}{copy}} (void $\ast$dest, void $\ast$data)
+\item 
+virtual int \mbox{\hyperlink{classBasicType_a4a865ad5d294bbacaff78dcdc64b4752}{format\+Bin}} (void $\ast$dest, void $\ast$data)
+\item 
+virtual int \mbox{\hyperlink{classBasicType_a049abd1fc9e6619071a99582cde3b5c7}{format\+Txt}} (void $\ast$dest, void $\ast$data)
+\item 
+virtual \mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130}{Type\+Code}} \mbox{\hyperlink{classBasicType_a9ee43985dac8c7eae0dd751e0b701c0b}{get\+Type\+Code}} (void)
+\item 
+virtual int64\+\_\+t \mbox{\hyperlink{classBasicType_ab703e8f77c3001b08e64c430cf3e2e5e}{get\+Type\+Size}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130}{Type\+Code}} \mbox{\hyperlink{classBasicType_a2111a937626ec90fa107f74299b9e166}{b\+\_\+type\+\_\+code}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classBasicType_a7bf89759407c3fcb7829d4779fc35fe2}{b\+\_\+type\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of class \mbox{\hyperlink{classBasicType}{Basic\+Type}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBasicType_a6c8f9c316edfcaf9b9f38261cf61fef9}\label{classBasicType_a6c8f9c316edfcaf9b9f38261cf61fef9}} 
+\index{BasicType@{BasicType}!BasicType@{BasicType}}
+\index{BasicType@{BasicType}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{BasicType()}{BasicType()}}
+{\footnotesize\ttfamily Basic\+Type\+::\+Basic\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130}{Type\+Code}}}]{typecode,  }\item[{int64\+\_\+t}]{typesize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor. \mbox{\Hypertarget{classBasicType_a5cec9c934ec8022eed42052e1edd7c20}\label{classBasicType_a5cec9c934ec8022eed42052e1edd7c20}} 
+\index{BasicType@{BasicType}!````~BasicType@{$\sim$BasicType}}
+\index{````~BasicType@{$\sim$BasicType}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{$\sim$BasicType()}{~BasicType()}}
+{\footnotesize\ttfamily virtual Basic\+Type\+::$\sim$\+Basic\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBasicType_a72af042896025d3def191bc479cbac21}\label{classBasicType_a72af042896025d3def191bc479cbac21}} 
+\index{BasicType@{BasicType}!cmpEQ@{cmpEQ}}
+\index{cmpEQ@{cmpEQ}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{cmpEQ()}{cmpEQ()}}
+{\footnotesize\ttfamily virtual bool Basic\+Type\+::cmp\+EQ (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+equal to. 
+
+Reimplemented in \mbox{\hyperlink{classTypeInt8_ad8904dba4a189add6e5c078fcad28ac2}{Type\+Int8}}, \mbox{\hyperlink{classTypeInt16_a3d6d057ef03a034433b87e56a8230dcd}{Type\+Int16}}, \mbox{\hyperlink{classTypeInt32_ad601c0de1710c980f6d4ee7664bee319}{Type\+Int32}}, \mbox{\hyperlink{classTypeInt64_ad90d325421fead1f82cb42591406af65}{Type\+Int64}}, \mbox{\hyperlink{classTypeFloat32_a31ec4f5a816150c0eb8a2eee32c7ebdc}{Type\+Float32}}, \mbox{\hyperlink{classTypeFloat64_a098acf74c14570133f6bcdb80de0c35d}{Type\+Float64}}, \mbox{\hyperlink{classTypeCharN_ab88944eae06481baa08c2c95c5d6157a}{Type\+CharN}}, \mbox{\hyperlink{classTypeDate_ac9e409d42209bbe4175cef6781c5527e}{Type\+Date}}, \mbox{\hyperlink{classTypeTime_ae3143ad1bc3d043915a42f0801c78208}{Type\+Time}}, and \mbox{\hyperlink{classTypeDateTime_a81d3463a7429ee3ab281d9b17679e20f}{Type\+Date\+Time}}.
+
+\mbox{\Hypertarget{classBasicType_a8d0a5515211debf7efaa0887ec014570}\label{classBasicType_a8d0a5515211debf7efaa0887ec014570}} 
+\index{BasicType@{BasicType}!cmpGE@{cmpGE}}
+\index{cmpGE@{cmpGE}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{cmpGE()}{cmpGE()}}
+{\footnotesize\ttfamily virtual bool Basic\+Type\+::cmp\+GE (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+greater than or equal to 
+
+Reimplemented in \mbox{\hyperlink{classTypeInt8_a5a662d2eb76db918e26597be72014bb4}{Type\+Int8}}, \mbox{\hyperlink{classTypeInt16_a60b2ea13ed49000c550b568fbdc849c2}{Type\+Int16}}, \mbox{\hyperlink{classTypeInt32_a6aed000e8ce9b26dc19b37adbf94da07}{Type\+Int32}}, \mbox{\hyperlink{classTypeInt64_a0b0d74f01063c96496154037c7ec872c}{Type\+Int64}}, \mbox{\hyperlink{classTypeFloat32_ad6a13130a52e0c3597ea8f5d9f3bc170}{Type\+Float32}}, \mbox{\hyperlink{classTypeFloat64_a73c54858f7d558558d0370f4302a95fb}{Type\+Float64}}, \mbox{\hyperlink{classTypeCharN_a565c4e59b3c5fc8cf98ea5d7dfffc486}{Type\+CharN}}, \mbox{\hyperlink{classTypeDate_a03964a576830e935b9328c6f2501bf73}{Type\+Date}}, \mbox{\hyperlink{classTypeTime_a6970b460c7b08a3507d0b4817d230728}{Type\+Time}}, and \mbox{\hyperlink{classTypeDateTime_a3866f5ea41e1a644602382046971729b}{Type\+Date\+Time}}.
+
+\mbox{\Hypertarget{classBasicType_a26eb6217b104abe851d18864dfc1d4e4}\label{classBasicType_a26eb6217b104abe851d18864dfc1d4e4}} 
+\index{BasicType@{BasicType}!cmpGT@{cmpGT}}
+\index{cmpGT@{cmpGT}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{cmpGT()}{cmpGT()}}
+{\footnotesize\ttfamily virtual bool Basic\+Type\+::cmp\+GT (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+greater than. 
+
+Reimplemented in \mbox{\hyperlink{classTypeInt8_af119311fc00d11505fb08e1c8dbd2295}{Type\+Int8}}, \mbox{\hyperlink{classTypeInt16_a24d00f6e8703d4fbfee31567d1b3ceec}{Type\+Int16}}, \mbox{\hyperlink{classTypeInt32_a2e79e5cb3108db29789d56fff6cacfe4}{Type\+Int32}}, \mbox{\hyperlink{classTypeInt64_afa81a8f84449ada923d50a26c3b857f0}{Type\+Int64}}, \mbox{\hyperlink{classTypeFloat32_acc6f6ddd553938ef83c2bf28d69855d1}{Type\+Float32}}, \mbox{\hyperlink{classTypeFloat64_a4d9ffc2b266aa2d46cbcc16ec1430c9a}{Type\+Float64}}, \mbox{\hyperlink{classTypeCharN_a9a38211f37b8c4d5e1a1ccc58ab4dc25}{Type\+CharN}}, \mbox{\hyperlink{classTypeDate_aed7c36f69a1af68b29bf9b95d82cb930}{Type\+Date}}, \mbox{\hyperlink{classTypeTime_a462e0b328eb3885830bc5958f3ecd6ea}{Type\+Time}}, and \mbox{\hyperlink{classTypeDateTime_aaca304d5174c2326b61075172f68e313}{Type\+Date\+Time}}.
+
+\mbox{\Hypertarget{classBasicType_ae877a5b8d90493064c7be49f25e54dbb}\label{classBasicType_ae877a5b8d90493064c7be49f25e54dbb}} 
+\index{BasicType@{BasicType}!cmpLE@{cmpLE}}
+\index{cmpLE@{cmpLE}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{cmpLE()}{cmpLE()}}
+{\footnotesize\ttfamily virtual bool Basic\+Type\+::cmp\+LE (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+less than or equal to. 
+
+Reimplemented in \mbox{\hyperlink{classTypeInt8_a679e8ff2e8e9f7bba2e08d4dc993b25f}{Type\+Int8}}, \mbox{\hyperlink{classTypeInt16_aa3772aa01f121f07387e69e43fd54b2a}{Type\+Int16}}, \mbox{\hyperlink{classTypeInt32_aa2ecd8d3f7d4baf0f10e9d0959c145f5}{Type\+Int32}}, \mbox{\hyperlink{classTypeInt64_a2c71f3467a308dc784842c53a62d694e}{Type\+Int64}}, \mbox{\hyperlink{classTypeFloat32_ac637abd9dba79adbf07925cf919880af}{Type\+Float32}}, \mbox{\hyperlink{classTypeFloat64_aac9dbc361b542eff87f21255cc1bf0f7}{Type\+Float64}}, \mbox{\hyperlink{classTypeCharN_a0a39610b141d4012cacbe169d32012d9}{Type\+CharN}}, \mbox{\hyperlink{classTypeDate_ab15e64aafba2e44a671f01cac5dd81d7}{Type\+Date}}, \mbox{\hyperlink{classTypeTime_a9a4d890743dbeca0d791ee611bce017b}{Type\+Time}}, and \mbox{\hyperlink{classTypeDateTime_a01a37a1d2e8780d4623dd7b1d20a80e0}{Type\+Date\+Time}}.
+
+\mbox{\Hypertarget{classBasicType_a3e5116955f79f95f5f4697fe06ea8f17}\label{classBasicType_a3e5116955f79f95f5f4697fe06ea8f17}} 
+\index{BasicType@{BasicType}!cmpLT@{cmpLT}}
+\index{cmpLT@{cmpLT}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{cmpLT()}{cmpLT()}}
+{\footnotesize\ttfamily virtual bool Basic\+Type\+::cmp\+LT (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+less than. 
+
+Reimplemented in \mbox{\hyperlink{classTypeInt8_acd1e1e13493ecc100a0f3fab4d7fbba7}{Type\+Int8}}, \mbox{\hyperlink{classTypeInt16_a132f8aeff997561d3791eed839cfb85d}{Type\+Int16}}, \mbox{\hyperlink{classTypeInt32_ab2d0c4f1ad4812781c89e3eeb41657ae}{Type\+Int32}}, \mbox{\hyperlink{classTypeInt64_a44f3c9addf3a14325c1c41f2f4ce4394}{Type\+Int64}}, \mbox{\hyperlink{classTypeFloat32_a63cca786a73f3bfeda595de99d6c5110}{Type\+Float32}}, \mbox{\hyperlink{classTypeFloat64_aeedee159502d20cc31170660c0c557a6}{Type\+Float64}}, \mbox{\hyperlink{classTypeCharN_a655668a783c8ab7fdf045e3af8dd4d9a}{Type\+CharN}}, \mbox{\hyperlink{classTypeDate_a57a9a3e721d62201441a37d66d450fca}{Type\+Date}}, \mbox{\hyperlink{classTypeTime_aabdd05b9bdf99ad01da46aeb23147888}{Type\+Time}}, and \mbox{\hyperlink{classTypeDateTime_a2eee450d2794131c30d03cbc4b964307}{Type\+Date\+Time}}.
+
+\mbox{\Hypertarget{classBasicType_a349331dad71fea0c2731b9caec87661d}\label{classBasicType_a349331dad71fea0c2731b9caec87661d}} 
+\index{BasicType@{BasicType}!copy@{copy}}
+\index{copy@{copy}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily virtual int Basic\+Type\+::copy (\begin{DoxyParamCaption}\item[{void $\ast$}]{dest,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+copy from data to dest. 
+
+Reimplemented in \mbox{\hyperlink{classTypeInt8_a79443e3e120abc46700b23dcf3a3ab4a}{Type\+Int8}}, \mbox{\hyperlink{classTypeInt16_a922dc3f7a43f251dad65a46606db1889}{Type\+Int16}}, \mbox{\hyperlink{classTypeInt32_a1ac7dfe4ef77721c3d84cea3d6eef306}{Type\+Int32}}, \mbox{\hyperlink{classTypeInt64_a78d6b6b78a364f870a2f66257f3c3a09}{Type\+Int64}}, \mbox{\hyperlink{classTypeFloat32_af79cac964fd7614d8d035bb85855dc61}{Type\+Float32}}, \mbox{\hyperlink{classTypeFloat64_a782e1a571caff03c1ea746d4d4957154}{Type\+Float64}}, \mbox{\hyperlink{classTypeCharN_ad759453e236223b6b82e4e28110531b9}{Type\+CharN}}, \mbox{\hyperlink{classTypeDate_a32fa98246f142732e7f8a7294475d578}{Type\+Date}}, \mbox{\hyperlink{classTypeTime_afc28aa5f0c409290b588536693dc207c}{Type\+Time}}, and \mbox{\hyperlink{classTypeDateTime_a6bef8206c0b73325e153a316705bc358}{Type\+Date\+Time}}.
+
+\mbox{\Hypertarget{classBasicType_a4a865ad5d294bbacaff78dcdc64b4752}\label{classBasicType_a4a865ad5d294bbacaff78dcdc64b4752}} 
+\index{BasicType@{BasicType}!formatBin@{formatBin}}
+\index{formatBin@{formatBin}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{formatBin()}{formatBin()}}
+{\footnotesize\ttfamily virtual int Basic\+Type\+::format\+Bin (\begin{DoxyParamCaption}\item[{void $\ast$}]{dest,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+extract bin format from data(txt) to dest. 
+
+Reimplemented in \mbox{\hyperlink{classTypeInt8_a248720b1a1751a45a177b356ed7af54f}{Type\+Int8}}, \mbox{\hyperlink{classTypeInt16_a612206c7445d1d1c928032af4cf50648}{Type\+Int16}}, \mbox{\hyperlink{classTypeInt32_aebd76cca3ab18378c707f5347cbdc6f1}{Type\+Int32}}, \mbox{\hyperlink{classTypeInt64_a2f7a5277de11d88997f86baf294d59c3}{Type\+Int64}}, \mbox{\hyperlink{classTypeFloat32_a912206fe3da2743f248f8f809890b6f1}{Type\+Float32}}, \mbox{\hyperlink{classTypeFloat64_ac33e885c464dfa7736730f2948cd88be}{Type\+Float64}}, \mbox{\hyperlink{classTypeCharN_a3a18424360418305922196bb9196c07c}{Type\+CharN}}, \mbox{\hyperlink{classTypeDate_a297f0fcbb73f6b5e7891e02aedd7c705}{Type\+Date}}, \mbox{\hyperlink{classTypeTime_abc8061392b5c4c5ee26407026c43a828}{Type\+Time}}, and \mbox{\hyperlink{classTypeDateTime_ad6972d9011c27e79d60f5118c578341c}{Type\+Date\+Time}}.
+
+\mbox{\Hypertarget{classBasicType_a049abd1fc9e6619071a99582cde3b5c7}\label{classBasicType_a049abd1fc9e6619071a99582cde3b5c7}} 
+\index{BasicType@{BasicType}!formatTxt@{formatTxt}}
+\index{formatTxt@{formatTxt}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{formatTxt()}{formatTxt()}}
+{\footnotesize\ttfamily virtual int Basic\+Type\+::format\+Txt (\begin{DoxyParamCaption}\item[{void $\ast$}]{dest,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+extract txt format from data(bin) to dest. 
+
+Reimplemented in \mbox{\hyperlink{classTypeInt8_ad4807a1f3e01143317b685f5f1d93c73}{Type\+Int8}}, \mbox{\hyperlink{classTypeInt16_ad417e952ca51261a78582b40e2491051}{Type\+Int16}}, \mbox{\hyperlink{classTypeInt32_a14c4629907400abcccbb9b2d67cb998d}{Type\+Int32}}, \mbox{\hyperlink{classTypeInt64_a535d0d8b519e049e62f83d503144b683}{Type\+Int64}}, \mbox{\hyperlink{classTypeFloat32_a482690c9a39163d21c4133bbbb3925fc}{Type\+Float32}}, \mbox{\hyperlink{classTypeFloat64_a126573473ea46717f6b47b85e588bb2a}{Type\+Float64}}, \mbox{\hyperlink{classTypeCharN_a5ae6861c3d6ad94e57a619e92616ddea}{Type\+CharN}}, \mbox{\hyperlink{classTypeDate_a43126faf2892c32052aca84c8c0003a5}{Type\+Date}}, \mbox{\hyperlink{classTypeTime_abe57cb6286558ed30d074b41371748a2}{Type\+Time}}, and \mbox{\hyperlink{classTypeDateTime_a7d8be4104f322eec5b2db5c67f27dafb}{Type\+Date\+Time}}.
+
+\mbox{\Hypertarget{classBasicType_a9ee43985dac8c7eae0dd751e0b701c0b}\label{classBasicType_a9ee43985dac8c7eae0dd751e0b701c0b}} 
+\index{BasicType@{BasicType}!getTypeCode@{getTypeCode}}
+\index{getTypeCode@{getTypeCode}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{getTypeCode()}{getTypeCode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130}{Type\+Code}} Basic\+Type\+::get\+Type\+Code (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+get type code of this data type. \mbox{\Hypertarget{classBasicType_ab703e8f77c3001b08e64c430cf3e2e5e}\label{classBasicType_ab703e8f77c3001b08e64c430cf3e2e5e}} 
+\index{BasicType@{BasicType}!getTypeSize@{getTypeSize}}
+\index{getTypeSize@{getTypeSize}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{getTypeSize()}{getTypeSize()}}
+{\footnotesize\ttfamily virtual int64\+\_\+t Basic\+Type\+::get\+Type\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+get data size when stored in bin format. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classBasicType_a2111a937626ec90fa107f74299b9e166}\label{classBasicType_a2111a937626ec90fa107f74299b9e166}} 
+\index{BasicType@{BasicType}!b\_type\_code@{b\_type\_code}}
+\index{b\_type\_code@{b\_type\_code}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{b\_type\_code}{b\_type\_code}}
+{\footnotesize\ttfamily \mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130}{Type\+Code}} Basic\+Type\+::b\+\_\+type\+\_\+code\hspace{0.3cm}{\ttfamily [protected]}}
+
+data type code \mbox{\Hypertarget{classBasicType_a7bf89759407c3fcb7829d4779fc35fe2}\label{classBasicType_a7bf89759407c3fcb7829d4779fc35fe2}} 
+\index{BasicType@{BasicType}!b\_type\_size@{b\_type\_size}}
+\index{b\_type\_size@{b\_type\_size}!BasicType@{BasicType}}
+\doxysubsubsection{\texorpdfstring{b\_type\_size}{b\_type\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Basic\+Type\+::b\+\_\+type\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}}
+
+data type size 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{datatype_8h}{datatype.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,1238 @@
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Aggre\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Condition Struct Reference}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Member Data Documentation}{7}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}column\_rank}{7}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}method}{7}{subsubsection.4.1.2.2}
+\contentsline {section}{\numberline {4.2}Basic\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Type Class Reference}{8}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{9}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Constructor \& Destructor Documentation}{9}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}BasicType()}{9}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}$\sim $BasicType()}{9}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Member Function Documentation}{9}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}cmpEQ()}{9}{subsubsection.4.2.3.1}
+\contentsline {subsubsection}{\numberline {4.2.3.2}cmpGE()}{9}{subsubsection.4.2.3.2}
+\contentsline {subsubsection}{\numberline {4.2.3.3}cmpGT()}{10}{subsubsection.4.2.3.3}
+\contentsline {subsubsection}{\numberline {4.2.3.4}cmpLE()}{10}{subsubsection.4.2.3.4}
+\contentsline {subsubsection}{\numberline {4.2.3.5}cmpLT()}{10}{subsubsection.4.2.3.5}
+\contentsline {subsubsection}{\numberline {4.2.3.6}copy()}{10}{subsubsection.4.2.3.6}
+\contentsline {subsubsection}{\numberline {4.2.3.7}formatBin()}{11}{subsubsection.4.2.3.7}
+\contentsline {subsubsection}{\numberline {4.2.3.8}formatTxt()}{11}{subsubsection.4.2.3.8}
+\contentsline {subsubsection}{\numberline {4.2.3.9}getTypeCode()}{11}{subsubsection.4.2.3.9}
+\contentsline {subsubsection}{\numberline {4.2.3.10}getTypeSize()}{11}{subsubsection.4.2.3.10}
+\contentsline {subsection}{\numberline {4.2.4}Member Data Documentation}{11}{subsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.4.1}b\_type\_code}{11}{subsubsection.4.2.4.1}
+\contentsline {subsubsection}{\numberline {4.2.4.2}b\_type\_size}{12}{subsubsection.4.2.4.2}
+\contentsline {section}{\numberline {4.3}bnode Class Reference}{12}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Member Function Documentation}{12}{subsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1.1}ch()}{12}{subsubsection.4.3.1.1}
+\contentsline {subsubsection}{\numberline {4.3.1.2}chEndAddr()}{12}{subsubsection.4.3.1.2}
+\contentsline {subsubsection}{\numberline {4.3.1.3}k()}{13}{subsubsection.4.3.1.3}
+\contentsline {subsection}{\numberline {4.3.2}Member Data Documentation}{13}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}child}{13}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}key}{13}{subsubsection.4.3.2.2}
+\contentsline {section}{\numberline {4.4}Catalog Class Reference}{13}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{14}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Member Function Documentation}{14}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}createColumn()}{14}{subsubsection.4.4.2.1}
+\contentsline {subsubsection}{\numberline {4.4.2.2}createDatabase()}{14}{subsubsection.4.4.2.2}
+\contentsline {subsubsection}{\numberline {4.4.2.3}createIndex()}{15}{subsubsection.4.4.2.3}
+\contentsline {subsubsection}{\numberline {4.4.2.4}createTable()}{15}{subsubsection.4.4.2.4}
+\contentsline {subsubsection}{\numberline {4.4.2.5}getObjById()}{16}{subsubsection.4.4.2.5}
+\contentsline {subsubsection}{\numberline {4.4.2.6}getObjByName()}{16}{subsubsection.4.4.2.6}
+\contentsline {subsubsection}{\numberline {4.4.2.7}init()}{16}{subsubsection.4.4.2.7}
+\contentsline {subsubsection}{\numberline {4.4.2.8}initColumn()}{17}{subsubsection.4.4.2.8}
+\contentsline {subsubsection}{\numberline {4.4.2.9}initDatabase()}{17}{subsubsection.4.4.2.9}
+\contentsline {subsubsection}{\numberline {4.4.2.10}initIndex()}{17}{subsubsection.4.4.2.10}
+\contentsline {subsubsection}{\numberline {4.4.2.11}initTable()}{18}{subsubsection.4.4.2.11}
+\contentsline {subsubsection}{\numberline {4.4.2.12}obtainId()}{18}{subsubsection.4.4.2.12}
+\contentsline {subsubsection}{\numberline {4.4.2.13}print()}{19}{subsubsection.4.4.2.13}
+\contentsline {subsubsection}{\numberline {4.4.2.14}registerObj()}{19}{subsubsection.4.4.2.14}
+\contentsline {subsubsection}{\numberline {4.4.2.15}shut()}{19}{subsubsection.4.4.2.15}
+\contentsline {subsubsection}{\numberline {4.4.2.16}shutDatabase()}{19}{subsubsection.4.4.2.16}
+\contentsline {subsection}{\numberline {4.4.3}Member Data Documentation}{20}{subsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.3.1}cl\_id\_obj}{20}{subsubsection.4.4.3.1}
+\contentsline {subsubsection}{\numberline {4.4.3.2}cl\_name\_obj}{20}{subsubsection.4.4.3.2}
+\contentsline {section}{\numberline {4.5}Column Class Reference}{20}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{21}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{21}{subsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.2.1}Column()}{21}{subsubsection.4.5.2.1}
+\contentsline {subsubsection}{\numberline {4.5.2.2}$\sim $Column()}{21}{subsubsection.4.5.2.2}
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{21}{subsection.4.5.3}
+\contentsline {subsubsection}{\numberline {4.5.3.1}finish()}{22}{subsubsection.4.5.3.1}
+\contentsline {subsubsection}{\numberline {4.5.3.2}getCoffset()}{22}{subsubsection.4.5.3.2}
+\contentsline {subsubsection}{\numberline {4.5.3.3}getCSize()}{22}{subsubsection.4.5.3.3}
+\contentsline {subsubsection}{\numberline {4.5.3.4}getCType()}{22}{subsubsection.4.5.3.4}
+\contentsline {subsubsection}{\numberline {4.5.3.5}getDataType()}{22}{subsubsection.4.5.3.5}
+\contentsline {subsubsection}{\numberline {4.5.3.6}init()}{22}{subsubsection.4.5.3.6}
+\contentsline {subsubsection}{\numberline {4.5.3.7}print()}{22}{subsubsection.4.5.3.7}
+\contentsline {subsubsection}{\numberline {4.5.3.8}setCoffset()}{23}{subsubsection.4.5.3.8}
+\contentsline {subsubsection}{\numberline {4.5.3.9}shut()}{23}{subsubsection.4.5.3.9}
+\contentsline {subsection}{\numberline {4.5.4}Member Data Documentation}{23}{subsection.4.5.4}
+\contentsline {subsubsection}{\numberline {4.5.4.1}c\_datatype}{23}{subsubsection.4.5.4.1}
+\contentsline {subsubsection}{\numberline {4.5.4.2}c\_offset}{23}{subsubsection.4.5.4.2}
+\contentsline {subsubsection}{\numberline {4.5.4.3}c\_size}{23}{subsubsection.4.5.4.3}
+\contentsline {subsubsection}{\numberline {4.5.4.4}c\_type}{23}{subsubsection.4.5.4.4}
+\contentsline {section}{\numberline {4.6}Condition Struct Reference}{24}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{24}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Member Data Documentation}{24}{subsection.4.6.2}
+\contentsline {subsubsection}{\numberline {4.6.2.1}column}{24}{subsubsection.4.6.2.1}
+\contentsline {subsubsection}{\numberline {4.6.2.2}compare}{24}{subsubsection.4.6.2.2}
+\contentsline {subsubsection}{\numberline {4.6.2.3}value}{24}{subsubsection.4.6.2.3}
+\contentsline {section}{\numberline {4.7}Conditions Struct Reference}{24}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{25}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Member Data Documentation}{25}{subsection.4.7.2}
+\contentsline {subsubsection}{\numberline {4.7.2.1}condition}{25}{subsubsection.4.7.2.1}
+\contentsline {subsubsection}{\numberline {4.7.2.2}condition\_num}{25}{subsubsection.4.7.2.2}
+\contentsline {section}{\numberline {4.8}Database Class Reference}{25}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{26}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Constructor \& Destructor Documentation}{26}{subsection.4.8.2}
+\contentsline {subsubsection}{\numberline {4.8.2.1}Database()}{26}{subsubsection.4.8.2.1}
+\contentsline {subsubsection}{\numberline {4.8.2.2}$\sim $Database()}{26}{subsubsection.4.8.2.2}
+\contentsline {subsection}{\numberline {4.8.3}Member Function Documentation}{27}{subsection.4.8.3}
+\contentsline {subsubsection}{\numberline {4.8.3.1}addTable()}{27}{subsubsection.4.8.3.1}
+\contentsline {subsubsection}{\numberline {4.8.3.2}finish()}{27}{subsubsection.4.8.3.2}
+\contentsline {subsubsection}{\numberline {4.8.3.3}getTables()}{27}{subsubsection.4.8.3.3}
+\contentsline {subsubsection}{\numberline {4.8.3.4}init()}{27}{subsubsection.4.8.3.4}
+\contentsline {subsubsection}{\numberline {4.8.3.5}insert()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{27}{subsubsection.4.8.3.5}
+\contentsline {subsubsection}{\numberline {4.8.3.6}insert()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{28}{subsubsection.4.8.3.6}
+\contentsline {subsubsection}{\numberline {4.8.3.7}loadData()}{28}{subsubsection.4.8.3.7}
+\contentsline {subsubsection}{\numberline {4.8.3.8}print()}{29}{subsubsection.4.8.3.8}
+\contentsline {subsubsection}{\numberline {4.8.3.9}shut()}{29}{subsubsection.4.8.3.9}
+\contentsline {subsection}{\numberline {4.8.4}Member Data Documentation}{29}{subsection.4.8.4}
+\contentsline {subsubsection}{\numberline {4.8.4.1}d\_table}{29}{subsubsection.4.8.4.1}
+\contentsline {section}{\numberline {4.9}Error\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Log Class Reference}{29}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{31}{subsection.4.9.1}
+\contentsline {subsection}{\numberline {4.9.2}Constructor \& Destructor Documentation}{31}{subsection.4.9.2}
+\contentsline {subsubsection}{\numberline {4.9.2.1}ErrorLog()}{31}{subsubsection.4.9.2.1}
+\contentsline {subsubsection}{\numberline {4.9.2.2}$\sim $ErrorLog()}{31}{subsubsection.4.9.2.2}
+\contentsline {subsection}{\numberline {4.9.3}Member Function Documentation}{31}{subsection.4.9.3}
+\contentsline {subsubsection}{\numberline {4.9.3.1}closeLog()}{32}{subsubsection.4.9.3.1}
+\contentsline {subsubsection}{\numberline {4.9.3.2}flushLog()}{32}{subsubsection.4.9.3.2}
+\contentsline {subsubsection}{\numberline {4.9.3.3}getErrorCode()}{32}{subsubsection.4.9.3.3}
+\contentsline {subsubsection}{\numberline {4.9.3.4}getErrorMsg()}{32}{subsubsection.4.9.3.4}
+\contentsline {subsubsection}{\numberline {4.9.3.5}getFuncNameGCC()}{32}{subsubsection.4.9.3.5}
+\contentsline {subsubsection}{\numberline {4.9.3.6}id2Name()}{33}{subsubsection.4.9.3.6}
+\contentsline {subsubsection}{\numberline {4.9.3.7}init()}{33}{subsubsection.4.9.3.7}
+\contentsline {subsubsection}{\numberline {4.9.3.8}log()}{33}{subsubsection.4.9.3.8}
+\contentsline {subsubsection}{\numberline {4.9.3.9}name2Id()}{34}{subsubsection.4.9.3.9}
+\contentsline {subsubsection}{\numberline {4.9.3.10}reset()}{34}{subsubsection.4.9.3.10}
+\contentsline {subsubsection}{\numberline {4.9.3.11}setLevel()}{34}{subsubsection.4.9.3.11}
+\contentsline {subsection}{\numberline {4.9.4}Member Data Documentation}{35}{subsection.4.9.4}
+\contentsline {subsubsection}{\numberline {4.9.4.1}el\_bt\_buffer}{35}{subsubsection.4.9.4.1}
+\contentsline {subsubsection}{\numberline {4.9.4.2}el\_demangle\_buf}{35}{subsubsection.4.9.4.2}
+\contentsline {subsubsection}{\numberline {4.9.4.3}el\_demangle\_len}{35}{subsubsection.4.9.4.3}
+\contentsline {subsubsection}{\numberline {4.9.4.4}el\_err\_code}{35}{subsubsection.4.9.4.4}
+\contentsline {subsubsection}{\numberline {4.9.4.5}el\_fp}{35}{subsubsection.4.9.4.5}
+\contentsline {subsubsection}{\numberline {4.9.4.6}el\_level}{36}{subsubsection.4.9.4.6}
+\contentsline {subsubsection}{\numberline {4.9.4.7}el\_level\_name}{36}{subsubsection.4.9.4.7}
+\contentsline {subsubsection}{\numberline {4.9.4.8}el\_lock}{36}{subsubsection.4.9.4.8}
+\contentsline {subsubsection}{\numberline {4.9.4.9}el\_logfile}{36}{subsubsection.4.9.4.9}
+\contentsline {subsubsection}{\numberline {4.9.4.10}el\_msg\_buf}{36}{subsubsection.4.9.4.10}
+\contentsline {subsubsection}{\numberline {4.9.4.11}el\_msg\_cap}{36}{subsubsection.4.9.4.11}
+\contentsline {subsubsection}{\numberline {4.9.4.12}el\_msg\_cur}{37}{subsubsection.4.9.4.12}
+\contentsline {subsubsection}{\numberline {4.9.4.13}el\_name\_2\_id}{37}{subsubsection.4.9.4.13}
+\contentsline {subsubsection}{\numberline {4.9.4.14}el\_thread\_name}{37}{subsubsection.4.9.4.14}
+\contentsline {subsubsection}{\numberline {4.9.4.15}el\_tloc}{37}{subsubsection.4.9.4.15}
+\contentsline {subsubsection}{\numberline {4.9.4.16}el\_tm}{37}{subsubsection.4.9.4.16}
+\contentsline {section}{\numberline {4.10}Executor Class Reference}{37}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{38}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}Member Function Documentation}{38}{subsection.4.10.2}
+\contentsline {subsubsection}{\numberline {4.10.2.1}close()}{38}{subsubsection.4.10.2.1}
+\contentsline {subsubsection}{\numberline {4.10.2.2}exec()}{38}{subsubsection.4.10.2.2}
+\contentsline {subsubsection}{\numberline {4.10.2.3}findCol()}{39}{subsubsection.4.10.2.3}
+\contentsline {subsubsection}{\numberline {4.10.2.4}getRank()}{39}{subsubsection.4.10.2.4}
+\contentsline {subsubsection}{\numberline {4.10.2.5}planner()}{40}{subsubsection.4.10.2.5}
+\contentsline {subsection}{\numberline {4.10.3}Member Data Documentation}{40}{subsection.4.10.3}
+\contentsline {subsubsection}{\numberline {4.10.3.1}current\_query}{40}{subsubsection.4.10.3.1}
+\contentsline {subsubsection}{\numberline {4.10.3.2}root}{40}{subsubsection.4.10.3.2}
+\contentsline {section}{\numberline {4.11}Filter Class Reference}{40}{section.4.11}
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{41}{subsection.4.11.1}
+\contentsline {subsection}{\numberline {4.11.2}Constructor \& Destructor Documentation}{42}{subsection.4.11.2}
+\contentsline {subsubsection}{\numberline {4.11.2.1}Filter()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/3]}}{42}{subsubsection.4.11.2.1}
+\contentsline {subsubsection}{\numberline {4.11.2.2}$\sim $Filter()}{42}{subsubsection.4.11.2.2}
+\contentsline {subsubsection}{\numberline {4.11.2.3}Filter()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/3]}}{42}{subsubsection.4.11.2.3}
+\contentsline {subsubsection}{\numberline {4.11.2.4}Filter()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/3]}}{42}{subsubsection.4.11.2.4}
+\contentsline {subsection}{\numberline {4.11.3}Member Function Documentation}{43}{subsection.4.11.3}
+\contentsline {subsubsection}{\numberline {4.11.3.1}close()}{43}{subsubsection.4.11.3.1}
+\contentsline {subsubsection}{\numberline {4.11.3.2}cmpEQ()}{43}{subsubsection.4.11.3.2}
+\contentsline {subsubsection}{\numberline {4.11.3.3}cmpGE()}{44}{subsubsection.4.11.3.3}
+\contentsline {subsubsection}{\numberline {4.11.3.4}cmpGT()}{44}{subsubsection.4.11.3.4}
+\contentsline {subsubsection}{\numberline {4.11.3.5}cmpLE()}{44}{subsubsection.4.11.3.5}
+\contentsline {subsubsection}{\numberline {4.11.3.6}cmpLT()}{45}{subsubsection.4.11.3.6}
+\contentsline {subsubsection}{\numberline {4.11.3.7}cmpNE()}{45}{subsubsection.4.11.3.7}
+\contentsline {subsubsection}{\numberline {4.11.3.8}getNext()}{46}{subsubsection.4.11.3.8}
+\contentsline {subsubsection}{\numberline {4.11.3.9}initCmpFunc()}{46}{subsubsection.4.11.3.9}
+\contentsline {subsubsection}{\numberline {4.11.3.10}open()}{46}{subsubsection.4.11.3.10}
+\contentsline {subsubsection}{\numberline {4.11.3.11}setChild()}{47}{subsubsection.4.11.3.11}
+\contentsline {subsubsection}{\numberline {4.11.3.12}setColumn()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{47}{subsubsection.4.11.3.12}
+\contentsline {subsubsection}{\numberline {4.11.3.13}setColumn()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{47}{subsubsection.4.11.3.13}
+\contentsline {subsubsection}{\numberline {4.11.3.14}setFiltCond()}{48}{subsubsection.4.11.3.14}
+\contentsline {subsection}{\numberline {4.11.4}Member Data Documentation}{48}{subsection.4.11.4}
+\contentsline {subsubsection}{\numberline {4.11.4.1}buf\_for\_child}{48}{subsubsection.4.11.4.1}
+\contentsline {subsubsection}{\numberline {4.11.4.2}child}{48}{subsubsection.4.11.4.2}
+\contentsline {subsubsection}{\numberline {4.11.4.3}child\_buf\_size}{48}{subsubsection.4.11.4.3}
+\contentsline {subsubsection}{\numberline {4.11.4.4}cmp\_func}{49}{subsubsection.4.11.4.4}
+\contentsline {subsubsection}{\numberline {4.11.4.5}cmp\_mtd}{49}{subsubsection.4.11.4.5}
+\contentsline {subsubsection}{\numberline {4.11.4.6}cmp\_table}{49}{subsubsection.4.11.4.6}
+\contentsline {subsubsection}{\numberline {4.11.4.7}filt\_off}{49}{subsubsection.4.11.4.7}
+\contentsline {subsubsection}{\numberline {4.11.4.8}filt\_pos}{49}{subsubsection.4.11.4.8}
+\contentsline {subsubsection}{\numberline {4.11.4.9}filt\_type}{49}{subsubsection.4.11.4.9}
+\contentsline {subsubsection}{\numberline {4.11.4.10}in\_tuple\_size}{49}{subsubsection.4.11.4.10}
+\contentsline {subsubsection}{\numberline {4.11.4.11}input\_cid}{49}{subsubsection.4.11.4.11}
+\contentsline {subsubsection}{\numberline {4.11.4.12}value}{50}{subsubsection.4.11.4.12}
+\contentsline {section}{\numberline {4.12}Gr\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Agg\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Record Class Reference}{50}{section.4.12}
+\contentsline {subsection}{\numberline {4.12.1}Detailed Description}{50}{subsection.4.12.1}
+\contentsline {subsection}{\numberline {4.12.2}Constructor \& Destructor Documentation}{50}{subsection.4.12.2}
+\contentsline {subsubsection}{\numberline {4.12.2.1}GrAggRecord()}{50}{subsubsection.4.12.2.1}
+\contentsline {subsection}{\numberline {4.12.3}Member Data Documentation}{51}{subsection.4.12.3}
+\contentsline {subsubsection}{\numberline {4.12.3.1}count}{51}{subsubsection.4.12.3.1}
+\contentsline {subsubsection}{\numberline {4.12.3.2}middle\_record}{51}{subsubsection.4.12.3.2}
+\contentsline {subsubsection}{\numberline {4.12.3.3}sum}{51}{subsubsection.4.12.3.3}
+\contentsline {section}{\numberline {4.13}Groupby\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Aggre\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::group\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}by\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hash Struct Reference}{51}{section.4.13}
+\contentsline {subsection}{\numberline {4.13.1}Member Function Documentation}{51}{subsection.4.13.1}
+\contentsline {subsubsection}{\numberline {4.13.1.1}operator()()}{51}{subsubsection.4.13.1.1}
+\contentsline {section}{\numberline {4.14}Groupby\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Aggre\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::group\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}by\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}key Struct Reference}{52}{section.4.14}
+\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{52}{subsection.4.14.1}
+\contentsline {subsection}{\numberline {4.14.2}Member Function Documentation}{52}{subsection.4.14.2}
+\contentsline {subsubsection}{\numberline {4.14.2.1}operator==()}{52}{subsubsection.4.14.2.1}
+\contentsline {subsection}{\numberline {4.14.3}Member Data Documentation}{52}{subsection.4.14.3}
+\contentsline {subsubsection}{\numberline {4.14.3.1}type\_array}{52}{subsubsection.4.14.3.1}
+\contentsline {subsubsection}{\numberline {4.14.3.2}value\_array}{52}{subsubsection.4.14.3.2}
+\contentsline {section}{\numberline {4.15}Groupby\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Aggre Class Reference}{53}{section.4.15}
+\contentsline {subsection}{\numberline {4.15.1}Detailed Description}{55}{subsection.4.15.1}
+\contentsline {subsection}{\numberline {4.15.2}Member Typedef Documentation}{55}{subsection.4.15.2}
+\contentsline {subsubsection}{\numberline {4.15.2.1}group\_by\_hash\_t}{55}{subsubsection.4.15.2.1}
+\contentsline {subsubsection}{\numberline {4.15.2.2}group\_by\_key\_t}{55}{subsubsection.4.15.2.2}
+\contentsline {subsubsection}{\numberline {4.15.2.3}group\_by\_type\_t}{55}{subsubsection.4.15.2.3}
+\contentsline {subsection}{\numberline {4.15.3}Constructor \& Destructor Documentation}{55}{subsection.4.15.3}
+\contentsline {subsubsection}{\numberline {4.15.3.1}GroupbyAggre()}{56}{subsubsection.4.15.3.1}
+\contentsline {subsubsection}{\numberline {4.15.3.2}$\sim $GroupbyAggre()}{56}{subsubsection.4.15.3.2}
+\contentsline {subsection}{\numberline {4.15.4}Member Function Documentation}{56}{subsection.4.15.4}
+\contentsline {subsubsection}{\numberline {4.15.4.1}avgFloat32()}{56}{subsubsection.4.15.4.1}
+\contentsline {subsubsection}{\numberline {4.15.4.2}avgFloat64()}{56}{subsubsection.4.15.4.2}
+\contentsline {subsubsection}{\numberline {4.15.4.3}avgInt16()}{57}{subsubsection.4.15.4.3}
+\contentsline {subsubsection}{\numberline {4.15.4.4}avgInt32()}{57}{subsubsection.4.15.4.4}
+\contentsline {subsubsection}{\numberline {4.15.4.5}avgInt64()}{57}{subsubsection.4.15.4.5}
+\contentsline {subsubsection}{\numberline {4.15.4.6}avgInt8()}{58}{subsubsection.4.15.4.6}
+\contentsline {subsubsection}{\numberline {4.15.4.7}close()}{58}{subsubsection.4.15.4.7}
+\contentsline {subsubsection}{\numberline {4.15.4.8}count()}{58}{subsubsection.4.15.4.8}
+\contentsline {subsubsection}{\numberline {4.15.4.9}finalCount()}{59}{subsubsection.4.15.4.9}
+\contentsline {subsubsection}{\numberline {4.15.4.10}finalFloat32Avg()}{59}{subsubsection.4.15.4.10}
+\contentsline {subsubsection}{\numberline {4.15.4.11}finalFloat32Sum()}{59}{subsubsection.4.15.4.11}
+\contentsline {subsubsection}{\numberline {4.15.4.12}finalFloat64Avg()}{60}{subsubsection.4.15.4.12}
+\contentsline {subsubsection}{\numberline {4.15.4.13}finalFloat64Sum()}{60}{subsubsection.4.15.4.13}
+\contentsline {subsubsection}{\numberline {4.15.4.14}finalInt16Sum()}{60}{subsubsection.4.15.4.14}
+\contentsline {subsubsection}{\numberline {4.15.4.15}finalInt32Sum()}{61}{subsubsection.4.15.4.15}
+\contentsline {subsubsection}{\numberline {4.15.4.16}finalInt64Sum()}{61}{subsubsection.4.15.4.16}
+\contentsline {subsubsection}{\numberline {4.15.4.17}finalInt8Sum()}{61}{subsubsection.4.15.4.17}
+\contentsline {subsubsection}{\numberline {4.15.4.18}finalIntAvg()}{62}{subsubsection.4.15.4.18}
+\contentsline {subsubsection}{\numberline {4.15.4.19}getNext()}{62}{subsubsection.4.15.4.19}
+\contentsline {subsubsection}{\numberline {4.15.4.20}initAvg()}{62}{subsubsection.4.15.4.20}
+\contentsline {subsubsection}{\numberline {4.15.4.21}initCount()}{63}{subsubsection.4.15.4.21}
+\contentsline {subsubsection}{\numberline {4.15.4.22}initFloat32Max()}{63}{subsubsection.4.15.4.22}
+\contentsline {subsubsection}{\numberline {4.15.4.23}initFloat32Min()}{63}{subsubsection.4.15.4.23}
+\contentsline {subsubsection}{\numberline {4.15.4.24}initFloat64Max()}{63}{subsubsection.4.15.4.24}
+\contentsline {subsubsection}{\numberline {4.15.4.25}initFloat64Min()}{64}{subsubsection.4.15.4.25}
+\contentsline {subsubsection}{\numberline {4.15.4.26}initInt16Max()}{64}{subsubsection.4.15.4.26}
+\contentsline {subsubsection}{\numberline {4.15.4.27}initInt16Min()}{64}{subsubsection.4.15.4.27}
+\contentsline {subsubsection}{\numberline {4.15.4.28}initInt32Max()}{65}{subsubsection.4.15.4.28}
+\contentsline {subsubsection}{\numberline {4.15.4.29}initInt32Min()}{65}{subsubsection.4.15.4.29}
+\contentsline {subsubsection}{\numberline {4.15.4.30}initInt64Max()}{65}{subsubsection.4.15.4.30}
+\contentsline {subsubsection}{\numberline {4.15.4.31}initInt64Min()}{66}{subsubsection.4.15.4.31}
+\contentsline {subsubsection}{\numberline {4.15.4.32}initInt8Max()}{66}{subsubsection.4.15.4.32}
+\contentsline {subsubsection}{\numberline {4.15.4.33}initInt8Min()}{66}{subsubsection.4.15.4.33}
+\contentsline {subsubsection}{\numberline {4.15.4.34}initSum()}{67}{subsubsection.4.15.4.34}
+\contentsline {subsubsection}{\numberline {4.15.4.35}maxFloat32()}{67}{subsubsection.4.15.4.35}
+\contentsline {subsubsection}{\numberline {4.15.4.36}maxFloat64()}{67}{subsubsection.4.15.4.36}
+\contentsline {subsubsection}{\numberline {4.15.4.37}maxInt16()}{68}{subsubsection.4.15.4.37}
+\contentsline {subsubsection}{\numberline {4.15.4.38}maxInt32()}{68}{subsubsection.4.15.4.38}
+\contentsline {subsubsection}{\numberline {4.15.4.39}maxInt64()}{68}{subsubsection.4.15.4.39}
+\contentsline {subsubsection}{\numberline {4.15.4.40}maxInt8()}{69}{subsubsection.4.15.4.40}
+\contentsline {subsubsection}{\numberline {4.15.4.41}minFloat32()}{69}{subsubsection.4.15.4.41}
+\contentsline {subsubsection}{\numberline {4.15.4.42}minFloat64()}{69}{subsubsection.4.15.4.42}
+\contentsline {subsubsection}{\numberline {4.15.4.43}minInt16()}{70}{subsubsection.4.15.4.43}
+\contentsline {subsubsection}{\numberline {4.15.4.44}minInt32()}{70}{subsubsection.4.15.4.44}
+\contentsline {subsubsection}{\numberline {4.15.4.45}minInt64()}{70}{subsubsection.4.15.4.45}
+\contentsline {subsubsection}{\numberline {4.15.4.46}minInt8()}{71}{subsubsection.4.15.4.46}
+\contentsline {subsubsection}{\numberline {4.15.4.47}open()}{71}{subsubsection.4.15.4.47}
+\contentsline {subsubsection}{\numberline {4.15.4.48}set()}{71}{subsubsection.4.15.4.48}
+\contentsline {subsubsection}{\numberline {4.15.4.49}setChild()}{72}{subsubsection.4.15.4.49}
+\contentsline {subsubsection}{\numberline {4.15.4.50}sumFloat32()}{72}{subsubsection.4.15.4.50}
+\contentsline {subsubsection}{\numberline {4.15.4.51}sumFloat64()}{72}{subsubsection.4.15.4.51}
+\contentsline {subsubsection}{\numberline {4.15.4.52}sumInt16()}{73}{subsubsection.4.15.4.52}
+\contentsline {subsubsection}{\numberline {4.15.4.53}sumInt32()}{73}{subsubsection.4.15.4.53}
+\contentsline {subsubsection}{\numberline {4.15.4.54}sumInt64()}{73}{subsubsection.4.15.4.54}
+\contentsline {subsubsection}{\numberline {4.15.4.55}sumInt8()}{74}{subsubsection.4.15.4.55}
+\contentsline {subsection}{\numberline {4.15.5}Member Data Documentation}{74}{subsection.4.15.5}
+\contentsline {subsubsection}{\numberline {4.15.5.1}aggr\_method}{74}{subsubsection.4.15.5.1}
+\contentsline {subsubsection}{\numberline {4.15.5.2}aggr\_pos}{74}{subsubsection.4.15.5.2}
+\contentsline {subsubsection}{\numberline {4.15.5.3}aggr\_type}{74}{subsubsection.4.15.5.3}
+\contentsline {subsubsection}{\numberline {4.15.5.4}avg\_table}{74}{subsubsection.4.15.5.4}
+\contentsline {subsubsection}{\numberline {4.15.5.5}buf\_for\_child}{75}{subsubsection.4.15.5.5}
+\contentsline {subsubsection}{\numberline {4.15.5.6}child}{75}{subsubsection.4.15.5.6}
+\contentsline {subsubsection}{\numberline {4.15.5.7}child\_buf\_size}{75}{subsubsection.4.15.5.7}
+\contentsline {subsubsection}{\numberline {4.15.5.8}child\_tuple\_size}{75}{subsubsection.4.15.5.8}
+\contentsline {subsubsection}{\numberline {4.15.5.9}conditions}{75}{subsubsection.4.15.5.9}
+\contentsline {subsubsection}{\numberline {4.15.5.10}final\_avg\_table}{75}{subsubsection.4.15.5.10}
+\contentsline {subsubsection}{\numberline {4.15.5.11}final\_method}{75}{subsubsection.4.15.5.11}
+\contentsline {subsubsection}{\numberline {4.15.5.12}final\_sum\_table}{75}{subsubsection.4.15.5.12}
+\contentsline {subsubsection}{\numberline {4.15.5.13}group\_by\_pos}{76}{subsubsection.4.15.5.13}
+\contentsline {subsubsection}{\numberline {4.15.5.14}group\_by\_size}{76}{subsubsection.4.15.5.14}
+\contentsline {subsubsection}{\numberline {4.15.5.15}group\_by\_type}{76}{subsubsection.4.15.5.15}
+\contentsline {subsubsection}{\numberline {4.15.5.16}groupby\_rank}{76}{subsubsection.4.15.5.16}
+\contentsline {subsubsection}{\numberline {4.15.5.17}hash\_group}{76}{subsubsection.4.15.5.17}
+\contentsline {subsubsection}{\numberline {4.15.5.18}in\_cid}{76}{subsubsection.4.15.5.18}
+\contentsline {subsubsection}{\numberline {4.15.5.19}init\_max\_table}{76}{subsubsection.4.15.5.19}
+\contentsline {subsubsection}{\numberline {4.15.5.20}init\_method}{77}{subsubsection.4.15.5.20}
+\contentsline {subsubsection}{\numberline {4.15.5.21}init\_min\_table}{77}{subsubsection.4.15.5.21}
+\contentsline {subsubsection}{\numberline {4.15.5.22}max\_table}{77}{subsubsection.4.15.5.22}
+\contentsline {subsubsection}{\numberline {4.15.5.23}middle\_buf\_array}{77}{subsubsection.4.15.5.23}
+\contentsline {subsubsection}{\numberline {4.15.5.24}middle\_buf\_size}{77}{subsubsection.4.15.5.24}
+\contentsline {subsubsection}{\numberline {4.15.5.25}middle\_tuple\_size}{77}{subsubsection.4.15.5.25}
+\contentsline {subsubsection}{\numberline {4.15.5.26}min\_table}{77}{subsubsection.4.15.5.26}
+\contentsline {subsubsection}{\numberline {4.15.5.27}next\_iter}{77}{subsubsection.4.15.5.27}
+\contentsline {subsubsection}{\numberline {4.15.5.28}out\_cid}{78}{subsubsection.4.15.5.28}
+\contentsline {subsubsection}{\numberline {4.15.5.29}sum\_table}{78}{subsubsection.4.15.5.29}
+\contentsline {section}{\numberline {4.16}Hash\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Cell Class Reference}{78}{section.4.16}
+\contentsline {subsection}{\numberline {4.16.1}Detailed Description}{78}{subsection.4.16.1}
+\contentsline {subsection}{\numberline {4.16.2}Member Data Documentation}{78}{subsection.4.16.2}
+\contentsline {subsubsection}{\numberline {4.16.2.1}capacity}{78}{subsubsection.4.16.2.1}
+\contentsline {subsubsection}{\numberline {4.16.2.2}ent}{79}{subsubsection.4.16.2.2}
+\contentsline {subsubsection}{\numberline {4.16.2.3}ents}{79}{subsubsection.4.16.2.3}
+\contentsline {subsubsection}{\numberline {4.16.2.4}hc\_num}{79}{subsubsection.4.16.2.4}
+\contentsline {subsubsection}{\numberline {4.16.2.5}}{79}{subsubsection.4.16.2.5}
+\contentsline {subsubsection}{\numberline {4.16.2.6}}{79}{subsubsection.4.16.2.6}
+\contentsline {section}{\numberline {4.17}Hashcode\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Ptr Class Reference}{79}{section.4.17}
+\contentsline {subsection}{\numberline {4.17.1}Detailed Description}{80}{subsection.4.17.1}
+\contentsline {subsection}{\numberline {4.17.2}Member Data Documentation}{80}{subsection.4.17.2}
+\contentsline {subsubsection}{\numberline {4.17.2.1}hash\_code}{80}{subsubsection.4.17.2.1}
+\contentsline {subsubsection}{\numberline {4.17.2.2}tuple}{80}{subsubsection.4.17.2.2}
+\contentsline {section}{\numberline {4.18}Hash\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Index Class Reference}{80}{section.4.18}
+\contentsline {subsection}{\numberline {4.18.1}Detailed Description}{81}{subsection.4.18.1}
+\contentsline {subsection}{\numberline {4.18.2}Constructor \& Destructor Documentation}{81}{subsection.4.18.2}
+\contentsline {subsubsection}{\numberline {4.18.2.1}HashIndex()}{81}{subsubsection.4.18.2.1}
+\contentsline {subsection}{\numberline {4.18.3}Member Function Documentation}{82}{subsection.4.18.3}
+\contentsline {subsubsection}{\numberline {4.18.3.1}addIndexDTpye()}{82}{subsubsection.4.18.3.1}
+\contentsline {subsubsection}{\numberline {4.18.3.2}cmpEQ()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{82}{subsubsection.4.18.3.2}
+\contentsline {subsubsection}{\numberline {4.18.3.3}cmpEQ()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{83}{subsubsection.4.18.3.3}
+\contentsline {subsubsection}{\numberline {4.18.3.4}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{83}{subsubsection.4.18.3.4}
+\contentsline {subsubsection}{\numberline {4.18.3.5}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{83}{subsubsection.4.18.3.5}
+\contentsline {subsubsection}{\numberline {4.18.3.6}finish()}{84}{subsubsection.4.18.3.6}
+\contentsline {subsubsection}{\numberline {4.18.3.7}hash()}{84}{subsubsection.4.18.3.7}
+\contentsline {subsubsection}{\numberline {4.18.3.8}init()}{85}{subsubsection.4.18.3.8}
+\contentsline {subsubsection}{\numberline {4.18.3.9}insert()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{85}{subsubsection.4.18.3.9}
+\contentsline {subsubsection}{\numberline {4.18.3.10}insert()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{85}{subsubsection.4.18.3.10}
+\contentsline {subsubsection}{\numberline {4.18.3.11}lookup()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{86}{subsubsection.4.18.3.11}
+\contentsline {subsubsection}{\numberline {4.18.3.12}lookup()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{86}{subsubsection.4.18.3.12}
+\contentsline {subsubsection}{\numberline {4.18.3.13}print()}{87}{subsubsection.4.18.3.13}
+\contentsline {subsubsection}{\numberline {4.18.3.14}set\_ls()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{87}{subsubsection.4.18.3.14}
+\contentsline {subsubsection}{\numberline {4.18.3.15}set\_ls()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{87}{subsubsection.4.18.3.15}
+\contentsline {subsubsection}{\numberline {4.18.3.16}setCellCap()}{88}{subsubsection.4.18.3.16}
+\contentsline {subsubsection}{\numberline {4.18.3.17}shut()}{88}{subsubsection.4.18.3.17}
+\contentsline {subsubsection}{\numberline {4.18.3.18}tranToInt64()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{89}{subsubsection.4.18.3.18}
+\contentsline {subsubsection}{\numberline {4.18.3.19}tranToInt64()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{89}{subsubsection.4.18.3.19}
+\contentsline {subsection}{\numberline {4.18.4}Member Data Documentation}{89}{subsection.4.18.4}
+\contentsline {subsubsection}{\numberline {4.18.4.1}ih\_cell\_capbits}{89}{subsubsection.4.18.4.1}
+\contentsline {subsubsection}{\numberline {4.18.4.2}ih\_column\_cap}{90}{subsubsection.4.18.4.2}
+\contentsline {subsubsection}{\numberline {4.18.4.3}ih\_column\_num}{90}{subsubsection.4.18.4.3}
+\contentsline {subsubsection}{\numberline {4.18.4.4}ih\_datatype}{90}{subsubsection.4.18.4.4}
+\contentsline {subsubsection}{\numberline {4.18.4.5}ih\_hash\_bits}{90}{subsubsection.4.18.4.5}
+\contentsline {subsubsection}{\numberline {4.18.4.6}ih\_hashtable}{90}{subsubsection.4.18.4.6}
+\contentsline {subsubsection}{\numberline {4.18.4.7}ih\_table\_offset}{90}{subsubsection.4.18.4.7}
+\contentsline {section}{\numberline {4.19}Hash\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Info Struct Reference}{90}{section.4.19}
+\contentsline {subsection}{\numberline {4.19.1}Detailed Description}{91}{subsection.4.19.1}
+\contentsline {subsection}{\numberline {4.19.2}Member Data Documentation}{91}{subsection.4.19.2}
+\contentsline {subsubsection}{\numberline {4.19.2.1}hash}{91}{subsubsection.4.19.2.1}
+\contentsline {subsubsection}{\numberline {4.19.2.2}last}{91}{subsubsection.4.19.2.2}
+\contentsline {subsubsection}{\numberline {4.19.2.3}ppos}{91}{subsubsection.4.19.2.3}
+\contentsline {subsubsection}{\numberline {4.19.2.4}result}{91}{subsubsection.4.19.2.4}
+\contentsline {subsubsection}{\numberline {4.19.2.5}rnum}{92}{subsubsection.4.19.2.5}
+\contentsline {section}{\numberline {4.20}Hash\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Join Class Reference}{92}{section.4.20}
+\contentsline {subsection}{\numberline {4.20.1}Detailed Description}{93}{subsection.4.20.1}
+\contentsline {subsection}{\numberline {4.20.2}Constructor \& Destructor Documentation}{93}{subsection.4.20.2}
+\contentsline {subsubsection}{\numberline {4.20.2.1}HashJoin()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{93}{subsubsection.4.20.2.1}
+\contentsline {subsubsection}{\numberline {4.20.2.2}$\sim $HashJoin()}{93}{subsubsection.4.20.2.2}
+\contentsline {subsubsection}{\numberline {4.20.2.3}HashJoin()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{93}{subsubsection.4.20.2.3}
+\contentsline {subsection}{\numberline {4.20.3}Member Function Documentation}{93}{subsection.4.20.3}
+\contentsline {subsubsection}{\numberline {4.20.3.1}close()}{94}{subsubsection.4.20.3.1}
+\contentsline {subsubsection}{\numberline {4.20.3.2}getNext()}{94}{subsubsection.4.20.3.2}
+\contentsline {subsubsection}{\numberline {4.20.3.3}open()}{94}{subsubsection.4.20.3.3}
+\contentsline {subsection}{\numberline {4.20.4}Member Data Documentation}{94}{subsection.4.20.4}
+\contentsline {subsubsection}{\numberline {4.20.4.1}hash\_index}{95}{subsubsection.4.20.4.1}
+\contentsline {subsubsection}{\numberline {4.20.4.2}last\_iter}{95}{subsubsection.4.20.4.2}
+\contentsline {subsubsection}{\numberline {4.20.4.3}left\_buf}{95}{subsubsection.4.20.4.3}
+\contentsline {subsubsection}{\numberline {4.20.4.4}left\_key\_off}{95}{subsubsection.4.20.4.4}
+\contentsline {subsubsection}{\numberline {4.20.4.5}left\_key\_type}{95}{subsubsection.4.20.4.5}
+\contentsline {subsubsection}{\numberline {4.20.4.6}left\_tuple\_size}{95}{subsubsection.4.20.4.6}
+\contentsline {subsubsection}{\numberline {4.20.4.7}middle\_buf\_array}{95}{subsubsection.4.20.4.7}
+\contentsline {subsubsection}{\numberline {4.20.4.8}middle\_buf\_size}{95}{subsubsection.4.20.4.8}
+\contentsline {subsubsection}{\numberline {4.20.4.9}right\_buf}{96}{subsubsection.4.20.4.9}
+\contentsline {subsubsection}{\numberline {4.20.4.10}right\_buf\_size}{96}{subsubsection.4.20.4.10}
+\contentsline {subsubsection}{\numberline {4.20.4.11}right\_has\_next}{96}{subsubsection.4.20.4.11}
+\contentsline {subsubsection}{\numberline {4.20.4.12}right\_key\_pos}{96}{subsubsection.4.20.4.12}
+\contentsline {subsubsection}{\numberline {4.20.4.13}right\_key\_type}{96}{subsubsection.4.20.4.13}
+\contentsline {subsubsection}{\numberline {4.20.4.14}right\_tuple\_size}{96}{subsubsection.4.20.4.14}
+\contentsline {subsubsection}{\numberline {4.20.4.15}txt\_buf}{96}{subsubsection.4.20.4.15}
+\contentsline {subsubsection}{\numberline {4.20.4.16}upper\_iter}{97}{subsubsection.4.20.4.16}
+\contentsline {section}{\numberline {4.21}Hash\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Table Class Reference}{97}{section.4.21}
+\contentsline {subsection}{\numberline {4.21.1}Detailed Description}{98}{subsection.4.21.1}
+\contentsline {subsection}{\numberline {4.21.2}Constructor \& Destructor Documentation}{98}{subsection.4.21.2}
+\contentsline {subsubsection}{\numberline {4.21.2.1}HashTable()}{98}{subsubsection.4.21.2.1}
+\contentsline {subsubsection}{\numberline {4.21.2.2}$\sim $HashTable()}{98}{subsubsection.4.21.2.2}
+\contentsline {subsection}{\numberline {4.21.3}Member Function Documentation}{98}{subsection.4.21.3}
+\contentsline {subsubsection}{\numberline {4.21.3.1}add()}{98}{subsubsection.4.21.3.1}
+\contentsline {subsubsection}{\numberline {4.21.3.2}allocate()}{99}{subsubsection.4.21.3.2}
+\contentsline {subsubsection}{\numberline {4.21.3.3}del()}{99}{subsubsection.4.21.3.3}
+\contentsline {subsubsection}{\numberline {4.21.3.4}free()}{99}{subsubsection.4.21.3.4}
+\contentsline {subsubsection}{\numberline {4.21.3.5}probe()}{100}{subsubsection.4.21.3.5}
+\contentsline {subsubsection}{\numberline {4.21.3.6}probe\_contd()}{100}{subsubsection.4.21.3.6}
+\contentsline {subsubsection}{\numberline {4.21.3.7}show()}{100}{subsubsection.4.21.3.7}
+\contentsline {subsubsection}{\numberline {4.21.3.8}size\_to\_slot()}{101}{subsubsection.4.21.3.8}
+\contentsline {subsubsection}{\numberline {4.21.3.9}utilization()}{101}{subsubsection.4.21.3.9}
+\contentsline {subsection}{\numberline {4.21.4}Member Data Documentation}{101}{subsection.4.21.4}
+\contentsline {subsubsection}{\numberline {4.21.4.1}avail}{101}{subsubsection.4.21.4.1}
+\contentsline {subsubsection}{\numberline {4.21.4.2}begin}{101}{subsubsection.4.21.4.2}
+\contentsline {subsubsection}{\numberline {4.21.4.3}end}{101}{subsubsection.4.21.4.3}
+\contentsline {subsubsection}{\numberline {4.21.4.4}estimated\_duplicates\_per\_key}{101}{subsubsection.4.21.4.4}
+\contentsline {subsubsection}{\numberline {4.21.4.5}estimated\_num\_distinct\_keys}{102}{subsubsection.4.21.4.5}
+\contentsline {subsubsection}{\numberline {4.21.4.6}free\_header}{102}{subsubsection.4.21.4.6}
+\contentsline {subsubsection}{\numberline {4.21.4.7}initial\_array\_size}{102}{subsubsection.4.21.4.7}
+\contentsline {subsubsection}{\numberline {4.21.4.8}more\_allocated}{102}{subsubsection.4.21.4.8}
+\contentsline {subsubsection}{\numberline {4.21.4.9}pointer2size}{102}{subsubsection.4.21.4.9}
+\contentsline {subsubsection}{\numberline {4.21.4.10}table}{102}{subsubsection.4.21.4.10}
+\contentsline {subsubsection}{\numberline {4.21.4.11}table\_size}{102}{subsubsection.4.21.4.11}
+\contentsline {section}{\numberline {4.22}Index Class Reference}{103}{section.4.22}
+\contentsline {subsection}{\numberline {4.22.1}Detailed Description}{104}{subsection.4.22.1}
+\contentsline {subsection}{\numberline {4.22.2}Constructor \& Destructor Documentation}{104}{subsection.4.22.2}
+\contentsline {subsubsection}{\numberline {4.22.2.1}Index()}{104}{subsubsection.4.22.2.1}
+\contentsline {subsubsection}{\numberline {4.22.2.2}$\sim $Index()}{104}{subsubsection.4.22.2.2}
+\contentsline {subsection}{\numberline {4.22.3}Member Function Documentation}{104}{subsection.4.22.3}
+\contentsline {subsubsection}{\numberline {4.22.3.1}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/4]}}{104}{subsubsection.4.22.3.1}
+\contentsline {subsubsection}{\numberline {4.22.3.2}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/4]}}{105}{subsubsection.4.22.3.2}
+\contentsline {subsubsection}{\numberline {4.22.3.3}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/4]}}{105}{subsubsection.4.22.3.3}
+\contentsline {subsubsection}{\numberline {4.22.3.4}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [4/4]}}{106}{subsubsection.4.22.3.4}
+\contentsline {subsubsection}{\numberline {4.22.3.5}finish()}{106}{subsubsection.4.22.3.5}
+\contentsline {subsubsection}{\numberline {4.22.3.6}getIKey()}{106}{subsubsection.4.22.3.6}
+\contentsline {subsubsection}{\numberline {4.22.3.7}getIndexTid()}{107}{subsubsection.4.22.3.7}
+\contentsline {subsubsection}{\numberline {4.22.3.8}getIType()}{107}{subsubsection.4.22.3.8}
+\contentsline {subsubsection}{\numberline {4.22.3.9}init()}{107}{subsubsection.4.22.3.9}
+\contentsline {subsubsection}{\numberline {4.22.3.10}insert()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{107}{subsubsection.4.22.3.10}
+\contentsline {subsubsection}{\numberline {4.22.3.11}insert()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{108}{subsubsection.4.22.3.11}
+\contentsline {subsubsection}{\numberline {4.22.3.12}lookup()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/4]}}{108}{subsubsection.4.22.3.12}
+\contentsline {subsubsection}{\numberline {4.22.3.13}lookup()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/4]}}{108}{subsubsection.4.22.3.13}
+\contentsline {subsubsection}{\numberline {4.22.3.14}lookup()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/4]}}{109}{subsubsection.4.22.3.14}
+\contentsline {subsubsection}{\numberline {4.22.3.15}lookup()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [4/4]}}{109}{subsubsection.4.22.3.15}
+\contentsline {subsubsection}{\numberline {4.22.3.16}print()}{110}{subsubsection.4.22.3.16}
+\contentsline {subsubsection}{\numberline {4.22.3.17}scan()}{110}{subsubsection.4.22.3.17}
+\contentsline {subsubsection}{\numberline {4.22.3.18}scan\_1()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{110}{subsubsection.4.22.3.18}
+\contentsline {subsubsection}{\numberline {4.22.3.19}scan\_1()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{112}{subsubsection.4.22.3.19}
+\contentsline {subsubsection}{\numberline {4.22.3.20}scan\_2()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{112}{subsubsection.4.22.3.20}
+\contentsline {subsubsection}{\numberline {4.22.3.21}scan\_2()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{113}{subsubsection.4.22.3.21}
+\contentsline {subsubsection}{\numberline {4.22.3.22}set\_ls()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{113}{subsubsection.4.22.3.22}
+\contentsline {subsubsection}{\numberline {4.22.3.23}set\_ls()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{114}{subsubsection.4.22.3.23}
+\contentsline {subsubsection}{\numberline {4.22.3.24}setIndexTid()}{114}{subsubsection.4.22.3.24}
+\contentsline {subsubsection}{\numberline {4.22.3.25}shut()}{114}{subsubsection.4.22.3.25}
+\contentsline {subsubsection}{\numberline {4.22.3.26}tranToInt64()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{114}{subsubsection.4.22.3.26}
+\contentsline {subsubsection}{\numberline {4.22.3.27}tranToInt64()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{115}{subsubsection.4.22.3.27}
+\contentsline {subsubsection}{\numberline {4.22.3.28}update()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{115}{subsubsection.4.22.3.28}
+\contentsline {subsubsection}{\numberline {4.22.3.29}update()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{115}{subsubsection.4.22.3.29}
+\contentsline {subsection}{\numberline {4.22.4}Member Data Documentation}{116}{subsection.4.22.4}
+\contentsline {subsubsection}{\numberline {4.22.4.1}i\_key}{116}{subsubsection.4.22.4.1}
+\contentsline {subsubsection}{\numberline {4.22.4.2}i\_t\_id}{116}{subsubsection.4.22.4.2}
+\contentsline {subsubsection}{\numberline {4.22.4.3}i\_type}{116}{subsubsection.4.22.4.3}
+\contentsline {section}{\numberline {4.23}Index\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Join Class Reference}{116}{section.4.23}
+\contentsline {subsection}{\numberline {4.23.1}Detailed Description}{117}{subsection.4.23.1}
+\contentsline {subsection}{\numberline {4.23.2}Constructor \& Destructor Documentation}{117}{subsection.4.23.2}
+\contentsline {subsubsection}{\numberline {4.23.2.1}IndexJoin()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{117}{subsubsection.4.23.2.1}
+\contentsline {subsubsection}{\numberline {4.23.2.2}$\sim $IndexJoin()}{117}{subsubsection.4.23.2.2}
+\contentsline {subsubsection}{\numberline {4.23.2.3}IndexJoin()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{117}{subsubsection.4.23.2.3}
+\contentsline {subsection}{\numberline {4.23.3}Member Function Documentation}{118}{subsection.4.23.3}
+\contentsline {subsubsection}{\numberline {4.23.3.1}close()}{118}{subsubsection.4.23.3.1}
+\contentsline {subsubsection}{\numberline {4.23.3.2}getNext()}{118}{subsubsection.4.23.3.2}
+\contentsline {subsubsection}{\numberline {4.23.3.3}open()}{118}{subsubsection.4.23.3.3}
+\contentsline {subsection}{\numberline {4.23.4}Member Data Documentation}{119}{subsection.4.23.4}
+\contentsline {subsubsection}{\numberline {4.23.4.1}current\_key}{119}{subsubsection.4.23.4.1}
+\contentsline {subsubsection}{\numberline {4.23.4.2}left\_buf}{119}{subsubsection.4.23.4.2}
+\contentsline {subsubsection}{\numberline {4.23.4.3}left\_buf\_size}{119}{subsubsection.4.23.4.3}
+\contentsline {subsubsection}{\numberline {4.23.4.4}left\_tuple\_size}{119}{subsubsection.4.23.4.4}
+\contentsline {subsubsection}{\numberline {4.23.4.5}right\_buf}{119}{subsubsection.4.23.4.5}
+\contentsline {subsubsection}{\numberline {4.23.4.6}right\_buf\_size}{119}{subsubsection.4.23.4.6}
+\contentsline {subsubsection}{\numberline {4.23.4.7}right\_has\_next}{119}{subsubsection.4.23.4.7}
+\contentsline {subsubsection}{\numberline {4.23.4.8}right\_tuple\_size}{120}{subsubsection.4.23.4.8}
+\contentsline {section}{\numberline {4.24}Index\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Scan Class Reference}{120}{section.4.24}
+\contentsline {subsection}{\numberline {4.24.1}Detailed Description}{120}{subsection.4.24.1}
+\contentsline {subsection}{\numberline {4.24.2}Constructor \& Destructor Documentation}{121}{subsection.4.24.2}
+\contentsline {subsubsection}{\numberline {4.24.2.1}IndexScan()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{121}{subsubsection.4.24.2.1}
+\contentsline {subsubsection}{\numberline {4.24.2.2}IndexScan()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{121}{subsubsection.4.24.2.2}
+\contentsline {subsubsection}{\numberline {4.24.2.3}$\sim $IndexScan()}{121}{subsubsection.4.24.2.3}
+\contentsline {subsection}{\numberline {4.24.3}Member Function Documentation}{121}{subsection.4.24.3}
+\contentsline {subsubsection}{\numberline {4.24.3.1}close()}{121}{subsubsection.4.24.3.1}
+\contentsline {subsubsection}{\numberline {4.24.3.2}getNext()}{122}{subsubsection.4.24.3.2}
+\contentsline {subsubsection}{\numberline {4.24.3.3}open()}{122}{subsubsection.4.24.3.3}
+\contentsline {subsubsection}{\numberline {4.24.3.4}setTabIdx()}{122}{subsubsection.4.24.3.4}
+\contentsline {subsubsection}{\numberline {4.24.3.5}updateKey()}{123}{subsubsection.4.24.3.5}
+\contentsline {subsection}{\numberline {4.24.4}Member Data Documentation}{123}{subsection.4.24.4}
+\contentsline {subsubsection}{\numberline {4.24.4.1}current\_key}{123}{subsubsection.4.24.4.1}
+\contentsline {subsubsection}{\numberline {4.24.4.2}from}{123}{subsubsection.4.24.4.2}
+\contentsline {subsubsection}{\numberline {4.24.4.3}i\_type}{123}{subsubsection.4.24.4.3}
+\contentsline {subsubsection}{\numberline {4.24.4.4}index}{123}{subsubsection.4.24.4.4}
+\contentsline {subsubsection}{\numberline {4.24.4.5}info\_ptr}{123}{subsubsection.4.24.4.5}
+\contentsline {subsubsection}{\numberline {4.24.4.6}key\_end}{124}{subsubsection.4.24.4.6}
+\contentsline {section}{\numberline {4.25}Join Class Reference}{124}{section.4.25}
+\contentsline {subsection}{\numberline {4.25.1}Detailed Description}{125}{subsection.4.25.1}
+\contentsline {subsection}{\numberline {4.25.2}Constructor \& Destructor Documentation}{125}{subsection.4.25.2}
+\contentsline {subsubsection}{\numberline {4.25.2.1}Join()}{125}{subsubsection.4.25.2.1}
+\contentsline {subsubsection}{\numberline {4.25.2.2}$\sim $Join()}{125}{subsubsection.4.25.2.2}
+\contentsline {subsection}{\numberline {4.25.3}Member Function Documentation}{125}{subsection.4.25.3}
+\contentsline {subsubsection}{\numberline {4.25.3.1}close()}{125}{subsubsection.4.25.3.1}
+\contentsline {subsubsection}{\numberline {4.25.3.2}getLeftCol()}{126}{subsubsection.4.25.3.2}
+\contentsline {subsubsection}{\numberline {4.25.3.3}getLeftOp()}{126}{subsubsection.4.25.3.3}
+\contentsline {subsubsection}{\numberline {4.25.3.4}getLeftRank()}{126}{subsubsection.4.25.3.4}
+\contentsline {subsubsection}{\numberline {4.25.3.5}getNext()}{126}{subsubsection.4.25.3.5}
+\contentsline {subsubsection}{\numberline {4.25.3.6}getRightCol()}{127}{subsubsection.4.25.3.6}
+\contentsline {subsubsection}{\numberline {4.25.3.7}getRightOp()}{127}{subsubsection.4.25.3.7}
+\contentsline {subsubsection}{\numberline {4.25.3.8}getRightRank()}{127}{subsubsection.4.25.3.8}
+\contentsline {subsubsection}{\numberline {4.25.3.9}open()}{127}{subsubsection.4.25.3.9}
+\contentsline {subsubsection}{\numberline {4.25.3.10}setJoinCol()}{128}{subsubsection.4.25.3.10}
+\contentsline {subsubsection}{\numberline {4.25.3.11}setLeftOp()}{128}{subsubsection.4.25.3.11}
+\contentsline {subsubsection}{\numberline {4.25.3.12}setRightOp()}{128}{subsubsection.4.25.3.12}
+\contentsline {subsection}{\numberline {4.25.4}Member Data Documentation}{129}{subsection.4.25.4}
+\contentsline {subsubsection}{\numberline {4.25.4.1}left}{129}{subsubsection.4.25.4.1}
+\contentsline {subsubsection}{\numberline {4.25.4.2}left\_cid}{129}{subsubsection.4.25.4.2}
+\contentsline {subsubsection}{\numberline {4.25.4.3}left\_rank}{129}{subsubsection.4.25.4.3}
+\contentsline {subsubsection}{\numberline {4.25.4.4}right}{129}{subsubsection.4.25.4.4}
+\contentsline {subsubsection}{\numberline {4.25.4.5}right\_cid}{129}{subsubsection.4.25.4.5}
+\contentsline {subsubsection}{\numberline {4.25.4.6}right\_rank}{129}{subsubsection.4.25.4.6}
+\contentsline {section}{\numberline {4.26}Key Class Reference}{130}{section.4.26}
+\contentsline {subsection}{\numberline {4.26.1}Detailed Description}{130}{subsection.4.26.1}
+\contentsline {subsection}{\numberline {4.26.2}Constructor \& Destructor Documentation}{130}{subsection.4.26.2}
+\contentsline {subsubsection}{\numberline {4.26.2.1}Key()}{130}{subsubsection.4.26.2.1}
+\contentsline {subsection}{\numberline {4.26.3}Member Function Documentation}{130}{subsection.4.26.3}
+\contentsline {subsubsection}{\numberline {4.26.3.1}contain()}{130}{subsubsection.4.26.3.1}
+\contentsline {subsubsection}{\numberline {4.26.3.2}getKey()}{131}{subsubsection.4.26.3.2}
+\contentsline {subsubsection}{\numberline {4.26.3.3}operator=()}{131}{subsubsection.4.26.3.3}
+\contentsline {subsubsection}{\numberline {4.26.3.4}print()}{131}{subsubsection.4.26.3.4}
+\contentsline {subsubsection}{\numberline {4.26.3.5}set()}{131}{subsubsection.4.26.3.5}
+\contentsline {subsection}{\numberline {4.26.4}Member Data Documentation}{131}{subsection.4.26.4}
+\contentsline {subsubsection}{\numberline {4.26.4.1}key}{132}{subsubsection.4.26.4.1}
+\contentsline {section}{\numberline {4.27}Memory Class Reference}{132}{section.4.27}
+\contentsline {subsection}{\numberline {4.27.1}Member Function Documentation}{132}{subsection.4.27.1}
+\contentsline {subsubsection}{\numberline {4.27.1.1}alloc()}{132}{subsubsection.4.27.1.1}
+\contentsline {subsubsection}{\numberline {4.27.1.2}alloc\_default()}{133}{subsubsection.4.27.1.2}
+\contentsline {subsubsection}{\numberline {4.27.1.3}allocTableAddr()}{133}{subsubsection.4.27.1.3}
+\contentsline {subsubsection}{\numberline {4.27.1.4}free()}{134}{subsubsection.4.27.1.4}
+\contentsline {subsubsection}{\numberline {4.27.1.5}init()}{134}{subsubsection.4.27.1.5}
+\contentsline {subsubsection}{\numberline {4.27.1.6}print()}{134}{subsubsection.4.27.1.6}
+\contentsline {subsubsection}{\numberline {4.27.1.7}shut()}{135}{subsubsection.4.27.1.7}
+\contentsline {subsubsection}{\numberline {4.27.1.8}slot()}{135}{subsubsection.4.27.1.8}
+\contentsline {subsection}{\numberline {4.27.2}Member Data Documentation}{135}{subsection.4.27.2}
+\contentsline {subsubsection}{\numberline {4.27.2.1}m\_array\_list}{135}{subsubsection.4.27.2.1}
+\contentsline {subsubsection}{\numberline {4.27.2.2}m\_curr}{135}{subsubsection.4.27.2.2}
+\contentsline {subsubsection}{\numberline {4.27.2.3}m\_head}{135}{subsubsection.4.27.2.3}
+\contentsline {subsubsection}{\numberline {4.27.2.4}m\_mins}{135}{subsubsection.4.27.2.4}
+\contentsline {subsubsection}{\numberline {4.27.2.5}m\_table\_addr}{135}{subsubsection.4.27.2.5}
+\contentsline {subsubsection}{\numberline {4.27.2.6}m\_tail}{136}{subsubsection.4.27.2.6}
+\contentsline {subsubsection}{\numberline {4.27.2.7}m\_total}{136}{subsubsection.4.27.2.7}
+\contentsline {section}{\numberline {4.28}MStorage Class Reference}{136}{section.4.28}
+\contentsline {subsection}{\numberline {4.28.1}Detailed Description}{136}{subsection.4.28.1}
+\contentsline {subsection}{\numberline {4.28.2}Member Function Documentation}{137}{subsection.4.28.2}
+\contentsline {subsubsection}{\numberline {4.28.2.1}allocRow()}{137}{subsubsection.4.28.2.1}
+\contentsline {subsubsection}{\numberline {4.28.2.2}expand()}{137}{subsubsection.4.28.2.2}
+\contentsline {subsubsection}{\numberline {4.28.2.3}getRecordNum()}{137}{subsubsection.4.28.2.3}
+\contentsline {subsubsection}{\numberline {4.28.2.4}getRow()}{137}{subsubsection.4.28.2.4}
+\contentsline {subsubsection}{\numberline {4.28.2.5}init()}{138}{subsubsection.4.28.2.5}
+\contentsline {subsubsection}{\numberline {4.28.2.6}shut()}{138}{subsubsection.4.28.2.6}
+\contentsline {subsection}{\numberline {4.28.3}Member Data Documentation}{138}{subsection.4.28.3}
+\contentsline {subsubsection}{\numberline {4.28.3.1}ms\_memory}{138}{subsubsection.4.28.3.1}
+\contentsline {subsubsection}{\numberline {4.28.3.2}ms\_memory\_cur}{139}{subsubsection.4.28.3.2}
+\contentsline {subsubsection}{\numberline {4.28.3.3}ms\_memory\_size}{139}{subsubsection.4.28.3.3}
+\contentsline {subsubsection}{\numberline {4.28.3.4}ms\_record\_max}{139}{subsubsection.4.28.3.4}
+\contentsline {subsubsection}{\numberline {4.28.3.5}ms\_record\_num}{139}{subsubsection.4.28.3.5}
+\contentsline {subsubsection}{\numberline {4.28.3.6}ms\_record\_size}{139}{subsubsection.4.28.3.6}
+\contentsline {subsubsection}{\numberline {4.28.3.7}pad}{139}{subsubsection.4.28.3.7}
+\contentsline {section}{\numberline {4.29}Object Class Reference}{139}{section.4.29}
+\contentsline {subsection}{\numberline {4.29.1}Detailed Description}{140}{subsection.4.29.1}
+\contentsline {subsection}{\numberline {4.29.2}Constructor \& Destructor Documentation}{140}{subsection.4.29.2}
+\contentsline {subsubsection}{\numberline {4.29.2.1}Object()}{140}{subsubsection.4.29.2.1}
+\contentsline {subsection}{\numberline {4.29.3}Member Function Documentation}{140}{subsection.4.29.3}
+\contentsline {subsubsection}{\numberline {4.29.3.1}changeName()}{140}{subsubsection.4.29.3.1}
+\contentsline {subsubsection}{\numberline {4.29.3.2}getOid()}{141}{subsubsection.4.29.3.2}
+\contentsline {subsubsection}{\numberline {4.29.3.3}getOname()}{141}{subsubsection.4.29.3.3}
+\contentsline {subsubsection}{\numberline {4.29.3.4}getOtype()}{141}{subsubsection.4.29.3.4}
+\contentsline {subsubsection}{\numberline {4.29.3.5}print()}{141}{subsubsection.4.29.3.5}
+\contentsline {subsubsection}{\numberline {4.29.3.6}shut()}{141}{subsubsection.4.29.3.6}
+\contentsline {subsection}{\numberline {4.29.4}Member Data Documentation}{141}{subsection.4.29.4}
+\contentsline {subsubsection}{\numberline {4.29.4.1}o\_id}{142}{subsubsection.4.29.4.1}
+\contentsline {subsubsection}{\numberline {4.29.4.2}o\_name}{142}{subsubsection.4.29.4.2}
+\contentsline {subsubsection}{\numberline {4.29.4.3}o\_type}{142}{subsubsection.4.29.4.3}
+\contentsline {section}{\numberline {4.30}Operator Class Reference}{142}{section.4.30}
+\contentsline {subsection}{\numberline {4.30.1}Constructor \& Destructor Documentation}{143}{subsection.4.30.1}
+\contentsline {subsubsection}{\numberline {4.30.1.1}Operator()}{143}{subsubsection.4.30.1.1}
+\contentsline {subsubsection}{\numberline {4.30.1.2}$\sim $Operator()}{143}{subsubsection.4.30.1.2}
+\contentsline {subsection}{\numberline {4.30.2}Member Function Documentation}{143}{subsection.4.30.2}
+\contentsline {subsubsection}{\numberline {4.30.2.1}close()}{143}{subsubsection.4.30.2.1}
+\contentsline {subsubsection}{\numberline {4.30.2.2}getBuffer()}{143}{subsubsection.4.30.2.2}
+\contentsline {subsubsection}{\numberline {4.30.2.3}getNext()}{144}{subsubsection.4.30.2.3}
+\contentsline {subsubsection}{\numberline {4.30.2.4}open()}{144}{subsubsection.4.30.2.4}
+\contentsline {subsubsection}{\numberline {4.30.2.5}setBuffer()}{144}{subsubsection.4.30.2.5}
+\contentsline {subsection}{\numberline {4.30.3}Member Data Documentation}{144}{subsection.4.30.3}
+\contentsline {subsubsection}{\numberline {4.30.3.1}buffer\_from\_father}{145}{subsubsection.4.30.3.1}
+\contentsline {section}{\numberline {4.31}Orderby Class Reference}{145}{section.4.31}
+\contentsline {subsection}{\numberline {4.31.1}Constructor \& Destructor Documentation}{145}{subsection.4.31.1}
+\contentsline {subsubsection}{\numberline {4.31.1.1}Orderby()}{146}{subsubsection.4.31.1.1}
+\contentsline {subsubsection}{\numberline {4.31.1.2}$\sim $Orderby()}{146}{subsubsection.4.31.1.2}
+\contentsline {subsection}{\numberline {4.31.2}Member Function Documentation}{146}{subsection.4.31.2}
+\contentsline {subsubsection}{\numberline {4.31.2.1}close()}{146}{subsubsection.4.31.2.1}
+\contentsline {subsubsection}{\numberline {4.31.2.2}getNext()}{146}{subsubsection.4.31.2.2}
+\contentsline {subsubsection}{\numberline {4.31.2.3}open()}{147}{subsubsection.4.31.2.3}
+\contentsline {subsubsection}{\numberline {4.31.2.4}set()}{147}{subsubsection.4.31.2.4}
+\contentsline {subsubsection}{\numberline {4.31.2.5}setChild()}{147}{subsubsection.4.31.2.5}
+\contentsline {subsection}{\numberline {4.31.3}Member Data Documentation}{147}{subsection.4.31.3}
+\contentsline {subsubsection}{\numberline {4.31.3.1}arrayid}{148}{subsubsection.4.31.3.1}
+\contentsline {subsubsection}{\numberline {4.31.3.2}child}{148}{subsubsection.4.31.3.2}
+\contentsline {subsubsection}{\numberline {4.31.3.3}child\_buffer}{148}{subsubsection.4.31.3.3}
+\contentsline {subsubsection}{\numberline {4.31.3.4}colid}{148}{subsubsection.4.31.3.4}
+\contentsline {subsubsection}{\numberline {4.31.3.5}coloff}{148}{subsubsection.4.31.3.5}
+\contentsline {subsubsection}{\numberline {4.31.3.6}colrank}{148}{subsubsection.4.31.3.6}
+\contentsline {subsubsection}{\numberline {4.31.3.7}coltype}{148}{subsubsection.4.31.3.7}
+\contentsline {subsubsection}{\numberline {4.31.3.8}middle\_buf\_array}{148}{subsubsection.4.31.3.8}
+\contentsline {subsubsection}{\numberline {4.31.3.9}middle\_buf\_size}{149}{subsubsection.4.31.3.9}
+\contentsline {subsubsection}{\numberline {4.31.3.10}orderby\_num}{149}{subsubsection.4.31.3.10}
+\contentsline {subsubsection}{\numberline {4.31.3.11}self\_buf\_size}{149}{subsubsection.4.31.3.11}
+\contentsline {subsubsection}{\numberline {4.31.3.12}tuple\_size}{149}{subsubsection.4.31.3.12}
+\contentsline {section}{\numberline {4.32}Pbtree Class Reference}{149}{section.4.32}
+\contentsline {subsection}{\numberline {4.32.1}Member Function Documentation}{150}{subsection.4.32.1}
+\contentsline {subsubsection}{\numberline {4.32.1.1}allocate()}{150}{subsubsection.4.32.1.1}
+\contentsline {subsubsection}{\numberline {4.32.1.2}cap2leve()}{150}{subsubsection.4.32.1.2}
+\contentsline {subsubsection}{\numberline {4.32.1.3}del()}{150}{subsubsection.4.32.1.3}
+\contentsline {subsubsection}{\numberline {4.32.1.4}free()}{150}{subsubsection.4.32.1.4}
+\contentsline {subsubsection}{\numberline {4.32.1.5}get\_recptr()}{150}{subsubsection.4.32.1.5}
+\contentsline {subsubsection}{\numberline {4.32.1.6}init()}{151}{subsubsection.4.32.1.6}
+\contentsline {subsubsection}{\numberline {4.32.1.7}insert()}{151}{subsubsection.4.32.1.7}
+\contentsline {subsubsection}{\numberline {4.32.1.8}leve2cap()}{151}{subsubsection.4.32.1.8}
+\contentsline {subsubsection}{\numberline {4.32.1.9}leve2size()}{151}{subsubsection.4.32.1.9}
+\contentsline {subsubsection}{\numberline {4.32.1.10}lookup()}{151}{subsubsection.4.32.1.10}
+\contentsline {subsubsection}{\numberline {4.32.1.11}lookup\_s()}{151}{subsubsection.4.32.1.11}
+\contentsline {subsubsection}{\numberline {4.32.1.12}print()}{151}{subsubsection.4.32.1.12}
+\contentsline {subsubsection}{\numberline {4.32.1.13}scan()}{152}{subsubsection.4.32.1.13}
+\contentsline {subsubsection}{\numberline {4.32.1.14}shut()}{152}{subsubsection.4.32.1.14}
+\contentsline {subsubsection}{\numberline {4.32.1.15}size2leve()}{152}{subsubsection.4.32.1.15}
+\contentsline {subsection}{\numberline {4.32.2}Member Data Documentation}{152}{subsection.4.32.2}
+\contentsline {subsubsection}{\numberline {4.32.2.1}p\_free\_header}{152}{subsubsection.4.32.2.1}
+\contentsline {subsubsection}{\numberline {4.32.2.2}p\_pbtree}{152}{subsubsection.4.32.2.2}
+\contentsline {section}{\numberline {4.33}Pbtree Class Reference}{152}{section.4.33}
+\contentsline {subsection}{\numberline {4.33.1}Member Function Documentation}{153}{subsection.4.33.1}
+\contentsline {subsubsection}{\numberline {4.33.1.1}allocate()}{153}{subsubsection.4.33.1.1}
+\contentsline {subsubsection}{\numberline {4.33.1.2}cap2leve()}{153}{subsubsection.4.33.1.2}
+\contentsline {subsubsection}{\numberline {4.33.1.3}del()}{153}{subsubsection.4.33.1.3}
+\contentsline {subsubsection}{\numberline {4.33.1.4}free()}{154}{subsubsection.4.33.1.4}
+\contentsline {subsubsection}{\numberline {4.33.1.5}get\_recptr()}{154}{subsubsection.4.33.1.5}
+\contentsline {subsubsection}{\numberline {4.33.1.6}init()}{154}{subsubsection.4.33.1.6}
+\contentsline {subsubsection}{\numberline {4.33.1.7}insert()}{154}{subsubsection.4.33.1.7}
+\contentsline {subsubsection}{\numberline {4.33.1.8}leve2cap()}{154}{subsubsection.4.33.1.8}
+\contentsline {subsubsection}{\numberline {4.33.1.9}leve2size()}{154}{subsubsection.4.33.1.9}
+\contentsline {subsubsection}{\numberline {4.33.1.10}lookup()}{155}{subsubsection.4.33.1.10}
+\contentsline {subsubsection}{\numberline {4.33.1.11}lookup\_s()}{155}{subsubsection.4.33.1.11}
+\contentsline {subsubsection}{\numberline {4.33.1.12}print()}{155}{subsubsection.4.33.1.12}
+\contentsline {subsubsection}{\numberline {4.33.1.13}scan()}{155}{subsubsection.4.33.1.13}
+\contentsline {subsubsection}{\numberline {4.33.1.14}shut()}{155}{subsubsection.4.33.1.14}
+\contentsline {subsubsection}{\numberline {4.33.1.15}size2leve()}{155}{subsubsection.4.33.1.15}
+\contentsline {subsection}{\numberline {4.33.2}Member Data Documentation}{156}{subsection.4.33.2}
+\contentsline {subsubsection}{\numberline {4.33.2.1}p\_free\_header}{156}{subsubsection.4.33.2.1}
+\contentsline {subsubsection}{\numberline {4.33.2.2}p\_pbtree}{156}{subsubsection.4.33.2.2}
+\contentsline {section}{\numberline {4.34}Pbtree\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Index Class Reference}{156}{section.4.34}
+\contentsline {subsection}{\numberline {4.34.1}Constructor \& Destructor Documentation}{157}{subsection.4.34.1}
+\contentsline {subsubsection}{\numberline {4.34.1.1}PbtreeIndex()}{157}{subsubsection.4.34.1.1}
+\contentsline {subsection}{\numberline {4.34.2}Member Function Documentation}{157}{subsection.4.34.2}
+\contentsline {subsubsection}{\numberline {4.34.2.1}del()}{157}{subsubsection.4.34.2.1}
+\contentsline {subsubsection}{\numberline {4.34.2.2}init()}{158}{subsubsection.4.34.2.2}
+\contentsline {subsubsection}{\numberline {4.34.2.3}insert()}{158}{subsubsection.4.34.2.3}
+\contentsline {subsubsection}{\numberline {4.34.2.4}lookup()}{159}{subsubsection.4.34.2.4}
+\contentsline {subsubsection}{\numberline {4.34.2.5}print()}{159}{subsubsection.4.34.2.5}
+\contentsline {subsubsection}{\numberline {4.34.2.6}scan()}{160}{subsubsection.4.34.2.6}
+\contentsline {subsubsection}{\numberline {4.34.2.7}set\_ls()}{160}{subsubsection.4.34.2.7}
+\contentsline {subsubsection}{\numberline {4.34.2.8}setIndexDTpye()}{161}{subsubsection.4.34.2.8}
+\contentsline {subsubsection}{\numberline {4.34.2.9}shut()}{161}{subsubsection.4.34.2.9}
+\contentsline {subsection}{\numberline {4.34.3}Member Data Documentation}{162}{subsection.4.34.3}
+\contentsline {subsubsection}{\numberline {4.34.3.1}pi\_datatype}{162}{subsubsection.4.34.3.1}
+\contentsline {subsubsection}{\numberline {4.34.3.2}pi\_pbtree}{162}{subsubsection.4.34.3.2}
+\contentsline {section}{\numberline {4.35}Pbtree\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Info Struct Reference}{162}{section.4.35}
+\contentsline {subsection}{\numberline {4.35.1}Detailed Description}{162}{subsection.4.35.1}
+\contentsline {subsection}{\numberline {4.35.2}Member Data Documentation}{163}{subsection.4.35.2}
+\contentsline {subsubsection}{\numberline {4.35.2.1}area}{163}{subsubsection.4.35.2.1}
+\contentsline {subsubsection}{\numberline {4.35.2.2}cr\_area}{163}{subsubsection.4.35.2.2}
+\contentsline {subsubsection}{\numberline {4.35.2.3}cr\_resu}{163}{subsubsection.4.35.2.3}
+\contentsline {subsubsection}{\numberline {4.35.2.4}l\_ptr}{163}{subsubsection.4.35.2.4}
+\contentsline {subsubsection}{\numberline {4.35.2.5}le\_resu}{163}{subsubsection.4.35.2.5}
+\contentsline {subsubsection}{\numberline {4.35.2.6}left}{163}{subsubsection.4.35.2.6}
+\contentsline {subsubsection}{\numberline {4.35.2.7}pos\_resu}{163}{subsubsection.4.35.2.7}
+\contentsline {subsubsection}{\numberline {4.35.2.8}result}{164}{subsubsection.4.35.2.8}
+\contentsline {subsubsection}{\numberline {4.35.2.9}right}{164}{subsubsection.4.35.2.9}
+\contentsline {subsubsection}{\numberline {4.35.2.10}s\_end}{164}{subsubsection.4.35.2.10}
+\contentsline {subsubsection}{\numberline {4.35.2.11}s\_num}{164}{subsubsection.4.35.2.11}
+\contentsline {subsubsection}{\numberline {4.35.2.12}s\_pos}{164}{subsubsection.4.35.2.12}
+\contentsline {subsubsection}{\numberline {4.35.2.13}s\_ptr}{164}{subsubsection.4.35.2.13}
+\contentsline {section}{\numberline {4.36}Pointer8B Class Reference}{164}{section.4.36}
+\contentsline {subsection}{\numberline {4.36.1}Member Function Documentation}{165}{subsection.4.36.1}
+\contentsline {subsubsection}{\numberline {4.36.1.1}operator char $\ast $()}{165}{subsubsection.4.36.1.1}
+\contentsline {subsubsection}{\numberline {4.36.1.2}operator struct bleaf $\ast $()}{165}{subsubsection.4.36.1.2}
+\contentsline {subsubsection}{\numberline {4.36.1.3}operator struct bnode $\ast $()}{165}{subsubsection.4.36.1.3}
+\contentsline {subsubsection}{\numberline {4.36.1.4}operator unsigned long long()}{165}{subsubsection.4.36.1.4}
+\contentsline {subsubsection}{\numberline {4.36.1.5}operator void $\ast $()}{166}{subsubsection.4.36.1.5}
+\contentsline {subsubsection}{\numberline {4.36.1.6}operator=()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{166}{subsubsection.4.36.1.6}
+\contentsline {subsubsection}{\numberline {4.36.1.7}operator=()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{166}{subsubsection.4.36.1.7}
+\contentsline {subsubsection}{\numberline {4.36.1.8}print()}{166}{subsubsection.4.36.1.8}
+\contentsline {subsection}{\numberline {4.36.2}Member Data Documentation}{166}{subsection.4.36.2}
+\contentsline {subsubsection}{\numberline {4.36.2.1}value}{166}{subsubsection.4.36.2.1}
+\contentsline {section}{\numberline {4.37}Project Class Reference}{166}{section.4.37}
+\contentsline {subsection}{\numberline {4.37.1}Detailed Description}{167}{subsection.4.37.1}
+\contentsline {subsection}{\numberline {4.37.2}Constructor \& Destructor Documentation}{167}{subsection.4.37.2}
+\contentsline {subsubsection}{\numberline {4.37.2.1}Project()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{167}{subsubsection.4.37.2.1}
+\contentsline {subsubsection}{\numberline {4.37.2.2}$\sim $Project()}{168}{subsubsection.4.37.2.2}
+\contentsline {subsubsection}{\numberline {4.37.2.3}Project()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{168}{subsubsection.4.37.2.3}
+\contentsline {subsection}{\numberline {4.37.3}Member Function Documentation}{168}{subsection.4.37.3}
+\contentsline {subsubsection}{\numberline {4.37.3.1}close()}{168}{subsubsection.4.37.3.1}
+\contentsline {subsubsection}{\numberline {4.37.3.2}getColnum()}{168}{subsubsection.4.37.3.2}
+\contentsline {subsubsection}{\numberline {4.37.3.3}getNext()}{169}{subsubsection.4.37.3.3}
+\contentsline {subsubsection}{\numberline {4.37.3.4}getSchema()}{169}{subsubsection.4.37.3.4}
+\contentsline {subsubsection}{\numberline {4.37.3.5}open()}{169}{subsubsection.4.37.3.5}
+\contentsline {subsubsection}{\numberline {4.37.3.6}setChild()}{169}{subsubsection.4.37.3.6}
+\contentsline {subsubsection}{\numberline {4.37.3.7}setProjCol()}{171}{subsubsection.4.37.3.7}
+\contentsline {subsubsection}{\numberline {4.37.3.8}top()}{171}{subsubsection.4.37.3.8}
+\contentsline {subsection}{\numberline {4.37.4}Member Data Documentation}{171}{subsection.4.37.4}
+\contentsline {subsubsection}{\numberline {4.37.4.1}buf\_for\_child}{171}{subsubsection.4.37.4.1}
+\contentsline {subsubsection}{\numberline {4.37.4.2}child}{171}{subsubsection.4.37.4.2}
+\contentsline {subsubsection}{\numberline {4.37.4.3}in\_buf\_size}{172}{subsubsection.4.37.4.3}
+\contentsline {subsubsection}{\numberline {4.37.4.4}in\_tuple\_size}{172}{subsubsection.4.37.4.4}
+\contentsline {subsubsection}{\numberline {4.37.4.5}input\_cid}{172}{subsubsection.4.37.4.5}
+\contentsline {subsubsection}{\numberline {4.37.4.6}input\_off}{172}{subsubsection.4.37.4.6}
+\contentsline {subsubsection}{\numberline {4.37.4.7}input\_pos}{172}{subsubsection.4.37.4.7}
+\contentsline {subsubsection}{\numberline {4.37.4.8}input\_type}{172}{subsubsection.4.37.4.8}
+\contentsline {subsubsection}{\numberline {4.37.4.9}out\_to\_in}{172}{subsubsection.4.37.4.9}
+\contentsline {subsubsection}{\numberline {4.37.4.10}output\_cid}{172}{subsubsection.4.37.4.10}
+\contentsline {subsubsection}{\numberline {4.37.4.11}output\_type}{173}{subsubsection.4.37.4.11}
+\contentsline {subsubsection}{\numberline {4.37.4.12}output\_type\_buf\_size}{173}{subsubsection.4.37.4.12}
+\contentsline {subsubsection}{\numberline {4.37.4.13}output\_type\_size}{173}{subsubsection.4.37.4.13}
+\contentsline {subsubsection}{\numberline {4.37.4.14}self\_buf\_size}{173}{subsubsection.4.37.4.14}
+\contentsline {subsubsection}{\numberline {4.37.4.15}topid}{173}{subsubsection.4.37.4.15}
+\contentsline {section}{\numberline {4.38}Request\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Column Struct Reference}{173}{section.4.38}
+\contentsline {subsection}{\numberline {4.38.1}Detailed Description}{174}{subsection.4.38.1}
+\contentsline {subsection}{\numberline {4.38.2}Member Data Documentation}{174}{subsection.4.38.2}
+\contentsline {subsubsection}{\numberline {4.38.2.1}aggregate\_method}{174}{subsubsection.4.38.2.1}
+\contentsline {subsubsection}{\numberline {4.38.2.2}name}{174}{subsubsection.4.38.2.2}
+\contentsline {section}{\numberline {4.39}Request\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Table Struct Reference}{174}{section.4.39}
+\contentsline {subsection}{\numberline {4.39.1}Detailed Description}{174}{subsection.4.39.1}
+\contentsline {subsection}{\numberline {4.39.2}Member Data Documentation}{174}{subsection.4.39.2}
+\contentsline {subsubsection}{\numberline {4.39.2.1}name}{175}{subsubsection.4.39.2.1}
+\contentsline {section}{\numberline {4.40}Result\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Table Class Reference}{175}{section.4.40}
+\contentsline {subsection}{\numberline {4.40.1}Detailed Description}{175}{subsection.4.40.1}
+\contentsline {subsection}{\numberline {4.40.2}Member Function Documentation}{175}{subsection.4.40.2}
+\contentsline {subsubsection}{\numberline {4.40.2.1}append()}{175}{subsubsection.4.40.2.1}
+\contentsline {subsubsection}{\numberline {4.40.2.2}dump()}{176}{subsubsection.4.40.2.2}
+\contentsline {subsubsection}{\numberline {4.40.2.3}getRC()}{176}{subsubsection.4.40.2.3}
+\contentsline {subsubsection}{\numberline {4.40.2.4}init()}{176}{subsubsection.4.40.2.4}
+\contentsline {subsubsection}{\numberline {4.40.2.5}print()}{177}{subsubsection.4.40.2.5}
+\contentsline {subsubsection}{\numberline {4.40.2.6}shut()}{177}{subsubsection.4.40.2.6}
+\contentsline {subsubsection}{\numberline {4.40.2.7}writeRC()}{177}{subsubsection.4.40.2.7}
+\contentsline {subsection}{\numberline {4.40.3}Member Data Documentation}{178}{subsection.4.40.3}
+\contentsline {subsubsection}{\numberline {4.40.3.1}buffer}{178}{subsubsection.4.40.3.1}
+\contentsline {subsubsection}{\numberline {4.40.3.2}buffer\_size}{178}{subsubsection.4.40.3.2}
+\contentsline {subsubsection}{\numberline {4.40.3.3}column\_number}{178}{subsubsection.4.40.3.3}
+\contentsline {subsubsection}{\numberline {4.40.3.4}column\_type}{178}{subsubsection.4.40.3.4}
+\contentsline {subsubsection}{\numberline {4.40.3.5}offset}{178}{subsubsection.4.40.3.5}
+\contentsline {subsubsection}{\numberline {4.40.3.6}offset\_size}{178}{subsubsection.4.40.3.6}
+\contentsline {subsubsection}{\numberline {4.40.3.7}row\_capicity}{179}{subsubsection.4.40.3.7}
+\contentsline {subsubsection}{\numberline {4.40.3.8}row\_length}{179}{subsubsection.4.40.3.8}
+\contentsline {subsubsection}{\numberline {4.40.3.9}row\_number}{179}{subsubsection.4.40.3.9}
+\contentsline {section}{\numberline {4.41}Row\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Table Class Reference}{179}{section.4.41}
+\contentsline {subsection}{\numberline {4.41.1}Detailed Description}{180}{subsection.4.41.1}
+\contentsline {subsection}{\numberline {4.41.2}Constructor \& Destructor Documentation}{180}{subsection.4.41.2}
+\contentsline {subsubsection}{\numberline {4.41.2.1}RowTable()}{180}{subsubsection.4.41.2.1}
+\contentsline {subsection}{\numberline {4.41.3}Member Function Documentation}{181}{subsection.4.41.3}
+\contentsline {subsubsection}{\numberline {4.41.3.1}access()}{181}{subsubsection.4.41.3.1}
+\contentsline {subsubsection}{\numberline {4.41.3.2}accessCol()}{181}{subsubsection.4.41.3.2}
+\contentsline {subsubsection}{\numberline {4.41.3.3}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{182}{subsubsection.4.41.3.3}
+\contentsline {subsubsection}{\numberline {4.41.3.4}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{182}{subsubsection.4.41.3.4}
+\contentsline {subsubsection}{\numberline {4.41.3.5}finish()}{183}{subsubsection.4.41.3.5}
+\contentsline {subsubsection}{\numberline {4.41.3.6}getMStorage()}{183}{subsubsection.4.41.3.6}
+\contentsline {subsubsection}{\numberline {4.41.3.7}getRecordNum()}{183}{subsubsection.4.41.3.7}
+\contentsline {subsubsection}{\numberline {4.41.3.8}getRecordPtr()}{183}{subsubsection.4.41.3.8}
+\contentsline {subsubsection}{\numberline {4.41.3.9}getRPattern()}{184}{subsubsection.4.41.3.9}
+\contentsline {subsubsection}{\numberline {4.41.3.10}init()}{184}{subsubsection.4.41.3.10}
+\contentsline {subsubsection}{\numberline {4.41.3.11}insert()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{184}{subsubsection.4.41.3.11}
+\contentsline {subsubsection}{\numberline {4.41.3.12}insert()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{184}{subsubsection.4.41.3.12}
+\contentsline {subsubsection}{\numberline {4.41.3.13}invalid()}{185}{subsubsection.4.41.3.13}
+\contentsline {subsubsection}{\numberline {4.41.3.14}isValid()}{185}{subsubsection.4.41.3.14}
+\contentsline {subsubsection}{\numberline {4.41.3.15}loadData()}{185}{subsubsection.4.41.3.15}
+\contentsline {subsubsection}{\numberline {4.41.3.16}printData()}{186}{subsubsection.4.41.3.16}
+\contentsline {subsubsection}{\numberline {4.41.3.17}select()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{186}{subsubsection.4.41.3.17}
+\contentsline {subsubsection}{\numberline {4.41.3.18}select()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{186}{subsubsection.4.41.3.18}
+\contentsline {subsubsection}{\numberline {4.41.3.19}selectCol()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{187}{subsubsection.4.41.3.19}
+\contentsline {subsubsection}{\numberline {4.41.3.20}selectCol()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{187}{subsubsection.4.41.3.20}
+\contentsline {subsubsection}{\numberline {4.41.3.21}selectCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{188}{subsubsection.4.41.3.21}
+\contentsline {subsubsection}{\numberline {4.41.3.22}selectCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{188}{subsubsection.4.41.3.22}
+\contentsline {subsubsection}{\numberline {4.41.3.23}shut()}{189}{subsubsection.4.41.3.23}
+\contentsline {subsubsection}{\numberline {4.41.3.24}updateCol()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{189}{subsubsection.4.41.3.24}
+\contentsline {subsubsection}{\numberline {4.41.3.25}updateCol()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{190}{subsubsection.4.41.3.25}
+\contentsline {subsubsection}{\numberline {4.41.3.26}updateCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/4]}}{190}{subsubsection.4.41.3.26}
+\contentsline {subsubsection}{\numberline {4.41.3.27}updateCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/4]}}{191}{subsubsection.4.41.3.27}
+\contentsline {subsubsection}{\numberline {4.41.3.28}updateCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/4]}}{191}{subsubsection.4.41.3.28}
+\contentsline {subsubsection}{\numberline {4.41.3.29}updateCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [4/4]}}{192}{subsubsection.4.41.3.29}
+\contentsline {subsection}{\numberline {4.41.4}Member Data Documentation}{192}{subsection.4.41.4}
+\contentsline {subsubsection}{\numberline {4.41.4.1}r\_pattern}{192}{subsubsection.4.41.4.1}
+\contentsline {subsubsection}{\numberline {4.41.4.2}r\_storage}{192}{subsubsection.4.41.4.2}
+\contentsline {section}{\numberline {4.42}RPattern Class Reference}{193}{section.4.42}
+\contentsline {subsection}{\numberline {4.42.1}Detailed Description}{193}{subsection.4.42.1}
+\contentsline {subsection}{\numberline {4.42.2}Member Function Documentation}{193}{subsection.4.42.2}
+\contentsline {subsubsection}{\numberline {4.42.2.1}addColumn()}{193}{subsubsection.4.42.2.1}
+\contentsline {subsubsection}{\numberline {4.42.2.2}getColumnOffset()}{194}{subsubsection.4.42.2.2}
+\contentsline {subsubsection}{\numberline {4.42.2.3}getColumnType()}{194}{subsubsection.4.42.2.3}
+\contentsline {subsubsection}{\numberline {4.42.2.4}getRowSize()}{194}{subsubsection.4.42.2.4}
+\contentsline {subsubsection}{\numberline {4.42.2.5}init()}{195}{subsubsection.4.42.2.5}
+\contentsline {subsubsection}{\numberline {4.42.2.6}print()}{195}{subsubsection.4.42.2.6}
+\contentsline {subsubsection}{\numberline {4.42.2.7}reset()}{195}{subsubsection.4.42.2.7}
+\contentsline {subsubsection}{\numberline {4.42.2.8}shut()}{195}{subsubsection.4.42.2.8}
+\contentsline {subsection}{\numberline {4.42.3}Member Data Documentation}{196}{subsection.4.42.3}
+\contentsline {subsubsection}{\numberline {4.42.3.1}par}{196}{subsubsection.4.42.3.1}
+\contentsline {subsubsection}{\numberline {4.42.3.2}rp\_colnum}{196}{subsubsection.4.42.3.2}
+\contentsline {subsubsection}{\numberline {4.42.3.3}rp\_current}{196}{subsubsection.4.42.3.3}
+\contentsline {subsubsection}{\numberline {4.42.3.4}rp\_dtype}{196}{subsubsection.4.42.3.4}
+\contentsline {subsubsection}{\numberline {4.42.3.5}rp\_mem\_sz}{196}{subsubsection.4.42.3.5}
+\contentsline {subsubsection}{\numberline {4.42.3.6}rp\_memory}{196}{subsubsection.4.42.3.6}
+\contentsline {subsubsection}{\numberline {4.42.3.7}rp\_offset}{196}{subsubsection.4.42.3.7}
+\contentsline {subsubsection}{\numberline {4.42.3.8}rp\_row\_sz}{197}{subsubsection.4.42.3.8}
+\contentsline {section}{\numberline {4.43}Scan Class Reference}{197}{section.4.43}
+\contentsline {subsection}{\numberline {4.43.1}Detailed Description}{197}{subsection.4.43.1}
+\contentsline {subsection}{\numberline {4.43.2}Constructor \& Destructor Documentation}{197}{subsection.4.43.2}
+\contentsline {subsubsection}{\numberline {4.43.2.1}Scan()}{198}{subsubsection.4.43.2.1}
+\contentsline {subsubsection}{\numberline {4.43.2.2}$\sim $Scan()}{198}{subsubsection.4.43.2.2}
+\contentsline {subsection}{\numberline {4.43.3}Member Function Documentation}{198}{subsection.4.43.3}
+\contentsline {subsubsection}{\numberline {4.43.3.1}close()}{198}{subsubsection.4.43.3.1}
+\contentsline {subsubsection}{\numberline {4.43.3.2}getNext()}{198}{subsubsection.4.43.3.2}
+\contentsline {subsubsection}{\numberline {4.43.3.3}open()}{199}{subsubsection.4.43.3.3}
+\contentsline {subsubsection}{\numberline {4.43.3.4}setTable()}{199}{subsubsection.4.43.3.4}
+\contentsline {subsection}{\numberline {4.43.4}Member Data Documentation}{199}{subsection.4.43.4}
+\contentsline {subsubsection}{\numberline {4.43.4.1}next\_record}{199}{subsubsection.4.43.4.1}
+\contentsline {subsubsection}{\numberline {4.43.4.2}scan\_table}{199}{subsubsection.4.43.4.2}
+\contentsline {subsubsection}{\numberline {4.43.4.3}total\_record}{200}{subsubsection.4.43.4.3}
+\contentsline {section}{\numberline {4.44}Select\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Query Class Reference}{200}{section.4.44}
+\contentsline {subsection}{\numberline {4.44.1}Detailed Description}{200}{subsection.4.44.1}
+\contentsline {subsection}{\numberline {4.44.2}Member Data Documentation}{200}{subsection.4.44.2}
+\contentsline {subsubsection}{\numberline {4.44.2.1}database\_id}{200}{subsubsection.4.44.2.1}
+\contentsline {subsubsection}{\numberline {4.44.2.2}from\_number}{201}{subsubsection.4.44.2.2}
+\contentsline {subsubsection}{\numberline {4.44.2.3}from\_table}{201}{subsubsection.4.44.2.3}
+\contentsline {subsubsection}{\numberline {4.44.2.4}groupby}{201}{subsubsection.4.44.2.4}
+\contentsline {subsubsection}{\numberline {4.44.2.5}groupby\_number}{201}{subsubsection.4.44.2.5}
+\contentsline {subsubsection}{\numberline {4.44.2.6}having}{201}{subsubsection.4.44.2.6}
+\contentsline {subsubsection}{\numberline {4.44.2.7}orderby}{201}{subsubsection.4.44.2.7}
+\contentsline {subsubsection}{\numberline {4.44.2.8}orderby\_number}{201}{subsubsection.4.44.2.8}
+\contentsline {subsubsection}{\numberline {4.44.2.9}select\_column}{201}{subsubsection.4.44.2.9}
+\contentsline {subsubsection}{\numberline {4.44.2.10}select\_number}{202}{subsubsection.4.44.2.10}
+\contentsline {subsubsection}{\numberline {4.44.2.11}where}{202}{subsubsection.4.44.2.11}
+\contentsline {section}{\numberline {4.45}Table Class Reference}{202}{section.4.45}
+\contentsline {subsection}{\numberline {4.45.1}Detailed Description}{203}{subsection.4.45.1}
+\contentsline {subsection}{\numberline {4.45.2}Constructor \& Destructor Documentation}{203}{subsection.4.45.2}
+\contentsline {subsubsection}{\numberline {4.45.2.1}$\sim $Table()}{203}{subsubsection.4.45.2.1}
+\contentsline {subsubsection}{\numberline {4.45.2.2}Table()}{203}{subsubsection.4.45.2.2}
+\contentsline {subsection}{\numberline {4.45.3}Member Function Documentation}{204}{subsection.4.45.3}
+\contentsline {subsubsection}{\numberline {4.45.3.1}addColumn()}{204}{subsubsection.4.45.3.1}
+\contentsline {subsubsection}{\numberline {4.45.3.2}addIndex()}{204}{subsubsection.4.45.3.2}
+\contentsline {subsubsection}{\numberline {4.45.3.3}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/3]}}{204}{subsubsection.4.45.3.3}
+\contentsline {subsubsection}{\numberline {4.45.3.4}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/3]}}{204}{subsubsection.4.45.3.4}
+\contentsline {subsubsection}{\numberline {4.45.3.5}del()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/3]}}{205}{subsubsection.4.45.3.5}
+\contentsline {subsubsection}{\numberline {4.45.3.6}finish()}{205}{subsubsection.4.45.3.6}
+\contentsline {subsubsection}{\numberline {4.45.3.7}getColumnRank()}{205}{subsubsection.4.45.3.7}
+\contentsline {subsubsection}{\numberline {4.45.3.8}getColumns()}{206}{subsubsection.4.45.3.8}
+\contentsline {subsubsection}{\numberline {4.45.3.9}getIndexRank()}{206}{subsubsection.4.45.3.9}
+\contentsline {subsubsection}{\numberline {4.45.3.10}getIndexs()}{206}{subsubsection.4.45.3.10}
+\contentsline {subsubsection}{\numberline {4.45.3.11}getRank()}{207}{subsubsection.4.45.3.11}
+\contentsline {subsubsection}{\numberline {4.45.3.12}getRecordNum()}{207}{subsubsection.4.45.3.12}
+\contentsline {subsubsection}{\numberline {4.45.3.13}getRecordPtr()}{207}{subsubsection.4.45.3.13}
+\contentsline {subsubsection}{\numberline {4.45.3.14}getTtype()}{207}{subsubsection.4.45.3.14}
+\contentsline {subsubsection}{\numberline {4.45.3.15}init()}{208}{subsubsection.4.45.3.15}
+\contentsline {subsubsection}{\numberline {4.45.3.16}insert()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{208}{subsubsection.4.45.3.16}
+\contentsline {subsubsection}{\numberline {4.45.3.17}insert()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{208}{subsubsection.4.45.3.17}
+\contentsline {subsubsection}{\numberline {4.45.3.18}loadData()}{209}{subsubsection.4.45.3.18}
+\contentsline {subsubsection}{\numberline {4.45.3.19}print()}{209}{subsubsection.4.45.3.19}
+\contentsline {subsubsection}{\numberline {4.45.3.20}printData()}{209}{subsubsection.4.45.3.20}
+\contentsline {subsubsection}{\numberline {4.45.3.21}select()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{209}{subsubsection.4.45.3.21}
+\contentsline {subsubsection}{\numberline {4.45.3.22}select()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{210}{subsubsection.4.45.3.22}
+\contentsline {subsubsection}{\numberline {4.45.3.23}selectCol()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{210}{subsubsection.4.45.3.23}
+\contentsline {subsubsection}{\numberline {4.45.3.24}selectCol()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{211}{subsubsection.4.45.3.24}
+\contentsline {subsubsection}{\numberline {4.45.3.25}selectCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{211}{subsubsection.4.45.3.25}
+\contentsline {subsubsection}{\numberline {4.45.3.26}selectCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{212}{subsubsection.4.45.3.26}
+\contentsline {subsubsection}{\numberline {4.45.3.27}shut()}{212}{subsubsection.4.45.3.27}
+\contentsline {subsubsection}{\numberline {4.45.3.28}updateCol()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{212}{subsubsection.4.45.3.28}
+\contentsline {subsubsection}{\numberline {4.45.3.29}updateCol()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{213}{subsubsection.4.45.3.29}
+\contentsline {subsubsection}{\numberline {4.45.3.30}updateCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/4]}}{213}{subsubsection.4.45.3.30}
+\contentsline {subsubsection}{\numberline {4.45.3.31}updateCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/4]}}{214}{subsubsection.4.45.3.31}
+\contentsline {subsubsection}{\numberline {4.45.3.32}updateCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/4]}}{214}{subsubsection.4.45.3.32}
+\contentsline {subsubsection}{\numberline {4.45.3.33}updateCols()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [4/4]}}{215}{subsubsection.4.45.3.33}
+\contentsline {subsection}{\numberline {4.45.4}Member Data Documentation}{215}{subsection.4.45.4}
+\contentsline {subsubsection}{\numberline {4.45.4.1}t\_columns}{215}{subsubsection.4.45.4.1}
+\contentsline {subsubsection}{\numberline {4.45.4.2}t\_index}{215}{subsubsection.4.45.4.2}
+\contentsline {subsubsection}{\numberline {4.45.4.3}t\_type}{215}{subsubsection.4.45.4.3}
+\contentsline {section}{\numberline {4.46}Type\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}CharN Class Reference}{216}{section.4.46}
+\contentsline {subsection}{\numberline {4.46.1}Detailed Description}{216}{subsection.4.46.1}
+\contentsline {subsection}{\numberline {4.46.2}Constructor \& Destructor Documentation}{216}{subsection.4.46.2}
+\contentsline {subsubsection}{\numberline {4.46.2.1}TypeCharN()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{216}{subsubsection.4.46.2.1}
+\contentsline {subsubsection}{\numberline {4.46.2.2}TypeCharN()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{216}{subsubsection.4.46.2.2}
+\contentsline {subsection}{\numberline {4.46.3}Member Function Documentation}{217}{subsection.4.46.3}
+\contentsline {subsubsection}{\numberline {4.46.3.1}cmpEQ()}{217}{subsubsection.4.46.3.1}
+\contentsline {subsubsection}{\numberline {4.46.3.2}cmpGE()}{217}{subsubsection.4.46.3.2}
+\contentsline {subsubsection}{\numberline {4.46.3.3}cmpGT()}{217}{subsubsection.4.46.3.3}
+\contentsline {subsubsection}{\numberline {4.46.3.4}cmpLE()}{217}{subsubsection.4.46.3.4}
+\contentsline {subsubsection}{\numberline {4.46.3.5}cmpLT()}{218}{subsubsection.4.46.3.5}
+\contentsline {subsubsection}{\numberline {4.46.3.6}copy()}{218}{subsubsection.4.46.3.6}
+\contentsline {subsubsection}{\numberline {4.46.3.7}formatBin()}{218}{subsubsection.4.46.3.7}
+\contentsline {subsubsection}{\numberline {4.46.3.8}formatTxt()}{218}{subsubsection.4.46.3.8}
+\contentsline {section}{\numberline {4.47}Type\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Date Class Reference}{219}{section.4.47}
+\contentsline {subsection}{\numberline {4.47.1}Detailed Description}{219}{subsection.4.47.1}
+\contentsline {subsection}{\numberline {4.47.2}Constructor \& Destructor Documentation}{219}{subsection.4.47.2}
+\contentsline {subsubsection}{\numberline {4.47.2.1}TypeDate()}{219}{subsubsection.4.47.2.1}
+\contentsline {subsection}{\numberline {4.47.3}Member Function Documentation}{219}{subsection.4.47.3}
+\contentsline {subsubsection}{\numberline {4.47.3.1}cmpEQ()}{220}{subsubsection.4.47.3.1}
+\contentsline {subsubsection}{\numberline {4.47.3.2}cmpGE()}{220}{subsubsection.4.47.3.2}
+\contentsline {subsubsection}{\numberline {4.47.3.3}cmpGT()}{220}{subsubsection.4.47.3.3}
+\contentsline {subsubsection}{\numberline {4.47.3.4}cmpLE()}{220}{subsubsection.4.47.3.4}
+\contentsline {subsubsection}{\numberline {4.47.3.5}cmpLT()}{221}{subsubsection.4.47.3.5}
+\contentsline {subsubsection}{\numberline {4.47.3.6}copy()}{221}{subsubsection.4.47.3.6}
+\contentsline {subsubsection}{\numberline {4.47.3.7}formatBin()}{221}{subsubsection.4.47.3.7}
+\contentsline {subsubsection}{\numberline {4.47.3.8}formatTxt()}{221}{subsubsection.4.47.3.8}
+\contentsline {section}{\numberline {4.48}Type\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Date\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Time Class Reference}{222}{section.4.48}
+\contentsline {subsection}{\numberline {4.48.1}Detailed Description}{222}{subsection.4.48.1}
+\contentsline {subsection}{\numberline {4.48.2}Constructor \& Destructor Documentation}{222}{subsection.4.48.2}
+\contentsline {subsubsection}{\numberline {4.48.2.1}TypeDateTime()}{222}{subsubsection.4.48.2.1}
+\contentsline {subsection}{\numberline {4.48.3}Member Function Documentation}{222}{subsection.4.48.3}
+\contentsline {subsubsection}{\numberline {4.48.3.1}cmpEQ()}{223}{subsubsection.4.48.3.1}
+\contentsline {subsubsection}{\numberline {4.48.3.2}cmpGE()}{223}{subsubsection.4.48.3.2}
+\contentsline {subsubsection}{\numberline {4.48.3.3}cmpGT()}{223}{subsubsection.4.48.3.3}
+\contentsline {subsubsection}{\numberline {4.48.3.4}cmpLE()}{223}{subsubsection.4.48.3.4}
+\contentsline {subsubsection}{\numberline {4.48.3.5}cmpLT()}{224}{subsubsection.4.48.3.5}
+\contentsline {subsubsection}{\numberline {4.48.3.6}copy()}{224}{subsubsection.4.48.3.6}
+\contentsline {subsubsection}{\numberline {4.48.3.7}formatBin()}{224}{subsubsection.4.48.3.7}
+\contentsline {subsubsection}{\numberline {4.48.3.8}formatTxt()}{224}{subsubsection.4.48.3.8}
+\contentsline {section}{\numberline {4.49}Type\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Float32 Class Reference}{225}{section.4.49}
+\contentsline {subsection}{\numberline {4.49.1}Detailed Description}{225}{subsection.4.49.1}
+\contentsline {subsection}{\numberline {4.49.2}Constructor \& Destructor Documentation}{225}{subsection.4.49.2}
+\contentsline {subsubsection}{\numberline {4.49.2.1}TypeFloat32()}{225}{subsubsection.4.49.2.1}
+\contentsline {subsection}{\numberline {4.49.3}Member Function Documentation}{225}{subsection.4.49.3}
+\contentsline {subsubsection}{\numberline {4.49.3.1}cmpEQ()}{226}{subsubsection.4.49.3.1}
+\contentsline {subsubsection}{\numberline {4.49.3.2}cmpGE()}{226}{subsubsection.4.49.3.2}
+\contentsline {subsubsection}{\numberline {4.49.3.3}cmpGT()}{226}{subsubsection.4.49.3.3}
+\contentsline {subsubsection}{\numberline {4.49.3.4}cmpLE()}{226}{subsubsection.4.49.3.4}
+\contentsline {subsubsection}{\numberline {4.49.3.5}cmpLT()}{227}{subsubsection.4.49.3.5}
+\contentsline {subsubsection}{\numberline {4.49.3.6}copy()}{227}{subsubsection.4.49.3.6}
+\contentsline {subsubsection}{\numberline {4.49.3.7}formatBin()}{227}{subsubsection.4.49.3.7}
+\contentsline {subsubsection}{\numberline {4.49.3.8}formatTxt()}{227}{subsubsection.4.49.3.8}
+\contentsline {section}{\numberline {4.50}Type\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Float64 Class Reference}{228}{section.4.50}
+\contentsline {subsection}{\numberline {4.50.1}Detailed Description}{228}{subsection.4.50.1}
+\contentsline {subsection}{\numberline {4.50.2}Constructor \& Destructor Documentation}{228}{subsection.4.50.2}
+\contentsline {subsubsection}{\numberline {4.50.2.1}TypeFloat64()}{228}{subsubsection.4.50.2.1}
+\contentsline {subsection}{\numberline {4.50.3}Member Function Documentation}{228}{subsection.4.50.3}
+\contentsline {subsubsection}{\numberline {4.50.3.1}cmpEQ()}{229}{subsubsection.4.50.3.1}
+\contentsline {subsubsection}{\numberline {4.50.3.2}cmpGE()}{229}{subsubsection.4.50.3.2}
+\contentsline {subsubsection}{\numberline {4.50.3.3}cmpGT()}{229}{subsubsection.4.50.3.3}
+\contentsline {subsubsection}{\numberline {4.50.3.4}cmpLE()}{229}{subsubsection.4.50.3.4}
+\contentsline {subsubsection}{\numberline {4.50.3.5}cmpLT()}{230}{subsubsection.4.50.3.5}
+\contentsline {subsubsection}{\numberline {4.50.3.6}copy()}{230}{subsubsection.4.50.3.6}
+\contentsline {subsubsection}{\numberline {4.50.3.7}formatBin()}{230}{subsubsection.4.50.3.7}
+\contentsline {subsubsection}{\numberline {4.50.3.8}formatTxt()}{230}{subsubsection.4.50.3.8}
+\contentsline {section}{\numberline {4.51}Type\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Int16 Class Reference}{231}{section.4.51}
+\contentsline {subsection}{\numberline {4.51.1}Detailed Description}{231}{subsection.4.51.1}
+\contentsline {subsection}{\numberline {4.51.2}Constructor \& Destructor Documentation}{231}{subsection.4.51.2}
+\contentsline {subsubsection}{\numberline {4.51.2.1}TypeInt16()}{231}{subsubsection.4.51.2.1}
+\contentsline {subsection}{\numberline {4.51.3}Member Function Documentation}{231}{subsection.4.51.3}
+\contentsline {subsubsection}{\numberline {4.51.3.1}cmpEQ()}{232}{subsubsection.4.51.3.1}
+\contentsline {subsubsection}{\numberline {4.51.3.2}cmpGE()}{232}{subsubsection.4.51.3.2}
+\contentsline {subsubsection}{\numberline {4.51.3.3}cmpGT()}{232}{subsubsection.4.51.3.3}
+\contentsline {subsubsection}{\numberline {4.51.3.4}cmpLE()}{232}{subsubsection.4.51.3.4}
+\contentsline {subsubsection}{\numberline {4.51.3.5}cmpLT()}{233}{subsubsection.4.51.3.5}
+\contentsline {subsubsection}{\numberline {4.51.3.6}copy()}{233}{subsubsection.4.51.3.6}
+\contentsline {subsubsection}{\numberline {4.51.3.7}formatBin()}{233}{subsubsection.4.51.3.7}
+\contentsline {subsubsection}{\numberline {4.51.3.8}formatTxt()}{233}{subsubsection.4.51.3.8}
+\contentsline {section}{\numberline {4.52}Type\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Int32 Class Reference}{234}{section.4.52}
+\contentsline {subsection}{\numberline {4.52.1}Detailed Description}{234}{subsection.4.52.1}
+\contentsline {subsection}{\numberline {4.52.2}Constructor \& Destructor Documentation}{234}{subsection.4.52.2}
+\contentsline {subsubsection}{\numberline {4.52.2.1}TypeInt32()}{234}{subsubsection.4.52.2.1}
+\contentsline {subsection}{\numberline {4.52.3}Member Function Documentation}{234}{subsection.4.52.3}
+\contentsline {subsubsection}{\numberline {4.52.3.1}cmpEQ()}{235}{subsubsection.4.52.3.1}
+\contentsline {subsubsection}{\numberline {4.52.3.2}cmpGE()}{235}{subsubsection.4.52.3.2}
+\contentsline {subsubsection}{\numberline {4.52.3.3}cmpGT()}{235}{subsubsection.4.52.3.3}
+\contentsline {subsubsection}{\numberline {4.52.3.4}cmpLE()}{235}{subsubsection.4.52.3.4}
+\contentsline {subsubsection}{\numberline {4.52.3.5}cmpLT()}{236}{subsubsection.4.52.3.5}
+\contentsline {subsubsection}{\numberline {4.52.3.6}copy()}{236}{subsubsection.4.52.3.6}
+\contentsline {subsubsection}{\numberline {4.52.3.7}formatBin()}{236}{subsubsection.4.52.3.7}
+\contentsline {subsubsection}{\numberline {4.52.3.8}formatTxt()}{236}{subsubsection.4.52.3.8}
+\contentsline {section}{\numberline {4.53}Type\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Int64 Class Reference}{237}{section.4.53}
+\contentsline {subsection}{\numberline {4.53.1}Detailed Description}{237}{subsection.4.53.1}
+\contentsline {subsection}{\numberline {4.53.2}Constructor \& Destructor Documentation}{237}{subsection.4.53.2}
+\contentsline {subsubsection}{\numberline {4.53.2.1}TypeInt64()}{237}{subsubsection.4.53.2.1}
+\contentsline {subsection}{\numberline {4.53.3}Member Function Documentation}{237}{subsection.4.53.3}
+\contentsline {subsubsection}{\numberline {4.53.3.1}cmpEQ()}{238}{subsubsection.4.53.3.1}
+\contentsline {subsubsection}{\numberline {4.53.3.2}cmpGE()}{238}{subsubsection.4.53.3.2}
+\contentsline {subsubsection}{\numberline {4.53.3.3}cmpGT()}{238}{subsubsection.4.53.3.3}
+\contentsline {subsubsection}{\numberline {4.53.3.4}cmpLE()}{238}{subsubsection.4.53.3.4}
+\contentsline {subsubsection}{\numberline {4.53.3.5}cmpLT()}{239}{subsubsection.4.53.3.5}
+\contentsline {subsubsection}{\numberline {4.53.3.6}copy()}{239}{subsubsection.4.53.3.6}
+\contentsline {subsubsection}{\numberline {4.53.3.7}formatBin()}{239}{subsubsection.4.53.3.7}
+\contentsline {subsubsection}{\numberline {4.53.3.8}formatTxt()}{239}{subsubsection.4.53.3.8}
+\contentsline {section}{\numberline {4.54}Type\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Int8 Class Reference}{240}{section.4.54}
+\contentsline {subsection}{\numberline {4.54.1}Detailed Description}{240}{subsection.4.54.1}
+\contentsline {subsection}{\numberline {4.54.2}Constructor \& Destructor Documentation}{240}{subsection.4.54.2}
+\contentsline {subsubsection}{\numberline {4.54.2.1}TypeInt8()}{240}{subsubsection.4.54.2.1}
+\contentsline {subsection}{\numberline {4.54.3}Member Function Documentation}{240}{subsection.4.54.3}
+\contentsline {subsubsection}{\numberline {4.54.3.1}cmpEQ()}{241}{subsubsection.4.54.3.1}
+\contentsline {subsubsection}{\numberline {4.54.3.2}cmpGE()}{241}{subsubsection.4.54.3.2}
+\contentsline {subsubsection}{\numberline {4.54.3.3}cmpGT()}{241}{subsubsection.4.54.3.3}
+\contentsline {subsubsection}{\numberline {4.54.3.4}cmpLE()}{241}{subsubsection.4.54.3.4}
+\contentsline {subsubsection}{\numberline {4.54.3.5}cmpLT()}{242}{subsubsection.4.54.3.5}
+\contentsline {subsubsection}{\numberline {4.54.3.6}copy()}{242}{subsubsection.4.54.3.6}
+\contentsline {subsubsection}{\numberline {4.54.3.7}formatBin()}{242}{subsubsection.4.54.3.7}
+\contentsline {subsubsection}{\numberline {4.54.3.8}formatTxt()}{242}{subsubsection.4.54.3.8}
+\contentsline {section}{\numberline {4.55}Type\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Time Class Reference}{243}{section.4.55}
+\contentsline {subsection}{\numberline {4.55.1}Detailed Description}{243}{subsection.4.55.1}
+\contentsline {subsection}{\numberline {4.55.2}Constructor \& Destructor Documentation}{243}{subsection.4.55.2}
+\contentsline {subsubsection}{\numberline {4.55.2.1}TypeTime()}{243}{subsubsection.4.55.2.1}
+\contentsline {subsection}{\numberline {4.55.3}Member Function Documentation}{243}{subsection.4.55.3}
+\contentsline {subsubsection}{\numberline {4.55.3.1}cmpEQ()}{244}{subsubsection.4.55.3.1}
+\contentsline {subsubsection}{\numberline {4.55.3.2}cmpGE()}{244}{subsubsection.4.55.3.2}
+\contentsline {subsubsection}{\numberline {4.55.3.3}cmpGT()}{244}{subsubsection.4.55.3.3}
+\contentsline {subsubsection}{\numberline {4.55.3.4}cmpLE()}{244}{subsubsection.4.55.3.4}
+\contentsline {subsubsection}{\numberline {4.55.3.5}cmpLT()}{245}{subsubsection.4.55.3.5}
+\contentsline {subsubsection}{\numberline {4.55.3.6}copy()}{245}{subsubsection.4.55.3.6}
+\contentsline {subsubsection}{\numberline {4.55.3.7}formatBin()}{245}{subsubsection.4.55.3.7}
+\contentsline {subsubsection}{\numberline {4.55.3.8}formatTxt()}{245}{subsubsection.4.55.3.8}
+\contentsline {chapter}{\numberline {5}File Documentation}{247}{chapter.5}
+\contentsline {section}{\numberline {5.1}system/catalog.cc File Reference}{247}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{247}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}DESCRIPTION}{247}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Variable Documentation}{248}{subsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.3.1}g\_catalog}{248}{subsubsection.5.1.3.1}
+\contentsline {section}{\numberline {5.2}system/catalog.d File Reference}{248}{section.5.2}
+\contentsline {section}{\numberline {5.3}system/catalog.h File Reference}{248}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{248}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}DESCRIPTION}{248}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Variable Documentation}{249}{subsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.1}g\_catalog}{249}{subsubsection.5.3.3.1}
+\contentsline {section}{\numberline {5.4}catalog.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{249}{section.5.4}
+\contentsline {section}{\numberline {5.5}system/datatype.h File Reference}{250}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{250}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}DESCRIPTION}{250}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Enumeration Type Documentation}{250}{subsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.3.1}TypeCode}{250}{subsubsection.5.5.3.1}
+\contentsline {section}{\numberline {5.6}datatype.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{251}{section.5.6}
+\contentsline {section}{\numberline {5.7}system/errorlog.cc File Reference}{256}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{257}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Description}{257}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}Macro Definition Documentation}{257}{subsection.5.7.3}
+\contentsline {subsubsection}{\numberline {5.7.3.1}EL\_TOTAL\_FILES}{257}{subsubsection.5.7.3.1}
+\contentsline {subsection}{\numberline {5.7.4}Variable Documentation}{257}{subsection.5.7.4}
+\contentsline {subsubsection}{\numberline {5.7.4.1}EL\_src\_file\_name}{257}{subsubsection.5.7.4.1}
+\contentsline {subsubsection}{\numberline {5.7.4.2}thread\_el}{258}{subsubsection.5.7.4.2}
+\contentsline {section}{\numberline {5.8}system/errorlog.d File Reference}{258}{section.5.8}
+\contentsline {section}{\numberline {5.9}system/errorlog.h File Reference}{258}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{259}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Description}{259}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {5.9.3}Macro Definition Documentation}{260}{subsection.5.9.3}
+\contentsline {subsubsection}{\numberline {5.9.3.1}\_Thread\_local}{260}{subsubsection.5.9.3.1}
+\contentsline {subsubsection}{\numberline {5.9.3.2}EL\_ASSERT}{260}{subsubsection.5.9.3.2}
+\contentsline {subsubsection}{\numberline {5.9.3.3}EL\_BAD\_FILEID}{260}{subsubsection.5.9.3.3}
+\contentsline {subsubsection}{\numberline {5.9.3.4}EL\_DEBUG}{260}{subsubsection.5.9.3.4}
+\contentsline {subsubsection}{\numberline {5.9.3.5}EL\_ERRCODE}{260}{subsubsection.5.9.3.5}
+\contentsline {subsubsection}{\numberline {5.9.3.6}EL\_ERRMSG}{260}{subsubsection.5.9.3.6}
+\contentsline {subsubsection}{\numberline {5.9.3.7}EL\_ERROR}{260}{subsubsection.5.9.3.7}
+\contentsline {subsubsection}{\numberline {5.9.3.8}EL\_ERROR\_CODE}{261}{subsubsection.5.9.3.8}
+\contentsline {subsubsection}{\numberline {5.9.3.9}EL\_GET\_FILEID}{261}{subsubsection.5.9.3.9}
+\contentsline {subsubsection}{\numberline {5.9.3.10}EL\_GET\_FILENAME}{261}{subsubsection.5.9.3.10}
+\contentsline {subsubsection}{\numberline {5.9.3.11}EL\_GET\_LINENO}{261}{subsubsection.5.9.3.11}
+\contentsline {subsubsection}{\numberline {5.9.3.12}EL\_INFO}{261}{subsubsection.5.9.3.12}
+\contentsline {subsubsection}{\numberline {5.9.3.13}EL\_LEVEL\_COMPILE}{261}{subsubsection.5.9.3.13}
+\contentsline {subsubsection}{\numberline {5.9.3.14}EL\_LOG\_DEBUG}{261}{subsubsection.5.9.3.14}
+\contentsline {subsubsection}{\numberline {5.9.3.15}EL\_LOG\_ERROR}{262}{subsubsection.5.9.3.15}
+\contentsline {subsubsection}{\numberline {5.9.3.16}EL\_LOG\_INFO}{262}{subsubsection.5.9.3.16}
+\contentsline {subsubsection}{\numberline {5.9.3.17}EL\_LOG\_SERIOUS}{262}{subsubsection.5.9.3.17}
+\contentsline {subsubsection}{\numberline {5.9.3.18}EL\_LOG\_WARN}{262}{subsubsection.5.9.3.18}
+\contentsline {subsubsection}{\numberline {5.9.3.19}EL\_OK}{262}{subsubsection.5.9.3.19}
+\contentsline {subsubsection}{\numberline {5.9.3.20}EL\_RESET}{262}{subsubsection.5.9.3.20}
+\contentsline {subsubsection}{\numberline {5.9.3.21}EL\_SERIOUS}{263}{subsubsection.5.9.3.21}
+\contentsline {subsubsection}{\numberline {5.9.3.22}EL\_WARN}{263}{subsubsection.5.9.3.22}
+\contentsline {subsection}{\numberline {5.9.4}Variable Documentation}{263}{subsection.5.9.4}
+\contentsline {subsubsection}{\numberline {5.9.4.1}EL\_src\_file\_name}{263}{subsubsection.5.9.4.1}
+\contentsline {subsubsection}{\numberline {5.9.4.2}thread\_el}{263}{subsubsection.5.9.4.2}
+\contentsline {section}{\numberline {5.10}errorlog.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{263}{section.5.10}
+\contentsline {section}{\numberline {5.11}system/executor.cc File Reference}{265}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{266}{subsection.5.11.1}
+\contentsline {subsection}{\numberline {5.11.2}DESCRIPTION}{266}{subsection.5.11.2}
+\contentsline {subsection}{\numberline {5.11.3}Function Documentation}{266}{subsection.5.11.3}
+\contentsline {subsubsection}{\numberline {5.11.3.1}allocColBuf()}{266}{subsubsection.5.11.3.1}
+\contentsline {subsubsection}{\numberline {5.11.3.2}easyAlloc()}{266}{subsubsection.5.11.3.2}
+\contentsline {subsubsection}{\numberline {5.11.3.3}getTupleSize()}{267}{subsubsection.5.11.3.3}
+\contentsline {section}{\numberline {5.12}system/executor.d File Reference}{267}{section.5.12}
+\contentsline {section}{\numberline {5.13}system/executor.h File Reference}{267}{section.5.13}
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{268}{subsection.5.13.1}
+\contentsline {subsection}{\numberline {5.13.2}DESCRIPTION}{268}{subsection.5.13.2}
+\contentsline {subsection}{\numberline {5.13.3}Enumeration Type Documentation}{268}{subsection.5.13.3}
+\contentsline {subsubsection}{\numberline {5.13.3.1}AggregateMethod}{268}{subsubsection.5.13.3.1}
+\contentsline {subsubsection}{\numberline {5.13.3.2}CompareMethod}{269}{subsubsection.5.13.3.2}
+\contentsline {subsection}{\numberline {5.13.4}Function Documentation}{269}{subsection.5.13.4}
+\contentsline {subsubsection}{\numberline {5.13.4.1}easyAlloc()}{269}{subsubsection.5.13.4.1}
+\contentsline {section}{\numberline {5.14}executor.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{270}{section.5.14}
+\contentsline {section}{\numberline {5.15}system/gcc\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}pf\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}p3.h File Reference}{279}{section.5.15}
+\contentsline {subsection}{\numberline {5.15.1}Macro Definition Documentation}{279}{subsection.5.15.1}
+\contentsline {subsubsection}{\numberline {5.15.1.1}pfld}{279}{subsubsection.5.15.1.1}
+\contentsline {subsubsection}{\numberline {5.15.1.2}pfldnta}{279}{subsubsection.5.15.1.2}
+\contentsline {subsubsection}{\numberline {5.15.1.3}pfst}{280}{subsubsection.5.15.1.3}
+\contentsline {subsubsection}{\numberline {5.15.1.4}pfstnta}{280}{subsubsection.5.15.1.4}
+\contentsline {subsubsection}{\numberline {5.15.1.5}prefetchnta}{280}{subsubsection.5.15.1.5}
+\contentsline {subsubsection}{\numberline {5.15.1.6}prefetcht0}{280}{subsubsection.5.15.1.6}
+\contentsline {subsubsection}{\numberline {5.15.1.7}prefetcht1}{280}{subsubsection.5.15.1.7}
+\contentsline {subsubsection}{\numberline {5.15.1.8}ptouch}{280}{subsubsection.5.15.1.8}
+\contentsline {section}{\numberline {5.16}gcc\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}pf\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}p3.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{281}{section.5.16}
+\contentsline {section}{\numberline {5.17}system/global.cc File Reference}{281}{section.5.17}
+\contentsline {subsection}{\numberline {5.17.1}Function Documentation}{281}{subsection.5.17.1}
+\contentsline {subsubsection}{\numberline {5.17.1.1}global\_init()}{282}{subsubsection.5.17.1.1}
+\contentsline {subsubsection}{\numberline {5.17.1.2}global\_shut()}{282}{subsubsection.5.17.1.2}
+\contentsline {section}{\numberline {5.18}system/global.d File Reference}{282}{section.5.18}
+\contentsline {section}{\numberline {5.19}system/global.h File Reference}{282}{section.5.19}
+\contentsline {subsection}{\numberline {5.19.1}Macro Definition Documentation}{282}{subsection.5.19.1}
+\contentsline {subsubsection}{\numberline {5.19.1.1}BNODE\_POINTERS\_NUM}{282}{subsubsection.5.19.1.1}
+\contentsline {subsubsection}{\numberline {5.19.1.2}GLOBAL\_MEMORY\_MINIMUM}{283}{subsubsection.5.19.1.2}
+\contentsline {subsubsection}{\numberline {5.19.1.3}GLOBAL\_MEMORY\_SIZE}{283}{subsubsection.5.19.1.3}
+\contentsline {subsection}{\numberline {5.19.2}Function Documentation}{283}{subsection.5.19.2}
+\contentsline {subsubsection}{\numberline {5.19.2.1}global\_init()}{283}{subsubsection.5.19.2.1}
+\contentsline {subsubsection}{\numberline {5.19.2.2}global\_shut()}{283}{subsubsection.5.19.2.2}
+\contentsline {subsection}{\numberline {5.19.3}Variable Documentation}{283}{subsection.5.19.3}
+\contentsline {subsubsection}{\numberline {5.19.3.1}g\_catalog}{283}{subsubsection.5.19.3.1}
+\contentsline {subsubsection}{\numberline {5.19.3.2}g\_memory}{283}{subsubsection.5.19.3.2}
+\contentsline {section}{\numberline {5.20}global.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{284}{section.5.20}
+\contentsline {section}{\numberline {5.21}system/hashindex.cc File Reference}{284}{section.5.21}
+\contentsline {subsection}{\numberline {5.21.1}Detailed Description}{284}{subsection.5.21.1}
+\contentsline {subsection}{\numberline {5.21.2}DESCRIPTION}{284}{subsection.5.21.2}
+\contentsline {section}{\numberline {5.22}system/hashindex.d File Reference}{284}{section.5.22}
+\contentsline {section}{\numberline {5.23}system/hashindex.h File Reference}{284}{section.5.23}
+\contentsline {subsection}{\numberline {5.23.1}Detailed Description}{285}{subsection.5.23.1}
+\contentsline {subsection}{\numberline {5.23.2}DESCRIPTION}{285}{subsection.5.23.2}
+\contentsline {subsection}{\numberline {5.23.3}Macro Definition Documentation}{285}{subsection.5.23.3}
+\contentsline {subsubsection}{\numberline {5.23.3.1}HASHINFO\_CAPICITY}{285}{subsubsection.5.23.3.1}
+\contentsline {section}{\numberline {5.24}hashindex.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{286}{section.5.24}
+\contentsline {section}{\numberline {5.25}system/hashtable.cc File Reference}{286}{section.5.25}
+\contentsline {subsection}{\numberline {5.25.1}Macro Definition Documentation}{287}{subsection.5.25.1}
+\contentsline {subsubsection}{\numberline {5.25.1.1}ESTIMATE\_ERROR}{287}{subsubsection.5.25.1.1}
+\contentsline {section}{\numberline {5.26}system/hashtable.d File Reference}{287}{section.5.26}
+\contentsline {section}{\numberline {5.27}system/hashtable.h File Reference}{287}{section.5.27}
+\contentsline {subsection}{\numberline {5.27.1}Macro Definition Documentation}{287}{subsection.5.27.1}
+\contentsline {subsubsection}{\numberline {5.27.1.1}hc\_capacity}{287}{subsubsection.5.27.1.1}
+\contentsline {subsubsection}{\numberline {5.27.1.2}hc\_ent}{288}{subsubsection.5.27.1.2}
+\contentsline {subsubsection}{\numberline {5.27.1.3}hc\_ents}{288}{subsubsection.5.27.1.3}
+\contentsline {section}{\numberline {5.28}hashtable.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{288}{section.5.28}
+\contentsline {section}{\numberline {5.29}system/mymemory.cc File Reference}{289}{section.5.29}
+\contentsline {subsection}{\numberline {5.29.1}Detailed Description}{289}{subsection.5.29.1}
+\contentsline {subsection}{\numberline {5.29.2}DESCRIPTION}{289}{subsection.5.29.2}
+\contentsline {subsection}{\numberline {5.29.3}Variable Documentation}{289}{subsection.5.29.3}
+\contentsline {subsubsection}{\numberline {5.29.3.1}g\_memory}{289}{subsubsection.5.29.3.1}
+\contentsline {section}{\numberline {5.30}system/mymemory.d File Reference}{290}{section.5.30}
+\contentsline {section}{\numberline {5.31}system/mymemory.h File Reference}{290}{section.5.31}
+\contentsline {subsection}{\numberline {5.31.1}Detailed Description}{290}{subsection.5.31.1}
+\contentsline {subsection}{\numberline {5.31.2}DESCRIPTION}{290}{subsection.5.31.2}
+\contentsline {subsection}{\numberline {5.31.3}Macro Definition Documentation}{290}{subsection.5.31.3}
+\contentsline {subsubsection}{\numberline {5.31.3.1}MEMORY\_OK}{291}{subsubsection.5.31.3.1}
+\contentsline {subsubsection}{\numberline {5.31.3.2}NON\_TABLE\_MEMORY\_ADDR}{291}{subsubsection.5.31.3.2}
+\contentsline {subsubsection}{\numberline {5.31.3.3}TABLE\_MEMORY\_ALLOC\_INC}{291}{subsubsection.5.31.3.3}
+\contentsline {subsubsection}{\numberline {5.31.3.4}TABLE\_MEMORY\_ALLOC\_MAX}{291}{subsubsection.5.31.3.4}
+\contentsline {subsubsection}{\numberline {5.31.3.5}TABLE\_MEMORY\_INIT\_ADDR}{291}{subsubsection.5.31.3.5}
+\contentsline {subsubsection}{\numberline {5.31.3.6}TABLE\_MEMORY\_MAX\_ADDR}{291}{subsubsection.5.31.3.6}
+\contentsline {subsection}{\numberline {5.31.4}Variable Documentation}{291}{subsection.5.31.4}
+\contentsline {subsubsection}{\numberline {5.31.4.1}g\_memory}{291}{subsubsection.5.31.4.1}
+\contentsline {section}{\numberline {5.32}mymemory.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{292}{section.5.32}
+\contentsline {section}{\numberline {5.33}system/nodepref.h File Reference}{292}{section.5.33}
+\contentsline {subsection}{\numberline {5.33.1}Macro Definition Documentation}{292}{subsection.5.33.1}
+\contentsline {subsubsection}{\numberline {5.33.1.1}AREA\_LINE\_NUM}{293}{subsubsection.5.33.1.1}
+\contentsline {subsubsection}{\numberline {5.33.1.2}BNODE\_SIZE}{293}{subsubsection.5.33.1.2}
+\contentsline {subsubsection}{\numberline {5.33.1.3}CACHE\_LINE\_SIZE}{293}{subsubsection.5.33.1.3}
+\contentsline {subsubsection}{\numberline {5.33.1.4}ITEM\_SIZE}{293}{subsubsection.5.33.1.4}
+\contentsline {subsubsection}{\numberline {5.33.1.5}L3\_CACHE\_LINE}{293}{subsubsection.5.33.1.5}
+\contentsline {subsubsection}{\numberline {5.33.1.6}LEAF\_PREF}{293}{subsubsection.5.33.1.6}
+\contentsline {subsubsection}{\numberline {5.33.1.7}LEAF\_PREF\_ST}{293}{subsubsection.5.33.1.7}
+\contentsline {subsubsection}{\numberline {5.33.1.8}NODE\_LINE\_NUM}{293}{subsubsection.5.33.1.8}
+\contentsline {section}{\numberline {5.34}nodepref.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{294}{section.5.34}
+\contentsline {section}{\numberline {5.35}system/pbtree.cc File Reference}{297}{section.5.35}
+\contentsline {subsection}{\numberline {5.35.1}Detailed Description}{297}{subsection.5.35.1}
+\contentsline {subsection}{\numberline {5.35.2}LICENSE}{297}{subsection.5.35.2}
+\contentsline {subsection}{\numberline {5.35.3}DESCRIPTION}{297}{subsection.5.35.3}
+\contentsline {subsection}{\numberline {5.35.4}Macro Definition Documentation}{298}{subsection.5.35.4}
+\contentsline {subsubsection}{\numberline {5.35.4.1}LEFT\_KEY\_NUM\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{298}{subsubsection.5.35.4.1}
+\contentsline {subsubsection}{\numberline {5.35.4.2}LEFT\_KEY\_NUM\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{298}{subsubsection.5.35.4.2}
+\contentsline {subsubsection}{\numberline {5.35.4.3}RIGHT\_KEY\_NUM\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{298}{subsubsection.5.35.4.3}
+\contentsline {subsubsection}{\numberline {5.35.4.4}RIGHT\_KEY\_NUM\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{298}{subsubsection.5.35.4.4}
+\contentsline {section}{\numberline {5.36}system/pbtree.d File Reference}{298}{section.5.36}
+\contentsline {section}{\numberline {5.37}system/pbtree.h File Reference}{298}{section.5.37}
+\contentsline {subsection}{\numberline {5.37.1}Detailed Description}{299}{subsection.5.37.1}
+\contentsline {subsection}{\numberline {5.37.2}LICENSE}{299}{subsection.5.37.2}
+\contentsline {subsection}{\numberline {5.37.3}DESCRIPTION}{299}{subsection.5.37.3}
+\contentsline {subsection}{\numberline {5.37.4}Macro Definition Documentation}{299}{subsection.5.37.4}
+\contentsline {subsubsection}{\numberline {5.37.4.1}BKEY\_NUM}{299}{subsubsection.5.37.4.1}
+\contentsline {subsubsection}{\numberline {5.37.4.2}bleaf}{300}{subsubsection.5.37.4.2}
+\contentsline {subsubsection}{\numberline {5.37.4.3}bnext}{300}{subsubsection.5.37.4.3}
+\contentsline {subsubsection}{\numberline {5.37.4.4}bnum}{300}{subsubsection.5.37.4.4}
+\contentsline {subsubsection}{\numberline {5.37.4.5}KEY\_SIZE}{300}{subsubsection.5.37.4.5}
+\contentsline {subsubsection}{\numberline {5.37.4.6}LEAF\_KEY\_NUM}{300}{subsubsection.5.37.4.6}
+\contentsline {subsubsection}{\numberline {5.37.4.7}MAX\_KEY}{300}{subsubsection.5.37.4.7}
+\contentsline {subsubsection}{\numberline {5.37.4.8}MIN\_KEY}{300}{subsubsection.5.37.4.8}
+\contentsline {subsubsection}{\numberline {5.37.4.9}NON\_LEAF\_KEY\_NUM}{301}{subsubsection.5.37.4.9}
+\contentsline {subsubsection}{\numberline {5.37.4.10}POINTER8B\_SIZE}{301}{subsubsection.5.37.4.10}
+\contentsline {subsubsection}{\numberline {5.37.4.11}POINTER\_SIZE}{301}{subsubsection.5.37.4.11}
+\contentsline {subsection}{\numberline {5.37.5}Typedef Documentation}{301}{subsection.5.37.5}
+\contentsline {subsubsection}{\numberline {5.37.5.1}key\_type}{301}{subsubsection.5.37.5.1}
+\contentsline {section}{\numberline {5.38}pbtree.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{301}{section.5.38}
+\contentsline {section}{\numberline {5.39}system/pbtreeindex.cc File Reference}{305}{section.5.39}
+\contentsline {section}{\numberline {5.40}system/pbtreeindex.d File Reference}{305}{section.5.40}
+\contentsline {section}{\numberline {5.41}system/pbtreeindex.h File Reference}{305}{section.5.41}
+\contentsline {subsection}{\numberline {5.41.1}Detailed Description}{306}{subsection.5.41.1}
+\contentsline {subsection}{\numberline {5.41.2}DESCRIPTION}{306}{subsection.5.41.2}
+\contentsline {subsection}{\numberline {5.41.3}Macro Definition Documentation}{306}{subsection.5.41.3}
+\contentsline {subsubsection}{\numberline {5.41.3.1}PBTREEINFO\_CAPICITY}{306}{subsubsection.5.41.3.1}
+\contentsline {section}{\numberline {5.42}pbtreeindex.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{306}{section.5.42}
+\contentsline {section}{\numberline {5.43}system/rowtable.cc File Reference}{307}{section.5.43}
+\contentsline {subsection}{\numberline {5.43.1}Detailed Description}{307}{subsection.5.43.1}
+\contentsline {subsection}{\numberline {5.43.2}DESCRIPTION}{307}{subsection.5.43.2}
+\contentsline {section}{\numberline {5.44}system/rowtable.d File Reference}{307}{section.5.44}
+\contentsline {section}{\numberline {5.45}system/rowtable.h File Reference}{307}{section.5.45}
+\contentsline {subsection}{\numberline {5.45.1}Detailed Description}{308}{subsection.5.45.1}
+\contentsline {subsection}{\numberline {5.45.2}DESCRIPTION}{308}{subsection.5.45.2}
+\contentsline {subsection}{\numberline {5.45.3}Variable Documentation}{308}{subsection.5.45.3}
+\contentsline {subsubsection}{\numberline {5.45.3.1}g\_memory}{308}{subsubsection.5.45.3.1}
+\contentsline {section}{\numberline {5.46}rowtable.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{309}{section.5.46}
+\contentsline {section}{\numberline {5.47}system/runaimdb.cc File Reference}{311}{section.5.47}
+\contentsline {subsection}{\numberline {5.47.1}Detailed Description}{312}{subsection.5.47.1}
+\contentsline {subsection}{\numberline {5.47.2}DESCRIPTION}{312}{subsection.5.47.2}
+\contentsline {subsection}{\numberline {5.47.3}Function Documentation}{312}{subsection.5.47.3}
+\contentsline {subsubsection}{\numberline {5.47.3.1}load\_data()}{312}{subsubsection.5.47.3.1}
+\contentsline {subsubsection}{\numberline {5.47.3.2}load\_schema()}{313}{subsubsection.5.47.3.2}
+\contentsline {subsubsection}{\numberline {5.47.3.3}main()}{313}{subsubsection.5.47.3.3}
+\contentsline {subsubsection}{\numberline {5.47.3.4}test()}{313}{subsubsection.5.47.3.4}
+\contentsline {subsubsection}{\numberline {5.47.3.5}testOne()}{314}{subsubsection.5.47.3.5}
+\contentsline {subsection}{\numberline {5.47.4}Variable Documentation}{314}{subsection.5.47.4}
+\contentsline {subsubsection}{\numberline {5.47.4.1}print\_flag}{314}{subsubsection.5.47.4.1}
+\contentsline {subsubsection}{\numberline {5.47.4.2}querys}{314}{subsubsection.5.47.4.2}
+\contentsline {subsubsection}{\numberline {5.47.4.3}table\_name}{314}{subsubsection.5.47.4.3}
+\contentsline {section}{\numberline {5.48}system/runaimdb.d File Reference}{314}{section.5.48}
+\contentsline {section}{\numberline {5.49}system/schema.h File Reference}{314}{section.5.49}
+\contentsline {subsection}{\numberline {5.49.1}Detailed Description}{315}{subsection.5.49.1}
+\contentsline {subsection}{\numberline {5.49.2}DESCRIPTION}{315}{subsection.5.49.2}
+\contentsline {subsection}{\numberline {5.49.3}Macro Definition Documentation}{316}{subsection.5.49.3}
+\contentsline {subsubsection}{\numberline {5.49.3.1}OBJ\_NAME\_MAX}{316}{subsubsection.5.49.3.1}
+\contentsline {subsection}{\numberline {5.49.4}Enumeration Type Documentation}{316}{subsection.5.49.4}
+\contentsline {subsubsection}{\numberline {5.49.4.1}ColumnType}{316}{subsubsection.5.49.4.1}
+\contentsline {subsubsection}{\numberline {5.49.4.2}IndexType}{316}{subsubsection.5.49.4.2}
+\contentsline {subsubsection}{\numberline {5.49.4.3}ObjectType}{317}{subsubsection.5.49.4.3}
+\contentsline {subsubsection}{\numberline {5.49.4.4}TableType}{317}{subsubsection.5.49.4.4}
+\contentsline {section}{\numberline {5.50}schema.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{318}{section.5.50}
+\contentsline {chapter}{Index}{325}{section*.200}

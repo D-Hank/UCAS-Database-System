@@ -1,0 +1,734 @@
+\hypertarget{classTable}{}\doxysection{Table Class Reference}
+\label{classTable}\index{Table@{Table}}
+
+
+{\ttfamily \#include $<$schema.\+h$>$}
+
+Inheritance diagram for Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classTable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTable_a909d99f9a05b4c7eee97a6e5ba115e3d}{Table}} (int64\+\_\+t t\+\_\+id, const char $\ast$t\+\_\+name, \mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}{Table\+Type}} \mbox{\hyperlink{classTable_a65a17f299575abc0401b7a10ed3131ed}{t\+\_\+type}})
+\item 
+virtual \mbox{\hyperlink{classTable_a33a8da6f95f5281d493c8c491f23a3db}{$\sim$\+Table}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a580d6848b60beedf5d08cb48a5203cd5}{add\+Column}} (int64\+\_\+t column\+\_\+id)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a494719a212608d35dcb5e1f952f301cf}{add\+Index}} (int64\+\_\+t index\+\_\+id)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a2332a1fc7fcbeac27a7ec660c4274aa4}{del}} (char $\ast$columns\mbox{[}$\,$\mbox{]})
+\item 
+virtual bool \mbox{\hyperlink{classTable_a878ae22a692e5a56aae70fe93d42697c}{del}} (char $\ast$row\+\_\+pointer)
+\item 
+virtual bool \mbox{\hyperlink{classTable_ad4aa26f1087c1590a74c6dd19005c4c0}{del}} (int64\+\_\+t record\+\_\+rank)
+\item 
+virtual bool \mbox{\hyperlink{classTable_aa5192eeb2965be90284ff83106fe80d2}{finish}} (void)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classTable_a1caf72993a94c47ca5ccc1726c28a30c}{get\+Column\+Rank}} (int64\+\_\+t c\+\_\+id)
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \& \mbox{\hyperlink{classTable_a9f0a48154fb354fad6fbc9d1e3687d5d}{get\+Columns}} (void)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classTable_a9067ad461b9fc86c9d20ed25b3f1b303}{get\+Index\+Rank}} (int64\+\_\+t i\+\_\+id)
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \& \mbox{\hyperlink{classTable_a7f51a6d9edcd718288593bde12d1d940}{get\+Indexs}} (void)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classTable_a957f23b34ae169516d2094028f3cb376}{get\+Rank}} (std\+::vector$<$ int64\+\_\+t $>$ \&vec, int64\+\_\+t id)
+\item 
+virtual int64\+\_\+t \mbox{\hyperlink{classTable_ade58e3a4bb65e0b79f29e5c667305529}{get\+Record\+Num}} (void)
+\item 
+virtual void $\ast$ \mbox{\hyperlink{classTable_aa57a7ca7f5112c1091655be6589ee815}{get\+Record\+Ptr}} (int64\+\_\+t row\+\_\+rank)
+\item 
+\mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}{Table\+Type}} \mbox{\hyperlink{classTable_ab12aaa88daba145005671c1909d69b03}{get\+Ttype}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classTable_adeab766da4e0811ca571e3c9e870f5e1}{init}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a67b826ab2f897713806f6f2ce0a10bc2}{insert}} (char $\ast$columns\mbox{[}$\,$\mbox{]})
+\item 
+virtual bool \mbox{\hyperlink{classTable_af888ef7e22bab16366b81b4d9d155082}{insert}} (char $\ast$source)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a8e7ee9d67e2c2e5e04f3a5ad54299fc6}{load\+Data}} (const char $\ast$filename)
+\item 
+virtual void \mbox{\hyperlink{classTable_aa9ece3fd4385feb15816e287c3e64dcf}{print}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classTable_af1db9daa991a84f7d7c32d54a517cece}{print\+Data}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a0cc704d1c166b0b2374aa2f4db3c80ba}{select}} (char $\ast$row\+\_\+pointer, char $\ast$dest)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a2fcbd7fdf0677de28c1dd4fe3030403d}{select}} (int64\+\_\+t record\+\_\+rank, char $\ast$dest)
+\item 
+virtual bool \mbox{\hyperlink{classTable_afd98a033a4ba0c4dbb0da58956ca7f1a}{select\+Col}} (char $\ast$row\+\_\+pointer, int64\+\_\+t column\+\_\+rank, char $\ast$dest)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a44463f0ee53b4d05fa182596ce1e0fac}{select\+Col}} (int64\+\_\+t record\+\_\+rank, int64\+\_\+t column\+\_\+rank, char $\ast$dest)
+\item 
+virtual bool \mbox{\hyperlink{classTable_ad667072cf9b356e1e305d37a8e16b5f2}{select\+Cols}} (char $\ast$row\+\_\+pointer, int64\+\_\+t column\+\_\+total, int64\+\_\+t $\ast$column\+\_\+ranks, char $\ast$dest)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a12031136b85beddac3b75746cd75ff0d}{select\+Cols}} (int64\+\_\+t record\+\_\+rank, int64\+\_\+t column\+\_\+total, int64\+\_\+t $\ast$column\+\_\+ranks, char $\ast$dest)
+\item 
+virtual bool \mbox{\hyperlink{classTable_ac5536ca71e2a8e9890d86e9230cbbe8e}{shut}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classTable_ad072188e6d971482f03047df81accd89}{update\+Col}} (char $\ast$row\+\_\+pointer, int64\+\_\+t column\+\_\+rank, char $\ast$source)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a77ec3acafdbbabc75e7af416d3260f06}{update\+Col}} (int64\+\_\+t record\+\_\+rank, int64\+\_\+t column\+\_\+rank, char $\ast$source)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a0744fb8d8339686be5d86e014d3cb084}{update\+Cols}} (char $\ast$row\+\_\+pointer, int64\+\_\+t column\+\_\+total, int64\+\_\+t $\ast$column\+\_\+ranks, char $\ast$source)
+\item 
+virtual bool \mbox{\hyperlink{classTable_a100025d7c19b9c69f4ed1353be430032}{update\+Cols}} (char $\ast$row\+\_\+pointer, int64\+\_\+t column\+\_\+total, int64\+\_\+t $\ast$column\+\_\+ranks, char $\ast$source\mbox{[}$\,$\mbox{]})
+\item 
+virtual bool \mbox{\hyperlink{classTable_aeac94dafd5a886f9db2c8ce2c11cf1b6}{update\+Cols}} (int64\+\_\+t record\+\_\+rank, int64\+\_\+t column\+\_\+total, int64\+\_\+t $\ast$column\+\_\+ranks, char $\ast$source)
+\item 
+virtual bool \mbox{\hyperlink{classTable_ad6921c60b7bae579c3983c5f3e785666}{update\+Cols}} (int64\+\_\+t record\+\_\+rank, int64\+\_\+t column\+\_\+total, int64\+\_\+t $\ast$column\+\_\+ranks, char $\ast$source\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classTable_afc4c313931bfabddc571e49c10605121}{t\+\_\+columns}}
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classTable_a1af9a3c6d290f3b5121b9fc5e8541495}{t\+\_\+index}}
+\item 
+\mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}{Table\+Type}} \mbox{\hyperlink{classTable_a65a17f299575abc0401b7a10ed3131ed}{t\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of class \mbox{\hyperlink{classTable}{Table}}. ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTable_a33a8da6f95f5281d493c8c491f23a3db}\label{classTable_a33a8da6f95f5281d493c8c491f23a3db}} 
+\index{Table@{Table}!````~Table@{$\sim$Table}}
+\index{````~Table@{$\sim$Table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{$\sim$Table()}{~Table()}}
+{\footnotesize\ttfamily virtual Table\+::$\sim$\+Table (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+destructor. \mbox{\Hypertarget{classTable_a909d99f9a05b4c7eee97a6e5ba115e3d}\label{classTable_a909d99f9a05b4c7eee97a6e5ba115e3d}} 
+\index{Table@{Table}!Table@{Table}}
+\index{Table@{Table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}}
+{\footnotesize\ttfamily Table\+::\+Table (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{t\+\_\+id,  }\item[{const char $\ast$}]{t\+\_\+name,  }\item[{\mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}{Table\+Type}}}]{t\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor. 
+\begin{DoxyParams}{Parameters}
+{\em t\+\_\+id} & table identifier \\
+\hline
+{\em t\+\_\+name} & table name \\
+\hline
+{\em t\+\_\+type} & table type \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTable_a580d6848b60beedf5d08cb48a5203cd5}\label{classTable_a580d6848b60beedf5d08cb48a5203cd5}} 
+\index{Table@{Table}!addColumn@{addColumn}}
+\index{addColumn@{addColumn}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{addColumn()}{addColumn()}}
+{\footnotesize\ttfamily virtual bool Table\+::add\+Column (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{column\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+add column identifier to this table. \mbox{\Hypertarget{classTable_a494719a212608d35dcb5e1f952f301cf}\label{classTable_a494719a212608d35dcb5e1f952f301cf}} 
+\index{Table@{Table}!addIndex@{addIndex}}
+\index{addIndex@{addIndex}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{addIndex()}{addIndex()}}
+{\footnotesize\ttfamily virtual bool Table\+::add\+Index (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{index\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+add index identifier to this table. \mbox{\Hypertarget{classTable_a2332a1fc7fcbeac27a7ec660c4274aa4}\label{classTable_a2332a1fc7fcbeac27a7ec660c4274aa4}} 
+\index{Table@{Table}!del@{del}}
+\index{del@{del}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual bool Table\+::del (\begin{DoxyParamCaption}\item[{char $\ast$}]{columns\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+del a row(not in use). 
+\begin{DoxyParams}{Parameters}
+{\em columns} & array of the pointers in a row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable_a878ae22a692e5a56aae70fe93d42697c}\label{classTable_a878ae22a692e5a56aae70fe93d42697c}} 
+\index{Table@{Table}!del@{del}}
+\index{del@{del}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual bool Table\+::del (\begin{DoxyParamCaption}\item[{char $\ast$}]{row\+\_\+pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+del a row(not in use). 
+\begin{DoxyParams}{Parameters}
+{\em row\+\_\+pointer} & the pointer of a row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a21bb0b95868ceb8cf7c98948254dc2ee}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_ad4aa26f1087c1590a74c6dd19005c4c0}\label{classTable_ad4aa26f1087c1590a74c6dd19005c4c0}} 
+\index{Table@{Table}!del@{del}}
+\index{del@{del}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual bool Table\+::del (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{record\+\_\+rank }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+del a row. 
+\begin{DoxyParams}{Parameters}
+{\em row\+\_\+rank} & the n th record of the table \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a4cf86d02ab12b7bf36c0d87f0cc93bc8}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_aa5192eeb2965be90284ff83106fe80d2}\label{classTable_aa5192eeb2965be90284ff83106fe80d2}} 
+\index{Table@{Table}!finish@{finish}}
+\index{finish@{finish}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{finish()}{finish()}}
+{\footnotesize\ttfamily virtual bool Table\+::finish (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+finish, important interface for son class 
+
+Reimplemented in \mbox{\hyperlink{classRowTable_af7de8b13c57dd8fde1c41a2a34e4e774}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_a1caf72993a94c47ca5ccc1726c28a30c}\label{classTable_a1caf72993a94c47ca5ccc1726c28a30c}} 
+\index{Table@{Table}!getColumnRank@{getColumnRank}}
+\index{getColumnRank@{getColumnRank}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getColumnRank()}{getColumnRank()}}
+{\footnotesize\ttfamily int64\+\_\+t Table\+::get\+Column\+Rank (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{c\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get column rank in this table 
+\begin{DoxyParams}{Parameters}
+{\em c\+\_\+id} & column identifier \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=} & 0 valid rank \\
+\hline
+{\em $<$0} & invalid, not exist \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable_a9f0a48154fb354fad6fbc9d1e3687d5d}\label{classTable_a9f0a48154fb354fad6fbc9d1e3687d5d}} 
+\index{Table@{Table}!getColumns@{getColumns}}
+\index{getColumns@{getColumns}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getColumns()}{getColumns()}}
+{\footnotesize\ttfamily std\+::vector$<$ int64\+\_\+t $>$ \& Table\+::get\+Columns (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get column identifier vector. 
+\begin{DoxyRetVals}{Return values}
+{\em vector} & of column identifiers \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable_a9067ad461b9fc86c9d20ed25b3f1b303}\label{classTable_a9067ad461b9fc86c9d20ed25b3f1b303}} 
+\index{Table@{Table}!getIndexRank@{getIndexRank}}
+\index{getIndexRank@{getIndexRank}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getIndexRank()}{getIndexRank()}}
+{\footnotesize\ttfamily int64\+\_\+t Table\+::get\+Index\+Rank (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{i\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get index rank in this table 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+id} & column identifier \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=} & 0 valid rank \\
+\hline
+{\em $<$0} & invalid, not exist \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable_a7f51a6d9edcd718288593bde12d1d940}\label{classTable_a7f51a6d9edcd718288593bde12d1d940}} 
+\index{Table@{Table}!getIndexs@{getIndexs}}
+\index{getIndexs@{getIndexs}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getIndexs()}{getIndexs()}}
+{\footnotesize\ttfamily std\+::vector$<$ int64\+\_\+t $>$ \& Table\+::get\+Indexs (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get index identifier vector. \mbox{\Hypertarget{classTable_a957f23b34ae169516d2094028f3cb376}\label{classTable_a957f23b34ae169516d2094028f3cb376}} 
+\index{Table@{Table}!getRank@{getRank}}
+\index{getRank@{getRank}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getRank()}{getRank()}}
+{\footnotesize\ttfamily int64\+\_\+t Table\+::get\+Rank (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int64\+\_\+t $>$ \&}]{vec,  }\item[{int64\+\_\+t}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get rank in a vector 
+\begin{DoxyParams}{Parameters}
+{\em vec} & vector to search in \\
+\hline
+{\em id} & object identifier \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=} & 0 valid rank \\
+\hline
+{\em $<$0} & invalid, not exist \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable_ade58e3a4bb65e0b79f29e5c667305529}\label{classTable_ade58e3a4bb65e0b79f29e5c667305529}} 
+\index{Table@{Table}!getRecordNum@{getRecordNum}}
+\index{getRecordNum@{getRecordNum}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getRecordNum()}{getRecordNum()}}
+{\footnotesize\ttfamily virtual int64\+\_\+t Table\+::get\+Record\+Num (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+get record number. 
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a6b3b7c858bb144fe88880a0adfc39212}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_aa57a7ca7f5112c1091655be6589ee815}\label{classTable_aa57a7ca7f5112c1091655be6589ee815}} 
+\index{Table@{Table}!getRecordPtr@{getRecordPtr}}
+\index{getRecordPtr@{getRecordPtr}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getRecordPtr()}{getRecordPtr()}}
+{\footnotesize\ttfamily virtual void $\ast$ Table\+::get\+Record\+Ptr (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{row\+\_\+rank }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+get record pointer. 
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a0ec2fc101060b53b24ada380bdec1d96}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_ab12aaa88daba145005671c1909d69b03}\label{classTable_ab12aaa88daba145005671c1909d69b03}} 
+\index{Table@{Table}!getTtype@{getTtype}}
+\index{getTtype@{getTtype}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getTtype()}{getTtype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}{Table\+Type}} Table\+::get\+Ttype (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get table type. \mbox{\Hypertarget{classTable_adeab766da4e0811ca571e3c9e870f5e1}\label{classTable_adeab766da4e0811ca571e3c9e870f5e1}} 
+\index{Table@{Table}!init@{init}}
+\index{init@{init}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual bool Table\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+init, important interface for son class 
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a6f2e369777c11b9e64aec70808ed8edb}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_a67b826ab2f897713806f6f2ce0a10bc2}\label{classTable_a67b826ab2f897713806f6f2ce0a10bc2}} 
+\index{Table@{Table}!insert@{insert}}
+\index{insert@{insert}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Table\+::insert (\begin{DoxyParamCaption}\item[{char $\ast$}]{columns\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+insert a row. 
+\begin{DoxyParams}{Parameters}
+{\em columns} & each element of the array pointed to a column data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a12da29d8f9d03748910241fd6dfb4968}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_af888ef7e22bab16366b81b4d9d155082}\label{classTable_af888ef7e22bab16366b81b4d9d155082}} 
+\index{Table@{Table}!insert@{insert}}
+\index{insert@{insert}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Table\+::insert (\begin{DoxyParamCaption}\item[{char $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+insert a row. 
+\begin{DoxyParams}{Parameters}
+{\em source} & buffer of a row in pattern \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a1f72ce755680f39a3b378ebde6abe192}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_a8e7ee9d67e2c2e5e04f3a5ad54299fc6}\label{classTable_a8e7ee9d67e2c2e5e04f3a5ad54299fc6}} 
+\index{Table@{Table}!loadData@{loadData}}
+\index{loadData@{loadData}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily virtual bool Table\+::load\+Data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+load data(not in use). 
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a4915492db5b4ca19a4510280a39a4860}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_aa9ece3fd4385feb15816e287c3e64dcf}\label{classTable_aa9ece3fd4385feb15816e287c3e64dcf}} 
+\index{Table@{Table}!print@{print}}
+\index{print@{print}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void Table\+::print (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+print table information. 
+
+Reimplemented from \mbox{\hyperlink{classObject_a979154fa752f7a901145ef4968c6aa58}{Object}}.
+
+\mbox{\Hypertarget{classTable_af1db9daa991a84f7d7c32d54a517cece}\label{classTable_af1db9daa991a84f7d7c32d54a517cece}} 
+\index{Table@{Table}!printData@{printData}}
+\index{printData@{printData}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{printData()}{printData()}}
+{\footnotesize\ttfamily virtual bool Table\+::print\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+print data in table. 
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a1c905e531e152b7853cd77227c29614c}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_a0cc704d1c166b0b2374aa2f4db3c80ba}\label{classTable_a0cc704d1c166b0b2374aa2f4db3c80ba}} 
+\index{Table@{Table}!select@{select}}
+\index{select@{select}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Table\+::select (\begin{DoxyParamCaption}\item[{char $\ast$}]{row\+\_\+pointer,  }\item[{char $\ast$}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+select all columns\textquotesingle{} data. 
+\begin{DoxyParams}{Parameters}
+{\em row\+\_\+pointer} & the pointer of a row \\
+\hline
+{\em dest} & buffer to store result \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_aa4c6231cae4747be9cf80ece380a82ce}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_a2fcbd7fdf0677de28c1dd4fe3030403d}\label{classTable_a2fcbd7fdf0677de28c1dd4fe3030403d}} 
+\index{Table@{Table}!select@{select}}
+\index{select@{select}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Table\+::select (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{record\+\_\+rank,  }\item[{char $\ast$}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+select all columns\textquotesingle{} data. 
+\begin{DoxyParams}{Parameters}
+{\em record\+\_\+rank} & the n th row in the table storage \\
+\hline
+{\em dest} & buffer to store result \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_aa07dff1269945f08e44ddf9c3ce4b3e5}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_afd98a033a4ba0c4dbb0da58956ca7f1a}\label{classTable_afd98a033a4ba0c4dbb0da58956ca7f1a}} 
+\index{Table@{Table}!selectCol@{selectCol}}
+\index{selectCol@{selectCol}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{selectCol()}{selectCol()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Table\+::select\+Col (\begin{DoxyParamCaption}\item[{char $\ast$}]{row\+\_\+pointer,  }\item[{int64\+\_\+t}]{column\+\_\+rank,  }\item[{char $\ast$}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+select one column data by pointer of a row. 
+\begin{DoxyParams}{Parameters}
+{\em row\+\_\+pointer} & the pointer of a row \\
+\hline
+{\em column\+\_\+rank} & the n th column in table pattern \\
+\hline
+{\em dest} & buffer to store result \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_ac73f8ad3412a999ee8b83f2755d591ce}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_a44463f0ee53b4d05fa182596ce1e0fac}\label{classTable_a44463f0ee53b4d05fa182596ce1e0fac}} 
+\index{Table@{Table}!selectCol@{selectCol}}
+\index{selectCol@{selectCol}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{selectCol()}{selectCol()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Table\+::select\+Col (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{record\+\_\+rank,  }\item[{int64\+\_\+t}]{column\+\_\+rank,  }\item[{char $\ast$}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+select one column data. 
+\begin{DoxyParams}{Parameters}
+{\em record\+\_\+rank} & the n th row in the table storage \\
+\hline
+{\em column\+\_\+rank} & the n th column in table pattern \\
+\hline
+{\em dest} & buffer to store result \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a897196ce45a0e5243b62be1d9906a52b}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_ad667072cf9b356e1e305d37a8e16b5f2}\label{classTable_ad667072cf9b356e1e305d37a8e16b5f2}} 
+\index{Table@{Table}!selectCols@{selectCols}}
+\index{selectCols@{selectCols}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{selectCols()}{selectCols()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Table\+::select\+Cols (\begin{DoxyParamCaption}\item[{char $\ast$}]{row\+\_\+pointer,  }\item[{int64\+\_\+t}]{column\+\_\+total,  }\item[{int64\+\_\+t $\ast$}]{column\+\_\+ranks,  }\item[{char $\ast$}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+select several column data. 
+\begin{DoxyParams}{Parameters}
+{\em row\+\_\+pointer} & the pointer of a row \\
+\hline
+{\em column\+\_\+total} & total number of columns to select \\
+\hline
+{\em column\+\_\+ranks} & array of column\+\_\+rank, column\+\_\+rank is the n th column in table pattern \\
+\hline
+{\em dest} & buffer to store result \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a5f9881b9f99b4a567501ae67902fcc06}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_a12031136b85beddac3b75746cd75ff0d}\label{classTable_a12031136b85beddac3b75746cd75ff0d}} 
+\index{Table@{Table}!selectCols@{selectCols}}
+\index{selectCols@{selectCols}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{selectCols()}{selectCols()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Table\+::select\+Cols (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{record\+\_\+rank,  }\item[{int64\+\_\+t}]{column\+\_\+total,  }\item[{int64\+\_\+t $\ast$}]{column\+\_\+ranks,  }\item[{char $\ast$}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+select several column data. 
+\begin{DoxyParams}{Parameters}
+{\em record\+\_\+rank} & the n th row in the table storage \\
+\hline
+{\em column\+\_\+total} & total number of columns to select \\
+\hline
+{\em column\+\_\+ranks} & array of column\+\_\+rank, column\+\_\+rank is the n th column in table pattern \\
+\hline
+{\em dest} & buffer to store result \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a8880015b130367767a39aa966f624d19}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_ac5536ca71e2a8e9890d86e9230cbbe8e}\label{classTable_ac5536ca71e2a8e9890d86e9230cbbe8e}} 
+\index{Table@{Table}!shut@{shut}}
+\index{shut@{shut}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{shut()}{shut()}}
+{\footnotesize\ttfamily virtual bool Table\+::shut (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+shut, important interface for son class 
+
+Reimplemented from \mbox{\hyperlink{classObject_ae021c9efe8397bc993d41cceccdf8955}{Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a08e7799429c049e9c36097318518461c}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_ad072188e6d971482f03047df81accd89}\label{classTable_ad072188e6d971482f03047df81accd89}} 
+\index{Table@{Table}!updateCol@{updateCol}}
+\index{updateCol@{updateCol}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{updateCol()}{updateCol()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Table\+::update\+Col (\begin{DoxyParamCaption}\item[{char $\ast$}]{row\+\_\+pointer,  }\item[{int64\+\_\+t}]{column\+\_\+rank,  }\item[{char $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+update one column data. 
+\begin{DoxyParams}{Parameters}
+{\em row\+\_\+pointer} & the pointer of a row \\
+\hline
+{\em column\+\_\+rank} & the n th column in table pattern \\
+\hline
+{\em source} & buffer to store data to change for \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a0bb958b38ec20302cec20bcde9718d9f}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_a77ec3acafdbbabc75e7af416d3260f06}\label{classTable_a77ec3acafdbbabc75e7af416d3260f06}} 
+\index{Table@{Table}!updateCol@{updateCol}}
+\index{updateCol@{updateCol}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{updateCol()}{updateCol()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Table\+::update\+Col (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{record\+\_\+rank,  }\item[{int64\+\_\+t}]{column\+\_\+rank,  }\item[{char $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+update one column data. 
+\begin{DoxyParams}{Parameters}
+{\em record\+\_\+rank} & the n th row in the table storage \\
+\hline
+{\em column\+\_\+rank} & the n th column in table pattern \\
+\hline
+{\em source} & buffer to store data to change for \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_ab7e907c9813180d8a5f3ef1daf8a7044}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_a0744fb8d8339686be5d86e014d3cb084}\label{classTable_a0744fb8d8339686be5d86e014d3cb084}} 
+\index{Table@{Table}!updateCols@{updateCols}}
+\index{updateCols@{updateCols}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{updateCols()}{updateCols()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily virtual bool Table\+::update\+Cols (\begin{DoxyParamCaption}\item[{char $\ast$}]{row\+\_\+pointer,  }\item[{int64\+\_\+t}]{column\+\_\+total,  }\item[{int64\+\_\+t $\ast$}]{column\+\_\+ranks,  }\item[{char $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+update several column data. 
+\begin{DoxyParams}{Parameters}
+{\em row\+\_\+pointer} & the pointer of a row \\
+\hline
+{\em column\+\_\+total} & total number of columns to select \\
+\hline
+{\em column\+\_\+ranks} & array of column\+\_\+rank, column\+\_\+rank is the n th column in table pattern \\
+\hline
+{\em source} & buffer to store data to change for \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a3135c69adda621b726d9ec77ec55fb84}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_a100025d7c19b9c69f4ed1353be430032}\label{classTable_a100025d7c19b9c69f4ed1353be430032}} 
+\index{Table@{Table}!updateCols@{updateCols}}
+\index{updateCols@{updateCols}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{updateCols()}{updateCols()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily virtual bool Table\+::update\+Cols (\begin{DoxyParamCaption}\item[{char $\ast$}]{row\+\_\+pointer,  }\item[{int64\+\_\+t}]{column\+\_\+total,  }\item[{int64\+\_\+t $\ast$}]{column\+\_\+ranks,  }\item[{char $\ast$}]{source\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+update several column data. 
+\begin{DoxyParams}{Parameters}
+{\em row\+\_\+pointer} & the pointer of a row \\
+\hline
+{\em column\+\_\+total} & total number of columns to select \\
+\hline
+{\em column\+\_\+ranks} & array of column\+\_\+rank, column\+\_\+rank is the n th column in table pattern \\
+\hline
+{\em source} & array of columns\textquotesingle{} pointers, each points a column data to change for \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a8797b622aa1f4f68cc9e5ebdabfb16ec}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_aeac94dafd5a886f9db2c8ce2c11cf1b6}\label{classTable_aeac94dafd5a886f9db2c8ce2c11cf1b6}} 
+\index{Table@{Table}!updateCols@{updateCols}}
+\index{updateCols@{updateCols}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{updateCols()}{updateCols()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily virtual bool Table\+::update\+Cols (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{record\+\_\+rank,  }\item[{int64\+\_\+t}]{column\+\_\+total,  }\item[{int64\+\_\+t $\ast$}]{column\+\_\+ranks,  }\item[{char $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a6ae864a0caf01cf629299fbbb4eb7ee5}{Row\+Table}}.
+
+\mbox{\Hypertarget{classTable_ad6921c60b7bae579c3983c5f3e785666}\label{classTable_ad6921c60b7bae579c3983c5f3e785666}} 
+\index{Table@{Table}!updateCols@{updateCols}}
+\index{updateCols@{updateCols}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{updateCols()}{updateCols()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily virtual bool Table\+::update\+Cols (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{record\+\_\+rank,  }\item[{int64\+\_\+t}]{column\+\_\+total,  }\item[{int64\+\_\+t $\ast$}]{column\+\_\+ranks,  }\item[{char $\ast$}]{source\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+update several column data. 
+\begin{DoxyParams}{Parameters}
+{\em record\+\_\+rank} & the n th row in the table storage \\
+\hline
+{\em column\+\_\+total} & total number of columns to select \\
+\hline
+{\em column\+\_\+ranks} & array of column\+\_\+rank, column\+\_\+rank is the n th column in table pattern \\
+\hline
+{\em source} & array of columns\textquotesingle{} pointers, each points a column data to change for \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classRowTable_a94d03ca53788ce68a1feef40c17f471c}{Row\+Table}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTable_afc4c313931bfabddc571e49c10605121}\label{classTable_afc4c313931bfabddc571e49c10605121}} 
+\index{Table@{Table}!t\_columns@{t\_columns}}
+\index{t\_columns@{t\_columns}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{t\_columns}{t\_columns}}
+{\footnotesize\ttfamily std\+::vector$<$ int64\+\_\+t $>$ Table\+::t\+\_\+columns\hspace{0.3cm}{\ttfamily [private]}}
+
+vector of columns\textquotesingle{} identifier \mbox{\Hypertarget{classTable_a1af9a3c6d290f3b5121b9fc5e8541495}\label{classTable_a1af9a3c6d290f3b5121b9fc5e8541495}} 
+\index{Table@{Table}!t\_index@{t\_index}}
+\index{t\_index@{t\_index}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{t\_index}{t\_index}}
+{\footnotesize\ttfamily std\+::vector$<$ int64\+\_\+t $>$ Table\+::t\+\_\+index\hspace{0.3cm}{\ttfamily [private]}}
+
+vector of index\textquotesingle{}s identifier \mbox{\Hypertarget{classTable_a65a17f299575abc0401b7a10ed3131ed}\label{classTable_a65a17f299575abc0401b7a10ed3131ed}} 
+\index{Table@{Table}!t\_type@{t\_type}}
+\index{t\_type@{t\_type}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{t\_type}{t\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}{Table\+Type}} Table\+::t\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+table type 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{schema_8h}{schema.\+h}}\end{DoxyCompactItemize}

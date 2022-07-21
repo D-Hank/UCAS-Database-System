@@ -1,0 +1,26 @@
+\hypertarget{mymemory_8cc}{}\doxysection{system/mymemory.cc File Reference}
+\label{mymemory_8cc}\index{system/mymemory.cc@{system/mymemory.cc}}
+{\ttfamily \#include \char`\"{}mymemory.\+h\char`\"{}}\newline
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMemory}{Memory}} \mbox{\hyperlink{mymemory_8cc_ab02b3badee65de481b409f3887fb8691}{g\+\_\+memory}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@autrhor liugang(\href{mailto:liugang@ict.ac.cn}{\texttt{ liugang@ict.\+ac.\+cn}}) \begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+\hypertarget{schema_8h_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{schema_8h_DESCRIPTION}
+\mbox{\hyperlink{classMemory}{Memory}} is system own manager to alloc and free slab of different size the minmux size is sizeof(void$\ast$), maxsize is given by m\+\_\+array\+\_\+list size
+
+interface\+: int64\+\_\+t alloc (char $\ast$\&p, int64\+\_\+t size) int64\+\_\+t free (char $\ast$p, int64\+\_\+t size) you should put down the size of memory allocated, when you free back, you need this data 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{mymemory_8cc_ab02b3badee65de481b409f3887fb8691}\label{mymemory_8cc_ab02b3badee65de481b409f3887fb8691}} 
+\index{mymemory.cc@{mymemory.cc}!g\_memory@{g\_memory}}
+\index{g\_memory@{g\_memory}!mymemory.cc@{mymemory.cc}}
+\doxysubsubsection{\texorpdfstring{g\_memory}{g\_memory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMemory}{Memory}} g\+\_\+memory}
+

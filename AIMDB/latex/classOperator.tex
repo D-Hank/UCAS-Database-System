@@ -1,0 +1,134 @@
+\hypertarget{classOperator}{}\doxysection{Operator Class Reference}
+\label{classOperator}\index{Operator@{Operator}}
+
+
+{\ttfamily \#include $<$executor.\+h$>$}
+
+Inheritance diagram for Operator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.307692cm]{classOperator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOperator_acf2514c5e9f48b0a988c955a7d41c486}{Operator}} ()
+\item 
+virtual \mbox{\hyperlink{classOperator_a3fdf52b48772b7025c7baca76c7378f4}{$\sim$\+Operator}} ()
+\item 
+virtual bool \mbox{\hyperlink{classOperator_a1db4a9736164f68e497e2f89d00473f1}{close}} ()
+\item 
+char $\ast$ \mbox{\hyperlink{classOperator_acf55b0a8626be141f01682f1bf78c480}{get\+Buffer}} ()
+\item 
+virtual bool \mbox{\hyperlink{classOperator_ab9e6e455abb03bc86a18548b4e6b093b}{get\+Next}} ()
+\item 
+virtual bool \mbox{\hyperlink{classOperator_aaec459eabb9b23f5c2253e2ca355d665}{open}} ()
+\item 
+void \mbox{\hyperlink{classOperator_a140073068cd46bd837f81f26e788f154}{set\+Buffer}} (char $\ast$buffer\+\_\+allocated)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{classOperator_a180bc383bf406cdcc35d6fa36ce8e8a5}{buffer\+\_\+from\+\_\+father}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOperator_acf2514c5e9f48b0a988c955a7d41c486}\label{classOperator_acf2514c5e9f48b0a988c955a7d41c486}} 
+\index{Operator@{Operator}!Operator@{Operator}}
+\index{Operator@{Operator}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{Operator()}{Operator()}}
+{\footnotesize\ttfamily Operator\+::\+Operator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+keep this buffer for passing record Constructor \mbox{\Hypertarget{classOperator_a3fdf52b48772b7025c7baca76c7378f4}\label{classOperator_a3fdf52b48772b7025c7baca76c7378f4}} 
+\index{Operator@{Operator}!````~Operator@{$\sim$Operator}}
+\index{````~Operator@{$\sim$Operator}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{$\sim$Operator()}{~Operator()}}
+{\footnotesize\ttfamily virtual Operator\+::$\sim$\+Operator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOperator_a1db4a9736164f68e497e2f89d00473f1}\label{classOperator_a1db4a9736164f68e497e2f89d00473f1}} 
+\index{Operator@{Operator}!close@{close}}
+\index{close@{close}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual bool Operator\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+close this operator, release all resources 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classScan_a0d6ccccd842e717a4facf1f8d705873d}{Scan}}, \mbox{\hyperlink{classIndexScan_afe074fc153f6bee9ed0e0dd0f3bca8e7}{Index\+Scan}}, \mbox{\hyperlink{classFilter_aef5d442eaa7f62fd8a612297b954ff13}{Filter}}, \mbox{\hyperlink{classIndexJoin_a1fc6dbedb5f8c21f57c76c6be79b0f65}{Index\+Join}}, \mbox{\hyperlink{classHashJoin_acf6d8d36dd4388595b6d6923e118c019}{Hash\+Join}}, \mbox{\hyperlink{classProject_a4c245b9a05d63f4b4eaa14d8dbc853f0}{Project}}, \mbox{\hyperlink{classGroupbyAggre_a0ec7c464d68f751395eb1babbf27ce7b}{Groupby\+Aggre}}, \mbox{\hyperlink{classOrderby_a87be8f58fd1c1396cf8268dd879b7309}{Orderby}}, and \mbox{\hyperlink{classJoin_a17937583484d82767f24e032497f9b97}{Join}}.
+
+\mbox{\Hypertarget{classOperator_acf55b0a8626be141f01682f1bf78c480}\label{classOperator_acf55b0a8626be141f01682f1bf78c480}} 
+\index{Operator@{Operator}!getBuffer@{getBuffer}}
+\index{getBuffer@{getBuffer}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{getBuffer()}{getBuffer()}}
+{\footnotesize\ttfamily char $\ast$ Operator\+::get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get current operator\textquotesingle{}s buffer to write \mbox{\Hypertarget{classOperator_ab9e6e455abb03bc86a18548b4e6b093b}\label{classOperator_ab9e6e455abb03bc86a18548b4e6b093b}} 
+\index{Operator@{Operator}!getNext@{getNext}}
+\index{getNext@{getNext}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily virtual bool Operator\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+get next record from the table iterately 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classScan_a4d2f13c66297091fd123b4721e6e867f}{Scan}}, \mbox{\hyperlink{classIndexScan_afc5577db78a17b31c9fd36580cfd6d42}{Index\+Scan}}, \mbox{\hyperlink{classFilter_a6ae5d9c291cebdf5da5df41f3e9bacbd}{Filter}}, \mbox{\hyperlink{classIndexJoin_ab14eaebc98de774cd8400a75f9c8023b}{Index\+Join}}, \mbox{\hyperlink{classHashJoin_a07a8395f9f01dce593dc05e33a7d71ac}{Hash\+Join}}, \mbox{\hyperlink{classProject_aae3a9951b2d21e7adba1e14776bd602b}{Project}}, \mbox{\hyperlink{classGroupbyAggre_a760ccd0b54b48bcb753e2215e83d4551}{Groupby\+Aggre}}, \mbox{\hyperlink{classOrderby_aaaaabc14dd46bd8eef6caf83f1a5077b}{Orderby}}, and \mbox{\hyperlink{classJoin_a4bef631fe8bd0cd7523f35560d8826e7}{Join}}.
+
+\mbox{\Hypertarget{classOperator_aaec459eabb9b23f5c2253e2ca355d665}\label{classOperator_aaec459eabb9b23f5c2253e2ca355d665}} 
+\index{Operator@{Operator}!open@{open}}
+\index{open@{open}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily virtual bool Operator\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+open an operator 
+\begin{DoxyRetVals}{Return values}
+{\em true} & successfully opened \\
+\hline
+{\em false} & failed \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classScan_a60b43ca2f86ac511d553dc5115a4a1ab}{Scan}}, \mbox{\hyperlink{classIndexScan_a9e8622ef0e49cd3d9a65a824198a6951}{Index\+Scan}}, \mbox{\hyperlink{classFilter_a08697df199ab6b840737ddd13e65c4f1}{Filter}}, \mbox{\hyperlink{classIndexJoin_a2a5bb5dddd347591cb98aaa75fd27473}{Index\+Join}}, \mbox{\hyperlink{classHashJoin_abc599afb02c6ecf81c9a585dbadb89a8}{Hash\+Join}}, \mbox{\hyperlink{classProject_a96fb883f3d824248a2dabe8651b63526}{Project}}, \mbox{\hyperlink{classGroupbyAggre_a49f76ea23e31af22a67fa9ef339a875d}{Groupby\+Aggre}}, \mbox{\hyperlink{classOrderby_a1dea59e46aa5ff36dd0cb55cde8e96be}{Orderby}}, and \mbox{\hyperlink{classJoin_a1bdda2e5254ccd8a98cae52cd892337b}{Join}}.
+
+\mbox{\Hypertarget{classOperator_a140073068cd46bd837f81f26e788f154}\label{classOperator_a140073068cd46bd837f81f26e788f154}} 
+\index{Operator@{Operator}!setBuffer@{setBuffer}}
+\index{setBuffer@{setBuffer}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{setBuffer()}{setBuffer()}}
+{\footnotesize\ttfamily void Operator\+::set\+Buffer (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer\+\_\+allocated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Save allocated buffer from father should be called before this operator\textquotesingle{}s open 
+\begin{DoxyParams}{Parameters}
+{\em buffer\+\_\+allocated} & a static buffer to store the next record \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classOperator_a180bc383bf406cdcc35d6fa36ce8e8a5}\label{classOperator_a180bc383bf406cdcc35d6fa36ce8e8a5}} 
+\index{Operator@{Operator}!buffer\_from\_father@{buffer\_from\_father}}
+\index{buffer\_from\_father@{buffer\_from\_father}!Operator@{Operator}}
+\doxysubsubsection{\texorpdfstring{buffer\_from\_father}{buffer\_from\_father}}
+{\footnotesize\ttfamily char$\ast$ Operator\+::buffer\+\_\+from\+\_\+father}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{executor_8h}{executor.\+h}}\end{DoxyCompactItemize}

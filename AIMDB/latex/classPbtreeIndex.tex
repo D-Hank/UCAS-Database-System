@@ -1,0 +1,320 @@
+\hypertarget{classPbtreeIndex}{}\doxysection{Pbtree\+Index Class Reference}
+\label{classPbtreeIndex}\index{PbtreeIndex@{PbtreeIndex}}
+
+
+{\ttfamily \#include $<$pbtreeindex.\+h$>$}
+
+Inheritance diagram for Pbtree\+Index\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPbtreeIndex}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPbtreeIndex_ad11c3cab6bc7e010990840433ceea628}{Pbtree\+Index}} (int64\+\_\+t pi\+\_\+id, const char $\ast$i\+\_\+name, \mbox{\hyperlink{classKey}{Key}} \&\mbox{\hyperlink{classIndex_aa3b4f0cdd0e1c0cb1b21412a9e9e9d9a}{i\+\_\+key}})
+\item 
+bool \mbox{\hyperlink{classPbtreeIndex_ab9da1b2ee35c4c4544eb782f60b0adde}{del}} (void $\ast$i\+\_\+data, void $\ast$p\+\_\+del)
+\item 
+bool \mbox{\hyperlink{classPbtreeIndex_acd859114f12d518d2d30b7060ca61384}{init}} (void)
+\item 
+bool \mbox{\hyperlink{classPbtreeIndex_a80dd75c8708bf0d0a4796c76f39ff3ae}{insert}} (void $\ast$i\+\_\+data, void $\ast$p\+\_\+in)
+\item 
+bool \mbox{\hyperlink{classPbtreeIndex_ab3ce1f804474a7d9933d1e72ba842c3d}{lookup}} (void $\ast$i\+\_\+data, void $\ast$info, void $\ast$\&result)
+\item 
+void \mbox{\hyperlink{classPbtreeIndex_aa1bb44169b111c47b97ca74c5028d6e8}{print}} (void)
+\item 
+bool \mbox{\hyperlink{classPbtreeIndex_a8016d0963fd2d4cfcef785c9eb23f855}{scan}} (void $\ast$info, void $\ast$\&result)
+\item 
+bool \mbox{\hyperlink{classPbtreeIndex_a85544f8b024a953d90cff318dfc55a7f}{set\+\_\+ls}} (void $\ast$i\+\_\+data1, void $\ast$i\+\_\+data2, void $\ast$info)
+\item 
+bool \mbox{\hyperlink{classPbtreeIndex_a41b584d053d13f37c16d4dc77d636b03}{set\+Index\+DTpye}} (\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$i\+\_\+dt)
+\item 
+bool \mbox{\hyperlink{classPbtreeIndex_a47c37588dc70f27818633959bdb69462}{shut}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$ \mbox{\hyperlink{classPbtreeIndex_a0aacdcb9dd929a401733b120624faff5}{pi\+\_\+datatype}}
+\item 
+\mbox{\hyperlink{classPbtree}{Pbtree}} \mbox{\hyperlink{classPbtreeIndex_a2a016ff14838630aa9e18095cf5bb6e2}{pi\+\_\+pbtree}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPbtreeIndex_ad11c3cab6bc7e010990840433ceea628}\label{classPbtreeIndex_ad11c3cab6bc7e010990840433ceea628}} 
+\index{PbtreeIndex@{PbtreeIndex}!PbtreeIndex@{PbtreeIndex}}
+\index{PbtreeIndex@{PbtreeIndex}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{PbtreeIndex()}{PbtreeIndex()}}
+{\footnotesize\ttfamily Pbtree\+Index\+::\+Pbtree\+Index (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{pi\+\_\+id,  }\item[{const char $\ast$}]{i\+\_\+name,  }\item[{\mbox{\hyperlink{classKey}{Key}} \&}]{i\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor. 
+\begin{DoxyParams}{Parameters}
+{\em pi\+\_\+id} & pbtree index identifier \\
+\hline
+{\em i\+\_\+name} & index name \\
+\hline
+{\em i\+\_\+key} & key of this index \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPbtreeIndex_ab9da1b2ee35c4c4544eb782f60b0adde}\label{classPbtreeIndex_ab9da1b2ee35c4c4544eb782f60b0adde}} 
+\index{PbtreeIndex@{PbtreeIndex}!del@{del}}
+\index{del@{del}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}}
+{\footnotesize\ttfamily bool Pbtree\+Index\+::del (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$}]{p\+\_\+del }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+del an entry pbtree index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & buffer of column data \\
+\hline
+{\em p\+\_\+del} & pointer of row to delete \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_aac99dda5985a9d343b74bf908f607098}{Index}}.
+
+\mbox{\Hypertarget{classPbtreeIndex_acd859114f12d518d2d30b7060ca61384}\label{classPbtreeIndex_acd859114f12d518d2d30b7060ca61384}} 
+\index{PbtreeIndex@{PbtreeIndex}!init@{init}}
+\index{init@{init}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Pbtree\+Index\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+init \mbox{\hyperlink{classPbtreeIndex}{Pbtree\+Index}} 
+\begin{DoxyRetVals}{Return values}
+{\em true} & successfully inited \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_ad0269d526e7a2640db91b564f3f335c8}{Index}}.
+
+\mbox{\Hypertarget{classPbtreeIndex_a80dd75c8708bf0d0a4796c76f39ff3ae}\label{classPbtreeIndex_a80dd75c8708bf0d0a4796c76f39ff3ae}} 
+\index{PbtreeIndex@{PbtreeIndex}!insert@{insert}}
+\index{insert@{insert}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily bool Pbtree\+Index\+::insert (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$}]{p\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+insert an entry to pbtree index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & buffer of column data in pattren \\
+\hline
+{\em p\+\_\+in} & pointer of record to make index \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure\\
+\hline
+\end{DoxyRetVals}
+insert an entry to hash index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & buffer of column data in pattren \\
+\hline
+{\em p\+\_\+in} & pointer of record to make index \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a59abc6ca8b54dac0ac2de716e264a638}{Index}}.
+
+\mbox{\Hypertarget{classPbtreeIndex_ab3ce1f804474a7d9933d1e72ba842c3d}\label{classPbtreeIndex_ab3ce1f804474a7d9933d1e72ba842c3d}} 
+\index{PbtreeIndex@{PbtreeIndex}!lookup@{lookup}}
+\index{lookup@{lookup}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}}
+{\footnotesize\ttfamily bool Pbtree\+Index\+::lookup (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$}]{info,  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+setup for pbtree index lookup. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data1} & pointers of column data for lookup \\
+\hline
+{\em i\+\_\+data2} & set NULL when call \\
+\hline
+{\em info} & \mbox{\hyperlink{structPbtreeInfo}{Pbtree\+Info}} pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure\\
+\hline
+\end{DoxyRetVals}
+lookup pbtree index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & buffer of column data \\
+\hline
+{\em info} & \mbox{\hyperlink{structPbtreeInfo}{Pbtree\+Info}} pointer processed by set\+\_\+ls \\
+\hline
+{\em result} & reference of record pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & found \\
+\hline
+{\em false} & not found \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_ab76c8f3547394789802fd399c47c5cea}{Index}}.
+
+\mbox{\Hypertarget{classPbtreeIndex_aa1bb44169b111c47b97ca74c5028d6e8}\label{classPbtreeIndex_aa1bb44169b111c47b97ca74c5028d6e8}} 
+\index{PbtreeIndex@{PbtreeIndex}!print@{print}}
+\index{print@{print}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Pbtree\+Index\+::print (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+print \mbox{\hyperlink{classPbtree}{Pbtree}} index information.
+
+print pbtree index information. 
+
+Reimplemented from \mbox{\hyperlink{classIndex_acc369c94f8ec084557273a88b6b1a313}{Index}}.
+
+\mbox{\Hypertarget{classPbtreeIndex_a8016d0963fd2d4cfcef785c9eb23f855}\label{classPbtreeIndex_a8016d0963fd2d4cfcef785c9eb23f855}} 
+\index{PbtreeIndex@{PbtreeIndex}!scan@{scan}}
+\index{scan@{scan}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{scan()}{scan()}}
+{\footnotesize\ttfamily bool Pbtree\+Index\+::scan (\begin{DoxyParamCaption}\item[{void $\ast$}]{info,  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+iterate on calling to scan for values, \texorpdfstring{$>$}{>} left value \& \texorpdfstring{$<$}{<} right value 
+\begin{DoxyParams}{Parameters}
+{\em info} & pointer of an index info \\
+\hline
+{\em result} & return the pointer to the indexed row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & has more values \\
+\hline
+{\em false} & no more values\\
+\hline
+\end{DoxyRetVals}
+iterate on calling to scan for values. 
+\begin{DoxyParams}{Parameters}
+{\em info} & pointer of an index info \\
+\hline
+{\em result} & return the pointer to the indexed row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & has more values \\
+\hline
+{\em false} & no more values \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a8b395a157b719b71c425834128d44292}{Index}}.
+
+\mbox{\Hypertarget{classPbtreeIndex_a85544f8b024a953d90cff318dfc55a7f}\label{classPbtreeIndex_a85544f8b024a953d90cff318dfc55a7f}} 
+\index{PbtreeIndex@{PbtreeIndex}!set\_ls@{set\_ls}}
+\index{set\_ls@{set\_ls}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{set\_ls()}{set\_ls()}}
+{\footnotesize\ttfamily bool Pbtree\+Index\+::set\+\_\+ls (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data1,  }\item[{void $\ast$}]{i\+\_\+data2,  }\item[{void $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+setup for pbtree index lookup. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data1} & buffer of column data for lookup or scan(\char`\"{}$>$=\char`\"{}) \\
+\hline
+{\em i\+\_\+data2} & set NULL \\
+\hline
+{\em info} & \mbox{\hyperlink{structPbtreeInfo}{Pbtree\+Info}} pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a2009c96a48a8275550c7f531d72af946}{Index}}.
+
+\mbox{\Hypertarget{classPbtreeIndex_a41b584d053d13f37c16d4dc77d636b03}\label{classPbtreeIndex_a41b584d053d13f37c16d4dc77d636b03}} 
+\index{PbtreeIndex@{PbtreeIndex}!setIndexDTpye@{setIndexDTpye}}
+\index{setIndexDTpye@{setIndexDTpye}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{setIndexDTpye()}{setIndexDTpye()}}
+{\footnotesize\ttfamily bool Pbtree\+Index\+::set\+Index\+DTpye (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$}]{i\+\_\+dt }\end{DoxyParamCaption})}
+
+add indexed column\textquotesingle{}s data type. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+dt} & data type of indexed column \\
+\hline
+{\em offset} & offset of column in a rowtable\\
+\hline
+\end{DoxyParams}
+set indexed column\textquotesingle{}s data type. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+dt} & data type of indexed column \\
+\hline
+{\em offset} & offset of column in a rowtable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPbtreeIndex_a47c37588dc70f27818633959bdb69462}\label{classPbtreeIndex_a47c37588dc70f27818633959bdb69462}} 
+\index{PbtreeIndex@{PbtreeIndex}!shut@{shut}}
+\index{shut@{shut}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{shut()}{shut()}}
+{\footnotesize\ttfamily bool Pbtree\+Index\+::shut (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+free memory of \mbox{\hyperlink{classPbtree}{Pbtree}} and other strucure. 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success\\
+\hline
+\end{DoxyRetVals}
+free memory of hash table and other strucure. 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a80cee3927658bdeb678c776333115268}{Index}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPbtreeIndex_a0aacdcb9dd929a401733b120624faff5}\label{classPbtreeIndex_a0aacdcb9dd929a401733b120624faff5}} 
+\index{PbtreeIndex@{PbtreeIndex}!pi\_datatype@{pi\_datatype}}
+\index{pi\_datatype@{pi\_datatype}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{pi\_datatype}{pi\_datatype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBasicType}{Basic\+Type}}$\ast$ Pbtree\+Index\+::pi\+\_\+datatype\hspace{0.3cm}{\ttfamily [private]}}
+
+datatype of this column \mbox{\Hypertarget{classPbtreeIndex_a2a016ff14838630aa9e18095cf5bb6e2}\label{classPbtreeIndex_a2a016ff14838630aa9e18095cf5bb6e2}} 
+\index{PbtreeIndex@{PbtreeIndex}!pi\_pbtree@{pi\_pbtree}}
+\index{pi\_pbtree@{pi\_pbtree}!PbtreeIndex@{PbtreeIndex}}
+\doxysubsubsection{\texorpdfstring{pi\_pbtree}{pi\_pbtree}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPbtree}{Pbtree}} Pbtree\+Index\+::pi\+\_\+pbtree\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classPbtree}{Pbtree}}, allow duplicated elements 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{pbtreeindex_8h}{pbtreeindex.\+h}}\item 
+system/\mbox{\hyperlink{pbtreeindex_8cc}{pbtreeindex.\+cc}}\end{DoxyCompactItemize}

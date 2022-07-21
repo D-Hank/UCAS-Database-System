@@ -1,0 +1,657 @@
+\hypertarget{classIndex}{}\doxysection{Index Class Reference}
+\label{classIndex}\index{Index@{Index}}
+
+
+{\ttfamily \#include $<$schema.\+h$>$}
+
+Inheritance diagram for Index\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classIndex}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIndex_a12c0e59c84796293ea8bd8024b29964e}{Index}} (int64\+\_\+t i\+\_\+id, const char $\ast$i\+\_\+name, \mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}{Index\+Type}} \mbox{\hyperlink{classIndex_ac2ef48676fa285308d086d3312ae8fd6}{i\+\_\+type}}, \mbox{\hyperlink{classKey}{Key}} \&\mbox{\hyperlink{classIndex_aa3b4f0cdd0e1c0cb1b21412a9e9e9d9a}{i\+\_\+key}})
+\item 
+virtual \mbox{\hyperlink{classIndex_a8d45a43976fafda170ed231ffcb87911}{$\sim$\+Index}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a8f1ebdeb4ba97902a5b9722c10446caa}{del}} (void $\ast$i\+\_\+data)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_aac99dda5985a9d343b74bf908f607098}{del}} (void $\ast$i\+\_\+data, void $\ast$p\+\_\+del)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a4ed94fb4485843ffff4f14f092bd6005}{del}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]})
+\item 
+virtual bool \mbox{\hyperlink{classIndex_afb47e885a83fc53b402829ec361cff18}{del}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]}, void $\ast$p\+\_\+del)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a3e976e4d8e0214c6a916abc66b9588fc}{finish}} (void)
+\item 
+\mbox{\hyperlink{classKey}{Key}} \& \mbox{\hyperlink{classIndex_a1a221e97a5468131c72691a9a2bd8e53}{get\+IKey}} (void)
+\item 
+virtual int64\+\_\+t \mbox{\hyperlink{classIndex_a9f6dfad22ffe4d56c82074c2660f8d02}{get\+Index\+Tid}} (void)
+\item 
+\mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}{Index\+Type}} \mbox{\hyperlink{classIndex_ab0c0318dde90af8bee9c1613258668ff}{get\+IType}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_ad0269d526e7a2640db91b564f3f335c8}{init}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a59abc6ca8b54dac0ac2de716e264a638}{insert}} (void $\ast$i\+\_\+data, void $\ast$p\+\_\+in)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a3a77636367dfa08e00d4bc236ab5d298}{insert}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]}, void $\ast$p\+\_\+in)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_ada771dc37fb092a91082fd5b0f33095a}{lookup}} (void $\ast$i\+\_\+data, void $\ast$\&result)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_ab76c8f3547394789802fd399c47c5cea}{lookup}} (void $\ast$i\+\_\+data, void $\ast$info, void $\ast$\&result)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_af9c91efa3c4f1f5611e4c7fe49e6e40b}{lookup}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]}, void $\ast$\&result)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_aa306cf743a38d264ec6642a0bdaa1f14}{lookup}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]}, void $\ast$info, void $\ast$\&result)
+\item 
+virtual void \mbox{\hyperlink{classIndex_acc369c94f8ec084557273a88b6b1a313}{print}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a8b395a157b719b71c425834128d44292}{scan}} (void $\ast$info, void $\ast$\&result)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a08aa8ea5b25ad6e859eadbab679363f1}{scan\+\_\+1}} (void $\ast$i\+\_\+left, void $\ast$info)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_ac40a43b6ff8da20c353257b18d820c48}{scan\+\_\+1}} (void $\ast$i\+\_\+left\mbox{[}$\,$\mbox{]}, void $\ast$info)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a01e87e8a81ae96cffa41670c4a7aa4d1}{scan\+\_\+2}} (void $\ast$i\+\_\+right, void $\ast$info, void $\ast$\&result)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a87a3859470537c53dad97257f8c360d9}{scan\+\_\+2}} (void $\ast$i\+\_\+right\mbox{[}$\,$\mbox{]}, void $\ast$info, void $\ast$\&result)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a2009c96a48a8275550c7f531d72af946}{set\+\_\+ls}} (void $\ast$i\+\_\+data1, void $\ast$i\+\_\+data2, void $\ast$info)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_afc7a4ad5ce8b42bbe2638162710119f8}{set\+\_\+ls}} (void $\ast$i\+\_\+data1\mbox{[}$\,$\mbox{]}, void $\ast$i\+\_\+data2\mbox{[}$\,$\mbox{]}, void $\ast$info)
+\item 
+virtual void \mbox{\hyperlink{classIndex_a519f2d610c0974e75d34a3a391735b4c}{set\+Index\+Tid}} (int64\+\_\+t tid)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_a80cee3927658bdeb678c776333115268}{shut}} (void)
+\item 
+virtual int64\+\_\+t \mbox{\hyperlink{classIndex_a21607f9558cf7b16980fb069e148a98e}{tran\+To\+Int64}} (void $\ast$i\+\_\+data)
+\item 
+virtual int64\+\_\+t \mbox{\hyperlink{classIndex_a2a7d273304d6692b348d9fcb92c41622}{tran\+To\+Int64}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]})
+\item 
+virtual bool \mbox{\hyperlink{classIndex_aaf3f66118fa66c833268d4c93afc5703}{update}} (void $\ast$i\+\_\+data, void $\ast$p\+\_\+in)
+\item 
+virtual bool \mbox{\hyperlink{classIndex_aea42b20380267755ed0c58f931b642fa}{update}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]}, void $\ast$p\+\_\+in)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKey}{Key}} \mbox{\hyperlink{classIndex_aa3b4f0cdd0e1c0cb1b21412a9e9e9d9a}{i\+\_\+key}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classIndex_ab5cf757623e8cfa51e9689b8b69339ba}{i\+\_\+t\+\_\+id}}
+\item 
+\mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}{Index\+Type}} \mbox{\hyperlink{classIndex_ac2ef48676fa285308d086d3312ae8fd6}{i\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of class \mbox{\hyperlink{classIndex}{Index}} ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIndex_a12c0e59c84796293ea8bd8024b29964e}\label{classIndex_a12c0e59c84796293ea8bd8024b29964e}} 
+\index{Index@{Index}!Index@{Index}}
+\index{Index@{Index}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily Index\+::\+Index (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{i\+\_\+id,  }\item[{const char $\ast$}]{i\+\_\+name,  }\item[{\mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}{Index\+Type}}}]{i\+\_\+type,  }\item[{\mbox{\hyperlink{classKey}{Key}} \&}]{i\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+id} & index identifier \\
+\hline
+{\em i\+\_\+name} & index name \\
+\hline
+{\em i\+\_\+type} & index type \\
+\hline
+{\em i\+\_\+key} & key of this index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIndex_a8d45a43976fafda170ed231ffcb87911}\label{classIndex_a8d45a43976fafda170ed231ffcb87911}} 
+\index{Index@{Index}!````~Index@{$\sim$Index}}
+\index{````~Index@{$\sim$Index}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{$\sim$Index()}{~Index()}}
+{\footnotesize\ttfamily virtual Index\+::$\sim$\+Index (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIndex_a8f1ebdeb4ba97902a5b9722c10446caa}\label{classIndex_a8f1ebdeb4ba97902a5b9722c10446caa}} 
+\index{Index@{Index}!del@{del}}
+\index{del@{del}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily virtual bool Index\+::del (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+del an entry in \mbox{\hyperlink{classIndex}{Index}}. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & char buffer to store data in pattern \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a45fb6bc537dfb45c03c8ec8f36afde73}{Hash\+Index}}.
+
+\mbox{\Hypertarget{classIndex_aac99dda5985a9d343b74bf908f607098}\label{classIndex_aac99dda5985a9d343b74bf908f607098}} 
+\index{Index@{Index}!del@{del}}
+\index{del@{del}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily virtual bool Index\+::del (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$}]{p\+\_\+del }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+del an entry in \mbox{\hyperlink{classIndex}{Index}}. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & char buffer to store data in pattern \\
+\hline
+{\em p\+\_\+del} & address of specified row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classPbtreeIndex_ab9da1b2ee35c4c4544eb782f60b0adde}{Pbtree\+Index}}.
+
+\mbox{\Hypertarget{classIndex_a4ed94fb4485843ffff4f14f092bd6005}\label{classIndex_a4ed94fb4485843ffff4f14f092bd6005}} 
+\index{Index@{Index}!del@{del}}
+\index{del@{del}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily virtual bool Index\+::del (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+del an entry in Bptree\+Index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & each element of the array stores a pointer to column key \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_afbced3b08e11b6e2bf802839821c762c}{Hash\+Index}}.
+
+\mbox{\Hypertarget{classIndex_afb47e885a83fc53b402829ec361cff18}\label{classIndex_afb47e885a83fc53b402829ec361cff18}} 
+\index{Index@{Index}!del@{del}}
+\index{del@{del}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily virtual bool Index\+::del (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p\+\_\+del }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+del an entry in Bptree\+Index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & each element of the array stores a pointer to column key \\
+\hline
+{\em p\+\_\+del} & address of specified row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classIndex_a3e976e4d8e0214c6a916abc66b9588fc}\label{classIndex_a3e976e4d8e0214c6a916abc66b9588fc}} 
+\index{Index@{Index}!finish@{finish}}
+\index{finish@{finish}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{finish()}{finish()}}
+{\footnotesize\ttfamily virtual bool Index\+::finish (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+finish index, important interface for son class 
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a8f4fc6b1716abb6f4c3eb77889a48071}{Hash\+Index}}.
+
+\mbox{\Hypertarget{classIndex_a1a221e97a5468131c72691a9a2bd8e53}\label{classIndex_a1a221e97a5468131c72691a9a2bd8e53}} 
+\index{Index@{Index}!getIKey@{getIKey}}
+\index{getIKey@{getIKey}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{getIKey()}{getIKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKey}{Key}} \& Index\+::get\+IKey (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get index key \mbox{\Hypertarget{classIndex_a9f6dfad22ffe4d56c82074c2660f8d02}\label{classIndex_a9f6dfad22ffe4d56c82074c2660f8d02}} 
+\index{Index@{Index}!getIndexTid@{getIndexTid}}
+\index{getIndexTid@{getIndexTid}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{getIndexTid()}{getIndexTid()}}
+{\footnotesize\ttfamily virtual int64\+\_\+t Index\+::get\+Index\+Tid (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+get index in which table \mbox{\Hypertarget{classIndex_ab0c0318dde90af8bee9c1613258668ff}\label{classIndex_ab0c0318dde90af8bee9c1613258668ff}} 
+\index{Index@{Index}!getIType@{getIType}}
+\index{getIType@{getIType}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{getIType()}{getIType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}{Index\+Type}} Index\+::get\+IType (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get index type \mbox{\Hypertarget{classIndex_ad0269d526e7a2640db91b564f3f335c8}\label{classIndex_ad0269d526e7a2640db91b564f3f335c8}} 
+\index{Index@{Index}!init@{init}}
+\index{init@{init}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual bool Index\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+init index, important interface for son class 
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a6588d81a9ce852849f95188fdb157af9}{Hash\+Index}}, and \mbox{\hyperlink{classPbtreeIndex_acd859114f12d518d2d30b7060ca61384}{Pbtree\+Index}}.
+
+\mbox{\Hypertarget{classIndex_a59abc6ca8b54dac0ac2de716e264a638}\label{classIndex_a59abc6ca8b54dac0ac2de716e264a638}} 
+\index{Index@{Index}!insert@{insert}}
+\index{insert@{insert}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Index\+::insert (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$}]{p\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+insert an entry to \mbox{\hyperlink{classIndex}{Index}}. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & char buffer to store data in pattern \\
+\hline
+{\em p\+\_\+in} & pointer of a row to make index \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_ab666c89b8cb03133383f89d79064f203}{Hash\+Index}}, and \mbox{\hyperlink{classPbtreeIndex_a80dd75c8708bf0d0a4796c76f39ff3ae}{Pbtree\+Index}}.
+
+\mbox{\Hypertarget{classIndex_a3a77636367dfa08e00d4bc236ab5d298}\label{classIndex_a3a77636367dfa08e00d4bc236ab5d298}} 
+\index{Index@{Index}!insert@{insert}}
+\index{insert@{insert}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Index\+::insert (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+insert an entry to \mbox{\hyperlink{classIndex}{Index}}. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & each element of the array stores a pointer to column key \\
+\hline
+{\em p\+\_\+in} & pointer of a row to make index \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a539693ff4cca601098aed00efde973d2}{Hash\+Index}}.
+
+\mbox{\Hypertarget{classIndex_ada771dc37fb092a91082fd5b0f33095a}\label{classIndex_ada771dc37fb092a91082fd5b0f33095a}} 
+\index{Index@{Index}!lookup@{lookup}}
+\index{lookup@{lookup}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily virtual bool Index\+::lookup (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+lookup nonduplicate key in \mbox{\hyperlink{classIndex}{Index}}. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & char buffer to store data in pattern \\
+\hline
+{\em result} & return the pointer to the indexed row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classIndex_ab76c8f3547394789802fd399c47c5cea}\label{classIndex_ab76c8f3547394789802fd399c47c5cea}} 
+\index{Index@{Index}!lookup@{lookup}}
+\index{lookup@{lookup}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily virtual bool Index\+::lookup (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$}]{info,  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+lookup duplicate key, iterate through the \mbox{\hyperlink{classIndex}{Index}}. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & char buffer to store data in pattern \\
+\hline
+{\em info} & pointer of a Bptree\+Info \\
+\hline
+{\em result} & return the pointer to the indexed row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a30058930c7305586fd9e694e853e1bc7}{Hash\+Index}}, and \mbox{\hyperlink{classPbtreeIndex_ab3ce1f804474a7d9933d1e72ba842c3d}{Pbtree\+Index}}.
+
+\mbox{\Hypertarget{classIndex_af9c91efa3c4f1f5611e4c7fe49e6e40b}\label{classIndex_af9c91efa3c4f1f5611e4c7fe49e6e40b}} 
+\index{Index@{Index}!lookup@{lookup}}
+\index{lookup@{lookup}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily virtual bool Index\+::lookup (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+lookup nonduplicate key in \mbox{\hyperlink{classIndex}{Index}}. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & each element of the array stores a pointer to column key \\
+\hline
+{\em result} & return the pointer to the indexed row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classIndex_aa306cf743a38d264ec6642a0bdaa1f14}\label{classIndex_aa306cf743a38d264ec6642a0bdaa1f14}} 
+\index{Index@{Index}!lookup@{lookup}}
+\index{lookup@{lookup}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily virtual bool Index\+::lookup (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{info,  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+lookup duplicate key,iterate through the \mbox{\hyperlink{classIndex}{Index}}. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & each element of the array stores a pointer to column key \\
+\hline
+{\em info} & pointer of an index info \\
+\hline
+{\em result} & return the pointer to the indexed row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & has more values \\
+\hline
+{\em false} & no more values \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_af8e6b6592766e71419f5554578ec114c}{Hash\+Index}}.
+
+\mbox{\Hypertarget{classIndex_acc369c94f8ec084557273a88b6b1a313}\label{classIndex_acc369c94f8ec084557273a88b6b1a313}} 
+\index{Index@{Index}!print@{print}}
+\index{print@{print}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void Index\+::print (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+print index information 
+
+Reimplemented from \mbox{\hyperlink{classObject_a979154fa752f7a901145ef4968c6aa58}{Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a0acef2f7820a6ad5331c899e4b7fe24c}{Hash\+Index}}, and \mbox{\hyperlink{classPbtreeIndex_aa1bb44169b111c47b97ca74c5028d6e8}{Pbtree\+Index}}.
+
+\mbox{\Hypertarget{classIndex_a8b395a157b719b71c425834128d44292}\label{classIndex_a8b395a157b719b71c425834128d44292}} 
+\index{Index@{Index}!scan@{scan}}
+\index{scan@{scan}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{scan()}{scan()}}
+{\footnotesize\ttfamily virtual bool Index\+::scan (\begin{DoxyParamCaption}\item[{void $\ast$}]{info,  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+iterate on calling to scan for values. 
+\begin{DoxyParams}{Parameters}
+{\em info} & pointer of an index info \\
+\hline
+{\em result} & return the pointer to the indexed row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & has more values \\
+\hline
+{\em false} & no more values \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classPbtreeIndex_a8016d0963fd2d4cfcef785c9eb23f855}{Pbtree\+Index}}.
+
+\mbox{\Hypertarget{classIndex_a08aa8ea5b25ad6e859eadbab679363f1}\label{classIndex_a08aa8ea5b25ad6e859eadbab679363f1}} 
+\index{Index@{Index}!scan\_1@{scan\_1}}
+\index{scan\_1@{scan\_1}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{scan\_1()}{scan\_1()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Index\+::scan\+\_\+1 (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+left,  }\item[{void $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+prepare for scan operation. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+left} & char buffer to store data in pattern, \char`\"{}$>$=\char`\"{} \\
+\hline
+{\em info} & pointer of an index info \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & has more values \\
+\hline
+{\em false} & no more values \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classIndex_ac40a43b6ff8da20c353257b18d820c48}\label{classIndex_ac40a43b6ff8da20c353257b18d820c48}} 
+\index{Index@{Index}!scan\_1@{scan\_1}}
+\index{scan\_1@{scan\_1}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{scan\_1()}{scan\_1()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Index\+::scan\+\_\+1 (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+left\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+pepare for scan operation. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+left} & each element of the array stores a pointer to column key, \char`\"{}$>$=\char`\"{} \\
+\hline
+{\em info} & pointer of an index info \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classIndex_a01e87e8a81ae96cffa41670c4a7aa4d1}\label{classIndex_a01e87e8a81ae96cffa41670c4a7aa4d1}} 
+\index{Index@{Index}!scan\_2@{scan\_2}}
+\index{scan\_2@{scan\_2}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{scan\_2()}{scan\_2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Index\+::scan\+\_\+2 (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+right,  }\item[{void $\ast$}]{info,  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+iterate on calling to scan for values. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+right} & char buffer to store data in pattern, \char`\"{}$<$\char`\"{} \\
+\hline
+{\em info} & pointer of an index info \\
+\hline
+{\em result} & return the pointer to the indexed row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & has more values \\
+\hline
+{\em false} & no more values \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classIndex_a87a3859470537c53dad97257f8c360d9}\label{classIndex_a87a3859470537c53dad97257f8c360d9}} 
+\index{Index@{Index}!scan\_2@{scan\_2}}
+\index{scan\_2@{scan\_2}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{scan\_2()}{scan\_2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Index\+::scan\+\_\+2 (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+right\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{info,  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+iterate on calling to scan for values. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+right} & each element of the array stores a pointer to column key, \char`\"{}$<$\char`\"{} \\
+\hline
+{\em info} & pointer of an index info \\
+\hline
+{\em result} & return the pointer to the indexed row \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & has more values \\
+\hline
+{\em false} & no more values \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classIndex_a2009c96a48a8275550c7f531d72af946}\label{classIndex_a2009c96a48a8275550c7f531d72af946}} 
+\index{Index@{Index}!set\_ls@{set\_ls}}
+\index{set\_ls@{set\_ls}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{set\_ls()}{set\_ls()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Index\+::set\+\_\+ls (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data1,  }\item[{void $\ast$}]{i\+\_\+data2,  }\item[{void $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+prepare for lookup/scan operation. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data1} & char buffer to store data in pattern \\
+\hline
+{\em i\+\_\+data2} & char buffer to store data in pattern, for lookup, i\+\_\+data2=NULL \\
+\hline
+{\em info} & pointer of an index info \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a2a639c8c7bdc52834495ad3db773e714}{Hash\+Index}}, and \mbox{\hyperlink{classPbtreeIndex_a85544f8b024a953d90cff318dfc55a7f}{Pbtree\+Index}}.
+
+\mbox{\Hypertarget{classIndex_afc7a4ad5ce8b42bbe2638162710119f8}\label{classIndex_afc7a4ad5ce8b42bbe2638162710119f8}} 
+\index{Index@{Index}!set\_ls@{set\_ls}}
+\index{set\_ls@{set\_ls}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{set\_ls()}{set\_ls()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Index\+::set\+\_\+ls (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data1\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{i\+\_\+data2\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+prepare for lookup/scan operation. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data1} & each element of the array stores a pointer to column key \\
+\hline
+{\em i\+\_\+data2} & each element of the array stores a pointer to column key, for lookup, i\+\_\+data2=NULL \\
+\hline
+{\em info} & pointer of an index info \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & operation success \\
+\hline
+{\em false} & operation failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a78bb72f7522e8f345cb9c0fee9fba3b8}{Hash\+Index}}.
+
+\mbox{\Hypertarget{classIndex_a519f2d610c0974e75d34a3a391735b4c}\label{classIndex_a519f2d610c0974e75d34a3a391735b4c}} 
+\index{Index@{Index}!setIndexTid@{setIndexTid}}
+\index{setIndexTid@{setIndexTid}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{setIndexTid()}{setIndexTid()}}
+{\footnotesize\ttfamily virtual void Index\+::set\+Index\+Tid (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{tid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+set index in which table \mbox{\Hypertarget{classIndex_a80cee3927658bdeb678c776333115268}\label{classIndex_a80cee3927658bdeb678c776333115268}} 
+\index{Index@{Index}!shut@{shut}}
+\index{shut@{shut}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{shut()}{shut()}}
+{\footnotesize\ttfamily virtual bool Index\+::shut (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+shut dowm the index, free memory. 
+
+Reimplemented from \mbox{\hyperlink{classObject_ae021c9efe8397bc993d41cceccdf8955}{Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a842bae14f15853d8f2f917c6f6a7dce9}{Hash\+Index}}, and \mbox{\hyperlink{classPbtreeIndex_a47c37588dc70f27818633959bdb69462}{Pbtree\+Index}}.
+
+\mbox{\Hypertarget{classIndex_a21607f9558cf7b16980fb069e148a98e}\label{classIndex_a21607f9558cf7b16980fb069e148a98e}} 
+\index{Index@{Index}!tranToInt64@{tranToInt64}}
+\index{tranToInt64@{tranToInt64}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{tranToInt64()}{tranToInt64()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int64\+\_\+t Index\+::tran\+To\+Int64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+encode keys. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & char buffer to store data in pattern \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em int64\+\_\+t} & index code of i\+\_\+data \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a481e91d4a269aa0d4ab5399eacb02faa}{Hash\+Index}}.
+
+\mbox{\Hypertarget{classIndex_a2a7d273304d6692b348d9fcb92c41622}\label{classIndex_a2a7d273304d6692b348d9fcb92c41622}} 
+\index{Index@{Index}!tranToInt64@{tranToInt64}}
+\index{tranToInt64@{tranToInt64}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{tranToInt64()}{tranToInt64()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int64\+\_\+t Index\+::tran\+To\+Int64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+encode keys. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & each element of the array stores a pointer to column key \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em int64\+\_\+t} & index code of i\+\_\+data \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a66e388d2ab37ae96adc8864b1b833b7f}{Hash\+Index}}.
+
+\mbox{\Hypertarget{classIndex_aaf3f66118fa66c833268d4c93afc5703}\label{classIndex_aaf3f66118fa66c833268d4c93afc5703}} 
+\index{Index@{Index}!update@{update}}
+\index{update@{update}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Index\+::update (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$}]{p\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classIndex_aea42b20380267755ed0c58f931b642fa}\label{classIndex_aea42b20380267755ed0c58f931b642fa}} 
+\index{Index@{Index}!update@{update}}
+\index{update@{update}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Index\+::update (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classIndex_aa3b4f0cdd0e1c0cb1b21412a9e9e9d9a}\label{classIndex_aa3b4f0cdd0e1c0cb1b21412a9e9e9d9a}} 
+\index{Index@{Index}!i\_key@{i\_key}}
+\index{i\_key@{i\_key}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{i\_key}{i\_key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKey}{Key}} Index\+::i\+\_\+key\hspace{0.3cm}{\ttfamily [protected]}}
+
+index keys \mbox{\Hypertarget{classIndex_ab5cf757623e8cfa51e9689b8b69339ba}\label{classIndex_ab5cf757623e8cfa51e9689b8b69339ba}} 
+\index{Index@{Index}!i\_t\_id@{i\_t\_id}}
+\index{i\_t\_id@{i\_t\_id}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{i\_t\_id}{i\_t\_id}}
+{\footnotesize\ttfamily int64\+\_\+t Index\+::i\+\_\+t\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+in which table \mbox{\Hypertarget{classIndex_ac2ef48676fa285308d086d3312ae8fd6}\label{classIndex_ac2ef48676fa285308d086d3312ae8fd6}} 
+\index{Index@{Index}!i\_type@{i\_type}}
+\index{i\_type@{i\_type}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{i\_type}{i\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}{Index\+Type}} Index\+::i\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+index type 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{schema_8h}{schema.\+h}}\end{DoxyCompactItemize}

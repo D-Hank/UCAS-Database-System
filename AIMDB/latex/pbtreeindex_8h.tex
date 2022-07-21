@@ -1,0 +1,39 @@
+\hypertarget{pbtreeindex_8h}{}\doxysection{system/pbtreeindex.h File Reference}
+\label{pbtreeindex_8h}\index{system/pbtreeindex.h@{system/pbtreeindex.h}}
+{\ttfamily \#include \char`\"{}schema.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pbtree.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPbtreeIndex}{Pbtree\+Index}}
+\item 
+struct \mbox{\hyperlink{structPbtreeInfo}{Pbtree\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pbtreeindex_8h_ad4a1ad63b5a8b75b13db6d7362bb6631}{PBTREEINFO\+\_\+\+CAPICITY}}~(16)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+liugang(\href{mailto:liugang@ict.ac.cn}{\texttt{ liugang@ict.\+ac.\+cn}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+\hypertarget{schema_8h_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{schema_8h_DESCRIPTION}
+pbtree index, here we support ID data type(INT8/16/32/64/\+DATE/\+TIME/\+DATETIME) the value accessed at Element is the pointer of related recored. this implementation permits duplicated key with different value to be inserted, but not element with same key and value del operation will only del the first one which meet requirement, if you want delete all, you can call it many times till it returns false
+
+@basic usage\+:
+
+for each insert,del,look,scan, this file provides 2 same name method to handle 2 type data format you can use (1) for lookup, you should all use set\+\_\+ls to set Bptree\+Info with proper value, the first param is valid, leave the second to be NULL, Bptree\+Info can help you iterately get values you need. (2) call lookup to get the value iterately. (3) scan you can scan to iterately get the value you need 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pbtreeindex_8h_ad4a1ad63b5a8b75b13db6d7362bb6631}\label{pbtreeindex_8h_ad4a1ad63b5a8b75b13db6d7362bb6631}} 
+\index{pbtreeindex.h@{pbtreeindex.h}!PBTREEINFO\_CAPICITY@{PBTREEINFO\_CAPICITY}}
+\index{PBTREEINFO\_CAPICITY@{PBTREEINFO\_CAPICITY}!pbtreeindex.h@{pbtreeindex.h}}
+\doxysubsubsection{\texorpdfstring{PBTREEINFO\_CAPICITY}{PBTREEINFO\_CAPICITY}}
+{\footnotesize\ttfamily \#define PBTREEINFO\+\_\+\+CAPICITY~(16)}
+

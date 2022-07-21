@@ -1,0 +1,284 @@
+\hypertarget{nodepref_8h_source}{}\doxysection{nodepref.\+h}
+\label{nodepref_8h_source}\index{system/nodepref.h@{system/nodepref.h}}
+\mbox{\hyperlink{nodepref_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#ifndef \_PBTREE\_NODEPREF\_H}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define \_PBTREE\_NODEPREF\_H}}
+\DoxyCodeLine{17 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gcc__pf__p3_8h}{gcc\_pf\_p3.h}}"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define ITEM\_SIZE     ( 8)}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define NODE\_LINE\_NUM ( 4)}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define L3\_CACHE\_LINE (64)}}
+\DoxyCodeLine{24 \textcolor{comment}{// node size}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define CACHE\_LINE\_SIZE         L3\_CACHE\_LINE}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define BNODE\_SIZE              (CACHE\_LINE\_SIZE * NODE\_LINE\_NUM)}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define AREA\_LINE\_NUM   ((NODE\_LINE\_NUM+1)/2)}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{inline} NODE\_PREF(\textcolor{keyword}{register} \textcolor{keywordtype}{void} *bbp)}
+\DoxyCodeLine{30 \{}
+\DoxyCodeLine{31      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp));}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 2}}
+\DoxyCodeLine{33      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}));}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 3}}
+\DoxyCodeLine{36      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*2));}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 4}}
+\DoxyCodeLine{39      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*3));}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 5}}
+\DoxyCodeLine{42      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*4));}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 6}}
+\DoxyCodeLine{45      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*5));}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 7}}
+\DoxyCodeLine{48      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*6));}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 8}}
+\DoxyCodeLine{51      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*7));}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 9}}
+\DoxyCodeLine{54      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*8));}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 10}}
+\DoxyCodeLine{57      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*9));}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 11}}
+\DoxyCodeLine{60      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*10));}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 12}}
+\DoxyCodeLine{63      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*11));}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 13}}
+\DoxyCodeLine{66      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*12));}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 14}}
+\DoxyCodeLine{69      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*13));}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 15}}
+\DoxyCodeLine{72      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*14));}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 16}}
+\DoxyCodeLine{75      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*15));}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 17}}
+\DoxyCodeLine{78      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*16));}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 18}}
+\DoxyCodeLine{81      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*17));}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 19}}
+\DoxyCodeLine{84      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*18));}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 20}}
+\DoxyCodeLine{87      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*19));}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 21}}
+\DoxyCodeLine{90      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*20));}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 22}}
+\DoxyCodeLine{93      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*21));}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 23}}
+\DoxyCodeLine{96      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*22));}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 24}}
+\DoxyCodeLine{99      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*23));}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 25}}
+\DoxyCodeLine{102      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*24));}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 26}}
+\DoxyCodeLine{105      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*25));}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 27}}
+\DoxyCodeLine{108      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*26));}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 28}}
+\DoxyCodeLine{111      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*27));}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 29}}
+\DoxyCodeLine{114      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*28));}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 30}}
+\DoxyCodeLine{117      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*29));}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 31}}
+\DoxyCodeLine{120      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*30));}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 32}}
+\DoxyCodeLine{123      \mbox{\hyperlink{gcc__pf__p3_8h_a658a228a0eacff29bb8cb53fad8b24f4}{pfld}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*31));}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 33}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#    error "{}NODE\_LINE\_NUM must be <= 32!"{}}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{128 \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{inline} NODE\_PREF\_ST(\textcolor{keyword}{register} \textcolor{keywordtype}{void} *bbp)}
+\DoxyCodeLine{131 \{}
+\DoxyCodeLine{132      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp));}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 2}}
+\DoxyCodeLine{134      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}));}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 3}}
+\DoxyCodeLine{137      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*2));}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 4}}
+\DoxyCodeLine{140      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*3));}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 5}}
+\DoxyCodeLine{143      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*4));}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 6}}
+\DoxyCodeLine{146      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*5));}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 7}}
+\DoxyCodeLine{149      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*6));}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 8}}
+\DoxyCodeLine{152      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*7));}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 9}}
+\DoxyCodeLine{155      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*8));}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 10}}
+\DoxyCodeLine{158      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*9));}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 11}}
+\DoxyCodeLine{161      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*10));}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 12}}
+\DoxyCodeLine{164      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*11));}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 13}}
+\DoxyCodeLine{167      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*12));}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 14}}
+\DoxyCodeLine{170      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*13));}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 15}}
+\DoxyCodeLine{173      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*14));}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 16}}
+\DoxyCodeLine{176      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*15));}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 17}}
+\DoxyCodeLine{179      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*16));}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 18}}
+\DoxyCodeLine{182      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*17));}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 19}}
+\DoxyCodeLine{185      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*18));}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 20}}
+\DoxyCodeLine{188      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*19));}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 21}}
+\DoxyCodeLine{191      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*20));}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 22}}
+\DoxyCodeLine{194      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*21));}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 23}}
+\DoxyCodeLine{197      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*22));}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 24}}
+\DoxyCodeLine{200      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*23));}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 25}}
+\DoxyCodeLine{203      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*24));}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 26}}
+\DoxyCodeLine{206      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*25));}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 27}}
+\DoxyCodeLine{209      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*26));}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 28}}
+\DoxyCodeLine{212      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*27));}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 29}}
+\DoxyCodeLine{215      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*28));}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 30}}
+\DoxyCodeLine{218      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*29));}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 31}}
+\DoxyCodeLine{221      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*30));}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 32}}
+\DoxyCodeLine{224      \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* ((\textcolor{keywordtype}{char} *)bbp + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*31));}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#    if NODE\_LINE\_NUM >= 33}}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#    error "{}NODE\_LINE\_NUM must be <= 32!"{}}}
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#    endif}}
+\DoxyCodeLine{229 \}}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#define LEAF\_PREF           NODE\_PREF}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#define LEAF\_PREF\_ST        NODE\_PREF\_ST}}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234 \textcolor{comment}{// prefetch AREA\_LINE\_NUM cache lines starting from \&(area[i])}}
+\DoxyCodeLine{235 \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{inline} AREA\_PREF(\textcolor{keywordtype}{void} * area[], \textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} total)}
+\DoxyCodeLine{236 \{   }
+\DoxyCodeLine{237    \textcolor{keywordflow}{if} ((i) + \mbox{\hyperlink{nodepref_8h_ab34c3c1a7bfcd684ba341dbd7f2954f9}{AREA\_LINE\_NUM}}*\mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}/\mbox{\hyperlink{nodepref_8h_acd457e9376634adc961f4b9bfe6ddd21}{ITEM\_SIZE}} <= (total)) \{}
+\DoxyCodeLine{238       \textcolor{keyword}{register} \textcolor{keywordtype}{char} *p = (\textcolor{keywordtype}{char} *)(\&(area[i]));}
+\DoxyCodeLine{239       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* p);}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 2                             }}
+\DoxyCodeLine{241       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}));}
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#     endif}}
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 3                             }}
+\DoxyCodeLine{244       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*2));}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#     endif}}
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 4                             }}
+\DoxyCodeLine{247       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*3));}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#     endif}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 5                             }}
+\DoxyCodeLine{250       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*4));}
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#     endif}}
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 6                             }}
+\DoxyCodeLine{253       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*5));}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#     endif}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 7                             }}
+\DoxyCodeLine{256       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*6));}
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#     endif                 }}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 8                             }}
+\DoxyCodeLine{259       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*7));}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#     endif                 }}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 9                             }}
+\DoxyCodeLine{262       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*8));}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#     endif                 }}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 10                    }}
+\DoxyCodeLine{265       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*9));}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#     endif                 }}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 11}}
+\DoxyCodeLine{268       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*10));}
+\DoxyCodeLine{269 \textcolor{preprocessor}{\#     endif                 }}
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 12}}
+\DoxyCodeLine{271       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*11));}
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#     endif                 }}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 13}}
+\DoxyCodeLine{274       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*12));}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#     endif                 }}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 14}}
+\DoxyCodeLine{277       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*13));}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#     endif                 }}
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 15}}
+\DoxyCodeLine{280       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*14));}
+\DoxyCodeLine{281 \textcolor{preprocessor}{\#     endif                 }}
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 16}}
+\DoxyCodeLine{283       \mbox{\hyperlink{gcc__pf__p3_8h_a6a312b945fd7b20f9df369b2c789ba81}{pfst}} (* (p + \mbox{\hyperlink{nodepref_8h_af89f60b07247176687889ade776c8e10}{CACHE\_LINE\_SIZE}}*15));}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#     endif                 }}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#     if AREA\_LINE\_NUM >= 17}}
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#     error "{}AREA\_LINE\_NUM must be <= 16!"{}}}
+\DoxyCodeLine{287 \textcolor{preprocessor}{\#     endif}}
+\DoxyCodeLine{288     \}                                            }
+\DoxyCodeLine{289 \}}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{291 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_PBTREE\_NODEPREF\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

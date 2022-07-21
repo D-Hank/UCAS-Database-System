@@ -1,0 +1,83 @@
+小数据集测试：
+
+  (index: ps_suppkey,r_regionkey)
+  TQ1: select 1 列，1个filter
+    select s_name
+    from supplier
+    where s_nationkey = 18
+
+  TQ2: select 2 列， 2个filter, 其中一个filter列上有index
+    (index: ps_suppkey)
+    select ps_partkey,ps_availqty
+    from partsupp
+    where ps_suppkey = 6 and ps_availqty < 8000
+
+  TQ3: select 1 列，1个filter, filter列上有index
+    (index: c_nationkey)
+    select c_name,c_phone
+    from customer
+    where c_nationkey = 18
+
+  TQ4: select 2 列， 2个filter
+    select ps_partkey,ps_availqty
+    from partsupp
+    where ps_availqty < 3000 and ps_suppkey < 100
+
+  TQ5: select 2 列， 4个filter，其中一个filter列上有index
+    (index:l_suppkey)
+    select l_orderkey,l_tax
+    from lineitem
+    where l_partkey < 10000 and l_suppkey = 100 and l_quantity > 20 and l_tax >= 0.05
+
+  TQ6: 2个表join, 没有filter条件，没有index, 输出2列（每个表各选1列）
+    select c_name,o_totalprice
+    from customer,orders
+    where c_custkey = o_custkey
+
+  TQ7: 2个表join, 没有filter条件，有index, 输出2列（每个表各选1列）
+    (index: r_regionkey)
+    select n_name, r_name
+    from nation,region
+    where n_regionkey = r_regionkey
+
+  TQ8: 2个表join, 没有filter条件，没有index, 输出2列（每个表各选1列）
+    select l_quantity,o_totalprice
+    from orders,lineitem
+    where o_orderkey = l_orderkey
+
+  TQ9: 2个表join, 没有filter条件，没有index, 输出2列（每个表各选1列）
+    select c_name,o_totalprice
+    from customer,orders
+    where c_custkey = o_custkey
+
+  TQ10: 2个表join, 没有filter条件，有index, 输出2列（每个表各选1列）
+    (index: c_nationkey)
+    select n_name, c_name
+    from nation,customer
+    where n_nationkey = c_nationkey
+
+  TQ11: 2个表join, 各有1个filter条件，没有index, 输出2列（每个表各选1列）
+    select c_name,o_totalprice
+    from customer,orders
+    where c_custkey = o_custkey and c_nationkey = 18 and o_totalprice >20000
+
+  TQ12: 2个表join, 各有1个filter条件，没有index, 输出2列（每个表各选1列）
+    select p_name,ps_availqty
+    from part,partsupp
+    where p_partkey = ps_partkey and p_partkey < 1000 and ps_availqty < 8000
+
+  TQ13: 2个表join, 各有1个filter条件，有index, 输出2列（每个表各选1列）
+    (index: c_nationkey)
+    select n_name,c_name
+    from nation,customer
+    where n_nationkey = c_nationkey and c_custkey < 5000 and n_nationkey < 20
+
+  TQ14: 3个表join, 各有1个filter条件，没有index, 输出3列（每个表各选1列）
+    select p_name,s_name,ps_availqty
+    from part,supplier,partsupp
+    where p_partkey = ps_partkey and s_suppkey = ps_suppkey
+
+  TQ15: 4个表join, 各有1个filter条件，没有index, 输出4列（每个表各选1列）
+    select r_name,n_name,c_name,o_totalprice
+    from region,nation,customer,orders
+    where r_regionkey = n_regionkey and n_nationkey = c_nationkey and c_custkey = o_custkey

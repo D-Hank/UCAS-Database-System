@@ -1,0 +1,39 @@
+\hypertarget{rowtable_8h}{}\doxysection{system/rowtable.h File Reference}
+\label{rowtable_8h}\index{system/rowtable.h@{system/rowtable.h}}
+{\ttfamily \#include \char`\"{}mymemory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}schema.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMStorage}{MStorage}}
+\item 
+class \mbox{\hyperlink{classRowTable}{Row\+Table}}
+\item 
+class \mbox{\hyperlink{classRPattern}{RPattern}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMemory}{Memory}} \mbox{\hyperlink{rowtable_8h_ab02b3badee65de481b409f3887fb8691}{g\+\_\+memory}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+liugang(\href{mailto:liugang@ict.ac.cn}{\texttt{ liugang@ict.\+ac.\+cn}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+\hypertarget{schema_8h_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{schema_8h_DESCRIPTION}
+rowtable implementation, this file implement all interface required by class table data space is managed by g\+\_\+memory, which decreases malloc overhead when create rowtable, I will make one more column to represent its validation. if delete a record, put down the label to set it \char`\"{}invalid\char`\"{} for index in this table, delete the entry inside index
+
+basic usage\+: using rowtable interface surrounded by \char`\"{}//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\char`\"{} will be enough for you 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rowtable_8h_ab02b3badee65de481b409f3887fb8691}\label{rowtable_8h_ab02b3badee65de481b409f3887fb8691}} 
+\index{rowtable.h@{rowtable.h}!g\_memory@{g\_memory}}
+\index{g\_memory@{g\_memory}!rowtable.h@{rowtable.h}}
+\doxysubsubsection{\texorpdfstring{g\_memory}{g\_memory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMemory}{Memory}} g\+\_\+memory\hspace{0.3cm}{\ttfamily [extern]}}
+

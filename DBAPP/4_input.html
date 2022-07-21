@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <body>
+        <form method="post" action="4_train.php">
+            选择要查询的车次：<br>
+            <input type="text" name="train" value="G101"></input><br>
+            选择要查询的日期：<br>
+            <input type="date" id="date_box" name="date" min= ""></input><br>
+            <input type="submit" value="确认"></input>
+        </form>
+
+        <script>
+            function limit_date(){
+                const _interval_a_day = 24 * 60 * 60 * 1000;
+                const _interval_after = 5 * _interval_a_day;
+
+                var today = new Date();
+                var today_date = formal_date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+
+                var after = new Date(today.getTime() + _interval_after);
+                var after_date = formal_date(after.getFullYear(), after.getMonth() + 1, after.getDate());
+
+                var tomrrw = new Date(today.getTime() + _interval_a_day);
+                var tomrrw_date = formal_date(tomrrw.getFullYear(), tomrrw.getMonth() + 1, tomrrw.getDate());
+
+                document.getElementById("date_box").setAttribute("min", today_date);
+                document.getElementById("date_box").setAttribute("max", after_date);
+                document.getElementById("date_box").setAttribute("value", tomrrw_date);
+            }
+
+            function formal_date(year, month, date){
+                var month_formal = month < 10 ? "0" + month : "" + month;
+                var date_formal = date < 10 ? "0" + date : "" + date;
+                return year + "-" + month_formal + "-" + date_formal;
+            }
+
+            window.onload = function(){
+                limit_date();
+            }
+        </script>
+    </body>
+</html>

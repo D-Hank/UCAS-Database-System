@@ -1,0 +1,109 @@
+\hypertarget{classSelectQuery}{}\doxysection{Select\+Query Class Reference}
+\label{classSelectQuery}\index{SelectQuery@{SelectQuery}}
+
+
+{\ttfamily \#include $<$executor.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classSelectQuery_a1f22ee20ede46d4ed1f27d1abb9520be}{database\+\_\+id}}
+\item 
+int \mbox{\hyperlink{classSelectQuery_ae6737ccc7d0c7ec694b994eca35698e3}{from\+\_\+number}}
+\item 
+\mbox{\hyperlink{structRequestTable}{Request\+Table}} \mbox{\hyperlink{classSelectQuery_ab4a2fa059b3f898363bf8c8cda0e9824}{from\+\_\+table}} \mbox{[}4\mbox{]}
+\item 
+\mbox{\hyperlink{structRequestColumn}{Request\+Column}} \mbox{\hyperlink{classSelectQuery_a91d0be5635d96f98b10123bdb6b2240a}{groupby}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{classSelectQuery_ae0d1f2cad63d1e19b8800bd38c1f625c}{groupby\+\_\+number}}
+\item 
+\mbox{\hyperlink{structConditions}{Conditions}} \mbox{\hyperlink{classSelectQuery_acbe1bbb918c2fd0a916f06a28aa9875c}{having}}
+\item 
+\mbox{\hyperlink{structRequestColumn}{Request\+Column}} \mbox{\hyperlink{classSelectQuery_a217be88d39ddf971159ba7bf34892c29}{orderby}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{classSelectQuery_a35b19f13d1cf5fbd32de6b54db5948b5}{orderby\+\_\+number}}
+\item 
+\mbox{\hyperlink{structRequestColumn}{Request\+Column}} \mbox{\hyperlink{classSelectQuery_acbfafcd5fa4a899f0c6070dffedd4151}{select\+\_\+column}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{classSelectQuery_a2bc66dd79eef653d23605cb39c0ca41f}{select\+\_\+number}}
+\item 
+\mbox{\hyperlink{structConditions}{Conditions}} \mbox{\hyperlink{classSelectQuery_abad9b932c6a3945e24199df13ad793c1}{where}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of selectquery. ~\newline
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSelectQuery_a1f22ee20ede46d4ed1f27d1abb9520be}\label{classSelectQuery_a1f22ee20ede46d4ed1f27d1abb9520be}} 
+\index{SelectQuery@{SelectQuery}!database\_id@{database\_id}}
+\index{database\_id@{database\_id}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{database\_id}{database\_id}}
+{\footnotesize\ttfamily int64\+\_\+t Select\+Query\+::database\+\_\+id}
+
+database to execute \mbox{\Hypertarget{classSelectQuery_ae6737ccc7d0c7ec694b994eca35698e3}\label{classSelectQuery_ae6737ccc7d0c7ec694b994eca35698e3}} 
+\index{SelectQuery@{SelectQuery}!from\_number@{from\_number}}
+\index{from\_number@{from\_number}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{from\_number}{from\_number}}
+{\footnotesize\ttfamily int Select\+Query\+::from\+\_\+number}
+
+number of tables to select from \mbox{\Hypertarget{classSelectQuery_ab4a2fa059b3f898363bf8c8cda0e9824}\label{classSelectQuery_ab4a2fa059b3f898363bf8c8cda0e9824}} 
+\index{SelectQuery@{SelectQuery}!from\_table@{from\_table}}
+\index{from\_table@{from\_table}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{from\_table}{from\_table}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRequestTable}{Request\+Table}} Select\+Query\+::from\+\_\+table\mbox{[}4\mbox{]}}
+
+tables to select from, maximum 4 \mbox{\Hypertarget{classSelectQuery_a91d0be5635d96f98b10123bdb6b2240a}\label{classSelectQuery_a91d0be5635d96f98b10123bdb6b2240a}} 
+\index{SelectQuery@{SelectQuery}!groupby@{groupby}}
+\index{groupby@{groupby}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{groupby}{groupby}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRequestColumn}{Request\+Column}} Select\+Query\+::groupby\mbox{[}4\mbox{]}}
+
+columns to groupby \mbox{\Hypertarget{classSelectQuery_ae0d1f2cad63d1e19b8800bd38c1f625c}\label{classSelectQuery_ae0d1f2cad63d1e19b8800bd38c1f625c}} 
+\index{SelectQuery@{SelectQuery}!groupby\_number@{groupby\_number}}
+\index{groupby\_number@{groupby\_number}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{groupby\_number}{groupby\_number}}
+{\footnotesize\ttfamily int Select\+Query\+::groupby\+\_\+number}
+
+number of columns to groupby \mbox{\Hypertarget{classSelectQuery_acbe1bbb918c2fd0a916f06a28aa9875c}\label{classSelectQuery_acbe1bbb918c2fd0a916f06a28aa9875c}} 
+\index{SelectQuery@{SelectQuery}!having@{having}}
+\index{having@{having}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{having}{having}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structConditions}{Conditions}} Select\+Query\+::having}
+
+groupby conditions \mbox{\Hypertarget{classSelectQuery_a217be88d39ddf971159ba7bf34892c29}\label{classSelectQuery_a217be88d39ddf971159ba7bf34892c29}} 
+\index{SelectQuery@{SelectQuery}!orderby@{orderby}}
+\index{orderby@{orderby}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{orderby}{orderby}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRequestColumn}{Request\+Column}} Select\+Query\+::orderby\mbox{[}4\mbox{]}}
+
+columns to orderby \mbox{\Hypertarget{classSelectQuery_a35b19f13d1cf5fbd32de6b54db5948b5}\label{classSelectQuery_a35b19f13d1cf5fbd32de6b54db5948b5}} 
+\index{SelectQuery@{SelectQuery}!orderby\_number@{orderby\_number}}
+\index{orderby\_number@{orderby\_number}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{orderby\_number}{orderby\_number}}
+{\footnotesize\ttfamily int Select\+Query\+::orderby\+\_\+number}
+
+number of columns to orderby \mbox{\Hypertarget{classSelectQuery_acbfafcd5fa4a899f0c6070dffedd4151}\label{classSelectQuery_acbfafcd5fa4a899f0c6070dffedd4151}} 
+\index{SelectQuery@{SelectQuery}!select\_column@{select\_column}}
+\index{select\_column@{select\_column}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{select\_column}{select\_column}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRequestColumn}{Request\+Column}} Select\+Query\+::select\+\_\+column\mbox{[}4\mbox{]}}
+
+columns to select, maximum 4 \mbox{\Hypertarget{classSelectQuery_a2bc66dd79eef653d23605cb39c0ca41f}\label{classSelectQuery_a2bc66dd79eef653d23605cb39c0ca41f}} 
+\index{SelectQuery@{SelectQuery}!select\_number@{select\_number}}
+\index{select\_number@{select\_number}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{select\_number}{select\_number}}
+{\footnotesize\ttfamily int Select\+Query\+::select\+\_\+number}
+
+number of column to select \mbox{\Hypertarget{classSelectQuery_abad9b932c6a3945e24199df13ad793c1}\label{classSelectQuery_abad9b932c6a3945e24199df13ad793c1}} 
+\index{SelectQuery@{SelectQuery}!where@{where}}
+\index{where@{where}!SelectQuery@{SelectQuery}}
+\doxysubsubsection{\texorpdfstring{where}{where}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structConditions}{Conditions}} Select\+Query\+::where}
+
+where meets conditions, maximum 4 \& conditions 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{executor_8h}{executor.\+h}}\end{DoxyCompactItemize}

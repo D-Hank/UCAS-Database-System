@@ -1,0 +1,14 @@
+\hypertarget{rowtable_8cc}{}\doxysection{system/rowtable.cc File Reference}
+\label{rowtable_8cc}\index{system/rowtable.cc@{system/rowtable.cc}}
+{\ttfamily \#include \char`\"{}rowtable.\+h\char`\"{}}\newline
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+liugang(\href{mailto:liugang@ict.ac.cn}{\texttt{ liugang@ict.\+ac.\+cn}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+\hypertarget{schema_8h_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{schema_8h_DESCRIPTION}
+rowtable implementation, this file implement all interface required by class table data space is managed by g\+\_\+memory, which decreases malloc overhead when create rowtable, I will make one more column to represent its validation. if delete a record, put down the label to set it \char`\"{}invalid\char`\"{} for index in this table, delete the entry inside index 

@@ -1,0 +1,56 @@
+\hypertarget{pbtreeindex_8h_source}{}\doxysection{pbtreeindex.\+h}
+\label{pbtreeindex_8h_source}\index{system/pbtreeindex.h@{system/pbtreeindex.h}}
+\mbox{\hyperlink{pbtreeindex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifndef \_PBTREEINDEX\_H}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define \_PBTREEINDEX\_H}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{schema_8h}{schema.h}}"{}}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{pbtree_8h}{pbtree.h}}"{}}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{comment}{// support INT, id type data}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define PBTREEINFO\_CAPICITY (16)}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{33 \textcolor{keyword}{struct }\mbox{\hyperlink{structPbtreeInfo}{PbtreeInfo}} \{}
+\DoxyCodeLine{34     \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} \mbox{\hyperlink{structPbtreeInfo_a6eb72c5e03ae0f2f62999f8671879f38}{left}};   }
+\DoxyCodeLine{35     \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} \mbox{\hyperlink{structPbtreeInfo_ac1ab2defe98980fbd64792b2b6200fdb}{right}};  }
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} *\mbox{\hyperlink{structPbtreeInfo_a93c1aa7d6b9a1c2696b65631fa794846}{l\_ptr}};     }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} *\mbox{\hyperlink{structPbtreeInfo_ab7968b04ed217ff3ea7c799e781a3341}{s\_ptr}};     }
+\DoxyCodeLine{38     \textcolor{keywordtype}{int}   \mbox{\hyperlink{structPbtreeInfo_a710301d53df3b89756d92bda60b963e9}{s\_pos}};     }
+\DoxyCodeLine{39     \textcolor{keywordtype}{int}   \mbox{\hyperlink{structPbtreeInfo_a903c4a982921741fbd7cc9bd67724720}{s\_num}};     }
+\DoxyCodeLine{40     \textcolor{keywordtype}{int}   \mbox{\hyperlink{structPbtreeInfo_a80a8a539b0ca9d3956cb0b8ba9f50624}{s\_end}};     }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} *\mbox{\hyperlink{structPbtreeInfo_ab8c9368f70acc85ae45456237247b402}{area}}[\mbox{\hyperlink{pbtreeindex_8h_ad4a1ad63b5a8b75b13db6d7362bb6631}{PBTREEINFO\_CAPICITY}}];   }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} *\mbox{\hyperlink{structPbtreeInfo_a5d1d9d4df2f86c705fcaee623c795a31}{result}}[\mbox{\hyperlink{pbtreeindex_8h_ad4a1ad63b5a8b75b13db6d7362bb6631}{PBTREEINFO\_CAPICITY}}]; }
+\DoxyCodeLine{43     \textcolor{keywordtype}{int}   \mbox{\hyperlink{structPbtreeInfo_af79a07f46917ecbfeacade9f2c46555d}{cr\_area}};   }
+\DoxyCodeLine{44     \textcolor{keywordtype}{int}   \mbox{\hyperlink{structPbtreeInfo_a26512d6902a406c48ae789d4f719736d}{cr\_resu}};   }
+\DoxyCodeLine{45     \textcolor{keywordtype}{int}   \mbox{\hyperlink{structPbtreeInfo_a6c0618ce92f6985e559dbdbd4f3d1ed1}{pos\_resu}};  }
+\DoxyCodeLine{46     \textcolor{keywordtype}{int}   \mbox{\hyperlink{structPbtreeInfo_a147f30e7c05a9b9376e547730f9744ab}{le\_resu}};   }
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{class }\mbox{\hyperlink{classPbtreeIndex}{PbtreeIndex}} : \textcolor{keyword}{public} \mbox{\hyperlink{classIndex}{Index}} \{}
+\DoxyCodeLine{50   \textcolor{keyword}{private}:}
+\DoxyCodeLine{51     \mbox{\hyperlink{classPbtree}{Pbtree}}     \mbox{\hyperlink{classPbtreeIndex_a2a016ff14838630aa9e18095cf5bb6e2}{pi\_pbtree}};    }
+\DoxyCodeLine{52     \mbox{\hyperlink{classBasicType}{BasicType}} *\mbox{\hyperlink{classPbtreeIndex_a0aacdcb9dd929a401733b120624faff5}{pi\_datatype}};  }
+\DoxyCodeLine{54   \textcolor{keyword}{public}:}
+\DoxyCodeLine{61     \mbox{\hyperlink{classPbtreeIndex_ad11c3cab6bc7e010990840433ceea628}{PbtreeIndex}} (int64\_t pi\_id, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *i\_name, \mbox{\hyperlink{classKey}{Key}} \&\mbox{\hyperlink{classIndex_aa3b4f0cdd0e1c0cb1b21412a9e9e9d9a}{i\_key}})}
+\DoxyCodeLine{62         :\mbox{\hyperlink{classIndex}{Index}} (pi\_id, i\_name, \mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a11297c835b1a8214f782bd8aacf92420}{BPTREEINDEX}}, \mbox{\hyperlink{classIndex_aa3b4f0cdd0e1c0cb1b21412a9e9e9d9a}{i\_key}})}
+\DoxyCodeLine{63     \{}
+\DoxyCodeLine{64     \}}
+\DoxyCodeLine{69     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPbtreeIndex_acd859114f12d518d2d30b7060ca61384}{init}} (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{75     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPbtreeIndex_a41b584d053d13f37c16d4dc77d636b03}{setIndexDTpye}}(\mbox{\hyperlink{classBasicType}{BasicType}} * i\_dt);}
+\DoxyCodeLine{80     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPbtreeIndex_a47c37588dc70f27818633959bdb69462}{shut}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{comment}{//  data operator}}
+\DoxyCodeLine{90 \textcolor{comment}{}    \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPbtreeIndex_a80dd75c8708bf0d0a4796c76f39ff3ae}{insert}}(\textcolor{keywordtype}{void} *i\_data, \textcolor{keywordtype}{void} *p\_in);}
+\DoxyCodeLine{99     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPbtreeIndex_a85544f8b024a953d90cff318dfc55a7f}{set\_ls}}(\textcolor{keywordtype}{void} *i\_data1, \textcolor{keywordtype}{void} *i\_data2, \textcolor{keywordtype}{void} *info);}
+\DoxyCodeLine{108     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPbtreeIndex_ab3ce1f804474a7d9933d1e72ba842c3d}{lookup}}(\textcolor{keywordtype}{void} *i\_data, \textcolor{keywordtype}{void} *info, \textcolor{keywordtype}{void} *\&result);}
+\DoxyCodeLine{116     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPbtreeIndex_a8016d0963fd2d4cfcef785c9eb23f855}{scan}} (\textcolor{keywordtype}{void} *info, \textcolor{keywordtype}{void} *\&result);}
+\DoxyCodeLine{124     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPbtreeIndex_ab9da1b2ee35c4c4544eb782f60b0adde}{del}}(\textcolor{keywordtype}{void} *i\_data, \textcolor{keywordtype}{void} *p\_del);}
+\DoxyCodeLine{128     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPbtreeIndex_aa1bb44169b111c47b97ca74c5028d6e8}{print}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{129     }
+\DoxyCodeLine{130 \};}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

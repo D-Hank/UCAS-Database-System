@@ -1,0 +1,98 @@
+\hypertarget{classKey}{}\doxysection{Key Class Reference}
+\label{classKey}\index{Key@{Key}}
+
+
+{\ttfamily \#include $<$schema.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKey_a46d7994caa901fcd58a4fe96cea302c5}{Key}} (void)
+\item 
+bool \mbox{\hyperlink{classKey_a937770dadf0980dbab41d9aea87ffbc9}{contain}} (int64\+\_\+t col\+\_\+id)
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \& \mbox{\hyperlink{classKey_ae85ed55383522ed146aaf7862ba78bd8}{get\+Key}} (void)
+\item 
+\mbox{\hyperlink{classKey}{Key}} \& \mbox{\hyperlink{classKey_a5a325f5aa5ee203e688031203327fd4e}{operator=}} (const \mbox{\hyperlink{classKey}{Key}} \&p)
+\item 
+void \mbox{\hyperlink{classKey_afa977bf876e7d2eb821e3386f5ac5e4c}{print}} (void)
+\item 
+void \mbox{\hyperlink{classKey_a552963e138396091b772b1ca057b869b}{set}} (std\+::vector$<$ int64\+\_\+t $>$ \&in\+\_\+key)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classKey_aaf6da7fa85b9c607d4a42e6b8ac3d60b}{key}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of class \mbox{\hyperlink{classKey}{Key}}. ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKey_a46d7994caa901fcd58a4fe96cea302c5}\label{classKey_a46d7994caa901fcd58a4fe96cea302c5}} 
+\index{Key@{Key}!Key@{Key}}
+\index{Key@{Key}!Key@{Key}}
+\doxysubsubsection{\texorpdfstring{Key()}{Key()}}
+{\footnotesize\ttfamily Key\+::\+Key (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKey_a937770dadf0980dbab41d9aea87ffbc9}\label{classKey_a937770dadf0980dbab41d9aea87ffbc9}} 
+\index{Key@{Key}!contain@{contain}}
+\index{contain@{contain}!Key@{Key}}
+\doxysubsubsection{\texorpdfstring{contain()}{contain()}}
+{\footnotesize\ttfamily bool Key\+::contain (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{col\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+check if the key contain a column identifier. @col\+\_\+id column identifier. 
+\begin{DoxyRetVals}{Return values}
+{\em true} & contain \\
+\hline
+{\em false} & don\textquotesingle{}t contain \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classKey_ae85ed55383522ed146aaf7862ba78bd8}\label{classKey_ae85ed55383522ed146aaf7862ba78bd8}} 
+\index{Key@{Key}!getKey@{getKey}}
+\index{getKey@{getKey}!Key@{Key}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily std\+::vector$<$ int64\+\_\+t $>$ \& Key\+::get\+Key (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get key data. \mbox{\Hypertarget{classKey_a5a325f5aa5ee203e688031203327fd4e}\label{classKey_a5a325f5aa5ee203e688031203327fd4e}} 
+\index{Key@{Key}!operator=@{operator=}}
+\index{operator=@{operator=}!Key@{Key}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKey}{Key}} \& Key\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classKey}{Key}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+over write operator(=). \mbox{\Hypertarget{classKey_afa977bf876e7d2eb821e3386f5ac5e4c}\label{classKey_afa977bf876e7d2eb821e3386f5ac5e4c}} 
+\index{Key@{Key}!print@{print}}
+\index{print@{print}!Key@{Key}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Key\+::print (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+print key information. \mbox{\Hypertarget{classKey_a552963e138396091b772b1ca057b869b}\label{classKey_a552963e138396091b772b1ca057b869b}} 
+\index{Key@{Key}!set@{set}}
+\index{set@{set}!Key@{Key}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Key\+::set (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int64\+\_\+t $>$ \&}]{in\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set key. 
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+key} & keys(column identifiers) in vector \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKey_aaf6da7fa85b9c607d4a42e6b8ac3d60b}\label{classKey_aaf6da7fa85b9c607d4a42e6b8ac3d60b}} 
+\index{Key@{Key}!key@{key}}
+\index{key@{key}!Key@{Key}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily std\+::vector$<$ int64\+\_\+t $>$ Key\+::key\hspace{0.3cm}{\ttfamily [private]}}
+
+index iidentifier container 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{schema_8h}{schema.\+h}}\end{DoxyCompactItemize}

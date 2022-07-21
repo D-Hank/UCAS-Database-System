@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+
+<head>
+    <title>signup</title>
+    <link rel="stylesheet" type="text/css" href="dbms.css">
+    <style>
+        .background {
+            height: 100%;
+            background-image: linear-gradient(to bottom right, rgb(209, 209, 209), rgb(140, 165, 255), rgb(255, 186, 240));
+        }
+
+        .submit {
+            border: none;
+            outline: none;
+            background-image: linear-gradient(to bottom right, rgb(236, 172, 255), rgb(255, 179, 179));
+            margin-top: 10%;
+            margin-left: 20%;
+            margin-bottom: 3%;
+            width: 60%;
+            font-size: 17px;
+            color: white;
+            padding: 17px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="outer">
+            <div class="title">
+                SIGNUP
+            </div>
+            <form action="signup.php" method="post" class="input-form">
+                <input type="text" name="name" placeholder="name" class="input-text"><br>
+                <input type="text" name="user" placeholder="user" class="input-text"><br>
+                <input type="text" name="phone" placeholder="phone" class="input-text"><br>
+                <br>
+                <input type="submit" value="signup" class="submit">
+            </form>
+            <div class="more-text">
+                Already have an account? 
+                <a href="login.html">Log in</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

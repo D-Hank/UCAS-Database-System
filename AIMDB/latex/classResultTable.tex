@@ -1,0 +1,221 @@
+\hypertarget{classResultTable}{}\doxysection{Result\+Table Class Reference}
+\label{classResultTable}\index{ResultTable@{ResultTable}}
+
+
+{\ttfamily \#include $<$executor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classResultTable_aa779e15ebf2c386c4da2823f7732a072}{append}} (char $\ast$src)
+\begin{DoxyCompactList}\small\item\em write a row into result table \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classResultTable_ade020614bff0801508930e8eb59af938}{dump}} (FILE $\ast$fp)
+\item 
+char $\ast$ \mbox{\hyperlink{classResultTable_ac83581c83a30fcdc7a9bbfa0c12ede3b}{get\+RC}} (int row, int column)
+\item 
+int \mbox{\hyperlink{classResultTable_a03b0c44df26deb26e2b610a038082022}{init}} (\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$col\+\_\+types\mbox{[}$\,$\mbox{]}, int col\+\_\+num, int64\+\_\+t capicity=1024)
+\item 
+int \mbox{\hyperlink{classResultTable_a73bbfe02e669421de5dc67393f3834f2}{print}} (void)
+\item 
+int \mbox{\hyperlink{classResultTable_a70395ab496841316e1ce31df8f2aa2eb}{shut}} (void)
+\item 
+int \mbox{\hyperlink{classResultTable_ac915b9a308712cf8970b56bc43c22809}{write\+RC}} (int row, int column, void $\ast$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{classResultTable_ab4b90ad7d38d5803d76ea013c1aafd6c}{buffer}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classResultTable_a817b90fb68e0ccbf458ef54d4c687e92}{buffer\+\_\+size}}
+\item 
+int \mbox{\hyperlink{classResultTable_aaac52ce51a8c2e2264e9802e0cc93fd7}{column\+\_\+number}}
+\item 
+\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$$\ast$ \mbox{\hyperlink{classResultTable_a40f2334ebf770fb242d43a08b666bd73}{column\+\_\+type}}
+\item 
+int $\ast$ \mbox{\hyperlink{classResultTable_abb33d0e3802d3da01388f3f6abb393af}{offset}}
+\item 
+int \mbox{\hyperlink{classResultTable_ac058a67a44f3d2e1c13c44c4c918ab4c}{offset\+\_\+size}}
+\item 
+int \mbox{\hyperlink{classResultTable_a06d94b3ed444334313e5e50b28471471}{row\+\_\+capicity}}
+\item 
+int \mbox{\hyperlink{classResultTable_a01b1b04f595a96cd61c7f6db9fb17bf5}{row\+\_\+length}}
+\item 
+int \mbox{\hyperlink{classResultTable_ae667ceb49fef4f2f962a190e7b395237}{row\+\_\+number}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of result table. ~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classResultTable_aa779e15ebf2c386c4da2823f7732a072}\label{classResultTable_aa779e15ebf2c386c4da2823f7732a072}} 
+\index{ResultTable@{ResultTable}!append@{append}}
+\index{append@{append}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily int Result\+Table\+::append (\begin{DoxyParamCaption}\item[{char $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+write a row into result table 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & the row buffer to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 success 
+
+0 error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classResultTable_ade020614bff0801508930e8eb59af938}\label{classResultTable_ade020614bff0801508930e8eb59af938}} 
+\index{ResultTable@{ResultTable}!dump@{dump}}
+\index{dump@{dump}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily int Result\+Table\+::dump (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+write to file with FILE $\ast$fp \mbox{\Hypertarget{classResultTable_ac83581c83a30fcdc7a9bbfa0c12ede3b}\label{classResultTable_ac83581c83a30fcdc7a9bbfa0c12ede3b}} 
+\index{ResultTable@{ResultTable}!getRC@{getRC}}
+\index{getRC@{getRC}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{getRC()}{getRC()}}
+{\footnotesize\ttfamily char $\ast$ Result\+Table\+::get\+RC (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+calculate the char pointer of data spcified by row and column id you should set up column\+\_\+type,then call init function 
+\begin{DoxyParams}{Parameters}
+{\em row} & row id in result table \\
+\hline
+{\em column} & column id in result table \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em !=\+NULL} & pointer of a column \\
+\hline
+{\em ==\+NULL} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classResultTable_a03b0c44df26deb26e2b610a038082022}\label{classResultTable_a03b0c44df26deb26e2b610a038082022}} 
+\index{ResultTable@{ResultTable}!init@{init}}
+\index{init@{init}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Result\+Table\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$}]{col\+\_\+types\mbox{[}$\,$\mbox{]},  }\item[{int}]{col\+\_\+num,  }\item[{int64\+\_\+t}]{capicity = {\ttfamily 1024} }\end{DoxyParamCaption})}
+
+init alloc memory and set initial value 
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+types} & array of column type pointers \\
+\hline
+{\em col\+\_\+num} & number of columns in this \mbox{\hyperlink{classResultTable}{Result\+Table}} \\
+\hline
+{\em capicity} & buffer\+\_\+size, power of 2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & success \\
+\hline
+{\em $<$=0} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classResultTable_a73bbfe02e669421de5dc67393f3834f2}\label{classResultTable_a73bbfe02e669421de5dc67393f3834f2}} 
+\index{ResultTable@{ResultTable}!print@{print}}
+\index{print@{print}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily int Result\+Table\+::print (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+print result table, split by \textquotesingle{}\textbackslash{}t\textquotesingle{}, output a line per row 
+\begin{DoxyRetVals}{Return values}
+{\em the} & number of rows printed \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classResultTable_a70395ab496841316e1ce31df8f2aa2eb}\label{classResultTable_a70395ab496841316e1ce31df8f2aa2eb}} 
+\index{ResultTable@{ResultTable}!shut@{shut}}
+\index{shut@{shut}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{shut()}{shut()}}
+{\footnotesize\ttfamily int Result\+Table\+::shut (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+free memory of this result table to g\+\_\+memory \mbox{\Hypertarget{classResultTable_ac915b9a308712cf8970b56bc43c22809}\label{classResultTable_ac915b9a308712cf8970b56bc43c22809}} 
+\index{ResultTable@{ResultTable}!writeRC@{writeRC}}
+\index{writeRC@{writeRC}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{writeRC()}{writeRC()}}
+{\footnotesize\ttfamily int Result\+Table\+::write\+RC (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+write data to position row,column 
+\begin{DoxyParams}{Parameters}
+{\em row} & row id in result table \\
+\hline
+{\em column} & column id in result table \\
+\hline
+{\em data} & data pointer of a column \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em !=\+NULL} & pointer of a column \\
+\hline
+{\em ==\+NULL} & error \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classResultTable_ab4b90ad7d38d5803d76ea013c1aafd6c}\label{classResultTable_ab4b90ad7d38d5803d76ea013c1aafd6c}} 
+\index{ResultTable@{ResultTable}!buffer@{buffer}}
+\index{buffer@{buffer}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily char$\ast$ Result\+Table\+::buffer}
+
+pointer of buffer alloced from g\+\_\+memory \mbox{\Hypertarget{classResultTable_a817b90fb68e0ccbf458ef54d4c687e92}\label{classResultTable_a817b90fb68e0ccbf458ef54d4c687e92}} 
+\index{ResultTable@{ResultTable}!buffer\_size@{buffer\_size}}
+\index{buffer\_size@{buffer\_size}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{buffer\_size}{buffer\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Result\+Table\+::buffer\+\_\+size}
+
+size of buffer, power of 2 \mbox{\Hypertarget{classResultTable_aaac52ce51a8c2e2264e9802e0cc93fd7}\label{classResultTable_aaac52ce51a8c2e2264e9802e0cc93fd7}} 
+\index{ResultTable@{ResultTable}!column\_number@{column\_number}}
+\index{column\_number@{column\_number}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{column\_number}{column\_number}}
+{\footnotesize\ttfamily int Result\+Table\+::column\+\_\+number}
+
+columns number that a result row consist of \mbox{\Hypertarget{classResultTable_a40f2334ebf770fb242d43a08b666bd73}\label{classResultTable_a40f2334ebf770fb242d43a08b666bd73}} 
+\index{ResultTable@{ResultTable}!column\_type@{column\_type}}
+\index{column\_type@{column\_type}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{column\_type}{column\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBasicType}{Basic\+Type}}$\ast$$\ast$ Result\+Table\+::column\+\_\+type}
+
+each column data type \mbox{\Hypertarget{classResultTable_abb33d0e3802d3da01388f3f6abb393af}\label{classResultTable_abb33d0e3802d3da01388f3f6abb393af}} 
+\index{ResultTable@{ResultTable}!offset@{offset}}
+\index{offset@{offset}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily int$\ast$ Result\+Table\+::offset}
+
+\mbox{\Hypertarget{classResultTable_ac058a67a44f3d2e1c13c44c4c918ab4c}\label{classResultTable_ac058a67a44f3d2e1c13c44c4c918ab4c}} 
+\index{ResultTable@{ResultTable}!offset\_size@{offset\_size}}
+\index{offset\_size@{offset\_size}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{offset\_size}{offset\_size}}
+{\footnotesize\ttfamily int Result\+Table\+::offset\+\_\+size}
+
+\mbox{\Hypertarget{classResultTable_a06d94b3ed444334313e5e50b28471471}\label{classResultTable_a06d94b3ed444334313e5e50b28471471}} 
+\index{ResultTable@{ResultTable}!row\_capicity@{row\_capicity}}
+\index{row\_capicity@{row\_capicity}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{row\_capicity}{row\_capicity}}
+{\footnotesize\ttfamily int Result\+Table\+::row\+\_\+capicity}
+
+maximum capicity of rows according to buffer size and length of row \mbox{\Hypertarget{classResultTable_a01b1b04f595a96cd61c7f6db9fb17bf5}\label{classResultTable_a01b1b04f595a96cd61c7f6db9fb17bf5}} 
+\index{ResultTable@{ResultTable}!row\_length@{row\_length}}
+\index{row\_length@{row\_length}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{row\_length}{row\_length}}
+{\footnotesize\ttfamily int Result\+Table\+::row\+\_\+length}
+
+length per result row \mbox{\Hypertarget{classResultTable_ae667ceb49fef4f2f962a190e7b395237}\label{classResultTable_ae667ceb49fef4f2f962a190e7b395237}} 
+\index{ResultTable@{ResultTable}!row\_number@{row\_number}}
+\index{row\_number@{row\_number}!ResultTable@{ResultTable}}
+\doxysubsubsection{\texorpdfstring{row\_number}{row\_number}}
+{\footnotesize\ttfamily int Result\+Table\+::row\+\_\+number}
+
+current usage of rows 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{executor_8h}{executor.\+h}}\item 
+system/\mbox{\hyperlink{executor_8cc}{executor.\+cc}}\end{DoxyCompactItemize}

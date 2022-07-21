@@ -1,0 +1,338 @@
+\hypertarget{pbtree_8h_source}{}\doxysection{pbtree.\+h}
+\label{pbtree_8h_source}\index{system/pbtree.h@{system/pbtree.h}}
+\mbox{\hyperlink{pbtree_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{16 \textcolor{comment}{/* B+ tree:}}
+\DoxyCodeLine{17 \textcolor{comment}{}}
+\DoxyCodeLine{18 \textcolor{comment}{   non\_leaf nodes:  }}
+\DoxyCodeLine{19 \textcolor{comment}{    -\/ structure:}}
+\DoxyCodeLine{20 \textcolor{comment}{       k[0] k[1] k[2] ... k[N-\/1]}}
+\DoxyCodeLine{21 \textcolor{comment}{        ch[0] ch[1] ch[2] ... ch[N-\/1]}}
+\DoxyCodeLine{22 \textcolor{comment}{}}
+\DoxyCodeLine{23 \textcolor{comment}{    -\/ property}}
+\DoxyCodeLine{24 \textcolor{comment}{       k[0] is the actual number of keys in the node}}
+\DoxyCodeLine{25 \textcolor{comment}{       k[1] < k[2] < ... < k[N-\/1]}}
+\DoxyCodeLine{26 \textcolor{comment}{       ch[] are pointers to subtrees.}}
+\DoxyCodeLine{27 \textcolor{comment}{}}
+\DoxyCodeLine{28 \textcolor{comment}{       can hold at most (N-\/1) keys and N pointers.}}
+\DoxyCodeLine{29 \textcolor{comment}{}}
+\DoxyCodeLine{30 \textcolor{comment}{    -\/ implementation specific:}}
+\DoxyCodeLine{31 \textcolor{comment}{      assert(k[0]>=1)}}
+\DoxyCodeLine{32 \textcolor{comment}{ }}
+\DoxyCodeLine{33 \textcolor{comment}{   leaf nodes: }}
+\DoxyCodeLine{34 \textcolor{comment}{    -\/ structure:}}
+\DoxyCodeLine{35 \textcolor{comment}{        k[0]    k[1]  k[2] ... k[N-\/1]}}
+\DoxyCodeLine{36 \textcolor{comment}{        ch[0]   ch[1] ch[2]... ch[N-\/1]}}
+\DoxyCodeLine{37 \textcolor{comment}{}}
+\DoxyCodeLine{38 \textcolor{comment}{    -\/ property:}}
+\DoxyCodeLine{39 \textcolor{comment}{        (k[i], ch[i]) 1<=i<=N-\/1, are index entries}}
+\DoxyCodeLine{40 \textcolor{comment}{        k[0] is the actual number of entries in the node.}}
+\DoxyCodeLine{41 \textcolor{comment}{        ch[0] is leaf sibling pointer.}}
+\DoxyCodeLine{42 \textcolor{comment}{}}
+\DoxyCodeLine{43 \textcolor{comment}{        can hold at most (N-\/1) index entries.}}
+\DoxyCodeLine{44 \textcolor{comment}{}}
+\DoxyCodeLine{45 \textcolor{comment}{    -\/ implementation specific:}}
+\DoxyCodeLine{46 \textcolor{comment}{      assert(k[0]>=1)}}
+\DoxyCodeLine{47 \textcolor{comment}{ */}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#ifndef \_PBTREE\_PBTREE\_H}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define \_PBTREE\_PBTREE\_H}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#include <assert.h>}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mymemory_8h}{mymemory.h}}"{}}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{nodepref_8h}{nodepref.h}}"{}}}
+\DoxyCodeLine{57 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{58 \textcolor{comment}{// \#include "{}tree.h"{} based on x86\_64 prefetch}}
+\DoxyCodeLine{59 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/from tree.h-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62    \textcolor{keyword}{typedef} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}};}
+\DoxyCodeLine{63 \textcolor{preprocessor}{   \#define KEY\_SIZE             8}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{   \#define POINTER\_SIZE         8}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{   \#define POINTER8B\_SIZE       8}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{   \#define MAX\_KEY              ((key\_type)(0x7fffffffffffffff))}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{   \#define MIN\_KEY              ((key\_type)(0x8000000000000000))}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{comment}{// BKEY\_NUM = N-\/1}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define BKEY\_NUM                (BNODE\_SIZE/(KEY\_SIZE+POINTER8B\_SIZE) -\/ 1)}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define NON\_LEAF\_KEY\_NUM        BKEY\_NUM}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define LEAF\_KEY\_NUM            BKEY\_NUM}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{77 \textcolor{keyword}{class }\mbox{\hyperlink{classPointer8B}{Pointer8B}} \{}
+\DoxyCodeLine{78  \textcolor{keyword}{public}:}
+\DoxyCodeLine{79    \textcolor{comment}{// unsigned int num;}}
+\DoxyCodeLine{80    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82  \textcolor{keyword}{public}:}
+\DoxyCodeLine{83    \mbox{\hyperlink{classPointer8B}{Pointer8B}} \& \mbox{\hyperlink{classPointer8B_aa400538dfdfb87043b6ef603dd8883f8}{operator= }}(\textcolor{keyword}{const} \textcolor{keywordtype}{void} * ptr)}
+\DoxyCodeLine{84    \{}
+\DoxyCodeLine{85        \mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}}= (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} long)ptr;}
+\DoxyCodeLine{86        \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{87    \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89    \mbox{\hyperlink{classPointer8B}{Pointer8B}} \& \mbox{\hyperlink{classPointer8B_aa400538dfdfb87043b6ef603dd8883f8}{operator= }}(\textcolor{keyword}{const} \mbox{\hyperlink{classPointer8B}{Pointer8B}} \& p)}
+\DoxyCodeLine{90    \{}
+\DoxyCodeLine{91        \mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}}= p.\mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}};}
+\DoxyCodeLine{92        \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{93    \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95    \textcolor{keyword}{operator} \textcolor{keywordtype}{void}*() \{ \textcolor{keywordflow}{return} (\textcolor{keywordtype}{void} *)\mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}}; \}}
+\DoxyCodeLine{96    \textcolor{keyword}{operator} \textcolor{keywordtype}{char}*() \{ \textcolor{keywordflow}{return} (\textcolor{keywordtype}{char} *)\mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}}; \}}
+\DoxyCodeLine{97    \textcolor{keyword}{operator} \textcolor{keyword}{struct }\mbox{\hyperlink{classbnode}{bnode}} *() \{ \textcolor{keywordflow}{return} (\textcolor{keyword}{struct} \mbox{\hyperlink{classbnode}{bnode}} *)\mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}};\}}
+\DoxyCodeLine{98    \textcolor{keyword}{operator} \textcolor{keyword}{struct }\mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}} *() \{ \textcolor{keywordflow}{return} (\textcolor{keyword}{struct} \mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}} *)\mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}};\}}
+\DoxyCodeLine{99    \textcolor{keyword}{operator} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} long () \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}};\}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101    \textcolor{keywordtype}{void} \mbox{\hyperlink{classPointer8B_a82ff5d4d66727cdb6d57535b5f1c6fd1}{print}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{102        \textcolor{keywordflow}{if} (\mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}} \& (1UL<<63)) \{}
+\DoxyCodeLine{103            \textcolor{keywordtype}{void} *p = (\textcolor{keywordtype}{void}*)(\mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}} \& ((1UL<<63)-\/1));}
+\DoxyCodeLine{104            \textcolor{keywordtype}{int} num = *(\textcolor{keywordtype}{int}*) p;}
+\DoxyCodeLine{105            \textcolor{keywordtype}{void}** vptrs = (\textcolor{keywordtype}{void}**)((\textcolor{keywordtype}{char}*)p+2*\textcolor{keyword}{sizeof}(int));}
+\DoxyCodeLine{106            printf (\textcolor{stringliteral}{"{}["{}});}
+\DoxyCodeLine{107            \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii< num-\/1; ii++)}
+\DoxyCodeLine{108                printf(\textcolor{stringliteral}{"{}\%p,"{}}, vptrs[ii]);}
+\DoxyCodeLine{109            printf (\textcolor{stringliteral}{"{}\%p]\(\backslash\)n"{}}, vptrs[num-\/1]);}
+\DoxyCodeLine{110        \}}
+\DoxyCodeLine{111        \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{112            printf(\textcolor{stringliteral}{"{}[\%p]\(\backslash\)n"{}}, (\textcolor{keywordtype}{void}*)\mbox{\hyperlink{classPointer8B_a3bc6f25927b302abf580e125ffd92d18}{value}});}
+\DoxyCodeLine{113        \}}
+\DoxyCodeLine{114    \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 \}; \textcolor{comment}{// Pointer8B}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#ifdef UNIFIED\_IDX\_ENTRY}}
+\DoxyCodeLine{119 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }IdxEntry\{}
+\DoxyCodeLine{120   \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}}   k;}
+\DoxyCodeLine{121   \mbox{\hyperlink{classPointer8B}{Pointer8B}}  ch;}
+\DoxyCodeLine{122 \} IdxEntry;}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{keyword}{class }\mbox{\hyperlink{classbnode}{bnode}} \{}
+\DoxyCodeLine{125  \textcolor{keyword}{public}:}
+\DoxyCodeLine{126   IdxEntry   ent[\mbox{\hyperlink{pbtree_8h_a16fb53d0ddd9af9cd1ea0fd0f453d57b}{BKEY\_NUM}} + 1];}
+\DoxyCodeLine{127  \textcolor{keyword}{public}:}
+\DoxyCodeLine{128   \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}}  \& \mbox{\hyperlink{classbnode_a4c9b779b2dc41f71e0e3e346db69727e}{k}}(\textcolor{keywordtype}{int} idx)  \{ \textcolor{keywordflow}{return} ent[idx].k; \}}
+\DoxyCodeLine{129   \mbox{\hyperlink{classPointer8B}{Pointer8B}} \& \mbox{\hyperlink{classbnode_ac809a5675f806ba59e61187bf8055ab0}{ch}}(\textcolor{keywordtype}{int} idx) \{ \textcolor{keywordflow}{return} ent[idx].ch; \}}
+\DoxyCodeLine{130   \textcolor{keywordtype}{char} * \mbox{\hyperlink{classbnode_a7bf9202a9318e8b2082f56817ae4373a}{chEndAddr}}(\textcolor{keywordtype}{int} idx)}
+\DoxyCodeLine{131   \{\textcolor{keywordflow}{return} (\textcolor{keywordtype}{char} *)\&(ent[idx].ch)+\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classPointer8B}{Pointer8B}})-\/1;\}}
+\DoxyCodeLine{132 \}; \textcolor{comment}{// bnode}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{134 \textcolor{keyword}{class }\mbox{\hyperlink{classbnode}{bnode}} \{}
+\DoxyCodeLine{135  \textcolor{keyword}{public}:}
+\DoxyCodeLine{136   \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}}   \mbox{\hyperlink{classbnode_a7531e1dc392f7743afe1fd239623b2f8}{key}}[\mbox{\hyperlink{pbtree_8h_a16fb53d0ddd9af9cd1ea0fd0f453d57b}{BKEY\_NUM}} + 1];}
+\DoxyCodeLine{137   \mbox{\hyperlink{classPointer8B}{Pointer8B}}  \mbox{\hyperlink{classbnode_a343daabc6c0b412a6c3217303fc02e2f}{child}}[\mbox{\hyperlink{pbtree_8h_a16fb53d0ddd9af9cd1ea0fd0f453d57b}{BKEY\_NUM}} + 1];}
+\DoxyCodeLine{138  \textcolor{keyword}{public}:}
+\DoxyCodeLine{139   \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}}  \& \mbox{\hyperlink{classbnode_a4c9b779b2dc41f71e0e3e346db69727e}{k}}(\textcolor{keywordtype}{int} idx)  \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classbnode_a7531e1dc392f7743afe1fd239623b2f8}{key}}[idx]; \}}
+\DoxyCodeLine{140   \mbox{\hyperlink{classPointer8B}{Pointer8B}} \& \mbox{\hyperlink{classbnode_ac809a5675f806ba59e61187bf8055ab0}{ch}}(\textcolor{keywordtype}{int} idx) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classbnode_a343daabc6c0b412a6c3217303fc02e2f}{child}}[idx]; \}}
+\DoxyCodeLine{141   \textcolor{keywordtype}{char} * \mbox{\hyperlink{classbnode_a7bf9202a9318e8b2082f56817ae4373a}{chEndAddr}}(\textcolor{keywordtype}{int} idx)}
+\DoxyCodeLine{142   \{\textcolor{keywordflow}{return} (\textcolor{keywordtype}{char} *)\&(\mbox{\hyperlink{classbnode_a343daabc6c0b412a6c3217303fc02e2f}{child}}[idx])+\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classPointer8B}{Pointer8B}})-\/1;\}}
+\DoxyCodeLine{143 \}; \textcolor{comment}{// bnode}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define bleaf  bnode}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define bnum(ptr)       (((bleaf *)(ptr))-\/>k(0))}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define bnext(ptr)      (((bleaf *)(ptr))-\/>ch(0))}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{151 \textcolor{keyword}{class }\mbox{\hyperlink{classpbtree}{pbtree}} \{}
+\DoxyCodeLine{152  \textcolor{keyword}{private}: \textcolor{comment}{// tree nodes definition}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154    \mbox{\hyperlink{classbnode}{bnode}} * \mbox{\hyperlink{classpbtree_a0797030a3f15fa4f72111fbaed051904}{get\_node}} ()}
+\DoxyCodeLine{155    \{}
+\DoxyCodeLine{156     \textcolor{keywordtype}{char} *p = NULL;}
+\DoxyCodeLine{157         int64\_t sz = \mbox{\hyperlink{global_8h_ab02b3badee65de481b409f3887fb8691}{g\_memory}}.\mbox{\hyperlink{classMemory_a658ccab508b60c43fa12479348abcc5d}{alloc}} (p, \mbox{\hyperlink{nodepref_8h_a602ad827751e0fcb428f9d5d546beac9}{BNODE\_SIZE}});}
+\DoxyCodeLine{158     \textcolor{keywordflow}{return} sz == \mbox{\hyperlink{nodepref_8h_a602ad827751e0fcb428f9d5d546beac9}{BNODE\_SIZE}}? (\mbox{\hyperlink{classbnode}{bnode}}*)p: NULL;}
+\DoxyCodeLine{159    \}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161    \textcolor{keywordtype}{void} \mbox{\hyperlink{classpbtree_a610c3d126218c0c0ad620e25d46f0395}{delete\_node}} (\textcolor{keywordtype}{void} *p)}
+\DoxyCodeLine{162    \{}
+\DoxyCodeLine{163         \mbox{\hyperlink{global_8h_ab02b3badee65de481b409f3887fb8691}{g\_memory}}.\mbox{\hyperlink{classMemory_a70d0a24eb2642a38dcb09e37e20033dc}{free}}((\textcolor{keywordtype}{char}*)p, \mbox{\hyperlink{nodepref_8h_a602ad827751e0fcb428f9d5d546beac9}{BNODE\_SIZE}});}
+\DoxyCodeLine{164    \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166  \textcolor{keyword}{public}:  \textcolor{comment}{// root and level}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168    \mbox{\hyperlink{classbnode}{bnode}} *  \mbox{\hyperlink{classpbtree_ac227b6396cefa5649c95baa29a99e77b}{tree\_root}};}
+\DoxyCodeLine{169    \textcolor{keywordtype}{int}      \mbox{\hyperlink{classpbtree_a06a903e485e339e51149f380c34199d8}{root\_level}};               \textcolor{comment}{// leaf: level 0, parent of leaf: level 1}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171  \textcolor{keyword}{private}:}
+\DoxyCodeLine{172    \textcolor{comment}{/* don't need to be prefetched!!! */}}
+\DoxyCodeLine{173    \mbox{\hyperlink{classbnode}{bnode}} * \mbox{\hyperlink{classpbtree_a14c97d319e839973591d36c1509066b9}{parray}}[32];}
+\DoxyCodeLine{174    \textcolor{keywordtype}{int}     \mbox{\hyperlink{classpbtree_a540fa835fe35a2e6e0efe8d7679ea928}{ppos}}[32];}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176  \textcolor{keyword}{public}:}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178    \textcolor{keywordtype}{int} \mbox{\hyperlink{classpbtree_abc2f74dedd89f2896c2069e16ad58217}{init}} (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{179    \textcolor{keywordtype}{int} \mbox{\hyperlink{classpbtree_af55cf7b6846580942b6c51d0edabc50b}{shut}} (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{180    \textcolor{comment}{// given a search key, perform the search operation}}
+\DoxyCodeLine{181    \textcolor{comment}{// return the leaf node pointer and the position with leaf node}}
+\DoxyCodeLine{182    \textcolor{keywordtype}{void} * \mbox{\hyperlink{classpbtree_ae0fdce71f1430daa2a16a20990158090}{lookup}} (\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} key, \textcolor{keywordtype}{int} *pos);}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184    \textcolor{keywordtype}{void} * \mbox{\hyperlink{classpbtree_a8149f8ef0d8116b6211f8ba53b081da6}{get\_recptr}} (\textcolor{keywordtype}{void} *p, \textcolor{keywordtype}{int} pos)}
+\DoxyCodeLine{185    \{}
+\DoxyCodeLine{186         \textcolor{keywordflow}{if} (p == NULL) \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{187         \textcolor{keywordflow}{return} ((\mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}} *)p)-\/>ch(pos);}
+\DoxyCodeLine{188    \}}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190    \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} \mbox{\hyperlink{classpbtree_aaf13b93a0d41d3cb2a894d52d105e227}{get\_key}} (\textcolor{keywordtype}{void} *p, \textcolor{keywordtype}{int} pos) }
+\DoxyCodeLine{191    \{}
+\DoxyCodeLine{192     \textcolor{keywordflow}{return} ((\mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}} *)p)-\/>k(pos);}
+\DoxyCodeLine{193    \}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195    \textcolor{keywordtype}{void}** \mbox{\hyperlink{classpbtree_a27b13b0c840fa8a9f805212515885f10}{get\_recptr\_sp}} (\textcolor{keywordtype}{void} *p, \textcolor{keywordtype}{int} pos)}
+\DoxyCodeLine{196    \{}
+\DoxyCodeLine{197         \textcolor{keywordflow}{if} (p == NULL) \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{198         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{void}**)\&(((\mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}} *)p)-\/>ch(pos));}
+\DoxyCodeLine{199    \}}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201    \textcolor{comment}{// insert (key, ptr)}}
+\DoxyCodeLine{202    \textcolor{keywordtype}{void} \mbox{\hyperlink{classpbtree_ad3a6221ff587a9d38088707ee0fdd251}{insert}} (\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} key, \textcolor{keywordtype}{void} *ptr);}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204    \textcolor{comment}{// delete key}}
+\DoxyCodeLine{205    \textcolor{keywordtype}{void} \mbox{\hyperlink{classpbtree_a19c3b80cbe6be3355d075885a81889b2}{del}} (\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} key);}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207    \textcolor{comment}{// range scan}}
+\DoxyCodeLine{208    \textcolor{comment}{// Input:  *p is the starting leaf node}}
+\DoxyCodeLine{209    \textcolor{comment}{//         *spos is the starting position}}
+\DoxyCodeLine{210    \textcolor{comment}{//         endkey is the end key}}
+\DoxyCodeLine{211    \textcolor{comment}{//         *num is the buffer size of area[]}}
+\DoxyCodeLine{212    \textcolor{comment}{// Operation: store record pointers into area[]}}
+\DoxyCodeLine{213    \textcolor{comment}{// Output:}}
+\DoxyCodeLine{214    \textcolor{comment}{//    return 0: endkey is not reached}}
+\DoxyCodeLine{215    \textcolor{comment}{//              should call again with (*p, *spos)}}
+\DoxyCodeLine{216    \textcolor{comment}{//              *num is the number of pointers retrieved into area[]}}
+\DoxyCodeLine{217    \textcolor{comment}{//    return non-\/0: endkey is reached}}
+\DoxyCodeLine{218    \textcolor{comment}{//              *num is the number of pointers retrieved into area[]}}
+\DoxyCodeLine{219    \textcolor{keywordtype}{int} \mbox{\hyperlink{classpbtree_ae8c452b86a11abdc7254dd7372bd7be8}{scan}} (\textcolor{keywordtype}{void} **p, \textcolor{keywordtype}{int} *spos, \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} startkey, \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} endkey, }
+\DoxyCodeLine{220              \textcolor{keywordtype}{void} * area[], \textcolor{keywordtype}{int} *num);}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222  \textcolor{keyword}{private}:}
+\DoxyCodeLine{223    \textcolor{keywordtype}{void} \mbox{\hyperlink{classpbtree_a0346d853e85687cf995d13a3c962953d}{print}} (\mbox{\hyperlink{classbnode}{bnode}} *p, \textcolor{keywordtype}{int} \mbox{\hyperlink{classpbtree_a8fe423193146c71ae39dcd9f294ef75c}{level}});}
+\DoxyCodeLine{224    \textcolor{keywordtype}{void} \mbox{\hyperlink{classpbtree_a8f255fae6962a4a2cb3651b75f533c17}{check}} (\mbox{\hyperlink{classbnode}{bnode}} *p, \textcolor{keywordtype}{int} \mbox{\hyperlink{classpbtree_a8fe423193146c71ae39dcd9f294ef75c}{level}}, \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} *start, \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} *end, \textcolor{keywordtype}{void} **ptr);}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226  \textcolor{keyword}{public}:}
+\DoxyCodeLine{227    \textcolor{keywordtype}{void} \mbox{\hyperlink{classpbtree_a0346d853e85687cf995d13a3c962953d}{print}} ()}
+\DoxyCodeLine{228    \{}
+\DoxyCodeLine{229         printf(\textcolor{stringliteral}{"{}Printing pbtree\(\backslash\)n"{}});}
+\DoxyCodeLine{230             \mbox{\hyperlink{classpbtree_a0346d853e85687cf995d13a3c962953d}{print}} (\mbox{\hyperlink{classpbtree_ac227b6396cefa5649c95baa29a99e77b}{tree\_root}}, \mbox{\hyperlink{classpbtree_a06a903e485e339e51149f380c34199d8}{root\_level}});}
+\DoxyCodeLine{231    \}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233    \textcolor{keywordtype}{void} \mbox{\hyperlink{classpbtree_a32f4274b4f8bdece07c8412b31bea09c}{check}} (\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} *start, \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} *end)}
+\DoxyCodeLine{234    \{}
+\DoxyCodeLine{235         assert (\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classbnode}{bnode}})==\mbox{\hyperlink{nodepref_8h_a602ad827751e0fcb428f9d5d546beac9}{BNODE\_SIZE}});}
+\DoxyCodeLine{236         assert (\textcolor{keyword}{sizeof}(\mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}})==\mbox{\hyperlink{nodepref_8h_a602ad827751e0fcb428f9d5d546beac9}{BNODE\_SIZE}});}
+\DoxyCodeLine{237         \textcolor{keywordtype}{void} * ptr = NULL;}
+\DoxyCodeLine{238         \mbox{\hyperlink{classpbtree_a8f255fae6962a4a2cb3651b75f533c17}{check}} (\mbox{\hyperlink{classpbtree_ac227b6396cefa5649c95baa29a99e77b}{tree\_root}}, \mbox{\hyperlink{classpbtree_a06a903e485e339e51149f380c34199d8}{root\_level}}, start, end, \&ptr);}
+\DoxyCodeLine{239    \}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241    \textcolor{keywordtype}{int} \mbox{\hyperlink{classpbtree_a8fe423193146c71ae39dcd9f294ef75c}{level}} () \{\textcolor{keywordflow}{return} \mbox{\hyperlink{classpbtree_a06a903e485e339e51149f380c34199d8}{root\_level}};\}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243  \textcolor{keyword}{public}:}
+\DoxyCodeLine{244    \textcolor{keywordtype}{void} \mbox{\hyperlink{classpbtree_ab78d81b730c7c4c8c455a02a4a01a911}{save}} (\textcolor{keywordtype}{char} *filename)}
+\DoxyCodeLine{245    \{}
+\DoxyCodeLine{246       FILE *fp = fopen (filename, \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{247       \textcolor{keywordflow}{if} (fp == NULL) \{}
+\DoxyCodeLine{248         perror (filename); exit (1);}
+\DoxyCodeLine{249       \} }
+\DoxyCodeLine{250       fprintf (fp, \textcolor{stringliteral}{"{}tree\_root=\%p\(\backslash\)n"{}}, \mbox{\hyperlink{classpbtree_ac227b6396cefa5649c95baa29a99e77b}{tree\_root}});}
+\DoxyCodeLine{251       fprintf (fp, \textcolor{stringliteral}{"{}root\_level=\%d\(\backslash\)n\(\backslash\)n"{}}, \mbox{\hyperlink{classpbtree_a06a903e485e339e51149f380c34199d8}{root\_level}});}
+\DoxyCodeLine{252       fclose (fp);}
+\DoxyCodeLine{253    \}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255    \textcolor{keywordtype}{void} \mbox{\hyperlink{classpbtree_aa09eb2cbdddd72caa23c4c71d22d3311}{load}} (\textcolor{keywordtype}{char} *filename)}
+\DoxyCodeLine{256    \{}
+\DoxyCodeLine{257       FILE *fp = fopen (filename, \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{258       \textcolor{keywordflow}{if} (fp == NULL) \{}
+\DoxyCodeLine{259         perror (filename); exit (1);}
+\DoxyCodeLine{260       \}}
+\DoxyCodeLine{261       \textcolor{keywordflow}{if} ((fscanf (fp, \textcolor{stringliteral}{"{}tree\_root=\%p\(\backslash\)n"{}}, \&\mbox{\hyperlink{classpbtree_ac227b6396cefa5649c95baa29a99e77b}{tree\_root}}) != 1) ||}
+\DoxyCodeLine{262           (fscanf (fp, \textcolor{stringliteral}{"{}root\_level=\%d\(\backslash\)n"{}}, \&\mbox{\hyperlink{classpbtree_a06a903e485e339e51149f380c34199d8}{root\_level}}) != 1)) \{}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264         fprintf (stderr, \textcolor{stringliteral}{"{}\%s format error!\(\backslash\)n"{}}, filename);}
+\DoxyCodeLine{265         exit (1);}
+\DoxyCodeLine{266       \}}
+\DoxyCodeLine{267       fclose (fp);}
+\DoxyCodeLine{268    \}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270 \}; \textcolor{comment}{// pbtree}}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{273 \textcolor{keyword}{class }\mbox{\hyperlink{classPbtree}{Pbtree}} \{   \textcolor{comment}{// support duplicated elements}}
+\DoxyCodeLine{274   \textcolor{keyword}{private}:}
+\DoxyCodeLine{275     \mbox{\hyperlink{classpbtree}{pbtree}} \mbox{\hyperlink{classPbtree_a5d840e4b413f21c5d16674b89593e4e4}{p\_pbtree}};}
+\DoxyCodeLine{276     \textcolor{keywordtype}{char}*  \mbox{\hyperlink{classPbtree_aa5d91166be68c8cd922b4ebd3b72c348}{p\_free\_header}}[16]; \textcolor{comment}{// minimum size is 32 Byte}}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{278   \textcolor{keyword}{public}:}
+\DoxyCodeLine{279     \textcolor{keywordtype}{void}  \mbox{\hyperlink{classPbtree_aaa7fd10ef80f7e5931cadbaa98439036}{init}}   (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{280     \textcolor{keywordtype}{bool}  \mbox{\hyperlink{classPbtree_a561753cdbae6a0960e4e54c31a79aa55}{insert}} (\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} key, \textcolor{keywordtype}{void}* ptr);}
+\DoxyCodeLine{281     \textcolor{keywordtype}{bool}  \mbox{\hyperlink{classPbtree_ad0b10d58a28d9c8e8ea7cb30f57e5363}{del}}    (\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} key, \textcolor{keywordtype}{void}* ptr);}
+\DoxyCodeLine{282     \textcolor{keywordtype}{void}* \mbox{\hyperlink{classPbtree_aad351f0e8d1de3e948e4ce5fe02e776f}{lookup}} (\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}});}
+\DoxyCodeLine{283     \textcolor{keywordtype}{int}   \mbox{\hyperlink{classPbtree_ad8b8472ce1f0bb1cde332deee72ad457}{get\_recptr}} (\textcolor{keywordtype}{void}* p, \textcolor{keywordtype}{void}* match[], \textcolor{keywordtype}{int} capicity, \textcolor{keywordtype}{int} \&pos);}
+\DoxyCodeLine{284    }
+\DoxyCodeLine{285     \textcolor{keywordtype}{void}* \mbox{\hyperlink{classPbtree_ac1bbab724157bbdc6c364339e5c113d8}{lookup\_s}} (\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} key, \textcolor{keywordtype}{int} *pos);}
+\DoxyCodeLine{286     \textcolor{keywordtype}{int}   \mbox{\hyperlink{classPbtree_a6aa106c9d5df8cdb793555ab1e4ff48a}{scan}} (\textcolor{keywordtype}{void} **p, \textcolor{keywordtype}{int} *spos, \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} startkey, \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\_type}} endkey, }
+\DoxyCodeLine{287                 \textcolor{keywordtype}{void} * area[], \textcolor{keywordtype}{int} *num);}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{289     \textcolor{keywordtype}{void}  \mbox{\hyperlink{classPbtree_a00f3ee11e104c3f5f8422e5daa059dc3}{shut}}   (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{290     \textcolor{keywordtype}{void}  \mbox{\hyperlink{classPbtree_a81e64f784a553795cc8999c9e8111919}{print}}  (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292   \textcolor{keyword}{public}:}
+\DoxyCodeLine{293     \textcolor{keywordtype}{bool}  \mbox{\hyperlink{classPbtree_a5536b432bcdc44da1a431010b5414800}{allocate}} (\textcolor{keywordtype}{char} *\&p,\textcolor{keywordtype}{int} leve) \{}
+\DoxyCodeLine{294         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classPbtree_aa5d91166be68c8cd922b4ebd3b72c348}{p\_free\_header}}[leve]) \{}
+\DoxyCodeLine{295             p = \mbox{\hyperlink{classPbtree_aa5d91166be68c8cd922b4ebd3b72c348}{p\_free\_header}}[leve];}
+\DoxyCodeLine{296             \mbox{\hyperlink{classPbtree_aa5d91166be68c8cd922b4ebd3b72c348}{p\_free\_header}}[leve] = *(\textcolor{keywordtype}{char}**)\mbox{\hyperlink{classPbtree_aa5d91166be68c8cd922b4ebd3b72c348}{p\_free\_header}}[leve];}
+\DoxyCodeLine{297             *(\textcolor{keywordtype}{int}*)(p) = 0;}
+\DoxyCodeLine{298             *(\textcolor{keywordtype}{int}*)(p+\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})) = \mbox{\hyperlink{classPbtree_aaa2248cc2d4d5a6a20f5b309dfc87eb4}{leve2cap}} (leve);}
+\DoxyCodeLine{299             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{300         \}}
+\DoxyCodeLine{301         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{302             int64\_t size = \mbox{\hyperlink{classPbtree_abb8fe5c586508c20b46a53cc49b6647f}{leve2size}} (leve);}
+\DoxyCodeLine{303             int64\_t sz = \mbox{\hyperlink{global_8h_ab02b3badee65de481b409f3887fb8691}{g\_memory}}.\mbox{\hyperlink{classMemory_a658ccab508b60c43fa12479348abcc5d}{alloc}} (p, size);}
+\DoxyCodeLine{304             \textcolor{keywordflow}{if} (sz != size) \{}
+\DoxyCodeLine{305                 printf (\textcolor{stringliteral}{"{}[Pbtree][ERROR][allocate]: g\_memory is not enough! 296\(\backslash\)n"{}});}
+\DoxyCodeLine{306                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{307             \}}
+\DoxyCodeLine{308             *(\textcolor{keywordtype}{int}*)(p) = 0;}
+\DoxyCodeLine{309             *(\textcolor{keywordtype}{int}*)(p+\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})) = \mbox{\hyperlink{classPbtree_aaa2248cc2d4d5a6a20f5b309dfc87eb4}{leve2cap}} (leve);}
+\DoxyCodeLine{310             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{311         \}}
+\DoxyCodeLine{312         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{313     \}}
+\DoxyCodeLine{314     \textcolor{keywordtype}{bool}  \mbox{\hyperlink{classPbtree_a1bfe109e2e46760094feb05f1bf4e23b}{free}} (\textcolor{keywordtype}{char} *p, \textcolor{keywordtype}{int} leve) \{}
+\DoxyCodeLine{315         *(\textcolor{keywordtype}{char}**)(p) = \mbox{\hyperlink{classPbtree_aa5d91166be68c8cd922b4ebd3b72c348}{p\_free\_header}}[leve];}
+\DoxyCodeLine{316         \mbox{\hyperlink{classPbtree_aa5d91166be68c8cd922b4ebd3b72c348}{p\_free\_header}}[leve] = p;}
+\DoxyCodeLine{317         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{318     \}}
+\DoxyCodeLine{319     \textcolor{keywordtype}{int} \mbox{\hyperlink{classPbtree_a1353a92a4e21daad1dc503f911373694}{cap2leve}}(\textcolor{keywordtype}{int} cap) \{}
+\DoxyCodeLine{320         \textcolor{keywordtype}{int} t = ((cap+1)>>2);}
+\DoxyCodeLine{321         \textcolor{keywordtype}{int} leve = 0;}
+\DoxyCodeLine{322         \textcolor{keywordflow}{while} (t>1) \{}
+\DoxyCodeLine{323             leve ++;}
+\DoxyCodeLine{324             t = t>>1;}
+\DoxyCodeLine{325         \}}
+\DoxyCodeLine{326         \textcolor{keywordflow}{return} leve;}
+\DoxyCodeLine{327     \}}
+\DoxyCodeLine{328     \textcolor{keywordtype}{int} \mbox{\hyperlink{classPbtree_aaa2248cc2d4d5a6a20f5b309dfc87eb4}{leve2cap}}(\textcolor{keywordtype}{int} leve) \{}
+\DoxyCodeLine{329         \textcolor{keywordflow}{return} (1<<(leve+2))-\/1;}
+\DoxyCodeLine{330     \}}
+\DoxyCodeLine{331     \textcolor{keywordtype}{int} \mbox{\hyperlink{classPbtree_abb8fe5c586508c20b46a53cc49b6647f}{leve2size}} (\textcolor{keywordtype}{int} leve) \{}
+\DoxyCodeLine{332         \textcolor{keywordflow}{return} 1<<(leve+5);}
+\DoxyCodeLine{333     \}}
+\DoxyCodeLine{334     \textcolor{keywordtype}{int} \mbox{\hyperlink{classPbtree_a8487dfbfc6c80d494d1a145da8813689}{size2leve}} (\textcolor{keywordtype}{int} size) \{}
+\DoxyCodeLine{335         \textcolor{keywordtype}{int} leve = 0;}
+\DoxyCodeLine{336         \textcolor{keywordtype}{int} sz = size;}
+\DoxyCodeLine{337         \textcolor{keywordflow}{while} (sz > (1<<5)) \{}
+\DoxyCodeLine{338             leve ++;}
+\DoxyCodeLine{339             sz = sz >> 1;}
+\DoxyCodeLine{340         \}}
+\DoxyCodeLine{341         \textcolor{keywordflow}{return} leve;}
+\DoxyCodeLine{342     \}}
+\DoxyCodeLine{343 \};}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{346 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_PBTREE\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

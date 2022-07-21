@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['b_5ftype_5fcode_0',['b_type_code',['../classBasicType.html#a2111a937626ec90fa107f74299b9e166',1,'BasicType']]],
+  ['b_5ftype_5fsize_1',['b_type_size',['../classBasicType.html#a7bf89759407c3fcb7829d4779fc35fe2',1,'BasicType']]],
+  ['basictype_2',['BasicType',['../classBasicType.html',1,'BasicType'],['../classBasicType.html#a6c8f9c316edfcaf9b9f38261cf61fef9',1,'BasicType::BasicType()']]],
+  ['begin_3',['begin',['../classHashTable.html#a3e44159a2b9f59f7aad60b8e5da6a2d8',1,'HashTable']]],
+  ['bkey_5fnum_4',['BKEY_NUM',['../pbtree_8h.html#a16fb53d0ddd9af9cd1ea0fd0f453d57b',1,'pbtree.h']]],
+  ['bleaf_5',['bleaf',['../pbtree_8h.html#a51b2e8433b0d8bf855c8b0a215a7ded2',1,'pbtree.h']]],
+  ['bnext_6',['bnext',['../pbtree_8h.html#aba9693a048d16696b1c43fe2d3c62fc6',1,'pbtree.h']]],
+  ['bnode_7',['bnode',['../classbnode.html',1,'']]],
+  ['bnode_5fpointers_5fnum_8',['BNODE_POINTERS_NUM',['../global_8h.html#ab9fee684d90b97ba4d984d758e4ec0b9',1,'global.h']]],
+  ['bnode_5fsize_9',['BNODE_SIZE',['../nodepref_8h.html#a602ad827751e0fcb428f9d5d546beac9',1,'nodepref.h']]],
+  ['bnum_10',['bnum',['../pbtree_8h.html#abab47dda719c1b9e464f8570ba47dbb4',1,'pbtree.h']]],
+  ['bptreeindex_11',['BPTREEINDEX',['../schema_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839a11297c835b1a8214f782bd8aacf92420',1,'schema.h']]],
+  ['buf_5ffor_5fchild_12',['buf_for_child',['../classFilter.html#a66cdf6bae230ceb4e61d163aeb2424f6',1,'Filter::buf_for_child()'],['../classProject.html#ad2c06affb613048d841a4dc9be31db8a',1,'Project::buf_for_child()'],['../classGroupbyAggre.html#a063bf92e89bb522119047a6180655f6b',1,'GroupbyAggre::buf_for_child()']]],
+  ['buffer_13',['buffer',['../classResultTable.html#ab4b90ad7d38d5803d76ea013c1aafd6c',1,'ResultTable']]],
+  ['buffer_5ffrom_5ffather_14',['buffer_from_father',['../classOperator.html#a180bc383bf406cdcc35d6fa36ce8e8a5',1,'Operator']]],
+  ['buffer_5fsize_15',['buffer_size',['../classResultTable.html#a817b90fb68e0ccbf458ef54d4c687e92',1,'ResultTable']]]
+];

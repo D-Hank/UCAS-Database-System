@@ -1,0 +1,248 @@
+\hypertarget{schema_8h}{}\doxysection{system/schema.h File Reference}
+\label{schema_8h}\index{system/schema.h@{system/schema.h}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}datatype.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classColumn}{Column}}
+\item 
+class \mbox{\hyperlink{classDatabase}{Database}}
+\item 
+class \mbox{\hyperlink{classIndex}{Index}}
+\item 
+class \mbox{\hyperlink{classKey}{Key}}
+\item 
+class \mbox{\hyperlink{classObject}{Object}}
+\item 
+class \mbox{\hyperlink{classTable}{Table}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{schema_8h_aaf2203ed5a6f320baf156afcd2a7448e}{OBJ\+\_\+\+NAME\+\_\+\+MAX}}~(128)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267c}{Column\+Type}} \{ \newline
+\mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267ca58170bba0aa9014415be3d4e16e1a01f}{INVID\+\_\+C}} = 0
+, \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267cada138aad097eaac8697fe3661c91af95}{INT8}}
+, \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267cac4a99142c241d04e1607af8a319c201b}{INT16}}
+, \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267cac1081c62db14e24ef35a1c3c36cba2e7}{INT32}}
+, \newline
+\mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267ca423a1db7cbc915478f654b15f87f3aac}{INT64}}
+, \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267ca2644b741f40df4c4c3a83bbdcf7124b3}{FLOAT32}}
+, \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267caa1f95514c315d551fb2d44d8a5bc6ee2}{FLOAT64}}
+, \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267cae48e1db6f6f7ddee166ce1988a1187a9}{CHARN}}
+, \newline
+\mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267ca0ace72efd9e987dfd807365d0ca50141}{DATE}}
+, \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267cae9e4c627760f36823cdd153c24229157}{TIME}}
+, \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267ca86797ee5836338ee241ceee5cfc669e2}{DATETIME}}
+, \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267ca213cbb9e1cf7edc72e935c74ff28aa96}{MAXTYPE\+\_\+C}}
+ \}
+\item 
+enum \mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}{Index\+Type}} \{ \newline
+\mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839ab62671eacb25b5596edb796388a45260}{INVID\+\_\+I}} = 0
+, \mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a29b999ebef47327002b83d13e454d5ba}{HASHINDEX}}
+, \mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a11297c835b1a8214f782bd8aacf92420}{BPTREEINDEX}}
+, \mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a1def8cd1d5225c5af5997c6a3243e8c6}{ARTTREEINDEX}}
+, \newline
+\mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a9236c583e44bbf793ccd271573f5c77e}{MAXTYPE\+\_\+I}}
+ \}
+\item 
+enum \mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \{ \newline
+\mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980ad27decb6cab3d5b1b1b8354d0c5ddf0d}{INVID\+\_\+O}} = 0
+, \mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980ae194350e16f26786cd6e2fdd3292717b}{DATABASE}}
+, \mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980a2e160f29fc076de5496a2b9968be9cc1}{TABLE}}
+, \mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980ac5a3a4f3774bc6aff01acdbd9862a1a9}{COLUMN}}
+, \newline
+\mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980a5f0c05bad71a7b0dd266aae7ce4b3579}{INDEX}}
+, \mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980a00acedd007ea7bc72482219808fd8a45}{MAXTYPE\+\_\+O}}
+ \}
+\item 
+enum \mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}{Table\+Type}} \{ \mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142a7e3c96cd188499157fe1ac8baa534895}{INVID\+\_\+T}} = 0
+, \mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142adbdabf31571efcd22dd915063d5c207f}{ROWTABLE}}
+, \mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142a4d9bf4c634a55b7a7e68e2d4d8c7b50c}{COLTABLE}}
+, \mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142a9f7ebc1b47ee069e74e487a7a1adf871}{MAXTYPE\+\_\+T}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+liugang(\href{mailto:liugang@ict.ac.cn}{\texttt{ liugang@ict.\+ac.\+cn}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+\hypertarget{schema_8h_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{schema_8h_DESCRIPTION}
+this file defines the abstract class of four primary elements of database system, these abstract classes provide uniform interface for upper application
+
+basic interface\+: init,finish,shut,select,insert,update,del,select\+Col,lookup,scan
+
+notice\+: for insert,del,update, input data requires to be processed by \mbox{\hyperlink{classBasicType}{Basic\+Type}} method format\+Bin, then call above function to actually put the into table example\+: char date\mbox{[}10\mbox{]} = 1970-\/01-\/01 \mbox{\hyperlink{classTypeDate}{Type\+Date}} type; char buff\mbox{[}10\mbox{]}; type.\+format (buff, date); // in buff, it\textquotesingle{}s stored as time\+\_\+t with 4 Byte then, you can perform insert () 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{schema_8h_aaf2203ed5a6f320baf156afcd2a7448e}\label{schema_8h_aaf2203ed5a6f320baf156afcd2a7448e}} 
+\index{schema.h@{schema.h}!OBJ\_NAME\_MAX@{OBJ\_NAME\_MAX}}
+\index{OBJ\_NAME\_MAX@{OBJ\_NAME\_MAX}!schema.h@{schema.h}}
+\doxysubsubsection{\texorpdfstring{OBJ\_NAME\_MAX}{OBJ\_NAME\_MAX}}
+{\footnotesize\ttfamily \#define OBJ\+\_\+\+NAME\+\_\+\+MAX~(128)}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267c}\label{schema_8h_a12a097aab61e653430d85fddbd53267c}} 
+\index{schema.h@{schema.h}!ColumnType@{ColumnType}}
+\index{ColumnType@{ColumnType}!schema.h@{schema.h}}
+\doxysubsubsection{\texorpdfstring{ColumnType}{ColumnType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267c}{Column\+Type}}}
+
+an enum for column. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INVID\_C@{INVID\_C}!schema.h@{schema.h}}\index{schema.h@{schema.h}!INVID\_C@{INVID\_C}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267ca58170bba0aa9014415be3d4e16e1a01f}\label{schema_8h_a12a097aab61e653430d85fddbd53267ca58170bba0aa9014415be3d4e16e1a01f}} 
+INVID\+\_\+C&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT8@{INT8}!schema.h@{schema.h}}\index{schema.h@{schema.h}!INT8@{INT8}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267cada138aad097eaac8697fe3661c91af95}\label{schema_8h_a12a097aab61e653430d85fddbd53267cada138aad097eaac8697fe3661c91af95}} 
+INT8&int8 ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT16@{INT16}!schema.h@{schema.h}}\index{schema.h@{schema.h}!INT16@{INT16}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267cac4a99142c241d04e1607af8a319c201b}\label{schema_8h_a12a097aab61e653430d85fddbd53267cac4a99142c241d04e1607af8a319c201b}} 
+INT16&int16 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT32@{INT32}!schema.h@{schema.h}}\index{schema.h@{schema.h}!INT32@{INT32}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267cac1081c62db14e24ef35a1c3c36cba2e7}\label{schema_8h_a12a097aab61e653430d85fddbd53267cac1081c62db14e24ef35a1c3c36cba2e7}} 
+INT32&int32 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT64@{INT64}!schema.h@{schema.h}}\index{schema.h@{schema.h}!INT64@{INT64}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267ca423a1db7cbc915478f654b15f87f3aac}\label{schema_8h_a12a097aab61e653430d85fddbd53267ca423a1db7cbc915478f654b15f87f3aac}} 
+INT64&int64 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLOAT32@{FLOAT32}!schema.h@{schema.h}}\index{schema.h@{schema.h}!FLOAT32@{FLOAT32}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267ca2644b741f40df4c4c3a83bbdcf7124b3}\label{schema_8h_a12a097aab61e653430d85fddbd53267ca2644b741f40df4c4c3a83bbdcf7124b3}} 
+FLOAT32&float32 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLOAT64@{FLOAT64}!schema.h@{schema.h}}\index{schema.h@{schema.h}!FLOAT64@{FLOAT64}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267caa1f95514c315d551fb2d44d8a5bc6ee2}\label{schema_8h_a12a097aab61e653430d85fddbd53267caa1f95514c315d551fb2d44d8a5bc6ee2}} 
+FLOAT64&float64 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHARN@{CHARN}!schema.h@{schema.h}}\index{schema.h@{schema.h}!CHARN@{CHARN}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267cae48e1db6f6f7ddee166ce1988a1187a9}\label{schema_8h_a12a097aab61e653430d85fddbd53267cae48e1db6f6f7ddee166ce1988a1187a9}} 
+CHARN&charn, fixed length string \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DATE@{DATE}!schema.h@{schema.h}}\index{schema.h@{schema.h}!DATE@{DATE}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267ca0ace72efd9e987dfd807365d0ca50141}\label{schema_8h_a12a097aab61e653430d85fddbd53267ca0ace72efd9e987dfd807365d0ca50141}} 
+DATE&days from 1970-\/01-\/01 till current DATE \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIME@{TIME}!schema.h@{schema.h}}\index{schema.h@{schema.h}!TIME@{TIME}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267cae9e4c627760f36823cdd153c24229157}\label{schema_8h_a12a097aab61e653430d85fddbd53267cae9e4c627760f36823cdd153c24229157}} 
+TIME&seconds from 00\+:00\+:00 till current TIME \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DATETIME@{DATETIME}!schema.h@{schema.h}}\index{schema.h@{schema.h}!DATETIME@{DATETIME}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267ca86797ee5836338ee241ceee5cfc669e2}\label{schema_8h_a12a097aab61e653430d85fddbd53267ca86797ee5836338ee241ceee5cfc669e2}} 
+DATETIME&seconds from 1970-\/01-\/01 00\+:00\+:00 till current DATETIME \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAXTYPE\_C@{MAXTYPE\_C}!schema.h@{schema.h}}\index{schema.h@{schema.h}!MAXTYPE\_C@{MAXTYPE\_C}}}\mbox{\Hypertarget{schema_8h_a12a097aab61e653430d85fddbd53267ca213cbb9e1cf7edc72e935c74ff28aa96}\label{schema_8h_a12a097aab61e653430d85fddbd53267ca213cbb9e1cf7edc72e935c74ff28aa96}} 
+MAXTYPE\+\_\+C&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}\label{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}} 
+\index{schema.h@{schema.h}!IndexType@{IndexType}}
+\index{IndexType@{IndexType}!schema.h@{schema.h}}
+\doxysubsubsection{\texorpdfstring{IndexType}{IndexType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}{Index\+Type}}}
+
+an enum for \mbox{\hyperlink{classIndex}{Index}}. ~\newline
+ \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INVID\_I@{INVID\_I}!schema.h@{schema.h}}\index{schema.h@{schema.h}!INVID\_I@{INVID\_I}}}\mbox{\Hypertarget{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839ab62671eacb25b5596edb796388a45260}\label{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839ab62671eacb25b5596edb796388a45260}} 
+INVID\+\_\+I&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HASHINDEX@{HASHINDEX}!schema.h@{schema.h}}\index{schema.h@{schema.h}!HASHINDEX@{HASHINDEX}}}\mbox{\Hypertarget{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a29b999ebef47327002b83d13e454d5ba}\label{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a29b999ebef47327002b83d13e454d5ba}} 
+HASHINDEX&hash index ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BPTREEINDEX@{BPTREEINDEX}!schema.h@{schema.h}}\index{schema.h@{schema.h}!BPTREEINDEX@{BPTREEINDEX}}}\mbox{\Hypertarget{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a11297c835b1a8214f782bd8aacf92420}\label{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a11297c835b1a8214f782bd8aacf92420}} 
+BPTREEINDEX&bptree index ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARTTREEINDEX@{ARTTREEINDEX}!schema.h@{schema.h}}\index{schema.h@{schema.h}!ARTTREEINDEX@{ARTTREEINDEX}}}\mbox{\Hypertarget{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a1def8cd1d5225c5af5997c6a3243e8c6}\label{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a1def8cd1d5225c5af5997c6a3243e8c6}} 
+ARTTREEINDEX&art tree index \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAXTYPE\_I@{MAXTYPE\_I}!schema.h@{schema.h}}\index{schema.h@{schema.h}!MAXTYPE\_I@{MAXTYPE\_I}}}\mbox{\Hypertarget{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a9236c583e44bbf793ccd271573f5c77e}\label{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839a9236c583e44bbf793ccd271573f5c77e}} 
+MAXTYPE\+\_\+I&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{schema_8h_a842c5e2e69277690b064bf363c017980}\label{schema_8h_a842c5e2e69277690b064bf363c017980}} 
+\index{schema.h@{schema.h}!ObjectType@{ObjectType}}
+\index{ObjectType@{ObjectType}!schema.h@{schema.h}}
+\doxysubsubsection{\texorpdfstring{ObjectType}{ObjectType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}}}
+
+an enum for Object\+Type label. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INVID\_O@{INVID\_O}!schema.h@{schema.h}}\index{schema.h@{schema.h}!INVID\_O@{INVID\_O}}}\mbox{\Hypertarget{schema_8h_a842c5e2e69277690b064bf363c017980ad27decb6cab3d5b1b1b8354d0c5ddf0d}\label{schema_8h_a842c5e2e69277690b064bf363c017980ad27decb6cab3d5b1b1b8354d0c5ddf0d}} 
+INVID\+\_\+O&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DATABASE@{DATABASE}!schema.h@{schema.h}}\index{schema.h@{schema.h}!DATABASE@{DATABASE}}}\mbox{\Hypertarget{schema_8h_a842c5e2e69277690b064bf363c017980ae194350e16f26786cd6e2fdd3292717b}\label{schema_8h_a842c5e2e69277690b064bf363c017980ae194350e16f26786cd6e2fdd3292717b}} 
+DATABASE&database \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TABLE@{TABLE}!schema.h@{schema.h}}\index{schema.h@{schema.h}!TABLE@{TABLE}}}\mbox{\Hypertarget{schema_8h_a842c5e2e69277690b064bf363c017980a2e160f29fc076de5496a2b9968be9cc1}\label{schema_8h_a842c5e2e69277690b064bf363c017980a2e160f29fc076de5496a2b9968be9cc1}} 
+TABLE&table ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COLUMN@{COLUMN}!schema.h@{schema.h}}\index{schema.h@{schema.h}!COLUMN@{COLUMN}}}\mbox{\Hypertarget{schema_8h_a842c5e2e69277690b064bf363c017980ac5a3a4f3774bc6aff01acdbd9862a1a9}\label{schema_8h_a842c5e2e69277690b064bf363c017980ac5a3a4f3774bc6aff01acdbd9862a1a9}} 
+COLUMN&column ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INDEX@{INDEX}!schema.h@{schema.h}}\index{schema.h@{schema.h}!INDEX@{INDEX}}}\mbox{\Hypertarget{schema_8h_a842c5e2e69277690b064bf363c017980a5f0c05bad71a7b0dd266aae7ce4b3579}\label{schema_8h_a842c5e2e69277690b064bf363c017980a5f0c05bad71a7b0dd266aae7ce4b3579}} 
+INDEX&index ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAXTYPE\_O@{MAXTYPE\_O}!schema.h@{schema.h}}\index{schema.h@{schema.h}!MAXTYPE\_O@{MAXTYPE\_O}}}\mbox{\Hypertarget{schema_8h_a842c5e2e69277690b064bf363c017980a00acedd007ea7bc72482219808fd8a45}\label{schema_8h_a842c5e2e69277690b064bf363c017980a00acedd007ea7bc72482219808fd8a45}} 
+MAXTYPE\+\_\+O&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}\label{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}} 
+\index{schema.h@{schema.h}!TableType@{TableType}}
+\index{TableType@{TableType}!schema.h@{schema.h}}
+\doxysubsubsection{\texorpdfstring{TableType}{TableType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}{Table\+Type}}}
+
+an enum for \mbox{\hyperlink{classTable}{Table}}. ~\newline
+ \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INVID\_T@{INVID\_T}!schema.h@{schema.h}}\index{schema.h@{schema.h}!INVID\_T@{INVID\_T}}}\mbox{\Hypertarget{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142a7e3c96cd188499157fe1ac8baa534895}\label{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142a7e3c96cd188499157fe1ac8baa534895}} 
+INVID\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROWTABLE@{ROWTABLE}!schema.h@{schema.h}}\index{schema.h@{schema.h}!ROWTABLE@{ROWTABLE}}}\mbox{\Hypertarget{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142adbdabf31571efcd22dd915063d5c207f}\label{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142adbdabf31571efcd22dd915063d5c207f}} 
+ROWTABLE&row table ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COLTABLE@{COLTABLE}!schema.h@{schema.h}}\index{schema.h@{schema.h}!COLTABLE@{COLTABLE}}}\mbox{\Hypertarget{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142a4d9bf4c634a55b7a7e68e2d4d8c7b50c}\label{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142a4d9bf4c634a55b7a7e68e2d4d8c7b50c}} 
+COLTABLE&column table \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAXTYPE\_T@{MAXTYPE\_T}!schema.h@{schema.h}}\index{schema.h@{schema.h}!MAXTYPE\_T@{MAXTYPE\_T}}}\mbox{\Hypertarget{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142a9f7ebc1b47ee069e74e487a7a1adf871}\label{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142a9f7ebc1b47ee069e74e487a7a1adf871}} 
+MAXTYPE\+\_\+T&\\
+\hline
+
+\end{DoxyEnumFields}

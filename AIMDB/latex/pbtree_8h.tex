@@ -1,0 +1,137 @@
+\hypertarget{pbtree_8h}{}\doxysection{system/pbtree.h File Reference}
+\label{pbtree_8h}\index{system/pbtree.h@{system/pbtree.h}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mymemory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nodepref.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbnode}{bnode}}
+\item 
+class \mbox{\hyperlink{classpbtree}{pbtree}}
+\item 
+class \mbox{\hyperlink{classPbtree}{Pbtree}}
+\item 
+class \mbox{\hyperlink{classPointer8B}{Pointer8B}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_a16fb53d0ddd9af9cd1ea0fd0f453d57b}{BKEY\+\_\+\+NUM}}~(\mbox{\hyperlink{nodepref_8h_a602ad827751e0fcb428f9d5d546beac9}{BNODE\+\_\+\+SIZE}}/(\mbox{\hyperlink{pbtree_8h_a2d996237e082b78b41771b5aa1a6eae1}{KEY\+\_\+\+SIZE}}+\mbox{\hyperlink{pbtree_8h_aab99acb2a4db2c95c1529e6f0a7aaf6d}{POINTER8\+B\+\_\+\+SIZE}}) -\/ 1)
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}}~\mbox{\hyperlink{classbnode}{bnode}}
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_aba9693a048d16696b1c43fe2d3c62fc6}{bnext}}(ptr)~(((\mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}} $\ast$)(ptr))-\/$>$ch(0))
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_abab47dda719c1b9e464f8570ba47dbb4}{bnum}}(ptr)~(((\mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}} $\ast$)(ptr))-\/$>$k(0))
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_a2d996237e082b78b41771b5aa1a6eae1}{KEY\+\_\+\+SIZE}}~8
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_ab1c42d7e27308a3e4dc1ce61f40d273d}{LEAF\+\_\+\+KEY\+\_\+\+NUM}}~\mbox{\hyperlink{pbtree_8h_a16fb53d0ddd9af9cd1ea0fd0f453d57b}{BKEY\+\_\+\+NUM}}
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_a3cb816ed7690a32c5d6f67d7cb615ca4}{MAX\+\_\+\+KEY}}~((\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\+\_\+type}})(0x7fffffffffffffff))
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_a88be9bacbd70598b6197fd34c7f7ea49}{MIN\+\_\+\+KEY}}~((\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\+\_\+type}})(0x8000000000000000))
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_a20700be5f77ae9210248e5fa62cb0492}{NON\+\_\+\+LEAF\+\_\+\+KEY\+\_\+\+NUM}}~\mbox{\hyperlink{pbtree_8h_a16fb53d0ddd9af9cd1ea0fd0f453d57b}{BKEY\+\_\+\+NUM}}
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_aab99acb2a4db2c95c1529e6f0a7aaf6d}{POINTER8\+B\+\_\+\+SIZE}}~8
+\item 
+\#define \mbox{\hyperlink{pbtree_8h_a70eafdf190b8f3be16349543fe1b39ae}{POINTER\+\_\+\+SIZE}}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef long long \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Shimin Chen \href{mailto:shimin.chen@gmail.com}{\texttt{ shimin.\+chen@gmail.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\hypertarget{pbtree_8h_LICENSE}{}\doxysubsection{LICENSE}\label{pbtree_8h_LICENSE}
+TBD\hypertarget{schema_8h_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{schema_8h_DESCRIPTION}
+The pbtree class implements prefetching B+-\/tree (without jump pointer arrays). with NO\+\_\+\+PREFETCH, this becomes an B+-\/tree implementation. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pbtree_8h_a16fb53d0ddd9af9cd1ea0fd0f453d57b}\label{pbtree_8h_a16fb53d0ddd9af9cd1ea0fd0f453d57b}} 
+\index{pbtree.h@{pbtree.h}!BKEY\_NUM@{BKEY\_NUM}}
+\index{BKEY\_NUM@{BKEY\_NUM}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{BKEY\_NUM}{BKEY\_NUM}}
+{\footnotesize\ttfamily \#define BKEY\+\_\+\+NUM~(\mbox{\hyperlink{nodepref_8h_a602ad827751e0fcb428f9d5d546beac9}{BNODE\+\_\+\+SIZE}}/(\mbox{\hyperlink{pbtree_8h_a2d996237e082b78b41771b5aa1a6eae1}{KEY\+\_\+\+SIZE}}+\mbox{\hyperlink{pbtree_8h_aab99acb2a4db2c95c1529e6f0a7aaf6d}{POINTER8\+B\+\_\+\+SIZE}}) -\/ 1)}
+
+\mbox{\Hypertarget{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}\label{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}} 
+\index{pbtree.h@{pbtree.h}!bleaf@{bleaf}}
+\index{bleaf@{bleaf}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{bleaf}{bleaf}}
+{\footnotesize\ttfamily \#define bleaf~\mbox{\hyperlink{classbnode}{bnode}}}
+
+\mbox{\Hypertarget{pbtree_8h_aba9693a048d16696b1c43fe2d3c62fc6}\label{pbtree_8h_aba9693a048d16696b1c43fe2d3c62fc6}} 
+\index{pbtree.h@{pbtree.h}!bnext@{bnext}}
+\index{bnext@{bnext}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{bnext}{bnext}}
+{\footnotesize\ttfamily \#define bnext(\begin{DoxyParamCaption}\item[{}]{ptr }\end{DoxyParamCaption})~(((\mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}} $\ast$)(ptr))-\/$>$ch(0))}
+
+\mbox{\Hypertarget{pbtree_8h_abab47dda719c1b9e464f8570ba47dbb4}\label{pbtree_8h_abab47dda719c1b9e464f8570ba47dbb4}} 
+\index{pbtree.h@{pbtree.h}!bnum@{bnum}}
+\index{bnum@{bnum}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{bnum}{bnum}}
+{\footnotesize\ttfamily \#define bnum(\begin{DoxyParamCaption}\item[{}]{ptr }\end{DoxyParamCaption})~(((\mbox{\hyperlink{pbtree_8h_a51b2e8433b0d8bf855c8b0a215a7ded2}{bleaf}} $\ast$)(ptr))-\/$>$k(0))}
+
+\mbox{\Hypertarget{pbtree_8h_a2d996237e082b78b41771b5aa1a6eae1}\label{pbtree_8h_a2d996237e082b78b41771b5aa1a6eae1}} 
+\index{pbtree.h@{pbtree.h}!KEY\_SIZE@{KEY\_SIZE}}
+\index{KEY\_SIZE@{KEY\_SIZE}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{KEY\_SIZE}{KEY\_SIZE}}
+{\footnotesize\ttfamily \#define KEY\+\_\+\+SIZE~8}
+
+\mbox{\Hypertarget{pbtree_8h_ab1c42d7e27308a3e4dc1ce61f40d273d}\label{pbtree_8h_ab1c42d7e27308a3e4dc1ce61f40d273d}} 
+\index{pbtree.h@{pbtree.h}!LEAF\_KEY\_NUM@{LEAF\_KEY\_NUM}}
+\index{LEAF\_KEY\_NUM@{LEAF\_KEY\_NUM}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{LEAF\_KEY\_NUM}{LEAF\_KEY\_NUM}}
+{\footnotesize\ttfamily \#define LEAF\+\_\+\+KEY\+\_\+\+NUM~\mbox{\hyperlink{pbtree_8h_a16fb53d0ddd9af9cd1ea0fd0f453d57b}{BKEY\+\_\+\+NUM}}}
+
+\mbox{\Hypertarget{pbtree_8h_a3cb816ed7690a32c5d6f67d7cb615ca4}\label{pbtree_8h_a3cb816ed7690a32c5d6f67d7cb615ca4}} 
+\index{pbtree.h@{pbtree.h}!MAX\_KEY@{MAX\_KEY}}
+\index{MAX\_KEY@{MAX\_KEY}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_KEY}{MAX\_KEY}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+KEY~((\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\+\_\+type}})(0x7fffffffffffffff))}
+
+\mbox{\Hypertarget{pbtree_8h_a88be9bacbd70598b6197fd34c7f7ea49}\label{pbtree_8h_a88be9bacbd70598b6197fd34c7f7ea49}} 
+\index{pbtree.h@{pbtree.h}!MIN\_KEY@{MIN\_KEY}}
+\index{MIN\_KEY@{MIN\_KEY}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_KEY}{MIN\_KEY}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+KEY~((\mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\+\_\+type}})(0x8000000000000000))}
+
+\mbox{\Hypertarget{pbtree_8h_a20700be5f77ae9210248e5fa62cb0492}\label{pbtree_8h_a20700be5f77ae9210248e5fa62cb0492}} 
+\index{pbtree.h@{pbtree.h}!NON\_LEAF\_KEY\_NUM@{NON\_LEAF\_KEY\_NUM}}
+\index{NON\_LEAF\_KEY\_NUM@{NON\_LEAF\_KEY\_NUM}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{NON\_LEAF\_KEY\_NUM}{NON\_LEAF\_KEY\_NUM}}
+{\footnotesize\ttfamily \#define NON\+\_\+\+LEAF\+\_\+\+KEY\+\_\+\+NUM~\mbox{\hyperlink{pbtree_8h_a16fb53d0ddd9af9cd1ea0fd0f453d57b}{BKEY\+\_\+\+NUM}}}
+
+\mbox{\Hypertarget{pbtree_8h_aab99acb2a4db2c95c1529e6f0a7aaf6d}\label{pbtree_8h_aab99acb2a4db2c95c1529e6f0a7aaf6d}} 
+\index{pbtree.h@{pbtree.h}!POINTER8B\_SIZE@{POINTER8B\_SIZE}}
+\index{POINTER8B\_SIZE@{POINTER8B\_SIZE}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{POINTER8B\_SIZE}{POINTER8B\_SIZE}}
+{\footnotesize\ttfamily \#define POINTER8\+B\+\_\+\+SIZE~8}
+
+\mbox{\Hypertarget{pbtree_8h_a70eafdf190b8f3be16349543fe1b39ae}\label{pbtree_8h_a70eafdf190b8f3be16349543fe1b39ae}} 
+\index{pbtree.h@{pbtree.h}!POINTER\_SIZE@{POINTER\_SIZE}}
+\index{POINTER\_SIZE@{POINTER\_SIZE}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{POINTER\_SIZE}{POINTER\_SIZE}}
+{\footnotesize\ttfamily \#define POINTER\+\_\+\+SIZE~8}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}\label{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}} 
+\index{pbtree.h@{pbtree.h}!key\_type@{key\_type}}
+\index{key\_type@{key\_type}!pbtree.h@{pbtree.h}}
+\doxysubsubsection{\texorpdfstring{key\_type}{key\_type}}
+{\footnotesize\ttfamily typedef long long \mbox{\hyperlink{pbtree_8h_ae441693f43c16258cbe1e183cbf8a233}{key\+\_\+type}}}
+

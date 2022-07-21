@@ -1,0 +1,133 @@
+\hypertarget{classObject}{}\doxysection{Object Class Reference}
+\label{classObject}\index{Object@{Object}}
+
+
+{\ttfamily \#include $<$schema.\+h$>$}
+
+Inheritance diagram for Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classObject}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_aa3a39b3d910abb5fb8338722c97048ac}{Object}} (int64\+\_\+t \mbox{\hyperlink{classObject_a042dd4dc36aa8977fadb23217dc0e717}{o\+\_\+id}}, \mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classObject_a2bb2ec43b39b789b5707e82681a62f83}{o\+\_\+type}}, const char $\ast$\mbox{\hyperlink{classObject_a8443c02f46fd2a18bdd8b2b63699bbd5}{o\+\_\+name}})
+\item 
+bool \mbox{\hyperlink{classObject_a2d3de0c6d115ec176d8276483bf21f0f}{change\+Name}} (char $\ast$\mbox{\hyperlink{classObject_a8443c02f46fd2a18bdd8b2b63699bbd5}{o\+\_\+name}})
+\item 
+int64\+\_\+t \mbox{\hyperlink{classObject_a4295d72e1ca6973da0c055e5e2f31ebe}{get\+Oid}} (void)
+\item 
+char $\ast$ \mbox{\hyperlink{classObject_ac7d4071062bba10e47a6be3246a39828}{get\+Oname}} (void)
+\item 
+\mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classObject_a0866cdb929ad857110bcd00a880256ad}{get\+Otype}} (void)
+\item 
+virtual void \mbox{\hyperlink{classObject_a979154fa752f7a901145ef4968c6aa58}{print}} (void)
+\item 
+virtual bool \mbox{\hyperlink{classObject_ae021c9efe8397bc993d41cceccdf8955}{shut}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classObject_a042dd4dc36aa8977fadb23217dc0e717}{o\+\_\+id}}
+\item 
+char \mbox{\hyperlink{classObject_a8443c02f46fd2a18bdd8b2b63699bbd5}{o\+\_\+name}} \mbox{[}\mbox{\hyperlink{schema_8h_aaf2203ed5a6f320baf156afcd2a7448e}{OBJ\+\_\+\+NAME\+\_\+\+MAX}}\mbox{]}
+\item 
+\mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classObject_a2bb2ec43b39b789b5707e82681a62f83}{o\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of \mbox{\hyperlink{classObject}{Object}}, basic element in database. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classObject_aa3a39b3d910abb5fb8338722c97048ac}\label{classObject_aa3a39b3d910abb5fb8338722c97048ac}} 
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily Object\+::\+Object (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{o\+\_\+id,  }\item[{\mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}}}]{o\+\_\+type,  }\item[{const char $\ast$}]{o\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor. 
+\begin{DoxyParams}{Parameters}
+{\em o\+\_\+id} & object identifier \\
+\hline
+{\em o\+\_\+type} & object type \\
+\hline
+{\em o\+\_\+name} & object name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classObject_a2d3de0c6d115ec176d8276483bf21f0f}\label{classObject_a2d3de0c6d115ec176d8276483bf21f0f}} 
+\index{Object@{Object}!changeName@{changeName}}
+\index{changeName@{changeName}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{changeName()}{changeName()}}
+{\footnotesize\ttfamily bool Object\+::change\+Name (\begin{DoxyParamCaption}\item[{char $\ast$}]{o\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+change object name(not in use). \mbox{\Hypertarget{classObject_a4295d72e1ca6973da0c055e5e2f31ebe}\label{classObject_a4295d72e1ca6973da0c055e5e2f31ebe}} 
+\index{Object@{Object}!getOid@{getOid}}
+\index{getOid@{getOid}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getOid()}{getOid()}}
+{\footnotesize\ttfamily int64\+\_\+t Object\+::get\+Oid (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get identifier of object. \mbox{\Hypertarget{classObject_ac7d4071062bba10e47a6be3246a39828}\label{classObject_ac7d4071062bba10e47a6be3246a39828}} 
+\index{Object@{Object}!getOname@{getOname}}
+\index{getOname@{getOname}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getOname()}{getOname()}}
+{\footnotesize\ttfamily char $\ast$ Object\+::get\+Oname (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get object name. \mbox{\Hypertarget{classObject_a0866cdb929ad857110bcd00a880256ad}\label{classObject_a0866cdb929ad857110bcd00a880256ad}} 
+\index{Object@{Object}!getOtype@{getOtype}}
+\index{getOtype@{getOtype}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getOtype()}{getOtype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Object\+::get\+Otype (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get object type. \mbox{\Hypertarget{classObject_a979154fa752f7a901145ef4968c6aa58}\label{classObject_a979154fa752f7a901145ef4968c6aa58}} 
+\index{Object@{Object}!print@{print}}
+\index{print@{print}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void Object\+::print (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+print the object infomation. 
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a0acef2f7820a6ad5331c899e4b7fe24c}{Hash\+Index}}, \mbox{\hyperlink{classPbtreeIndex_aa1bb44169b111c47b97ca74c5028d6e8}{Pbtree\+Index}}, \mbox{\hyperlink{classColumn_a91b5f5c7ec22624fed812fb5765643bd}{Column}}, \mbox{\hyperlink{classTable_aa9ece3fd4385feb15816e287c3e64dcf}{Table}}, \mbox{\hyperlink{classDatabase_ad337887a2173d222603b34a48b48ac4d}{Database}}, and \mbox{\hyperlink{classIndex_acc369c94f8ec084557273a88b6b1a313}{Index}}.
+
+\mbox{\Hypertarget{classObject_ae021c9efe8397bc993d41cceccdf8955}\label{classObject_ae021c9efe8397bc993d41cceccdf8955}} 
+\index{Object@{Object}!shut@{shut}}
+\index{shut@{shut}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{shut()}{shut()}}
+{\footnotesize\ttfamily virtual bool Object\+::shut (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+shut down the object. 
+
+Reimplemented in \mbox{\hyperlink{classHashIndex_a842bae14f15853d8f2f917c6f6a7dce9}{Hash\+Index}}, \mbox{\hyperlink{classPbtreeIndex_a47c37588dc70f27818633959bdb69462}{Pbtree\+Index}}, \mbox{\hyperlink{classRowTable_a08e7799429c049e9c36097318518461c}{Row\+Table}}, \mbox{\hyperlink{classColumn_a06d8632a47da54d3c7ba986e7971029a}{Column}}, \mbox{\hyperlink{classTable_ac5536ca71e2a8e9890d86e9230cbbe8e}{Table}}, \mbox{\hyperlink{classDatabase_a82aaf39d5f1620ca314f28df2e846314}{Database}}, and \mbox{\hyperlink{classIndex_a80cee3927658bdeb678c776333115268}{Index}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classObject_a042dd4dc36aa8977fadb23217dc0e717}\label{classObject_a042dd4dc36aa8977fadb23217dc0e717}} 
+\index{Object@{Object}!o\_id@{o\_id}}
+\index{o\_id@{o\_id}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{o\_id}{o\_id}}
+{\footnotesize\ttfamily int64\+\_\+t Object\+::o\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+object identifier \mbox{\Hypertarget{classObject_a8443c02f46fd2a18bdd8b2b63699bbd5}\label{classObject_a8443c02f46fd2a18bdd8b2b63699bbd5}} 
+\index{Object@{Object}!o\_name@{o\_name}}
+\index{o\_name@{o\_name}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{o\_name}{o\_name}}
+{\footnotesize\ttfamily char Object\+::o\+\_\+name\mbox{[}\mbox{\hyperlink{schema_8h_aaf2203ed5a6f320baf156afcd2a7448e}{OBJ\+\_\+\+NAME\+\_\+\+MAX}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+object name, max length OBJ\+\_\+\+NAME\+\_\+\+MAX \mbox{\Hypertarget{classObject_a2bb2ec43b39b789b5707e82681a62f83}\label{classObject_a2bb2ec43b39b789b5707e82681a62f83}} 
+\index{Object@{Object}!o\_type@{o\_type}}
+\index{o\_type@{o\_type}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{o\_type}{o\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{schema_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Object\+::o\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+object type ~\newline
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{schema_8h}{schema.\+h}}\end{DoxyCompactItemize}

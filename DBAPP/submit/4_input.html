@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="dbms.css">
+        <style>
+            .background {
+                height: 100%;
+                background-image: linear-gradient(to bottom right, rgb(209, 209, 209), rgb(197, 193, 255), rgb(255, 186, 252));
+            }
+
+            .submit {
+                border: none;
+                outline: none;
+                background-image: linear-gradient(to bottom right, rgb(236, 172, 255), rgb(255, 179, 179));
+                margin-top: 10%;
+                margin-left: 20%;
+                margin-bottom: 3%;
+                width: 60%;
+                font-size: 17px;
+                color: white;
+                padding: 17px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <div class="outer">
+                <div class="title">
+                    车次查询
+                </div>
+            <form method="post" action="4_train.php" class="input-form">
+                <br>
+                <input type="text" name="train" value="G101" placeholder="请输入要查询的车次" class="input-text"></input><br>
+                <br>
+                <input type="date" id="date_box" name="date" min= "" class="input-text"></input><br>
+                <input type="submit" value="确认" class="submit"></input>
+            </form>
+            </div>
+        </div>
+
+        <script>
+            function limit_date(){
+                const _interval_a_day = 24 * 60 * 60 * 1000;
+                const _interval_after = 5 * _interval_a_day;
+
+                var today = new Date();
+                var today_date = formal_date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+
+                var after = new Date(today.getTime() + _interval_after);
+                var after_date = formal_date(after.getFullYear(), after.getMonth() + 1, after.getDate());
+
+                var tomrrw = new Date(today.getTime() + _interval_a_day);
+                var tomrrw_date = formal_date(tomrrw.getFullYear(), tomrrw.getMonth() + 1, tomrrw.getDate());
+
+                document.getElementById("date_box").setAttribute("min", today_date);
+                document.getElementById("date_box").setAttribute("max", after_date);
+                document.getElementById("date_box").setAttribute("value", tomrrw_date);
+            }
+
+            function formal_date(year, month, date){
+                var month_formal = month < 10 ? "0" + month : "" + month;
+                var date_formal = date < 10 ? "0" + date : "" + date;
+                return year + "-" + month_formal + "-" + date_formal;
+            }
+
+            window.onload = function(){
+                limit_date();
+            }
+        </script>
+    </body>
+</html>

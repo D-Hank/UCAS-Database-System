@@ -1,0 +1,527 @@
+\hypertarget{classHashIndex}{}\doxysection{Hash\+Index Class Reference}
+\label{classHashIndex}\index{HashIndex@{HashIndex}}
+
+
+{\ttfamily \#include $<$hashindex.\+h$>$}
+
+Inheritance diagram for Hash\+Index\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classHashIndex}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHashIndex_a9544dd2a67becb25a9b4173f0e0a3036}{Hash\+Index}} (int64\+\_\+t h\+\_\+id, const char $\ast$i\+\_\+name, \mbox{\hyperlink{classKey}{Key}} \&\mbox{\hyperlink{classIndex_aa3b4f0cdd0e1c0cb1b21412a9e9e9d9a}{i\+\_\+key}})
+\item 
+bool \mbox{\hyperlink{classHashIndex_a474e00b8a2ae8eca991a6ab8064fefa9}{add\+Index\+DTpye}} (\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$i\+\_\+dt, int64\+\_\+t offset)
+\item 
+bool \mbox{\hyperlink{classHashIndex_a45fb6bc537dfb45c03c8ec8f36afde73}{del}} (void $\ast$i\+\_\+data)
+\item 
+bool \mbox{\hyperlink{classHashIndex_afbced3b08e11b6e2bf802839821c762c}{del}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]})
+\item 
+bool \mbox{\hyperlink{classHashIndex_a8f4fc6b1716abb6f4c3eb77889a48071}{finish}} (void)
+\item 
+bool \mbox{\hyperlink{classHashIndex_a6588d81a9ce852849f95188fdb157af9}{init}} (void)
+\item 
+bool \mbox{\hyperlink{classHashIndex_ab666c89b8cb03133383f89d79064f203}{insert}} (void $\ast$i\+\_\+data, void $\ast$p\+\_\+in)
+\item 
+bool \mbox{\hyperlink{classHashIndex_a539693ff4cca601098aed00efde973d2}{insert}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]}, void $\ast$p\+\_\+in)
+\item 
+bool \mbox{\hyperlink{classHashIndex_a30058930c7305586fd9e694e853e1bc7}{lookup}} (void $\ast$i\+\_\+data, void $\ast$info, void $\ast$\&result)
+\item 
+bool \mbox{\hyperlink{classHashIndex_af8e6b6592766e71419f5554578ec114c}{lookup}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]}, void $\ast$info, void $\ast$\&result)
+\item 
+void \mbox{\hyperlink{classHashIndex_a0acef2f7820a6ad5331c899e4b7fe24c}{print}} (void)
+\item 
+bool \mbox{\hyperlink{classHashIndex_a2a639c8c7bdc52834495ad3db773e714}{set\+\_\+ls}} (void $\ast$i\+\_\+data1, void $\ast$i\+\_\+data2, void $\ast$info)
+\item 
+bool \mbox{\hyperlink{classHashIndex_a78bb72f7522e8f345cb9c0fee9fba3b8}{set\+\_\+ls}} (void $\ast$i\+\_\+data1\mbox{[}$\,$\mbox{]}, void $\ast$i\+\_\+data2\mbox{[}$\,$\mbox{]}, void $\ast$info)
+\item 
+void \mbox{\hyperlink{classHashIndex_a48a406c175038f2984f4daff944dcd17}{set\+Cell\+Cap}} (int64\+\_\+t cell\+\_\+capbits)
+\item 
+bool \mbox{\hyperlink{classHashIndex_a842bae14f15853d8f2f917c6f6a7dce9}{shut}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classHashIndex_aa30abfcf77cf3d99c7a543be38805bfd}{cmp\+EQ}} (void $\ast$i\+\_\+data, void $\ast$result)
+\item 
+bool \mbox{\hyperlink{classHashIndex_a07f29f7a70368effaf85122c1262ecd2}{cmp\+EQ}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]}, void $\ast$result)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashIndex_ac1d55744aa7f599d11fd8cf50c40eac2}{hash}} (char $\ast$str, int64\+\_\+t maxlen)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashIndex_a481e91d4a269aa0d4ab5399eacb02faa}{tran\+To\+Int64}} (void $\ast$i\+\_\+data)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashIndex_a66e388d2ab37ae96adc8864b1b833b7f}{tran\+To\+Int64}} (void $\ast$i\+\_\+data\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashIndex_aeac12236ee18acdb9fd5bde941389f87}{ih\+\_\+cell\+\_\+capbits}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashIndex_a9481b45ea123cf27c9e08bd9984c684b}{ih\+\_\+column\+\_\+cap}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashIndex_aaebae7dffe156034425bc496699c2a6c}{ih\+\_\+column\+\_\+num}}
+\item 
+\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$$\ast$ \mbox{\hyperlink{classHashIndex_adad6d279b9e1d93dacb1edb706748fb3}{ih\+\_\+datatype}}
+\item 
+int64\+\_\+t $\ast$ \mbox{\hyperlink{classHashIndex_ae95cc72c377a3b96bf6f1b7f835f8543}{ih\+\_\+hash\+\_\+bits}}
+\item 
+\mbox{\hyperlink{classHashTable}{Hash\+Table}} $\ast$ \mbox{\hyperlink{classHashIndex_ad70a1906f2e4289414bc372c0a2b6611}{ih\+\_\+hashtable}}
+\item 
+int64\+\_\+t $\ast$ \mbox{\hyperlink{classHashIndex_a45af5036b1ea3b0c885d8ec268e9d586}{ih\+\_\+table\+\_\+offset}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+definition of \mbox{\hyperlink{classHashIndex}{Hash\+Index}}. ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHashIndex_a9544dd2a67becb25a9b4173f0e0a3036}\label{classHashIndex_a9544dd2a67becb25a9b4173f0e0a3036}} 
+\index{HashIndex@{HashIndex}!HashIndex@{HashIndex}}
+\index{HashIndex@{HashIndex}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{HashIndex()}{HashIndex()}}
+{\footnotesize\ttfamily Hash\+Index\+::\+Hash\+Index (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{h\+\_\+id,  }\item[{const char $\ast$}]{i\+\_\+name,  }\item[{\mbox{\hyperlink{classKey}{Key}} \&}]{i\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor. 
+\begin{DoxyParams}{Parameters}
+{\em h\+\_\+id} & hash index identifier \\
+\hline
+{\em i\+\_\+name} & index name \\
+\hline
+{\em i\+\_\+key} & key of this index \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHashIndex_a474e00b8a2ae8eca991a6ab8064fefa9}\label{classHashIndex_a474e00b8a2ae8eca991a6ab8064fefa9}} 
+\index{HashIndex@{HashIndex}!addIndexDTpye@{addIndexDTpye}}
+\index{addIndexDTpye@{addIndexDTpye}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{addIndexDTpye()}{addIndexDTpye()}}
+{\footnotesize\ttfamily bool Hash\+Index\+::add\+Index\+DTpye (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$}]{i\+\_\+dt,  }\item[{int64\+\_\+t}]{offset }\end{DoxyParamCaption})}
+
+add indexed column\textquotesingle{}s data type. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+dt} & data type of indexed column \\
+\hline
+{\em offset} & offset of column in a rowtable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHashIndex_aa30abfcf77cf3d99c7a543be38805bfd}\label{classHashIndex_aa30abfcf77cf3d99c7a543be38805bfd}} 
+\index{HashIndex@{HashIndex}!cmpEQ@{cmpEQ}}
+\index{cmpEQ@{cmpEQ}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{cmpEQ()}{cmpEQ()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Hash\+Index\+::cmp\+EQ (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+whether i\+\_\+data is result got from hash table 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & buffer data of columns \\
+\hline
+{\em result} & got from hash table \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & equal \\
+\hline
+{\em false} & not equal \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classHashIndex_a07f29f7a70368effaf85122c1262ecd2}\label{classHashIndex_a07f29f7a70368effaf85122c1262ecd2}} 
+\index{HashIndex@{HashIndex}!cmpEQ@{cmpEQ}}
+\index{cmpEQ@{cmpEQ}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{cmpEQ()}{cmpEQ()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Hash\+Index\+::cmp\+EQ (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+whether i\+\_\+data is result got from hash table 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & pointers of columns \\
+\hline
+{\em result} & got from hash table \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & equal \\
+\hline
+{\em false} & not equal \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classHashIndex_a45fb6bc537dfb45c03c8ec8f36afde73}\label{classHashIndex_a45fb6bc537dfb45c03c8ec8f36afde73}} 
+\index{HashIndex@{HashIndex}!del@{del}}
+\index{del@{del}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Hash\+Index\+::del (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+del an entry in hash index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & buffer of column data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a8f1ebdeb4ba97902a5b9722c10446caa}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_afbced3b08e11b6e2bf802839821c762c}\label{classHashIndex_afbced3b08e11b6e2bf802839821c762c}} 
+\index{HashIndex@{HashIndex}!del@{del}}
+\index{del@{del}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Hash\+Index\+::del (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+del an entry in hash index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & pointers of column data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a4ed94fb4485843ffff4f14f092bd6005}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_a8f4fc6b1716abb6f4c3eb77889a48071}\label{classHashIndex_a8f4fc6b1716abb6f4c3eb77889a48071}} 
+\index{HashIndex@{HashIndex}!finish@{finish}}
+\index{finish@{finish}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{finish()}{finish()}}
+{\footnotesize\ttfamily bool Hash\+Index\+::finish (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+init of hash table, heart of hash index ,most important. 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a3e976e4d8e0214c6a916abc66b9588fc}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_ac1d55744aa7f599d11fd8cf50c40eac2}\label{classHashIndex_ac1d55744aa7f599d11fd8cf50c40eac2}} 
+\index{HashIndex@{HashIndex}!hash@{hash}}
+\index{hash@{hash}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{hash()}{hash()}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Index\+::hash (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{int64\+\_\+t}]{maxlen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+hash method for CHARN. 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer of string \\
+\hline
+{\em maxlen} & maximum length of str \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em int64} & hash value of CHARN \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classHashIndex_a6588d81a9ce852849f95188fdb157af9}\label{classHashIndex_a6588d81a9ce852849f95188fdb157af9}} 
+\index{HashIndex@{HashIndex}!init@{init}}
+\index{init@{init}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Hash\+Index\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+init hashindex, to calculate initial value. 
+\begin{DoxyRetVals}{Return values}
+{\em true} & init success \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_ad0269d526e7a2640db91b564f3f335c8}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_ab666c89b8cb03133383f89d79064f203}\label{classHashIndex_ab666c89b8cb03133383f89d79064f203}} 
+\index{HashIndex@{HashIndex}!insert@{insert}}
+\index{insert@{insert}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Hash\+Index\+::insert (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$}]{p\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+insert an entry to hash index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & buffer of column data in pattren \\
+\hline
+{\em p\+\_\+in} & pointer of record to make index \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a59abc6ca8b54dac0ac2de716e264a638}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_a539693ff4cca601098aed00efde973d2}\label{classHashIndex_a539693ff4cca601098aed00efde973d2}} 
+\index{HashIndex@{HashIndex}!insert@{insert}}
+\index{insert@{insert}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Hash\+Index\+::insert (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+insert an entry to hash index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & each element of i\+\_\+data pointed to a column data \\
+\hline
+{\em p\+\_\+in} & pointer of record to make index \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a3a77636367dfa08e00d4bc236ab5d298}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_a30058930c7305586fd9e694e853e1bc7}\label{classHashIndex_a30058930c7305586fd9e694e853e1bc7}} 
+\index{HashIndex@{HashIndex}!lookup@{lookup}}
+\index{lookup@{lookup}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Hash\+Index\+::lookup (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data,  }\item[{void $\ast$}]{info,  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+lookup hash index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & buffer of column data \\
+\hline
+{\em info} & \mbox{\hyperlink{structHashInfo}{Hash\+Info}} pointer processed by set\+\_\+ls \\
+\hline
+{\em result} & reference of record pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & found \\
+\hline
+{\em false} & not found \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_ab76c8f3547394789802fd399c47c5cea}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_af8e6b6592766e71419f5554578ec114c}\label{classHashIndex_af8e6b6592766e71419f5554578ec114c}} 
+\index{HashIndex@{HashIndex}!lookup@{lookup}}
+\index{lookup@{lookup}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Hash\+Index\+::lookup (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{info,  }\item[{void $\ast$\&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+lookup hash index. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & pointers of column data \\
+\hline
+{\em info} & \mbox{\hyperlink{structHashInfo}{Hash\+Info}} pointer processed by set\+\_\+ls \\
+\hline
+{\em result} & reference of record pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & found \\
+\hline
+{\em false} & not found \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_aa306cf743a38d264ec6642a0bdaa1f14}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_a0acef2f7820a6ad5331c899e4b7fe24c}\label{classHashIndex_a0acef2f7820a6ad5331c899e4b7fe24c}} 
+\index{HashIndex@{HashIndex}!print@{print}}
+\index{print@{print}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Hash\+Index\+::print (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+print hash index information. 
+
+Reimplemented from \mbox{\hyperlink{classIndex_acc369c94f8ec084557273a88b6b1a313}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_a2a639c8c7bdc52834495ad3db773e714}\label{classHashIndex_a2a639c8c7bdc52834495ad3db773e714}} 
+\index{HashIndex@{HashIndex}!set\_ls@{set\_ls}}
+\index{set\_ls@{set\_ls}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{set\_ls()}{set\_ls()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Hash\+Index\+::set\+\_\+ls (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data1,  }\item[{void $\ast$}]{i\+\_\+data2,  }\item[{void $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+setup for hash index lookup. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data1} & buffer of column data for lookup or scan(\char`\"{}$>$=\char`\"{}) \\
+\hline
+{\em i\+\_\+data2} & set NULL \\
+\hline
+{\em info} & \mbox{\hyperlink{structHashInfo}{Hash\+Info}} pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a2009c96a48a8275550c7f531d72af946}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_a78bb72f7522e8f345cb9c0fee9fba3b8}\label{classHashIndex_a78bb72f7522e8f345cb9c0fee9fba3b8}} 
+\index{HashIndex@{HashIndex}!set\_ls@{set\_ls}}
+\index{set\_ls@{set\_ls}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{set\_ls()}{set\_ls()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Hash\+Index\+::set\+\_\+ls (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data1\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{i\+\_\+data2\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+setup for hash index lookup. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data1} & pointers of column data for lookup \\
+\hline
+{\em i\+\_\+data2} & set NULL when call \\
+\hline
+{\em info} & \mbox{\hyperlink{structHashInfo}{Hash\+Info}} pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_afc7a4ad5ce8b42bbe2638162710119f8}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_a48a406c175038f2984f4daff944dcd17}\label{classHashIndex_a48a406c175038f2984f4daff944dcd17}} 
+\index{HashIndex@{HashIndex}!setCellCap@{setCellCap}}
+\index{setCellCap@{setCellCap}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{setCellCap()}{setCellCap()}}
+{\footnotesize\ttfamily void Hash\+Index\+::set\+Cell\+Cap (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{cell\+\_\+capbits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set hashtable cell capicity. 
+\begin{DoxyParams}{Parameters}
+{\em cell\+\_\+capbits} & the number of cells in hashtable is 2$^\wedge$cell\+\_\+capbits \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHashIndex_a842bae14f15853d8f2f917c6f6a7dce9}\label{classHashIndex_a842bae14f15853d8f2f917c6f6a7dce9}} 
+\index{HashIndex@{HashIndex}!shut@{shut}}
+\index{shut@{shut}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{shut()}{shut()}}
+{\footnotesize\ttfamily bool Hash\+Index\+::shut (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+free memory of hash table and other strucure. 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a80cee3927658bdeb678c776333115268}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_a481e91d4a269aa0d4ab5399eacb02faa}\label{classHashIndex_a481e91d4a269aa0d4ab5399eacb02faa}} 
+\index{HashIndex@{HashIndex}!tranToInt64@{tranToInt64}}
+\index{tranToInt64@{tranToInt64}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{tranToInt64()}{tranToInt64()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Index\+::tran\+To\+Int64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+assemble hash keys, INT and CHARN. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & buffer of column data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em int64} & hash index code \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a21607f9558cf7b16980fb069e148a98e}{Index}}.
+
+\mbox{\Hypertarget{classHashIndex_a66e388d2ab37ae96adc8864b1b833b7f}\label{classHashIndex_a66e388d2ab37ae96adc8864b1b833b7f}} 
+\index{HashIndex@{HashIndex}!tranToInt64@{tranToInt64}}
+\index{tranToInt64@{tranToInt64}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{tranToInt64()}{tranToInt64()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Index\+::tran\+To\+Int64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{i\+\_\+data\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+assemble hash keys, INT and CHARN. 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+data} & pointers of column data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em int64} & hash index code \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classIndex_a2a7d273304d6692b348d9fcb92c41622}{Index}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classHashIndex_aeac12236ee18acdb9fd5bde941389f87}\label{classHashIndex_aeac12236ee18acdb9fd5bde941389f87}} 
+\index{HashIndex@{HashIndex}!ih\_cell\_capbits@{ih\_cell\_capbits}}
+\index{ih\_cell\_capbits@{ih\_cell\_capbits}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{ih\_cell\_capbits}{ih\_cell\_capbits}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Index\+::ih\+\_\+cell\+\_\+capbits\hspace{0.3cm}{\ttfamily [private]}}
+
+as cellnum is power of 2, so the number of bits can use is log2(cellnum) \mbox{\Hypertarget{classHashIndex_a9481b45ea123cf27c9e08bd9984c684b}\label{classHashIndex_a9481b45ea123cf27c9e08bd9984c684b}} 
+\index{HashIndex@{HashIndex}!ih\_column\_cap@{ih\_column\_cap}}
+\index{ih\_column\_cap@{ih\_column\_cap}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{ih\_column\_cap}{ih\_column\_cap}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Index\+::ih\+\_\+column\+\_\+cap\hspace{0.3cm}{\ttfamily [private]}}
+
+got from parent class, the number of columns in the key \mbox{\Hypertarget{classHashIndex_aaebae7dffe156034425bc496699c2a6c}\label{classHashIndex_aaebae7dffe156034425bc496699c2a6c}} 
+\index{HashIndex@{HashIndex}!ih\_column\_num@{ih\_column\_num}}
+\index{ih\_column\_num@{ih\_column\_num}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{ih\_column\_num}{ih\_column\_num}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Index\+::ih\+\_\+column\+\_\+num\hspace{0.3cm}{\ttfamily [private]}}
+
+current number of added columns \mbox{\Hypertarget{classHashIndex_adad6d279b9e1d93dacb1edb706748fb3}\label{classHashIndex_adad6d279b9e1d93dacb1edb706748fb3}} 
+\index{HashIndex@{HashIndex}!ih\_datatype@{ih\_datatype}}
+\index{ih\_datatype@{ih\_datatype}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{ih\_datatype}{ih\_datatype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBasicType}{Basic\+Type}}$\ast$$\ast$ Hash\+Index\+::ih\+\_\+datatype\hspace{0.3cm}{\ttfamily [private]}}
+
+each column data type \mbox{\Hypertarget{classHashIndex_ae95cc72c377a3b96bf6f1b7f835f8543}\label{classHashIndex_ae95cc72c377a3b96bf6f1b7f835f8543}} 
+\index{HashIndex@{HashIndex}!ih\_hash\_bits@{ih\_hash\_bits}}
+\index{ih\_hash\_bits@{ih\_hash\_bits}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{ih\_hash\_bits}{ih\_hash\_bits}}
+{\footnotesize\ttfamily int64\+\_\+t$\ast$ Hash\+Index\+::ih\+\_\+hash\+\_\+bits\hspace{0.3cm}{\ttfamily [private]}}
+
+each column assigend bits when hashing \mbox{\Hypertarget{classHashIndex_ad70a1906f2e4289414bc372c0a2b6611}\label{classHashIndex_ad70a1906f2e4289414bc372c0a2b6611}} 
+\index{HashIndex@{HashIndex}!ih\_hashtable@{ih\_hashtable}}
+\index{ih\_hashtable@{ih\_hashtable}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{ih\_hashtable}{ih\_hashtable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHashTable}{Hash\+Table}}$\ast$ Hash\+Index\+::ih\+\_\+hashtable\hspace{0.3cm}{\ttfamily [private]}}
+
+main part hash table \mbox{\Hypertarget{classHashIndex_a45af5036b1ea3b0c885d8ec268e9d586}\label{classHashIndex_a45af5036b1ea3b0c885d8ec268e9d586}} 
+\index{HashIndex@{HashIndex}!ih\_table\_offset@{ih\_table\_offset}}
+\index{ih\_table\_offset@{ih\_table\_offset}!HashIndex@{HashIndex}}
+\doxysubsubsection{\texorpdfstring{ih\_table\_offset}{ih\_table\_offset}}
+{\footnotesize\ttfamily int64\+\_\+t$\ast$ Hash\+Index\+::ih\+\_\+table\+\_\+offset\hspace{0.3cm}{\ttfamily [private]}}
+
+offsets of column key in rowtable 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{hashindex_8h}{hashindex.\+h}}\item 
+system/\mbox{\hyperlink{hashindex_8cc}{hashindex.\+cc}}\end{DoxyCompactItemize}

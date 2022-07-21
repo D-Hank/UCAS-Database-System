@@ -1,0 +1,257 @@
+\hypertarget{classHashJoin}{}\doxysection{Hash\+Join Class Reference}
+\label{classHashJoin}\index{HashJoin@{HashJoin}}
+
+
+{\ttfamily \#include $<$executor.\+h$>$}
+
+Inheritance diagram for Hash\+Join\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classHashJoin}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHashJoin_a6df8d30ffd84da72b2e993795158dae4}{Hash\+Join}} ()
+\item 
+\mbox{\hyperlink{classHashJoin_a4ba5975eab282de2459566c83a8da310}{Hash\+Join}} (std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classJoin_a674e003f67983c93809515554fad1b42}{left\+\_\+cid}}, std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classJoin_a93609b5330e1d25f071824cf531d69bf}{right\+\_\+cid}}, int64\+\_\+t \mbox{\hyperlink{classJoin_a9b1555b2d862a8b75d9f95c1176ff6d5}{left\+\_\+rank}}, int64\+\_\+t \mbox{\hyperlink{classJoin_a3a1de225bb90731c6d541fd2aecbd7dc}{right\+\_\+rank}})
+\item 
+\mbox{\hyperlink{classHashJoin_a0a588361c7fe77582c1b4ff544d821f7}{$\sim$\+Hash\+Join}} ()
+\item 
+bool \mbox{\hyperlink{classHashJoin_acf6d8d36dd4388595b6d6923e118c019}{close}} ()
+\item 
+bool \mbox{\hyperlink{classHashJoin_a07a8395f9f01dce593dc05e33a7d71ac}{get\+Next}} ()
+\item 
+bool \mbox{\hyperlink{classHashJoin_abc599afb02c6ecf81c9a585dbadb89a8}{open}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::multimap$<$ std\+::string, char $\ast$ $>$ \mbox{\hyperlink{classHashJoin_a5e4f7bba6c2e3a090cb24f2e93ca164b}{hash\+\_\+index}}
+\item 
+std\+::multimap$<$ std\+::string, char $\ast$ $>$\+::iterator \mbox{\hyperlink{classHashJoin_ad4469d34bd596e7dc3f31f09e54b4039}{last\+\_\+iter}}
+\item 
+char $\ast$ \mbox{\hyperlink{classHashJoin_a86dbf689390517e7c50cb1526a22f819}{left\+\_\+buf}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashJoin_a75bee439dddd9eb16c4a027e73dab351}{left\+\_\+key\+\_\+off}}
+\item 
+\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$ \mbox{\hyperlink{classHashJoin_a9b9604f71c5ec47acb772dc1743f404d}{left\+\_\+key\+\_\+type}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashJoin_ad0f4a60b39b7902a32a92ede74ab6be7}{left\+\_\+tuple\+\_\+size}}
+\item 
+std\+::vector$<$ char $\ast$ $>$ \mbox{\hyperlink{classHashJoin_a736cd63b229cd0f6b642a269d53bb510}{middle\+\_\+buf\+\_\+array}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashJoin_a950194cef4828cd6b30311304d3d7a54}{middle\+\_\+buf\+\_\+size}}
+\item 
+char $\ast$ \mbox{\hyperlink{classHashJoin_ae5234adeed85ade5485c32a5a711d081}{right\+\_\+buf}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashJoin_aad819a2cfdbe7e5de5bf84cfb34539a7}{right\+\_\+buf\+\_\+size}}
+\item 
+bool \mbox{\hyperlink{classHashJoin_a15a52b5eca1be4769a0d7b3e0df327f5}{right\+\_\+has\+\_\+next}}
+\item 
+char $\ast$ \mbox{\hyperlink{classHashJoin_a0748c1444b9e5bda2604345e27072d45}{right\+\_\+key\+\_\+pos}}
+\item 
+\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$ \mbox{\hyperlink{classHashJoin_ad739ac3f10fb67e4827a279a8881f951}{right\+\_\+key\+\_\+type}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classHashJoin_a5be9939614c3c2071ee67672f4774664}{right\+\_\+tuple\+\_\+size}}
+\item 
+char \mbox{\hyperlink{classHashJoin_a623d957dbe7638597ae49017a4d3ad58}{txt\+\_\+buf}} \mbox{[}128\mbox{]}
+\item 
+std\+::multimap$<$ std\+::string, char $\ast$ $>$\+::iterator \mbox{\hyperlink{classHashJoin_a604bd203943fa7e54abafcd2ef60660b}{upper\+\_\+iter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Definition of class \mbox{\hyperlink{classHashJoin}{Hash\+Join}} the simple {\ttfamily \mbox{\hyperlink{classHashJoin}{Hash\+Join}}} operator with arbitrary left and right 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHashJoin_a6df8d30ffd84da72b2e993795158dae4}\label{classHashJoin_a6df8d30ffd84da72b2e993795158dae4}} 
+\index{HashJoin@{HashJoin}!HashJoin@{HashJoin}}
+\index{HashJoin@{HashJoin}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{HashJoin()}{HashJoin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Hash\+Join\+::\+Hash\+Join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Upper bound of iterator for current key Constructor \mbox{\Hypertarget{classHashJoin_a0a588361c7fe77582c1b4ff544d821f7}\label{classHashJoin_a0a588361c7fe77582c1b4ff544d821f7}} 
+\index{HashJoin@{HashJoin}!````~HashJoin@{$\sim$HashJoin}}
+\index{````~HashJoin@{$\sim$HashJoin}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{$\sim$HashJoin()}{~HashJoin()}}
+{\footnotesize\ttfamily Hash\+Join\+::$\sim$\+Hash\+Join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor \mbox{\Hypertarget{classHashJoin_a4ba5975eab282de2459566c83a8da310}\label{classHashJoin_a4ba5975eab282de2459566c83a8da310}} 
+\index{HashJoin@{HashJoin}!HashJoin@{HashJoin}}
+\index{HashJoin@{HashJoin}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{HashJoin()}{HashJoin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Hash\+Join\+::\+Hash\+Join (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int64\+\_\+t $>$}]{left\+\_\+cid,  }\item[{std\+::vector$<$ int64\+\_\+t $>$}]{right\+\_\+cid,  }\item[{int64\+\_\+t}]{left\+\_\+rank,  }\item[{int64\+\_\+t}]{right\+\_\+rank }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overload constructor, set some attributes if already known 
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+cid} & column ID from left \\
+\hline
+{\em right\+\_\+cid} & column ID from right \\
+\hline
+{\em left\+\_\+rank} & rank of join key from left \\
+\hline
+{\em right\+\_\+rank} & rank of join key from right \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHashJoin_acf6d8d36dd4388595b6d6923e118c019}\label{classHashJoin_acf6d8d36dd4388595b6d6923e118c019}} 
+\index{HashJoin@{HashJoin}!close@{close}}
+\index{close@{close}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool Hash\+Join\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Close this operator 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classJoin_a17937583484d82767f24e032497f9b97}{Join}}.
+
+\mbox{\Hypertarget{classHashJoin_a07a8395f9f01dce593dc05e33a7d71ac}\label{classHashJoin_a07a8395f9f01dce593dc05e33a7d71ac}} 
+\index{HashJoin@{HashJoin}!getNext@{getNext}}
+\index{getNext@{getNext}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily bool Hash\+Join\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Generate next record 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classJoin_a4bef631fe8bd0cd7523f35560d8826e7}{Join}}.
+
+\mbox{\Hypertarget{classHashJoin_abc599afb02c6ecf81c9a585dbadb89a8}\label{classHashJoin_abc599afb02c6ecf81c9a585dbadb89a8}} 
+\index{HashJoin@{HashJoin}!open@{open}}
+\index{open@{open}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool Hash\+Join\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Open a \mbox{\hyperlink{classHashJoin}{Hash\+Join}} operator 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classJoin_a1bdda2e5254ccd8a98cae52cd892337b}{Join}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classHashJoin_a5e4f7bba6c2e3a090cb24f2e93ca164b}\label{classHashJoin_a5e4f7bba6c2e3a090cb24f2e93ca164b}} 
+\index{HashJoin@{HashJoin}!hash\_index@{hash\_index}}
+\index{hash\_index@{hash\_index}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{hash\_index}{hash\_index}}
+{\footnotesize\ttfamily std\+::multimap$<$std\+::string, char $\ast$$>$ Hash\+Join\+::hash\+\_\+index\hspace{0.3cm}{\ttfamily [private]}}
+
+A buffer to receive text value \mbox{\Hypertarget{classHashJoin_ad4469d34bd596e7dc3f31f09e54b4039}\label{classHashJoin_ad4469d34bd596e7dc3f31f09e54b4039}} 
+\index{HashJoin@{HashJoin}!last\_iter@{last\_iter}}
+\index{last\_iter@{last\_iter}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{last\_iter}{last\_iter}}
+{\footnotesize\ttfamily std\+::multimap$<$std\+::string,char$\ast$$>$\+::iterator Hash\+Join\+::last\+\_\+iter\hspace{0.3cm}{\ttfamily [private]}}
+
+Newly created hash index, will not be added to catalog \mbox{\Hypertarget{classHashJoin_a86dbf689390517e7c50cb1526a22f819}\label{classHashJoin_a86dbf689390517e7c50cb1526a22f819}} 
+\index{HashJoin@{HashJoin}!left\_buf@{left\_buf}}
+\index{left\_buf@{left\_buf}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{left\_buf}{left\_buf}}
+{\footnotesize\ttfamily char$\ast$ Hash\+Join\+::left\+\_\+buf\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classHashJoin_a75bee439dddd9eb16c4a027e73dab351}\label{classHashJoin_a75bee439dddd9eb16c4a027e73dab351}} 
+\index{HashJoin@{HashJoin}!left\_key\_off@{left\_key\_off}}
+\index{left\_key\_off@{left\_key\_off}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{left\_key\_off}{left\_key\_off}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Join\+::left\+\_\+key\+\_\+off\hspace{0.3cm}{\ttfamily [private]}}
+
+Position for join key from the right \mbox{\Hypertarget{classHashJoin_a9b9604f71c5ec47acb772dc1743f404d}\label{classHashJoin_a9b9604f71c5ec47acb772dc1743f404d}} 
+\index{HashJoin@{HashJoin}!left\_key\_type@{left\_key\_type}}
+\index{left\_key\_type@{left\_key\_type}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{left\_key\_type}{left\_key\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBasicType}{Basic\+Type}}$\ast$ Hash\+Join\+::left\+\_\+key\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+Basic type of join key on the right \mbox{\Hypertarget{classHashJoin_ad0f4a60b39b7902a32a92ede74ab6be7}\label{classHashJoin_ad0f4a60b39b7902a32a92ede74ab6be7}} 
+\index{HashJoin@{HashJoin}!left\_tuple\_size@{left\_tuple\_size}}
+\index{left\_tuple\_size@{left\_tuple\_size}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{left\_tuple\_size}{left\_tuple\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Join\+::left\+\_\+tuple\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of each middle buffer \mbox{\Hypertarget{classHashJoin_a736cd63b229cd0f6b642a269d53bb510}\label{classHashJoin_a736cd63b229cd0f6b642a269d53bb510}} 
+\index{HashJoin@{HashJoin}!middle\_buf\_array@{middle\_buf\_array}}
+\index{middle\_buf\_array@{middle\_buf\_array}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{middle\_buf\_array}{middle\_buf\_array}}
+{\footnotesize\ttfamily std\+::vector$<$char $\ast$$>$ Hash\+Join\+::middle\+\_\+buf\+\_\+array\hspace{0.3cm}{\ttfamily [private]}}
+
+Buffer allocated for right child \mbox{\Hypertarget{classHashJoin_a950194cef4828cd6b30311304d3d7a54}\label{classHashJoin_a950194cef4828cd6b30311304d3d7a54}} 
+\index{HashJoin@{HashJoin}!middle\_buf\_size@{middle\_buf\_size}}
+\index{middle\_buf\_size@{middle\_buf\_size}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{middle\_buf\_size}{middle\_buf\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Join\+::middle\+\_\+buf\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Each element points to an intermidiate record \mbox{\Hypertarget{classHashJoin_ae5234adeed85ade5485c32a5a711d081}\label{classHashJoin_ae5234adeed85ade5485c32a5a711d081}} 
+\index{HashJoin@{HashJoin}!right\_buf@{right\_buf}}
+\index{right\_buf@{right\_buf}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{right\_buf}{right\_buf}}
+{\footnotesize\ttfamily char$\ast$ Hash\+Join\+::right\+\_\+buf\hspace{0.3cm}{\ttfamily [private]}}
+
+Points to current area for left child to write \mbox{\Hypertarget{classHashJoin_aad819a2cfdbe7e5de5bf84cfb34539a7}\label{classHashJoin_aad819a2cfdbe7e5de5bf84cfb34539a7}} 
+\index{HashJoin@{HashJoin}!right\_buf\_size@{right\_buf\_size}}
+\index{right\_buf\_size@{right\_buf\_size}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{right\_buf\_size}{right\_buf\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Join\+::right\+\_\+buf\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of each record from right \mbox{\Hypertarget{classHashJoin_a15a52b5eca1be4769a0d7b3e0df327f5}\label{classHashJoin_a15a52b5eca1be4769a0d7b3e0df327f5}} 
+\index{HashJoin@{HashJoin}!right\_has\_next@{right\_has\_next}}
+\index{right\_has\_next@{right\_has\_next}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{right\_has\_next}{right\_has\_next}}
+{\footnotesize\ttfamily bool Hash\+Join\+::right\+\_\+has\+\_\+next\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of buffer allocated for right \mbox{\Hypertarget{classHashJoin_a0748c1444b9e5bda2604345e27072d45}\label{classHashJoin_a0748c1444b9e5bda2604345e27072d45}} 
+\index{HashJoin@{HashJoin}!right\_key\_pos@{right\_key\_pos}}
+\index{right\_key\_pos@{right\_key\_pos}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{right\_key\_pos}{right\_key\_pos}}
+{\footnotesize\ttfamily char$\ast$ Hash\+Join\+::right\+\_\+key\+\_\+pos\hspace{0.3cm}{\ttfamily [private]}}
+
+Whether read to the end of right input \mbox{\Hypertarget{classHashJoin_ad739ac3f10fb67e4827a279a8881f951}\label{classHashJoin_ad739ac3f10fb67e4827a279a8881f951}} 
+\index{HashJoin@{HashJoin}!right\_key\_type@{right\_key\_type}}
+\index{right\_key\_type@{right\_key\_type}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{right\_key\_type}{right\_key\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBasicType}{Basic\+Type}}$\ast$ Hash\+Join\+::right\+\_\+key\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+Offset for join key from the left \mbox{\Hypertarget{classHashJoin_a5be9939614c3c2071ee67672f4774664}\label{classHashJoin_a5be9939614c3c2071ee67672f4774664}} 
+\index{HashJoin@{HashJoin}!right\_tuple\_size@{right\_tuple\_size}}
+\index{right\_tuple\_size@{right\_tuple\_size}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{right\_tuple\_size}{right\_tuple\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Hash\+Join\+::right\+\_\+tuple\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of each record from left \mbox{\Hypertarget{classHashJoin_a623d957dbe7638597ae49017a4d3ad58}\label{classHashJoin_a623d957dbe7638597ae49017a4d3ad58}} 
+\index{HashJoin@{HashJoin}!txt\_buf@{txt\_buf}}
+\index{txt\_buf@{txt\_buf}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{txt\_buf}{txt\_buf}}
+{\footnotesize\ttfamily char Hash\+Join\+::txt\+\_\+buf\mbox{[}128\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+Basic type of join key on the left \mbox{\Hypertarget{classHashJoin_a604bd203943fa7e54abafcd2ef60660b}\label{classHashJoin_a604bd203943fa7e54abafcd2ef60660b}} 
+\index{HashJoin@{HashJoin}!upper\_iter@{upper\_iter}}
+\index{upper\_iter@{upper\_iter}!HashJoin@{HashJoin}}
+\doxysubsubsection{\texorpdfstring{upper\_iter}{upper\_iter}}
+{\footnotesize\ttfamily std\+::multimap$<$std\+::string,char$\ast$$>$\+::iterator Hash\+Join\+::upper\+\_\+iter\hspace{0.3cm}{\ttfamily [private]}}
+
+Last time iterator when searching from the left 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{executor_8h}{executor.\+h}}\item 
+system/\mbox{\hyperlink{executor_8cc}{executor.\+cc}}\end{DoxyCompactItemize}

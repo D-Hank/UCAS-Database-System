@@ -1,0 +1,53 @@
+小数据集测试：(1-2,保证容易手工检查)
+
+  TQ15: 4个表join, 各有1个filter条件，没有index, 输出4列（每个表各选1列）
+    select r_name,n_name,c_name,o_totalprice
+    from region,nation,customer,orders
+    where r_regionkey = n_regionkey and n_nationkey = c_nationkey and c_custkey = o_custkey
+
+  TQ16: TQ2基础上，加一个group by key, 一个aggregation，小数据集
+    (index: suppkey)
+    select ps_partkey,sum(ps_supplycost)
+    from partsupp
+    where ps_suppkey = 6 and ps_supplycost < 2000
+    group by ps_partkey
+
+  TQ17: TQ4基础上，加一个group by key, 一个aggregation
+    select ps_partkey,sum(ps_availqty)
+    from partsupp
+    where ps_partkey > 1000 and ps_suppkey < 3000
+    group by ps_partkey
+
+  TQ18: TQ6基础上，加一个group by key, 2个aggregation，小数据集
+    select c_name,SUM(o_totalprice),MAX(o_totalprice)
+    from customer,orders
+    where c_custkey = o_custkey
+    group by c_name
+
+  TQ19: TQ8基础上，加一个group by key, 2个aggregation
+    select l_suppkey,sum(o_totalprice),sum(l_tax)
+    from orders,lineitem
+    where o_orderkey = l_orderkey
+    group by l_suppkey
+
+  TQ20: TQ18基础上加一个having 条件
+    select l_suppkey,sum(o_totalprice),sum(l_tax)
+    from orders,lineitem
+    where o_orderkey = l_orderkey
+    group by l_suppkey
+    having l_suppkey < 1000
+
+  TQ21: TQ2基础上，按1个输出列进行排序，小数据集
+    (index: ps_suppkey)
+    select ps_partkey,ps_availqty
+    from partsupp
+    where ps_suppkey = 6 and ps_availqty < 8000
+    order by ps_availqty
+
+  TQ22: TQ14基础上，增加一个group by key, 一个aggregation，然后按group by key排序
+    select r_regionkey,n_nationkey,sum(o_totalprice)
+    from region,nation,customer,orders
+    where r_regionkey = n_regionkey and n_nationkey = c_nationkey and c_custkey = o_custkey
+    group by r_regionkey,n_nationkey
+    order by r_regionkey,n_nationkey
+  

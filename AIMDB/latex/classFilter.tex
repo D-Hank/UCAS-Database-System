@@ -1,0 +1,485 @@
+\hypertarget{classFilter}{}\doxysection{Filter Class Reference}
+\label{classFilter}\index{Filter@{Filter}}
+
+
+{\ttfamily \#include $<$executor.\+h$>$}
+
+Inheritance diagram for Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFilter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFilter_ad15994c30d497afd567a6445446a249e}{Filter}} ()
+\item 
+\mbox{\hyperlink{classFilter_a9f7c014138dcba6800bb13dde1b371aa}{Filter}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$\mbox{\hyperlink{classFilter_a0ea3318ccde52b12ddea7955a8f6b461}{child}}, int64\+\_\+t c\+\_\+id\mbox{[}$\,$\mbox{]}, int64\+\_\+t num\+\_\+column, int64\+\_\+t filt\+\_\+rank, \mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}} \mbox{\hyperlink{classFilter_ab7ca5c3a69e03025fa77f73533903428}{cmp\+\_\+mtd}}, char $\ast$\mbox{\hyperlink{classFilter_a3928d1a9ebcf677611b59659e38a8c00}{value}})
+\item 
+\mbox{\hyperlink{classFilter_a807cd2d9d7cc07aca9c113775d91d208}{Filter}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$\mbox{\hyperlink{classFilter_a0ea3318ccde52b12ddea7955a8f6b461}{child}}, std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classFilter_a269628d40f1917cfb08645bfa1b1bd69}{input\+\_\+cid}}, int64\+\_\+t filt\+\_\+rank, \mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}} \mbox{\hyperlink{classFilter_ab7ca5c3a69e03025fa77f73533903428}{cmp\+\_\+mtd}}, char $\ast$\mbox{\hyperlink{classFilter_a3928d1a9ebcf677611b59659e38a8c00}{value}})
+\item 
+\mbox{\hyperlink{classFilter_a502ee334d42eac3edbaf32b599f9c35e}{$\sim$\+Filter}} ()
+\item 
+bool \mbox{\hyperlink{classFilter_aef5d442eaa7f62fd8a612297b954ff13}{close}} ()
+\item 
+bool \mbox{\hyperlink{classFilter_a6ae5d9c291cebdf5da5df41f3e9bacbd}{get\+Next}} ()
+\item 
+bool \mbox{\hyperlink{classFilter_a08697df199ab6b840737ddd13e65c4f1}{open}} ()
+\item 
+void \mbox{\hyperlink{classFilter_a07e65756731de3a3c473d1d4f60e0e62}{set\+Child}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$\mbox{\hyperlink{classFilter_a0ea3318ccde52b12ddea7955a8f6b461}{child}})
+\item 
+bool \mbox{\hyperlink{classFilter_abffef35523203cff39f9af9513605e3d}{set\+Column}} (int64\+\_\+t c\+\_\+id\mbox{[}$\,$\mbox{]}, int64\+\_\+t num\+\_\+column, int64\+\_\+t filt\+\_\+rank, \mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}} \mbox{\hyperlink{classFilter_ab7ca5c3a69e03025fa77f73533903428}{cmp\+\_\+mtd}}, char $\ast$\mbox{\hyperlink{classFilter_a3928d1a9ebcf677611b59659e38a8c00}{value}})
+\item 
+bool \mbox{\hyperlink{classFilter_a986b3f544a0d6e5d7e556b53f9d584ee}{set\+Column}} (std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classFilter_a269628d40f1917cfb08645bfa1b1bd69}{input\+\_\+cid}}, int64\+\_\+t filt\+\_\+rank, \mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}} \mbox{\hyperlink{classFilter_ab7ca5c3a69e03025fa77f73533903428}{cmp\+\_\+mtd}}, char $\ast$\mbox{\hyperlink{classFilter_a3928d1a9ebcf677611b59659e38a8c00}{value}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFilter_a2aab93fc2866c1a33d45c76352b36c98}{init\+Cmp\+Func}} ()
+\item 
+void \mbox{\hyperlink{classFilter_aed6b83ce16e83d6199186addbfb66fe7}{set\+Filt\+Cond}} (int64\+\_\+t filt\+\_\+rank, \mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}} \mbox{\hyperlink{classFilter_ab7ca5c3a69e03025fa77f73533903428}{cmp\+\_\+mtd}}, char $\ast$\mbox{\hyperlink{classFilter_a3928d1a9ebcf677611b59659e38a8c00}{value}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classFilter_aea8442b25dd054593a829eb8a6a79287}{cmp\+EQ}} (void $\ast$data1, void $\ast$data2, \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$data\+\_\+type)
+\item 
+static bool \mbox{\hyperlink{classFilter_a35cc237bb94803fa6369538e47fdbd80}{cmp\+GE}} (void $\ast$data1, void $\ast$data2, \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$data\+\_\+type)
+\item 
+static bool \mbox{\hyperlink{classFilter_aef675bf3dba25128819eeb29b4a33de1}{cmp\+GT}} (void $\ast$data1, void $\ast$data2, \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$data\+\_\+type)
+\item 
+static bool \mbox{\hyperlink{classFilter_a09c88eae7178511ca6809c7fd5ac00ea}{cmp\+LE}} (void $\ast$data1, void $\ast$data2, \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$data\+\_\+type)
+\item 
+static bool \mbox{\hyperlink{classFilter_a4e201a5843cff173cb69c85237b7bab0}{cmp\+LT}} (void $\ast$data1, void $\ast$data2, \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$data\+\_\+type)
+\item 
+static bool \mbox{\hyperlink{classFilter_aac275780fd8b5e1bc8492abe0cd0149c}{cmp\+NE}} (void $\ast$data1, void $\ast$data2, \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$data\+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{classFilter_a66cdf6bae230ceb4e61d163aeb2424f6}{buf\+\_\+for\+\_\+child}}
+\item 
+\mbox{\hyperlink{classOperator}{Operator}} $\ast$ \mbox{\hyperlink{classFilter_a0ea3318ccde52b12ddea7955a8f6b461}{child}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classFilter_a65d6dd4b4d853bf8e47a80ecb282193d}{child\+\_\+buf\+\_\+size}}
+\item 
+bool($\ast$ \mbox{\hyperlink{classFilter_aebd1d7d0edd23ad8fe1781465db53442}{cmp\+\_\+func}} )(void $\ast$a, void $\ast$b, \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$data\+\_\+type)
+\item 
+\mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}} \mbox{\hyperlink{classFilter_ab7ca5c3a69e03025fa77f73533903428}{cmp\+\_\+mtd}}
+\item 
+bool($\ast$ \mbox{\hyperlink{classFilter_a6e26dd1a24c2026cb30b826924718c0c}{cmp\+\_\+table}} \mbox{[}\mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fbab3290be54b29e913a7a4b12dd97ecafa}{MAX\+\_\+\+CM}}\mbox{]})(void $\ast$data1, void $\ast$data2, \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$data\+\_\+type)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classFilter_aa3f7908e64154a37c50a62cff0803ded}{filt\+\_\+off}}
+\item 
+char $\ast$ \mbox{\hyperlink{classFilter_ac494539f59c118731e13d473a17fe803}{filt\+\_\+pos}}
+\item 
+\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$ \mbox{\hyperlink{classFilter_ab2bbb37abb78515408754adc6241233f}{filt\+\_\+type}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classFilter_a3c5411327207acf76f1beaa934b2034c}{in\+\_\+tuple\+\_\+size}}
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classFilter_a269628d40f1917cfb08645bfa1b1bd69}{input\+\_\+cid}}
+\item 
+char \mbox{\hyperlink{classFilter_a3928d1a9ebcf677611b59659e38a8c00}{value}} \mbox{[}128\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+definition of the class \mbox{\hyperlink{classFilter}{Filter}} the filter operator 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFilter_ad15994c30d497afd567a6445446a249e}\label{classFilter_ad15994c30d497afd567a6445446a249e}} 
+\index{Filter@{Filter}!Filter@{Filter}}
+\index{Filter@{Filter}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{Filter()}{Filter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Filter\+::\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor \mbox{\Hypertarget{classFilter_a502ee334d42eac3edbaf32b599f9c35e}\label{classFilter_a502ee334d42eac3edbaf32b599f9c35e}} 
+\index{Filter@{Filter}!````~Filter@{$\sim$Filter}}
+\index{````~Filter@{$\sim$Filter}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{$\sim$Filter()}{~Filter()}}
+{\footnotesize\ttfamily Filter\+::$\sim$\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor \mbox{\Hypertarget{classFilter_a807cd2d9d7cc07aca9c113775d91d208}\label{classFilter_a807cd2d9d7cc07aca9c113775d91d208}} 
+\index{Filter@{Filter}!Filter@{Filter}}
+\index{Filter@{Filter}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{Filter()}{Filter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Filter\+::\+Filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{child,  }\item[{std\+::vector$<$ int64\+\_\+t $>$}]{input\+\_\+cid,  }\item[{int64\+\_\+t}]{filt\+\_\+rank,  }\item[{\mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}}}]{cmp\+\_\+mtd,  }\item[{char $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overload constructor, designate some properties when created operator 
+\begin{DoxyParams}{Parameters}
+{\em child} & child operator to set \\
+\hline
+{\em input\+\_\+cid} & ID of input columns \\
+\hline
+{\em filt\+\_\+rank} & rank of filtering column from input \\
+\hline
+{\em cmp\+\_\+mtd} & compare method \\
+\hline
+{\em value} & text of value compared with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFilter_a9f7c014138dcba6800bb13dde1b371aa}\label{classFilter_a9f7c014138dcba6800bb13dde1b371aa}} 
+\index{Filter@{Filter}!Filter@{Filter}}
+\index{Filter@{Filter}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{Filter()}{Filter()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Filter\+::\+Filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{child,  }\item[{int64\+\_\+t}]{c\+\_\+id\mbox{[}$\,$\mbox{]},  }\item[{int64\+\_\+t}]{num\+\_\+column,  }\item[{int64\+\_\+t}]{filt\+\_\+rank,  }\item[{\mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}}}]{cmp\+\_\+mtd,  }\item[{char $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overload constructor 
+\begin{DoxyParams}{Parameters}
+{\em child} & child operator to set \\
+\hline
+{\em c\+\_\+id} & ID of input columns \\
+\hline
+{\em num\+\_\+column} & number of input columns \\
+\hline
+{\em filt\+\_\+rank} & rank of filtering column from input \\
+\hline
+{\em cmp\+\_\+mtd} & compare method \\
+\hline
+{\em value} & text of value compared with \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFilter_aef5d442eaa7f62fd8a612297b954ff13}\label{classFilter_aef5d442eaa7f62fd8a612297b954ff13}} 
+\index{Filter@{Filter}!close@{close}}
+\index{close@{close}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool Filter\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+close this operator, release all resources 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classOperator_a1db4a9736164f68e497e2f89d00473f1}{Operator}}.
+
+\mbox{\Hypertarget{classFilter_aea8442b25dd054593a829eb8a6a79287}\label{classFilter_aea8442b25dd054593a829eb8a6a79287}} 
+\index{Filter@{Filter}!cmpEQ@{cmpEQ}}
+\index{cmpEQ@{cmpEQ}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{cmpEQ()}{cmpEQ()}}
+{\footnotesize\ttfamily static bool Filter\+::cmp\+EQ (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2,  }\item[{\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$}]{data\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Equal to 
+\begin{DoxyParams}{Parameters}
+{\em data1} & first operand \\
+\hline
+{\em data2} & second operand \\
+\hline
+{\em data\+\_\+type} & basic type of these two operands \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & data1 == data2 \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classFilter_a35cc237bb94803fa6369538e47fdbd80}\label{classFilter_a35cc237bb94803fa6369538e47fdbd80}} 
+\index{Filter@{Filter}!cmpGE@{cmpGE}}
+\index{cmpGE@{cmpGE}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{cmpGE()}{cmpGE()}}
+{\footnotesize\ttfamily static bool Filter\+::cmp\+GE (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2,  }\item[{\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$}]{data\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Greater than or equal to 
+\begin{DoxyParams}{Parameters}
+{\em data1} & first operand \\
+\hline
+{\em data2} & second operand \\
+\hline
+{\em data\+\_\+type} & basic type of these two operands \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & data1 \texorpdfstring{$>$}{>}= data2 \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classFilter_aef675bf3dba25128819eeb29b4a33de1}\label{classFilter_aef675bf3dba25128819eeb29b4a33de1}} 
+\index{Filter@{Filter}!cmpGT@{cmpGT}}
+\index{cmpGT@{cmpGT}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{cmpGT()}{cmpGT()}}
+{\footnotesize\ttfamily static bool Filter\+::cmp\+GT (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2,  }\item[{\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$}]{data\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Greater than 
+\begin{DoxyParams}{Parameters}
+{\em data1} & first operand \\
+\hline
+{\em data2} & second operand \\
+\hline
+{\em data\+\_\+type} & basic type of these two operands \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & data1 \texorpdfstring{$>$}{>} data2 \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classFilter_a09c88eae7178511ca6809c7fd5ac00ea}\label{classFilter_a09c88eae7178511ca6809c7fd5ac00ea}} 
+\index{Filter@{Filter}!cmpLE@{cmpLE}}
+\index{cmpLE@{cmpLE}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{cmpLE()}{cmpLE()}}
+{\footnotesize\ttfamily static bool Filter\+::cmp\+LE (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2,  }\item[{\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$}]{data\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Less than or equal to 
+\begin{DoxyParams}{Parameters}
+{\em data1} & first operand \\
+\hline
+{\em data2} & second operand \\
+\hline
+{\em data\+\_\+type} & basic type of these two operands \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & data1 \texorpdfstring{$<$}{<}= data2 \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classFilter_a4e201a5843cff173cb69c85237b7bab0}\label{classFilter_a4e201a5843cff173cb69c85237b7bab0}} 
+\index{Filter@{Filter}!cmpLT@{cmpLT}}
+\index{cmpLT@{cmpLT}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{cmpLT()}{cmpLT()}}
+{\footnotesize\ttfamily static bool Filter\+::cmp\+LT (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2,  }\item[{\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$}]{data\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Comparision function for this class (wrapped method of \mbox{\hyperlink{classBasicType}{Basic\+Type}}) Less than 
+\begin{DoxyParams}{Parameters}
+{\em data1} & first operand \\
+\hline
+{\em data2} & second operand \\
+\hline
+{\em data\+\_\+type} & basic type of these two operands \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & data1 \texorpdfstring{$<$}{<} data2 \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classFilter_aac275780fd8b5e1bc8492abe0cd0149c}\label{classFilter_aac275780fd8b5e1bc8492abe0cd0149c}} 
+\index{Filter@{Filter}!cmpNE@{cmpNE}}
+\index{cmpNE@{cmpNE}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{cmpNE()}{cmpNE()}}
+{\footnotesize\ttfamily static bool Filter\+::cmp\+NE (\begin{DoxyParamCaption}\item[{void $\ast$}]{data1,  }\item[{void $\ast$}]{data2,  }\item[{\mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$}]{data\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Not equal to 
+\begin{DoxyParams}{Parameters}
+{\em data1} & first operand \\
+\hline
+{\em data2} & second operand \\
+\hline
+{\em data\+\_\+type} & basic type of these two operands \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & data1 != data2 \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classFilter_a6ae5d9c291cebdf5da5df41f3e9bacbd}\label{classFilter_a6ae5d9c291cebdf5da5df41f3e9bacbd}} 
+\index{Filter@{Filter}!getNext@{getNext}}
+\index{getNext@{getNext}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily bool Filter\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+get next tuple iterately 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classOperator_ab9e6e455abb03bc86a18548b4e6b093b}{Operator}}.
+
+\mbox{\Hypertarget{classFilter_a2aab93fc2866c1a33d45c76352b36c98}\label{classFilter_a2aab93fc2866c1a33d45c76352b36c98}} 
+\index{Filter@{Filter}!initCmpFunc@{initCmpFunc}}
+\index{initCmpFunc@{initCmpFunc}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{initCmpFunc()}{initCmpFunc()}}
+{\footnotesize\ttfamily void Filter\+::init\+Cmp\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Initialize compare function \mbox{\Hypertarget{classFilter_a08697df199ab6b840737ddd13e65c4f1}\label{classFilter_a08697df199ab6b840737ddd13e65c4f1}} 
+\index{Filter@{Filter}!open@{open}}
+\index{open@{open}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool Filter\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+open a \mbox{\hyperlink{classFilter}{Filter}} operator 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classOperator_aaec459eabb9b23f5c2253e2ca355d665}{Operator}}.
+
+\mbox{\Hypertarget{classFilter_a07e65756731de3a3c473d1d4f60e0e62}\label{classFilter_a07e65756731de3a3c473d1d4f60e0e62}} 
+\index{Filter@{Filter}!setChild@{setChild}}
+\index{setChild@{setChild}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setChild()}{setChild()}}
+{\footnotesize\ttfamily void Filter\+::set\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set child operator, shoud be called before open 
+\begin{DoxyParams}{Parameters}
+{\em child} & child operator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFilter_abffef35523203cff39f9af9513605e3d}\label{classFilter_abffef35523203cff39f9af9513605e3d}} 
+\index{Filter@{Filter}!setColumn@{setColumn}}
+\index{setColumn@{setColumn}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setColumn()}{setColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Filter\+::set\+Column (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{c\+\_\+id\mbox{[}$\,$\mbox{]},  }\item[{int64\+\_\+t}]{num\+\_\+column,  }\item[{int64\+\_\+t}]{filt\+\_\+rank,  }\item[{\mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}}}]{cmp\+\_\+mtd,  }\item[{char $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Save input column for later use, should be called before open 
+\begin{DoxyParams}{Parameters}
+{\em c\+\_\+id} & the column id of input \\
+\hline
+{\em num\+\_\+column} & number of columns in the input \\
+\hline
+{\em filt\+\_\+rank} & the filter column is which column from the input \\
+\hline
+{\em cmp\+\_\+mtd} & compare method \\
+\hline
+{\em value} & text of designated value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFilter_a986b3f544a0d6e5d7e556b53f9d584ee}\label{classFilter_a986b3f544a0d6e5d7e556b53f9d584ee}} 
+\index{Filter@{Filter}!setColumn@{setColumn}}
+\index{setColumn@{setColumn}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setColumn()}{setColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Filter\+::set\+Column (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int64\+\_\+t $>$}]{input\+\_\+cid,  }\item[{int64\+\_\+t}]{filt\+\_\+rank,  }\item[{\mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}}}]{cmp\+\_\+mtd,  }\item[{char $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overload, set input\+\_\+cid 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+cid} & the column id of input \\
+\hline
+{\em filt\+\_\+rank} & the filter column is which column from the input \\
+\hline
+{\em cmp\+\_\+mtd} & compare method \\
+\hline
+{\em value} & text of designated value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classFilter_aed6b83ce16e83d6199186addbfb66fe7}\label{classFilter_aed6b83ce16e83d6199186addbfb66fe7}} 
+\index{Filter@{Filter}!setFiltCond@{setFiltCond}}
+\index{setFiltCond@{setFiltCond}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{setFiltCond()}{setFiltCond()}}
+{\footnotesize\ttfamily void Filter\+::set\+Filt\+Cond (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{filt\+\_\+rank,  }\item[{\mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}}}]{cmp\+\_\+mtd,  }\item[{char $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Set properties for filter 
+\begin{DoxyParams}{Parameters}
+{\em filt\+\_\+rank} & the filter column is which column from the input \\
+\hline
+{\em cmp\+\_\+mtd} & compare method \\
+\hline
+{\em value} & text value to compare with \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classFilter_a66cdf6bae230ceb4e61d163aeb2424f6}\label{classFilter_a66cdf6bae230ceb4e61d163aeb2424f6}} 
+\index{Filter@{Filter}!buf\_for\_child@{buf\_for\_child}}
+\index{buf\_for\_child@{buf\_for\_child}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{buf\_for\_child}{buf\_for\_child}}
+{\footnotesize\ttfamily char$\ast$ Filter\+::buf\+\_\+for\+\_\+child\hspace{0.3cm}{\ttfamily [private]}}
+
+child operator \mbox{\Hypertarget{classFilter_a0ea3318ccde52b12ddea7955a8f6b461}\label{classFilter_a0ea3318ccde52b12ddea7955a8f6b461}} 
+\index{Filter@{Filter}!child@{child}}
+\index{child@{child}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{child}{child}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOperator}{Operator}}$\ast$ Filter\+::child\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFilter_a65d6dd4b4d853bf8e47a80ecb282193d}\label{classFilter_a65d6dd4b4d853bf8e47a80ecb282193d}} 
+\index{Filter@{Filter}!child\_buf\_size@{child\_buf\_size}}
+\index{child\_buf\_size@{child\_buf\_size}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{child\_buf\_size}{child\_buf\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Filter\+::child\+\_\+buf\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+buffer allocated for child \mbox{\Hypertarget{classFilter_aebd1d7d0edd23ad8fe1781465db53442}\label{classFilter_aebd1d7d0edd23ad8fe1781465db53442}} 
+\index{Filter@{Filter}!cmp\_func@{cmp\_func}}
+\index{cmp\_func@{cmp\_func}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{cmp\_func}{cmp\_func}}
+{\footnotesize\ttfamily bool($\ast$ Filter\+::cmp\+\_\+func) (void $\ast$a, void $\ast$b, \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$data\+\_\+type)\hspace{0.3cm}{\ttfamily [private]}}
+
+datatype of column to filter on \mbox{\Hypertarget{classFilter_ab7ca5c3a69e03025fa77f73533903428}\label{classFilter_ab7ca5c3a69e03025fa77f73533903428}} 
+\index{Filter@{Filter}!cmp\_mtd@{cmp\_mtd}}
+\index{cmp\_mtd@{cmp\_mtd}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{cmp\_mtd}{cmp\_mtd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fb}{Compare\+Method}} Filter\+::cmp\+\_\+mtd\hspace{0.3cm}{\ttfamily [private]}}
+
+offset of column to filter on (with respect to the input) \mbox{\Hypertarget{classFilter_a6e26dd1a24c2026cb30b826924718c0c}\label{classFilter_a6e26dd1a24c2026cb30b826924718c0c}} 
+\index{Filter@{Filter}!cmp\_table@{cmp\_table}}
+\index{cmp\_table@{cmp\_table}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{cmp\_table}{cmp\_table}}
+{\footnotesize\ttfamily bool($\ast$ Filter\+::cmp\+\_\+table\mbox{[}\mbox{\hyperlink{executor_8h_a6fb08838494fe9f0c13e04d1bfc191fbab3290be54b29e913a7a4b12dd97ecafa}{MAX\+\_\+\+CM}}\mbox{]})(void $\ast$data1, void $\ast$data2, \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$data\+\_\+type)\hspace{0.3cm}{\ttfamily [private]}}
+
+save the binary value to compare with Jump table for comparison, data\+\_\+type is used for dynamic binding \mbox{\Hypertarget{classFilter_aa3f7908e64154a37c50a62cff0803ded}\label{classFilter_aa3f7908e64154a37c50a62cff0803ded}} 
+\index{Filter@{Filter}!filt\_off@{filt\_off}}
+\index{filt\_off@{filt\_off}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{filt\_off}{filt\_off}}
+{\footnotesize\ttfamily int64\+\_\+t Filter\+::filt\+\_\+off\hspace{0.3cm}{\ttfamily [private]}}
+
+position of column to filter on \mbox{\Hypertarget{classFilter_ac494539f59c118731e13d473a17fe803}\label{classFilter_ac494539f59c118731e13d473a17fe803}} 
+\index{Filter@{Filter}!filt\_pos@{filt\_pos}}
+\index{filt\_pos@{filt\_pos}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{filt\_pos}{filt\_pos}}
+{\footnotesize\ttfamily char$\ast$ Filter\+::filt\+\_\+pos\hspace{0.3cm}{\ttfamily [private]}}
+
+identifiers of columns to operate \mbox{\Hypertarget{classFilter_ab2bbb37abb78515408754adc6241233f}\label{classFilter_ab2bbb37abb78515408754adc6241233f}} 
+\index{Filter@{Filter}!filt\_type@{filt\_type}}
+\index{filt\_type@{filt\_type}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{filt\_type}{filt\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBasicType}{Basic\+Type}}$\ast$ Filter\+::filt\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+store compare method \mbox{\Hypertarget{classFilter_a3c5411327207acf76f1beaa934b2034c}\label{classFilter_a3c5411327207acf76f1beaa934b2034c}} 
+\index{Filter@{Filter}!in\_tuple\_size@{in\_tuple\_size}}
+\index{in\_tuple\_size@{in\_tuple\_size}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{in\_tuple\_size}{in\_tuple\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Filter\+::in\+\_\+tuple\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+compare function for filter \mbox{\Hypertarget{classFilter_a269628d40f1917cfb08645bfa1b1bd69}\label{classFilter_a269628d40f1917cfb08645bfa1b1bd69}} 
+\index{Filter@{Filter}!input\_cid@{input\_cid}}
+\index{input\_cid@{input\_cid}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{input\_cid}{input\_cid}}
+{\footnotesize\ttfamily std\+::vector$<$ int64\+\_\+t $>$ Filter\+::input\+\_\+cid\hspace{0.3cm}{\ttfamily [private]}}
+
+size of buffer for child \mbox{\Hypertarget{classFilter_a3928d1a9ebcf677611b59659e38a8c00}\label{classFilter_a3928d1a9ebcf677611b59659e38a8c00}} 
+\index{Filter@{Filter}!value@{value}}
+\index{value@{value}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily char Filter\+::value\mbox{[}128\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+size of the input tuple 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{executor_8h}{executor.\+h}}\item 
+system/\mbox{\hyperlink{executor_8cc}{executor.\+cc}}\end{DoxyCompactItemize}

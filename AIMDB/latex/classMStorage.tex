@@ -1,0 +1,178 @@
+\hypertarget{classMStorage}{}\doxysection{MStorage Class Reference}
+\label{classMStorage}\index{MStorage@{MStorage}}
+
+
+{\ttfamily \#include $<$rowtable.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classMStorage_ae75e9c8581c3ef483e1a7d1a9ea6a1e8}{alloc\+Row}} (char $\ast$\&pointer)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classMStorage_aaf2713e384af8571f1800c5eb53294e9}{get\+Record\+Num}} (void)
+\item 
+char $\ast$ \mbox{\hyperlink{classMStorage_ae32a4a8b9b301a650ead67aa95116a34}{get\+Row}} (int64\+\_\+t record\+\_\+rank)
+\item 
+bool \mbox{\hyperlink{classMStorage_aa06543d04e2c4dddd2b1396051a67e74}{init}} (int64\+\_\+t record\+\_\+size)
+\item 
+void \mbox{\hyperlink{classMStorage_a7bcbc82e7067aa1e4ebd3d34383bf8e5}{shut}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classMStorage_a661909a981f80e25b281bbb9966febb2}{expand}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{classMStorage_ab7c5ae7e76987267795f49b8ee4d5ddf}{ms\+\_\+memory}}
+\item 
+char $\ast$ \mbox{\hyperlink{classMStorage_a0e23713a8c006a02fe3c309e8c7f67fd}{ms\+\_\+memory\+\_\+cur}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classMStorage_a01614aa6deaabf4cd1474948d0135c26}{ms\+\_\+memory\+\_\+size}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classMStorage_a750877d1b75459d8ddf3e91e262c402f}{ms\+\_\+record\+\_\+max}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classMStorage_a8f19246cb902429749e5ba0d51477229}{ms\+\_\+record\+\_\+num}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classMStorage_a15092b30c0024bfc767e97101a2104b2}{ms\+\_\+record\+\_\+size}}
+\item 
+char \mbox{\hyperlink{classMStorage_a856e4a327f88c4b7f69d257c5edc32b3}{pad}} \mbox{[}128-\/4 $\ast$sizeof(int64\+\_\+t) -\/sizeof(void $\ast$)\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of \mbox{\hyperlink{classMStorage}{MStorage}}, table storage manager. ~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMStorage_ae75e9c8581c3ef483e1a7d1a9ea6a1e8}\label{classMStorage_ae75e9c8581c3ef483e1a7d1a9ea6a1e8}} 
+\index{MStorage@{MStorage}!allocRow@{allocRow}}
+\index{allocRow@{allocRow}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{allocRow()}{allocRow()}}
+{\footnotesize\ttfamily int64\+\_\+t MStorage\+::alloc\+Row (\begin{DoxyParamCaption}\item[{char $\ast$\&}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+alloc an empty row. 
+\begin{DoxyParams}{Parameters}
+{\em pointer} & reference of pointer result \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & row rank in all table \\
+\hline
+{\em $<$0} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMStorage_a661909a981f80e25b281bbb9966febb2}\label{classMStorage_a661909a981f80e25b281bbb9966febb2}} 
+\index{MStorage@{MStorage}!expand@{expand}}
+\index{expand@{expand}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{expand()}{expand()}}
+{\footnotesize\ttfamily bool MStorage\+::expand (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+expand slots for more storage avaliable for this table. 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & lack memory \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMStorage_aaf2713e384af8571f1800c5eb53294e9}\label{classMStorage_aaf2713e384af8571f1800c5eb53294e9}} 
+\index{MStorage@{MStorage}!getRecordNum@{getRecordNum}}
+\index{getRecordNum@{getRecordNum}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{getRecordNum()}{getRecordNum()}}
+{\footnotesize\ttfamily int64\+\_\+t MStorage\+::get\+Record\+Num (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get the last record rank till now. \mbox{\Hypertarget{classMStorage_ae32a4a8b9b301a650ead67aa95116a34}\label{classMStorage_ae32a4a8b9b301a650ead67aa95116a34}} 
+\index{MStorage@{MStorage}!getRow@{getRow}}
+\index{getRow@{getRow}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{getRow()}{getRow()}}
+{\footnotesize\ttfamily char $\ast$ MStorage\+::get\+Row (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{record\+\_\+rank }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get the pointer of a row specified by record\+\_\+rank. 
+\begin{DoxyParams}{Parameters}
+{\em record\+\_\+rank} & the n th row in the table \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em !=\+NULL} & valid \\
+\hline
+{\em ==\+NULL} & param error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMStorage_aa06543d04e2c4dddd2b1396051a67e74}\label{classMStorage_aa06543d04e2c4dddd2b1396051a67e74}} 
+\index{MStorage@{MStorage}!init@{init}}
+\index{init@{init}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool MStorage\+::init (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{record\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+mkae sizeof(\+MStorage)==128, managed by g\+\_\+memory ~\newline
+ init, allocate memory and initial setting. 
+\begin{DoxyParams}{Parameters}
+{\em record\+\_\+size} & size of a row record \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMStorage_a7bcbc82e7067aa1e4ebd3d34383bf8e5}\label{classMStorage_a7bcbc82e7067aa1e4ebd3d34383bf8e5}} 
+\index{MStorage@{MStorage}!shut@{shut}}
+\index{shut@{shut}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{shut()}{shut()}}
+{\footnotesize\ttfamily void MStorage\+::shut (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+shut down, free memory to system. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMStorage_ab7c5ae7e76987267795f49b8ee4d5ddf}\label{classMStorage_ab7c5ae7e76987267795f49b8ee4d5ddf}} 
+\index{MStorage@{MStorage}!ms\_memory@{ms\_memory}}
+\index{ms\_memory@{ms\_memory}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{ms\_memory}{ms\_memory}}
+{\footnotesize\ttfamily char$\ast$ MStorage\+::ms\+\_\+memory\hspace{0.3cm}{\ttfamily [private]}}
+
+memory address \mbox{\Hypertarget{classMStorage_a0e23713a8c006a02fe3c309e8c7f67fd}\label{classMStorage_a0e23713a8c006a02fe3c309e8c7f67fd}} 
+\index{MStorage@{MStorage}!ms\_memory\_cur@{ms\_memory\_cur}}
+\index{ms\_memory\_cur@{ms\_memory\_cur}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{ms\_memory\_cur}{ms\_memory\_cur}}
+{\footnotesize\ttfamily char$\ast$ MStorage\+::ms\+\_\+memory\+\_\+cur\hspace{0.3cm}{\ttfamily [private]}}
+
+curent memory address \mbox{\Hypertarget{classMStorage_a01614aa6deaabf4cd1474948d0135c26}\label{classMStorage_a01614aa6deaabf4cd1474948d0135c26}} 
+\index{MStorage@{MStorage}!ms\_memory\_size@{ms\_memory\_size}}
+\index{ms\_memory\_size@{ms\_memory\_size}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{ms\_memory\_size}{ms\_memory\_size}}
+{\footnotesize\ttfamily int64\+\_\+t MStorage\+::ms\+\_\+memory\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+memory size actually mmaped \mbox{\Hypertarget{classMStorage_a750877d1b75459d8ddf3e91e262c402f}\label{classMStorage_a750877d1b75459d8ddf3e91e262c402f}} 
+\index{MStorage@{MStorage}!ms\_record\_max@{ms\_record\_max}}
+\index{ms\_record\_max@{ms\_record\_max}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{ms\_record\_max}{ms\_record\_max}}
+{\footnotesize\ttfamily int64\+\_\+t MStorage\+::ms\+\_\+record\+\_\+max\hspace{0.3cm}{\ttfamily [private]}}
+
+max records with actual mmaped memory \mbox{\Hypertarget{classMStorage_a8f19246cb902429749e5ba0d51477229}\label{classMStorage_a8f19246cb902429749e5ba0d51477229}} 
+\index{MStorage@{MStorage}!ms\_record\_num@{ms\_record\_num}}
+\index{ms\_record\_num@{ms\_record\_num}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{ms\_record\_num}{ms\_record\_num}}
+{\footnotesize\ttfamily int64\+\_\+t MStorage\+::ms\+\_\+record\+\_\+num\hspace{0.3cm}{\ttfamily [private]}}
+
+current record used \mbox{\Hypertarget{classMStorage_a15092b30c0024bfc767e97101a2104b2}\label{classMStorage_a15092b30c0024bfc767e97101a2104b2}} 
+\index{MStorage@{MStorage}!ms\_record\_size@{ms\_record\_size}}
+\index{ms\_record\_size@{ms\_record\_size}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{ms\_record\_size}{ms\_record\_size}}
+{\footnotesize\ttfamily int64\+\_\+t MStorage\+::ms\+\_\+record\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+size per record \mbox{\Hypertarget{classMStorage_a856e4a327f88c4b7f69d257c5edc32b3}\label{classMStorage_a856e4a327f88c4b7f69d257c5edc32b3}} 
+\index{MStorage@{MStorage}!pad@{pad}}
+\index{pad@{pad}!MStorage@{MStorage}}
+\doxysubsubsection{\texorpdfstring{pad}{pad}}
+{\footnotesize\ttfamily char MStorage\+::pad\mbox{[}128-\/4 $\ast$sizeof(int64\+\_\+t) -\/sizeof(void $\ast$)\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{rowtable_8h}{rowtable.\+h}}\end{DoxyCompactItemize}

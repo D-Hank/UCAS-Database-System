@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Find your train</title>
+</head>
+<script>
+    function nowtime() {
+        var date = new Date();
+        date.setDate(date.getDate() + 1);
+        var ntime = date.getFullYear() + '-' +
+            prezero(date.getMonth() + 1) + '-' +
+            prezero(date.getDate());
+        date.setDate(date.getDate() - 6);
+        var ptime = date.getFullYear() + '-' +
+            prezero(date.getMonth() + 1) + '-' +
+            prezero(date.getDate());
+        date.setDate(date.getDate() + 10);
+        var atime = date.getFullYear() + '-' +
+            prezero(date.getMonth() + 1) + '-' +
+            prezero(date.getDate());
+        document.getElementById("date").value = ntime;
+        document.getElementById("date").min = ptime;
+        document.getElementById("date").max = atime;
+    }
+
+    function prezero(d) {
+        return d < 10 ? ('0' + d) : d;
+    }
+</script>
+
+<body onload="nowtime()">
+    Look up your train here!<br>
+    <form action="train.php" method="post">
+        <input type="text" name="train" placeholder="train number : like G101"><br>
+        <input type="date" name="date" id="date"><br>
+        <!-- html5-->
+        <input type="submit" value="submit">
+    </form>
+    <br>
+</body>
+
+</html>

@@ -1,0 +1,1230 @@
+\hypertarget{classGroupbyAggre}{}\doxysection{Groupby\+Aggre Class Reference}
+\label{classGroupbyAggre}\index{GroupbyAggre@{GroupbyAggre}}
+
+
+{\ttfamily \#include $<$executor.\+h$>$}
+
+Inheritance diagram for Groupby\+Aggre\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGroupbyAggre}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structGroupbyAggre_1_1group__by__hash}{group\+\_\+by\+\_\+hash}}
+\item 
+struct \mbox{\hyperlink{structGroupbyAggre_1_1group__by__key}{group\+\_\+by\+\_\+key}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGroupbyAggre_a1f1c194c42f34756a4aa4b6295316857}{Groupby\+Aggre}} ()
+\item 
+\mbox{\hyperlink{classGroupbyAggre_a2f4f25d21d234276da0eb6359178c49c}{$\sim$\+Groupby\+Aggre}} ()
+\item 
+bool \mbox{\hyperlink{classGroupbyAggre_a0ec7c464d68f751395eb1babbf27ce7b}{close}} ()
+\item 
+bool \mbox{\hyperlink{classGroupbyAggre_a760ccd0b54b48bcb753e2215e83d4551}{get\+Next}} ()
+\item 
+bool \mbox{\hyperlink{classGroupbyAggre_a49f76ea23e31af22a67fa9ef339a875d}{open}} ()
+\item 
+void \mbox{\hyperlink{classGroupbyAggre_a06cf9da0cc38dc2d3025ed04ea6ed4ed}{set}} (std\+::vector$<$ int64\+\_\+t $>$ input\+\_\+colid, std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classGroupbyAggre_aafcf90abb875e7976bc9034dc8181777}{groupby\+\_\+rank}}, std\+::vector$<$ \mbox{\hyperlink{structAggreCondition}{Aggre\+Condition}} $>$ \mbox{\hyperlink{classGroupbyAggre_ae2629df6c6a1c27497952fe12c41c689}{conditions}}, std\+::vector$<$ int64\+\_\+t $>$ output\+\_\+colid)
+\item 
+void \mbox{\hyperlink{classGroupbyAggre_a4e13d374280fa257cdef8362c7761975}{set\+Child}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$\mbox{\hyperlink{classGroupbyAggre_abda18d01772f9f527bbc190a265de3ea}{child}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structGroupbyAggre_1_1group__by__hash}{Groupby\+Aggre\+::group\+\_\+by\+\_\+hash}} \mbox{\hyperlink{classGroupbyAggre_a38e6aa88aecc7b77bf6b66953d67df03}{group\+\_\+by\+\_\+hash\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structGroupbyAggre_1_1group__by__key}{Groupby\+Aggre\+::group\+\_\+by\+\_\+key}} \mbox{\hyperlink{classGroupbyAggre_a438bfad91f69c7fccd498dc9b625f003}{group\+\_\+by\+\_\+key\+\_\+t}}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$ $>$ \mbox{\hyperlink{classGroupbyAggre_a3b94d41fe3611e14df59a428c5154339}{group\+\_\+by\+\_\+type\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a39f65e93e623fd54171989bd63ae5bea}{avg\+Float32}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ad493cec0f18fd802363b40cbb62ff39a}{avg\+Float64}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ab8b247873877f0e0ec75ff9e3e8a2647}{avg\+Int16}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a2ad8eef51f1cba18c01040743e100909}{avg\+Int32}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ab2bdfcd3bb0b5fea35ce2b76056c6ca6}{avg\+Int64}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a777c8ac226ef2cfaf4841dc484d8467c}{avg\+Int8}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}} (void $\ast$sum, void $\ast$count, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a4e5aebd2b992b9a0901b1531d92cd1df}{final\+Count}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a47faf6a5ca8355e42cf3ba13e9e0c645}{final\+Float32\+Avg}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a209b63d187f0bc00c5f3d1e1c5b21247}{final\+Float32\+Sum}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ac79c6cd2514b790ed0a0cdaded29fad5}{final\+Float64\+Avg}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a0553d7f63bbea43a300fa2089f28b063}{final\+Float64\+Sum}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_abc59b341d698e82070df9557261c89bc}{final\+Int16\+Sum}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_af2ae3af76542290f293d50c189c63615}{final\+Int32\+Sum}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a06683d9261c86396f7408adb3fa0e838}{final\+Int64\+Sum}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_aafca01ec2d914efde42c368a12b40d86}{final\+Int8\+Sum}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a77293ff221831d441c98fb554bc82655}{final\+Int\+Avg}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a867e8ca29fa54ed0dda16b3752517859}{init\+Avg}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_abe8aeb026c9198b8bbd11ad94d75844f}{init\+Count}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a89945a5b872ce91529b6414dfda6d923}{init\+Float32\+Max}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a8d48065eff8dfbc71e79d4606216ed79}{init\+Float32\+Min}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ae0a8aed8c3b97e828cae07b8b693856d}{init\+Float64\+Max}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ada48de10beb5a12f1d95404d3030d605}{init\+Float64\+Min}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_aad5040f01faa00a8e7263c84497cfd8b}{init\+Int16\+Max}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ae0bfbf730b3b70606f696f13a114546f}{init\+Int16\+Min}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_af9fbad17c56c9f223523dcc3aa2d2b44}{init\+Int32\+Max}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_add39ccff514d57a81b3db7cb3939e0d7}{init\+Int32\+Min}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ab29c3a83d7ee513344dbce294e5fd6b5}{init\+Int64\+Max}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a5d153b31f88f6936f90e54f9aefedfc7}{init\+Int64\+Min}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a1f7359555bcee908e8fee1619ab083f5}{init\+Int8\+Max}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a2ab4a50c194bf62747248c60081cbb80}{init\+Int8\+Min}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a54a62e8302f90fc483c9884fbe865bb7}{init\+Sum}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_aae319c51f8b0272af3175bdf0a0cd48a}{max\+Float32}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_aeba97e03dd0f556536b1e802a38de41c}{max\+Float64}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a70cdd61fd8293bca7e9d0df273a723f2}{max\+Int16}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a10d3730271c6e749e95b739c9b72a46c}{max\+Int32}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a9cab995271ceceac5671a6e9e32cd6b8}{max\+Int64}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_aaf8194f067d6b25e7cb19eacb85416cf}{max\+Int8}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a9bf17c3820c4273a7c3282390353bba2}{min\+Float32}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ace5d28538ae480412d2b37c0cdef29da}{min\+Float64}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ac1dd59d131fc14b4ed1f780046140e10}{min\+Int16}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_aeea5f61f9ef5fdcb44d5c6e1dd0dc11e}{min\+Int32}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_ab39d86ae9dc239981cb2c6f4c8538e7f}{min\+Int64}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_afc42a1fad4b1b47b7e3e0ebb0398f63b}{min\+Int8}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a4fb4030a09e652eab30013d61a9f7368}{sum\+Float32}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a32114377a0fac0959cb14e6793fa1256}{sum\+Float64}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_abbefbfc842902a1efa45326e1797a984}{sum\+Int16}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_aa697a827c6e522e2a63249bb84e4045e}{sum\+Int32}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a07939f576855a522301e7e9d60ba15ca}{sum\+Int64}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+static void \mbox{\hyperlink{classGroupbyAggre_a2a5b0209b9a451bd2ce02184644ad1f0}{sum\+Int8}} (void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_ad2f51406822e1a85c7bc686db2624c3b}{aggr\+\_\+method}} \mbox{[}4\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+std\+::vector$<$ char $\ast$ $>$ \mbox{\hyperlink{classGroupbyAggre_a8668aa8f54690ddd535f763d6602f5c2}{aggr\+\_\+pos}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$ $>$ \mbox{\hyperlink{classGroupbyAggre_a528bc7f40167bfeb19e60655bb063078}{aggr\+\_\+type}}
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_ab9b0d69bb4b5778f917305258f98eb0e}{avg\+\_\+table}} \mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+char $\ast$ \mbox{\hyperlink{classGroupbyAggre_a063bf92e89bb522119047a6180655f6b}{buf\+\_\+for\+\_\+child}}
+\item 
+\mbox{\hyperlink{classOperator}{Operator}} $\ast$ \mbox{\hyperlink{classGroupbyAggre_abda18d01772f9f527bbc190a265de3ea}{child}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classGroupbyAggre_a5c4511dc2c69e38b186ba18a5d63c33f}{child\+\_\+buf\+\_\+size}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classGroupbyAggre_a5c9692171df74b301a2252326d8d4955}{child\+\_\+tuple\+\_\+size}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structAggreCondition}{Aggre\+Condition}} $>$ \mbox{\hyperlink{classGroupbyAggre_ae2629df6c6a1c27497952fe12c41c689}{conditions}}
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_a0502b3202428ef5c5152cbff4106205f}{final\+\_\+avg\+\_\+table}} \mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_a24fc99925784b9df3e705aa566142cc9}{final\+\_\+method}} \mbox{[}4\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_a83fdbf229c8967829ee60c8a8e28e973}{final\+\_\+sum\+\_\+table}} \mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)
+\item 
+std\+::vector$<$ char $\ast$ $>$ \mbox{\hyperlink{classGroupbyAggre_a61755c69752c20264951cfaa35efc88c}{group\+\_\+by\+\_\+pos}}
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classGroupbyAggre_acae863a593562da97221f7e5668fc0bb}{group\+\_\+by\+\_\+size}}
+\item 
+\mbox{\hyperlink{classGroupbyAggre_a3b94d41fe3611e14df59a428c5154339}{group\+\_\+by\+\_\+type\+\_\+t}} \mbox{\hyperlink{classGroupbyAggre_a79bc17ad4d0bc793f4b7fb9c10cadf57}{group\+\_\+by\+\_\+type}}
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classGroupbyAggre_aafcf90abb875e7976bc9034dc8181777}{groupby\+\_\+rank}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classGroupbyAggre_a438bfad91f69c7fccd498dc9b625f003}{group\+\_\+by\+\_\+key\+\_\+t}}, \mbox{\hyperlink{classGrAggRecord}{Gr\+Agg\+Record}} $\ast$, \mbox{\hyperlink{classGroupbyAggre_a38e6aa88aecc7b77bf6b66953d67df03}{group\+\_\+by\+\_\+hash\+\_\+t}} $>$ \mbox{\hyperlink{classGroupbyAggre_a5ac83b13d10a6fa2cf91254aaa658395}{hash\+\_\+group}}
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classGroupbyAggre_a3cd9a1545805d9ae37f544718674d53c}{in\+\_\+cid}}
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_a6ac67b07d7b417059210aeb8a2b202f1}{init\+\_\+max\+\_\+table}} \mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_a91a8ba8d1549b75854857c3837cc70ee}{init\+\_\+method}} \mbox{[}4\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_a14430368cd2281859c9f95d4c12f02bc}{init\+\_\+min\+\_\+table}} \mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_a3ec70303b437878dc1b550e89408835f}{max\+\_\+table}} \mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+std\+::vector$<$ char $\ast$ $>$ \mbox{\hyperlink{classGroupbyAggre_a04f64e3a3ffe8e27bd7aa1d1f54fb228}{middle\+\_\+buf\+\_\+array}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classGroupbyAggre_a3540df0f54a863ec43972267afdf4f7a}{middle\+\_\+buf\+\_\+size}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classGroupbyAggre_a4ea101bb3460153bf0f68b2cddb20f1e}{middle\+\_\+tuple\+\_\+size}}
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_a9f048eef24c8c6868070ea3548376479}{min\+\_\+table}} \mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classGroupbyAggre_a438bfad91f69c7fccd498dc9b625f003}{group\+\_\+by\+\_\+key\+\_\+t}}, \mbox{\hyperlink{classGrAggRecord}{Gr\+Agg\+Record}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classGroupbyAggre_ac6f792e2d5cc4604d73764e2b7836858}{next\+\_\+iter}}
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classGroupbyAggre_a74ea0cbe41f396d75e695bffc35da63a}{out\+\_\+cid}}
+\item 
+void($\ast$ \mbox{\hyperlink{classGroupbyAggre_af878c48f34e97d8dcba5cda3645f613c}{sum\+\_\+table}} \mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Definition of class \mbox{\hyperlink{classGroupbyAggre}{Groupby\+Aggre}} the groupby-\/aggregation operator 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classGroupbyAggre_a38e6aa88aecc7b77bf6b66953d67df03}\label{classGroupbyAggre_a38e6aa88aecc7b77bf6b66953d67df03}} 
+\index{GroupbyAggre@{GroupbyAggre}!group\_by\_hash\_t@{group\_by\_hash\_t}}
+\index{group\_by\_hash\_t@{group\_by\_hash\_t}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{group\_by\_hash\_t}{group\_by\_hash\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structGroupbyAggre_1_1group__by__hash}{Groupby\+Aggre\+::group\+\_\+by\+\_\+hash}} \mbox{\hyperlink{classGroupbyAggre_a38e6aa88aecc7b77bf6b66953d67df03}{Groupby\+Aggre\+::group\+\_\+by\+\_\+hash\+\_\+t}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGroupbyAggre_a438bfad91f69c7fccd498dc9b625f003}\label{classGroupbyAggre_a438bfad91f69c7fccd498dc9b625f003}} 
+\index{GroupbyAggre@{GroupbyAggre}!group\_by\_key\_t@{group\_by\_key\_t}}
+\index{group\_by\_key\_t@{group\_by\_key\_t}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{group\_by\_key\_t}{group\_by\_key\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structGroupbyAggre_1_1group__by__key}{Groupby\+Aggre\+::group\+\_\+by\+\_\+key}} \mbox{\hyperlink{classGroupbyAggre_a438bfad91f69c7fccd498dc9b625f003}{Groupby\+Aggre\+::group\+\_\+by\+\_\+key\+\_\+t}}\hspace{0.3cm}{\ttfamily [private]}}
+
+Position of aggr columns \mbox{\Hypertarget{classGroupbyAggre_a3b94d41fe3611e14df59a428c5154339}\label{classGroupbyAggre_a3b94d41fe3611e14df59a428c5154339}} 
+\index{GroupbyAggre@{GroupbyAggre}!group\_by\_type\_t@{group\_by\_type\_t}}
+\index{group\_by\_type\_t@{group\_by\_type\_t}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{group\_by\_type\_t}{group\_by\_type\_t}}
+{\footnotesize\ttfamily typedef std\+::vector$<$ \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$ $>$ \mbox{\hyperlink{classGroupbyAggre_a3b94d41fe3611e14df59a428c5154339}{Groupby\+Aggre\+::group\+\_\+by\+\_\+type\+\_\+t}}\hspace{0.3cm}{\ttfamily [private]}}
+
+Each element points to an intermediate record 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGroupbyAggre_a1f1c194c42f34756a4aa4b6295316857}\label{classGroupbyAggre_a1f1c194c42f34756a4aa4b6295316857}} 
+\index{GroupbyAggre@{GroupbyAggre}!GroupbyAggre@{GroupbyAggre}}
+\index{GroupbyAggre@{GroupbyAggre}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{GroupbyAggre()}{GroupbyAggre()}}
+{\footnotesize\ttfamily Groupby\+Aggre\+::\+Groupby\+Aggre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Finalize method table Constructor Initialize some data structure \mbox{\Hypertarget{classGroupbyAggre_a2f4f25d21d234276da0eb6359178c49c}\label{classGroupbyAggre_a2f4f25d21d234276da0eb6359178c49c}} 
+\index{GroupbyAggre@{GroupbyAggre}!````~GroupbyAggre@{$\sim$GroupbyAggre}}
+\index{````~GroupbyAggre@{$\sim$GroupbyAggre}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{$\sim$GroupbyAggre()}{~GroupbyAggre()}}
+{\footnotesize\ttfamily Groupby\+Aggre\+::$\sim$\+Groupby\+Aggre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGroupbyAggre_a39f65e93e623fd54171989bd63ae5bea}\label{classGroupbyAggre_a39f65e93e623fd54171989bd63ae5bea}} 
+\index{GroupbyAggre@{GroupbyAggre}!avgFloat32@{avgFloat32}}
+\index{avgFloat32@{avgFloat32}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{avgFloat32()}{avgFloat32()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::avg\+Float32 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate AVG method for FLOAT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ad493cec0f18fd802363b40cbb62ff39a}\label{classGroupbyAggre_ad493cec0f18fd802363b40cbb62ff39a}} 
+\index{GroupbyAggre@{GroupbyAggre}!avgFloat64@{avgFloat64}}
+\index{avgFloat64@{avgFloat64}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{avgFloat64()}{avgFloat64()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::avg\+Float64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate AVG method for FLOAT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ab8b247873877f0e0ec75ff9e3e8a2647}\label{classGroupbyAggre_ab8b247873877f0e0ec75ff9e3e8a2647}} 
+\index{GroupbyAggre@{GroupbyAggre}!avgInt16@{avgInt16}}
+\index{avgInt16@{avgInt16}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{avgInt16()}{avgInt16()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::avg\+Int16 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate AVG method for INT16 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a2ad8eef51f1cba18c01040743e100909}\label{classGroupbyAggre_a2ad8eef51f1cba18c01040743e100909}} 
+\index{GroupbyAggre@{GroupbyAggre}!avgInt32@{avgInt32}}
+\index{avgInt32@{avgInt32}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{avgInt32()}{avgInt32()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::avg\+Int32 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate AVG method for INT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ab2bdfcd3bb0b5fea35ce2b76056c6ca6}\label{classGroupbyAggre_ab2bdfcd3bb0b5fea35ce2b76056c6ca6}} 
+\index{GroupbyAggre@{GroupbyAggre}!avgInt64@{avgInt64}}
+\index{avgInt64@{avgInt64}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{avgInt64()}{avgInt64()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::avg\+Int64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate AVG method for INT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a777c8ac226ef2cfaf4841dc484d8467c}\label{classGroupbyAggre_a777c8ac226ef2cfaf4841dc484d8467c}} 
+\index{GroupbyAggre@{GroupbyAggre}!avgInt8@{avgInt8}}
+\index{avgInt8@{avgInt8}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{avgInt8()}{avgInt8()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::avg\+Int8 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate AVG method for INT8 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a0ec7c464d68f751395eb1babbf27ce7b}\label{classGroupbyAggre_a0ec7c464d68f751395eb1babbf27ce7b}} 
+\index{GroupbyAggre@{GroupbyAggre}!close@{close}}
+\index{close@{close}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool Groupby\+Aggre\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+close this operator, release all resources 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classOperator_a1db4a9736164f68e497e2f89d00473f1}{Operator}}.
+
+\mbox{\Hypertarget{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}\label{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}} 
+\index{GroupbyAggre@{GroupbyAggre}!count@{count}}
+\index{count@{count}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::count (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate COUNT method 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to original value of sum \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a4e5aebd2b992b9a0901b1531d92cd1df}\label{classGroupbyAggre_a4e5aebd2b992b9a0901b1531d92cd1df}} 
+\index{GroupbyAggre@{GroupbyAggre}!finalCount@{finalCount}}
+\index{finalCount@{finalCount}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{finalCount()}{finalCount()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::final\+Count (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Finalize for COUNT method 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be finalized \\
+\hline
+{\em count} & count to be finalized \\
+\hline
+{\em result} & place to save result \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a47faf6a5ca8355e42cf3ba13e9e0c645}\label{classGroupbyAggre_a47faf6a5ca8355e42cf3ba13e9e0c645}} 
+\index{GroupbyAggre@{GroupbyAggre}!finalFloat32Avg@{finalFloat32Avg}}
+\index{finalFloat32Avg@{finalFloat32Avg}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{finalFloat32Avg()}{finalFloat32Avg()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::final\+Float32\+Avg (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Finalize for AVG method of FLOAT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be finalized \\
+\hline
+{\em count} & count to be finalized \\
+\hline
+{\em result} & place to save result \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a209b63d187f0bc00c5f3d1e1c5b21247}\label{classGroupbyAggre_a209b63d187f0bc00c5f3d1e1c5b21247}} 
+\index{GroupbyAggre@{GroupbyAggre}!finalFloat32Sum@{finalFloat32Sum}}
+\index{finalFloat32Sum@{finalFloat32Sum}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{finalFloat32Sum()}{finalFloat32Sum()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::final\+Float32\+Sum (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Finalize for SUM method of FLOAT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ac79c6cd2514b790ed0a0cdaded29fad5}\label{classGroupbyAggre_ac79c6cd2514b790ed0a0cdaded29fad5}} 
+\index{GroupbyAggre@{GroupbyAggre}!finalFloat64Avg@{finalFloat64Avg}}
+\index{finalFloat64Avg@{finalFloat64Avg}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{finalFloat64Avg()}{finalFloat64Avg()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::final\+Float64\+Avg (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Finalize for AVG method of FLOAT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be finalized \\
+\hline
+{\em count} & count to be finalized \\
+\hline
+{\em result} & place to save result \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a0553d7f63bbea43a300fa2089f28b063}\label{classGroupbyAggre_a0553d7f63bbea43a300fa2089f28b063}} 
+\index{GroupbyAggre@{GroupbyAggre}!finalFloat64Sum@{finalFloat64Sum}}
+\index{finalFloat64Sum@{finalFloat64Sum}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{finalFloat64Sum()}{finalFloat64Sum()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::final\+Float64\+Sum (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Finalize for SUM method of FLOAT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be finalized \\
+\hline
+{\em count} & count to be finalized \\
+\hline
+{\em result} & place to save result \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_abc59b341d698e82070df9557261c89bc}\label{classGroupbyAggre_abc59b341d698e82070df9557261c89bc}} 
+\index{GroupbyAggre@{GroupbyAggre}!finalInt16Sum@{finalInt16Sum}}
+\index{finalInt16Sum@{finalInt16Sum}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{finalInt16Sum()}{finalInt16Sum()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::final\+Int16\+Sum (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Finalize for SUM method of INT16 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be finalized \\
+\hline
+{\em count} & count to be finalized \\
+\hline
+{\em result} & place to save result \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_af2ae3af76542290f293d50c189c63615}\label{classGroupbyAggre_af2ae3af76542290f293d50c189c63615}} 
+\index{GroupbyAggre@{GroupbyAggre}!finalInt32Sum@{finalInt32Sum}}
+\index{finalInt32Sum@{finalInt32Sum}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{finalInt32Sum()}{finalInt32Sum()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::final\+Int32\+Sum (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Finalize for SUM method of INT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a06683d9261c86396f7408adb3fa0e838}\label{classGroupbyAggre_a06683d9261c86396f7408adb3fa0e838}} 
+\index{GroupbyAggre@{GroupbyAggre}!finalInt64Sum@{finalInt64Sum}}
+\index{finalInt64Sum@{finalInt64Sum}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{finalInt64Sum()}{finalInt64Sum()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::final\+Int64\+Sum (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Finalize for SUM method of INT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be finalized \\
+\hline
+{\em count} & count to be finalized \\
+\hline
+{\em result} & place to save result \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_aafca01ec2d914efde42c368a12b40d86}\label{classGroupbyAggre_aafca01ec2d914efde42c368a12b40d86}} 
+\index{GroupbyAggre@{GroupbyAggre}!finalInt8Sum@{finalInt8Sum}}
+\index{finalInt8Sum@{finalInt8Sum}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{finalInt8Sum()}{finalInt8Sum()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::final\+Int8\+Sum (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init method table Finalize for SUM method of INT8 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be finalized \\
+\hline
+{\em count} & count to be finalized \\
+\hline
+{\em result} & place to save result \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a77293ff221831d441c98fb554bc82655}\label{classGroupbyAggre_a77293ff221831d441c98fb554bc82655}} 
+\index{GroupbyAggre@{GroupbyAggre}!finalIntAvg@{finalIntAvg}}
+\index{finalIntAvg@{finalIntAvg}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{finalIntAvg()}{finalIntAvg()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::final\+Int\+Avg (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Finalize for AVG method of INT 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be finalized \\
+\hline
+{\em count} & count to be finalized \\
+\hline
+{\em result} & place to save result \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a760ccd0b54b48bcb753e2215e83d4551}\label{classGroupbyAggre_a760ccd0b54b48bcb753e2215e83d4551}} 
+\index{GroupbyAggre@{GroupbyAggre}!getNext@{getNext}}
+\index{getNext@{getNext}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily bool Groupby\+Aggre\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+get next record from the table iterately 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classOperator_ab9e6e455abb03bc86a18548b4e6b093b}{Operator}}.
+
+\mbox{\Hypertarget{classGroupbyAggre_a867e8ca29fa54ed0dda16b3752517859}\label{classGroupbyAggre_a867e8ca29fa54ed0dda16b3752517859}} 
+\index{GroupbyAggre@{GroupbyAggre}!initAvg@{initAvg}}
+\index{initAvg@{initAvg}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initAvg()}{initAvg()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Avg (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for AVG method, note that float 0.\+0 is encoded as 0 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_abe8aeb026c9198b8bbd11ad94d75844f}\label{classGroupbyAggre_abe8aeb026c9198b8bbd11ad94d75844f}} 
+\index{GroupbyAggre@{GroupbyAggre}!initCount@{initCount}}
+\index{initCount@{initCount}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initCount()}{initCount()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Count (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for count method 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a89945a5b872ce91529b6414dfda6d923}\label{classGroupbyAggre_a89945a5b872ce91529b6414dfda6d923}} 
+\index{GroupbyAggre@{GroupbyAggre}!initFloat32Max@{initFloat32Max}}
+\index{initFloat32Max@{initFloat32Max}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initFloat32Max()}{initFloat32Max()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Float32\+Max (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MAX method of FLOAT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a8d48065eff8dfbc71e79d4606216ed79}\label{classGroupbyAggre_a8d48065eff8dfbc71e79d4606216ed79}} 
+\index{GroupbyAggre@{GroupbyAggre}!initFloat32Min@{initFloat32Min}}
+\index{initFloat32Min@{initFloat32Min}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initFloat32Min()}{initFloat32Min()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Float32\+Min (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MIN method of FLOAT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ae0a8aed8c3b97e828cae07b8b693856d}\label{classGroupbyAggre_ae0a8aed8c3b97e828cae07b8b693856d}} 
+\index{GroupbyAggre@{GroupbyAggre}!initFloat64Max@{initFloat64Max}}
+\index{initFloat64Max@{initFloat64Max}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initFloat64Max()}{initFloat64Max()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Float64\+Max (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MAX method of FLOAT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ada48de10beb5a12f1d95404d3030d605}\label{classGroupbyAggre_ada48de10beb5a12f1d95404d3030d605}} 
+\index{GroupbyAggre@{GroupbyAggre}!initFloat64Min@{initFloat64Min}}
+\index{initFloat64Min@{initFloat64Min}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initFloat64Min()}{initFloat64Min()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Float64\+Min (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MIN method of FLOAT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_aad5040f01faa00a8e7263c84497cfd8b}\label{classGroupbyAggre_aad5040f01faa00a8e7263c84497cfd8b}} 
+\index{GroupbyAggre@{GroupbyAggre}!initInt16Max@{initInt16Max}}
+\index{initInt16Max@{initInt16Max}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initInt16Max()}{initInt16Max()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Int16\+Max (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MAX method of INT16 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ae0bfbf730b3b70606f696f13a114546f}\label{classGroupbyAggre_ae0bfbf730b3b70606f696f13a114546f}} 
+\index{GroupbyAggre@{GroupbyAggre}!initInt16Min@{initInt16Min}}
+\index{initInt16Min@{initInt16Min}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initInt16Min()}{initInt16Min()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Int16\+Min (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MIN method of INT16 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_af9fbad17c56c9f223523dcc3aa2d2b44}\label{classGroupbyAggre_af9fbad17c56c9f223523dcc3aa2d2b44}} 
+\index{GroupbyAggre@{GroupbyAggre}!initInt32Max@{initInt32Max}}
+\index{initInt32Max@{initInt32Max}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initInt32Max()}{initInt32Max()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Int32\+Max (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MAX method of INT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_add39ccff514d57a81b3db7cb3939e0d7}\label{classGroupbyAggre_add39ccff514d57a81b3db7cb3939e0d7}} 
+\index{GroupbyAggre@{GroupbyAggre}!initInt32Min@{initInt32Min}}
+\index{initInt32Min@{initInt32Min}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initInt32Min()}{initInt32Min()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Int32\+Min (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MIN method of INT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ab29c3a83d7ee513344dbce294e5fd6b5}\label{classGroupbyAggre_ab29c3a83d7ee513344dbce294e5fd6b5}} 
+\index{GroupbyAggre@{GroupbyAggre}!initInt64Max@{initInt64Max}}
+\index{initInt64Max@{initInt64Max}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initInt64Max()}{initInt64Max()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Int64\+Max (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MAX method of INT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a5d153b31f88f6936f90e54f9aefedfc7}\label{classGroupbyAggre_a5d153b31f88f6936f90e54f9aefedfc7}} 
+\index{GroupbyAggre@{GroupbyAggre}!initInt64Min@{initInt64Min}}
+\index{initInt64Min@{initInt64Min}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initInt64Min()}{initInt64Min()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Int64\+Min (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MIN method of INT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a1f7359555bcee908e8fee1619ab083f5}\label{classGroupbyAggre_a1f7359555bcee908e8fee1619ab083f5}} 
+\index{GroupbyAggre@{GroupbyAggre}!initInt8Max@{initInt8Max}}
+\index{initInt8Max@{initInt8Max}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initInt8Max()}{initInt8Max()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Int8\+Max (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MAX method of INT8 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a2ab4a50c194bf62747248c60081cbb80}\label{classGroupbyAggre_a2ab4a50c194bf62747248c60081cbb80}} 
+\index{GroupbyAggre@{GroupbyAggre}!initInt8Min@{initInt8Min}}
+\index{initInt8Min@{initInt8Min}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initInt8Min()}{initInt8Min()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Int8\+Min (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Init for MIN method of INT8 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a54a62e8302f90fc483c9884fbe865bb7}\label{classGroupbyAggre_a54a62e8302f90fc483c9884fbe865bb7}} 
+\index{GroupbyAggre@{GroupbyAggre}!initSum@{initSum}}
+\index{initSum@{initSum}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{initSum()}{initSum()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::init\+Sum (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate method table Init for SUM method, note that float 0.\+0 is encoded as 0 
+\begin{DoxyParams}{Parameters}
+{\em sum} & sum to be initialized \\
+\hline
+{\em count} & count to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_aae319c51f8b0272af3175bdf0a0cd48a}\label{classGroupbyAggre_aae319c51f8b0272af3175bdf0a0cd48a}} 
+\index{GroupbyAggre@{GroupbyAggre}!maxFloat32@{maxFloat32}}
+\index{maxFloat32@{maxFloat32}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{maxFloat32()}{maxFloat32()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::max\+Float32 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MAX method for FLOAT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_aeba97e03dd0f556536b1e802a38de41c}\label{classGroupbyAggre_aeba97e03dd0f556536b1e802a38de41c}} 
+\index{GroupbyAggre@{GroupbyAggre}!maxFloat64@{maxFloat64}}
+\index{maxFloat64@{maxFloat64}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{maxFloat64()}{maxFloat64()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::max\+Float64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MAX method for FLOAT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a70cdd61fd8293bca7e9d0df273a723f2}\label{classGroupbyAggre_a70cdd61fd8293bca7e9d0df273a723f2}} 
+\index{GroupbyAggre@{GroupbyAggre}!maxInt16@{maxInt16}}
+\index{maxInt16@{maxInt16}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{maxInt16()}{maxInt16()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::max\+Int16 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MAX method for INT16 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a10d3730271c6e749e95b739c9b72a46c}\label{classGroupbyAggre_a10d3730271c6e749e95b739c9b72a46c}} 
+\index{GroupbyAggre@{GroupbyAggre}!maxInt32@{maxInt32}}
+\index{maxInt32@{maxInt32}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{maxInt32()}{maxInt32()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::max\+Int32 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MAX method for INT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a9cab995271ceceac5671a6e9e32cd6b8}\label{classGroupbyAggre_a9cab995271ceceac5671a6e9e32cd6b8}} 
+\index{GroupbyAggre@{GroupbyAggre}!maxInt64@{maxInt64}}
+\index{maxInt64@{maxInt64}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{maxInt64()}{maxInt64()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::max\+Int64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MAX method for INT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_aaf8194f067d6b25e7cb19eacb85416cf}\label{classGroupbyAggre_aaf8194f067d6b25e7cb19eacb85416cf}} 
+\index{GroupbyAggre@{GroupbyAggre}!maxInt8@{maxInt8}}
+\index{maxInt8@{maxInt8}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{maxInt8()}{maxInt8()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::max\+Int8 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MAX method for INT8 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a9bf17c3820c4273a7c3282390353bba2}\label{classGroupbyAggre_a9bf17c3820c4273a7c3282390353bba2}} 
+\index{GroupbyAggre@{GroupbyAggre}!minFloat32@{minFloat32}}
+\index{minFloat32@{minFloat32}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{minFloat32()}{minFloat32()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::min\+Float32 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MIN method for FLOAT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ace5d28538ae480412d2b37c0cdef29da}\label{classGroupbyAggre_ace5d28538ae480412d2b37c0cdef29da}} 
+\index{GroupbyAggre@{GroupbyAggre}!minFloat64@{minFloat64}}
+\index{minFloat64@{minFloat64}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{minFloat64()}{minFloat64()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::min\+Float64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MIN method for FLOAT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ac1dd59d131fc14b4ed1f780046140e10}\label{classGroupbyAggre_ac1dd59d131fc14b4ed1f780046140e10}} 
+\index{GroupbyAggre@{GroupbyAggre}!minInt16@{minInt16}}
+\index{minInt16@{minInt16}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{minInt16()}{minInt16()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::min\+Int16 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MIN method for INT16 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_aeea5f61f9ef5fdcb44d5c6e1dd0dc11e}\label{classGroupbyAggre_aeea5f61f9ef5fdcb44d5c6e1dd0dc11e}} 
+\index{GroupbyAggre@{GroupbyAggre}!minInt32@{minInt32}}
+\index{minInt32@{minInt32}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{minInt32()}{minInt32()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::min\+Int32 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MIN method for INT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_ab39d86ae9dc239981cb2c6f4c8538e7f}\label{classGroupbyAggre_ab39d86ae9dc239981cb2c6f4c8538e7f}} 
+\index{GroupbyAggre@{GroupbyAggre}!minInt64@{minInt64}}
+\index{minInt64@{minInt64}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{minInt64()}{minInt64()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::min\+Int64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MIN method for INT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_afc42a1fad4b1b47b7e3e0ebb0398f63b}\label{classGroupbyAggre_afc42a1fad4b1b47b7e3e0ebb0398f63b}} 
+\index{GroupbyAggre@{GroupbyAggre}!minInt8@{minInt8}}
+\index{minInt8@{minInt8}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{minInt8()}{minInt8()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::min\+Int8 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate MIN method for INT8 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a49f76ea23e31af22a67fa9ef339a875d}\label{classGroupbyAggre_a49f76ea23e31af22a67fa9ef339a875d}} 
+\index{GroupbyAggre@{GroupbyAggre}!open@{open}}
+\index{open@{open}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool Groupby\+Aggre\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+open a scan operator 
+\begin{DoxyRetVals}{Return values}
+{\em true} & successfully opened \\
+\hline
+{\em false} & failed \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classOperator_aaec459eabb9b23f5c2253e2ca355d665}{Operator}}.
+
+\mbox{\Hypertarget{classGroupbyAggre_a06cf9da0cc38dc2d3025ed04ea6ed4ed}\label{classGroupbyAggre_a06cf9da0cc38dc2d3025ed04ea6ed4ed}} 
+\index{GroupbyAggre@{GroupbyAggre}!set@{set}}
+\index{set@{set}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Groupby\+Aggre\+::set (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int64\+\_\+t $>$}]{input\+\_\+colid,  }\item[{std\+::vector$<$ int64\+\_\+t $>$}]{groupby\+\_\+rank,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structAggreCondition}{Aggre\+Condition}} $>$}]{conditions,  }\item[{std\+::vector$<$ int64\+\_\+t $>$}]{output\+\_\+colid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set input and output columns 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+colid} & ID of input columns \\
+\hline
+{\em groupby\+\_\+rank} & rank of group-\/by columns from input \\
+\hline
+{\em conditions} & aggregate method with its column \\
+\hline
+{\em output\+\_\+colid} & ID of output columns \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a4e13d374280fa257cdef8362c7761975}\label{classGroupbyAggre_a4e13d374280fa257cdef8362c7761975}} 
+\index{GroupbyAggre@{GroupbyAggre}!setChild@{setChild}}
+\index{setChild@{setChild}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{setChild()}{setChild()}}
+{\footnotesize\ttfamily void Groupby\+Aggre\+::set\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set child operator, shoud be called before open 
+\begin{DoxyParams}{Parameters}
+{\em child} & child operator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a4fb4030a09e652eab30013d61a9f7368}\label{classGroupbyAggre_a4fb4030a09e652eab30013d61a9f7368}} 
+\index{GroupbyAggre@{GroupbyAggre}!sumFloat32@{sumFloat32}}
+\index{sumFloat32@{sumFloat32}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{sumFloat32()}{sumFloat32()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::sum\+Float32 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate SUM method for FLOAT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a32114377a0fac0959cb14e6793fa1256}\label{classGroupbyAggre_a32114377a0fac0959cb14e6793fa1256}} 
+\index{GroupbyAggre@{GroupbyAggre}!sumFloat64@{sumFloat64}}
+\index{sumFloat64@{sumFloat64}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{sumFloat64()}{sumFloat64()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::sum\+Float64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate SUM method for FLOAT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_abbefbfc842902a1efa45326e1797a984}\label{classGroupbyAggre_abbefbfc842902a1efa45326e1797a984}} 
+\index{GroupbyAggre@{GroupbyAggre}!sumInt16@{sumInt16}}
+\index{sumInt16@{sumInt16}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{sumInt16()}{sumInt16()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::sum\+Int16 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate SUM method for INT16 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_aa697a827c6e522e2a63249bb84e4045e}\label{classGroupbyAggre_aa697a827c6e522e2a63249bb84e4045e}} 
+\index{GroupbyAggre@{GroupbyAggre}!sumInt32@{sumInt32}}
+\index{sumInt32@{sumInt32}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{sumInt32()}{sumInt32()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::sum\+Int32 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate SUM method for INT32 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a07939f576855a522301e7e9d60ba15ca}\label{classGroupbyAggre_a07939f576855a522301e7e9d60ba15ca}} 
+\index{GroupbyAggre@{GroupbyAggre}!sumInt64@{sumInt64}}
+\index{sumInt64@{sumInt64}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{sumInt64()}{sumInt64()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::sum\+Int64 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Aggregate SUM method for INT64 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGroupbyAggre_a2a5b0209b9a451bd2ce02184644ad1f0}\label{classGroupbyAggre_a2a5b0209b9a451bd2ce02184644ad1f0}} 
+\index{GroupbyAggre@{GroupbyAggre}!sumInt8@{sumInt8}}
+\index{sumInt8@{sumInt8}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{sumInt8()}{sumInt8()}}
+{\footnotesize\ttfamily static void Groupby\+Aggre\+::sum\+Int8 (\begin{DoxyParamCaption}\item[{void $\ast$}]{sum,  }\item[{void $\ast$}]{count,  }\item[{void $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Iterator for next record Aggregate SUM method for INT8 
+\begin{DoxyParams}{Parameters}
+{\em sum} & pointed to original value of sum \\
+\hline
+{\em count} & pointed to original value of count \\
+\hline
+{\em x} & pointed to x to be added \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGroupbyAggre_ad2f51406822e1a85c7bc686db2624c3b}\label{classGroupbyAggre_ad2f51406822e1a85c7bc686db2624c3b}} 
+\index{GroupbyAggre@{GroupbyAggre}!aggr\_method@{aggr\_method}}
+\index{aggr\_method@{aggr\_method}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{aggr\_method}{aggr\_method}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::aggr\+\_\+method\mbox{[}4\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGroupbyAggre_a8668aa8f54690ddd535f763d6602f5c2}\label{classGroupbyAggre_a8668aa8f54690ddd535f763d6602f5c2}} 
+\index{GroupbyAggre@{GroupbyAggre}!aggr\_pos@{aggr\_pos}}
+\index{aggr\_pos@{aggr\_pos}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{aggr\_pos}{aggr\_pos}}
+{\footnotesize\ttfamily std\+::vector$<$ char $\ast$ $>$ Groupby\+Aggre\+::aggr\+\_\+pos\hspace{0.3cm}{\ttfamily [private]}}
+
+Basic type of aggr columns \mbox{\Hypertarget{classGroupbyAggre_a528bc7f40167bfeb19e60655bb063078}\label{classGroupbyAggre_a528bc7f40167bfeb19e60655bb063078}} 
+\index{GroupbyAggre@{GroupbyAggre}!aggr\_type@{aggr\_type}}
+\index{aggr\_type@{aggr\_type}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{aggr\_type}{aggr\_type}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classBasicType}{Basic\+Type}} $\ast$ $>$ Groupby\+Aggre\+::aggr\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of group-\/by columns \mbox{\Hypertarget{classGroupbyAggre_ab9b0d69bb4b5778f917305258f98eb0e}\label{classGroupbyAggre_ab9b0d69bb4b5778f917305258f98eb0e}} 
+\index{GroupbyAggre@{GroupbyAggre}!avg\_table@{avg\_table}}
+\index{avg\_table@{avg\_table}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{avg\_table}{avg\_table}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::avg\+\_\+table\mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)\hspace{0.3cm}{\ttfamily [private]}}
+
+Search table for AVG \mbox{\Hypertarget{classGroupbyAggre_a063bf92e89bb522119047a6180655f6b}\label{classGroupbyAggre_a063bf92e89bb522119047a6180655f6b}} 
+\index{GroupbyAggre@{GroupbyAggre}!buf\_for\_child@{buf\_for\_child}}
+\index{buf\_for\_child@{buf\_for\_child}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{buf\_for\_child}{buf\_for\_child}}
+{\footnotesize\ttfamily char$\ast$ Groupby\+Aggre\+::buf\+\_\+for\+\_\+child\hspace{0.3cm}{\ttfamily [private]}}
+
+Aggregate method with column \mbox{\Hypertarget{classGroupbyAggre_abda18d01772f9f527bbc190a265de3ea}\label{classGroupbyAggre_abda18d01772f9f527bbc190a265de3ea}} 
+\index{GroupbyAggre@{GroupbyAggre}!child@{child}}
+\index{child@{child}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{child}{child}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOperator}{Operator}}$\ast$ Groupby\+Aggre\+::child\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGroupbyAggre_a5c4511dc2c69e38b186ba18a5d63c33f}\label{classGroupbyAggre_a5c4511dc2c69e38b186ba18a5d63c33f}} 
+\index{GroupbyAggre@{GroupbyAggre}!child\_buf\_size@{child\_buf\_size}}
+\index{child\_buf\_size@{child\_buf\_size}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{child\_buf\_size}{child\_buf\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Groupby\+Aggre\+::child\+\_\+buf\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Buffer for child \mbox{\Hypertarget{classGroupbyAggre_a5c9692171df74b301a2252326d8d4955}\label{classGroupbyAggre_a5c9692171df74b301a2252326d8d4955}} 
+\index{GroupbyAggre@{GroupbyAggre}!child\_tuple\_size@{child\_tuple\_size}}
+\index{child\_tuple\_size@{child\_tuple\_size}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{child\_tuple\_size}{child\_tuple\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Groupby\+Aggre\+::child\+\_\+tuple\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Buffer size allocated for child \mbox{\Hypertarget{classGroupbyAggre_ae2629df6c6a1c27497952fe12c41c689}\label{classGroupbyAggre_ae2629df6c6a1c27497952fe12c41c689}} 
+\index{GroupbyAggre@{GroupbyAggre}!conditions@{conditions}}
+\index{conditions@{conditions}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{conditions}{conditions}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structAggreCondition}{Aggre\+Condition}}$>$ Groupby\+Aggre\+::conditions\hspace{0.3cm}{\ttfamily [private]}}
+
+Output column ID \mbox{\Hypertarget{classGroupbyAggre_a0502b3202428ef5c5152cbff4106205f}\label{classGroupbyAggre_a0502b3202428ef5c5152cbff4106205f}} 
+\index{GroupbyAggre@{GroupbyAggre}!final\_avg\_table@{final\_avg\_table}}
+\index{final\_avg\_table@{final\_avg\_table}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{final\_avg\_table}{final\_avg\_table}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::final\+\_\+avg\+\_\+table\mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)\hspace{0.3cm}{\ttfamily [private]}}
+
+Search table for AVG final \mbox{\Hypertarget{classGroupbyAggre_a24fc99925784b9df3e705aa566142cc9}\label{classGroupbyAggre_a24fc99925784b9df3e705aa566142cc9}} 
+\index{GroupbyAggre@{GroupbyAggre}!final\_method@{final\_method}}
+\index{final\_method@{final\_method}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{final\_method}{final\_method}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::final\+\_\+method\mbox{[}4\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGroupbyAggre_a83fdbf229c8967829ee60c8a8e28e973}\label{classGroupbyAggre_a83fdbf229c8967829ee60c8a8e28e973}} 
+\index{GroupbyAggre@{GroupbyAggre}!final\_sum\_table@{final\_sum\_table}}
+\index{final\_sum\_table@{final\_sum\_table}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{final\_sum\_table}{final\_sum\_table}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::final\+\_\+sum\+\_\+table\mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$result)\hspace{0.3cm}{\ttfamily [private]}}
+
+Search table for SUM final \mbox{\Hypertarget{classGroupbyAggre_a61755c69752c20264951cfaa35efc88c}\label{classGroupbyAggre_a61755c69752c20264951cfaa35efc88c}} 
+\index{GroupbyAggre@{GroupbyAggre}!group\_by\_pos@{group\_by\_pos}}
+\index{group\_by\_pos@{group\_by\_pos}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{group\_by\_pos}{group\_by\_pos}}
+{\footnotesize\ttfamily std\+::vector$<$ char $\ast$ $>$ Groupby\+Aggre\+::group\+\_\+by\+\_\+pos\hspace{0.3cm}{\ttfamily [private]}}
+
+Basic type of group-\/by columns \mbox{\Hypertarget{classGroupbyAggre_acae863a593562da97221f7e5668fc0bb}\label{classGroupbyAggre_acae863a593562da97221f7e5668fc0bb}} 
+\index{GroupbyAggre@{GroupbyAggre}!group\_by\_size@{group\_by\_size}}
+\index{group\_by\_size@{group\_by\_size}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{group\_by\_size}{group\_by\_size}}
+{\footnotesize\ttfamily std\+::vector$<$ int64\+\_\+t $>$ Groupby\+Aggre\+::group\+\_\+by\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Position of group-\/by columns \mbox{\Hypertarget{classGroupbyAggre_a79bc17ad4d0bc793f4b7fb9c10cadf57}\label{classGroupbyAggre_a79bc17ad4d0bc793f4b7fb9c10cadf57}} 
+\index{GroupbyAggre@{GroupbyAggre}!group\_by\_type@{group\_by\_type}}
+\index{group\_by\_type@{group\_by\_type}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{group\_by\_type}{group\_by\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGroupbyAggre_a3b94d41fe3611e14df59a428c5154339}{group\+\_\+by\+\_\+type\+\_\+t}} Groupby\+Aggre\+::group\+\_\+by\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGroupbyAggre_aafcf90abb875e7976bc9034dc8181777}\label{classGroupbyAggre_aafcf90abb875e7976bc9034dc8181777}} 
+\index{GroupbyAggre@{GroupbyAggre}!groupby\_rank@{groupby\_rank}}
+\index{groupby\_rank@{groupby\_rank}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{groupby\_rank}{groupby\_rank}}
+{\footnotesize\ttfamily std\+::vector$<$int64\+\_\+t$>$ Groupby\+Aggre\+::groupby\+\_\+rank\hspace{0.3cm}{\ttfamily [private]}}
+
+Input column ID \mbox{\Hypertarget{classGroupbyAggre_a5ac83b13d10a6fa2cf91254aaa658395}\label{classGroupbyAggre_a5ac83b13d10a6fa2cf91254aaa658395}} 
+\index{GroupbyAggre@{GroupbyAggre}!hash\_group@{hash\_group}}
+\index{hash\_group@{hash\_group}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{hash\_group}{hash\_group}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{classGroupbyAggre_a438bfad91f69c7fccd498dc9b625f003}{group\+\_\+by\+\_\+key\+\_\+t}}, \mbox{\hyperlink{classGrAggRecord}{Gr\+Agg\+Record}} $\ast$, \mbox{\hyperlink{classGroupbyAggre_a38e6aa88aecc7b77bf6b66953d67df03}{group\+\_\+by\+\_\+hash\+\_\+t}}$>$ Groupby\+Aggre\+::hash\+\_\+group\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGroupbyAggre_a3cd9a1545805d9ae37f544718674d53c}\label{classGroupbyAggre_a3cd9a1545805d9ae37f544718674d53c}} 
+\index{GroupbyAggre@{GroupbyAggre}!in\_cid@{in\_cid}}
+\index{in\_cid@{in\_cid}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{in\_cid}{in\_cid}}
+{\footnotesize\ttfamily std\+::vector$<$int64\+\_\+t$>$ Groupby\+Aggre\+::in\+\_\+cid\hspace{0.3cm}{\ttfamily [private]}}
+
+Child operator \mbox{\Hypertarget{classGroupbyAggre_a6ac67b07d7b417059210aeb8a2b202f1}\label{classGroupbyAggre_a6ac67b07d7b417059210aeb8a2b202f1}} 
+\index{GroupbyAggre@{GroupbyAggre}!init\_max\_table@{init\_max\_table}}
+\index{init\_max\_table@{init\_max\_table}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{init\_max\_table}{init\_max\_table}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::init\+\_\+max\+\_\+table\mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})\hspace{0.3cm}{\ttfamily [private]}}
+
+Search table for MAX init \mbox{\Hypertarget{classGroupbyAggre_a91a8ba8d1549b75854857c3837cc70ee}\label{classGroupbyAggre_a91a8ba8d1549b75854857c3837cc70ee}} 
+\index{GroupbyAggre@{GroupbyAggre}!init\_method@{init\_method}}
+\index{init\_method@{init\_method}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{init\_method}{init\_method}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::init\+\_\+method\mbox{[}4\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGroupbyAggre_a14430368cd2281859c9f95d4c12f02bc}\label{classGroupbyAggre_a14430368cd2281859c9f95d4c12f02bc}} 
+\index{GroupbyAggre@{GroupbyAggre}!init\_min\_table@{init\_min\_table}}
+\index{init\_min\_table@{init\_min\_table}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{init\_min\_table}{init\_min\_table}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::init\+\_\+min\+\_\+table\mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}})\hspace{0.3cm}{\ttfamily [private]}}
+
+Search table for MIN init \mbox{\Hypertarget{classGroupbyAggre_a3ec70303b437878dc1b550e89408835f}\label{classGroupbyAggre_a3ec70303b437878dc1b550e89408835f}} 
+\index{GroupbyAggre@{GroupbyAggre}!max\_table@{max\_table}}
+\index{max\_table@{max\_table}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{max\_table}{max\_table}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::max\+\_\+table\mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)\hspace{0.3cm}{\ttfamily [private]}}
+
+Search table for MAX \mbox{\Hypertarget{classGroupbyAggre_a04f64e3a3ffe8e27bd7aa1d1f54fb228}\label{classGroupbyAggre_a04f64e3a3ffe8e27bd7aa1d1f54fb228}} 
+\index{GroupbyAggre@{GroupbyAggre}!middle\_buf\_array@{middle\_buf\_array}}
+\index{middle\_buf\_array@{middle\_buf\_array}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{middle\_buf\_array}{middle\_buf\_array}}
+{\footnotesize\ttfamily std\+::vector$<$ char $\ast$ $>$ Groupby\+Aggre\+::middle\+\_\+buf\+\_\+array\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of buffer allocated for intermediate record \mbox{\Hypertarget{classGroupbyAggre_a3540df0f54a863ec43972267afdf4f7a}\label{classGroupbyAggre_a3540df0f54a863ec43972267afdf4f7a}} 
+\index{GroupbyAggre@{GroupbyAggre}!middle\_buf\_size@{middle\_buf\_size}}
+\index{middle\_buf\_size@{middle\_buf\_size}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{middle\_buf\_size}{middle\_buf\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Groupby\+Aggre\+::middle\+\_\+buf\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of an intermediate record, not including c and s \mbox{\Hypertarget{classGroupbyAggre_a4ea101bb3460153bf0f68b2cddb20f1e}\label{classGroupbyAggre_a4ea101bb3460153bf0f68b2cddb20f1e}} 
+\index{GroupbyAggre@{GroupbyAggre}!middle\_tuple\_size@{middle\_tuple\_size}}
+\index{middle\_tuple\_size@{middle\_tuple\_size}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{middle\_tuple\_size}{middle\_tuple\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Groupby\+Aggre\+::middle\+\_\+tuple\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of a tuple from child \mbox{\Hypertarget{classGroupbyAggre_a9f048eef24c8c6868070ea3548376479}\label{classGroupbyAggre_a9f048eef24c8c6868070ea3548376479}} 
+\index{GroupbyAggre@{GroupbyAggre}!min\_table@{min\_table}}
+\index{min\_table@{min\_table}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{min\_table}{min\_table}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::min\+\_\+table\mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)\hspace{0.3cm}{\ttfamily [private]}}
+
+Search table for MIN \mbox{\Hypertarget{classGroupbyAggre_ac6f792e2d5cc4604d73764e2b7836858}\label{classGroupbyAggre_ac6f792e2d5cc4604d73764e2b7836858}} 
+\index{GroupbyAggre@{GroupbyAggre}!next\_iter@{next\_iter}}
+\index{next\_iter@{next\_iter}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{next\_iter}{next\_iter}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{classGroupbyAggre_a438bfad91f69c7fccd498dc9b625f003}{group\+\_\+by\+\_\+key\+\_\+t}},\mbox{\hyperlink{classGrAggRecord}{Gr\+Agg\+Record}}$\ast$$>$\+::iterator Groupby\+Aggre\+::next\+\_\+iter\hspace{0.3cm}{\ttfamily [private]}}
+
+Hash map for groupby \mbox{\Hypertarget{classGroupbyAggre_a74ea0cbe41f396d75e695bffc35da63a}\label{classGroupbyAggre_a74ea0cbe41f396d75e695bffc35da63a}} 
+\index{GroupbyAggre@{GroupbyAggre}!out\_cid@{out\_cid}}
+\index{out\_cid@{out\_cid}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{out\_cid}{out\_cid}}
+{\footnotesize\ttfamily std\+::vector$<$int64\+\_\+t$>$ Groupby\+Aggre\+::out\+\_\+cid\hspace{0.3cm}{\ttfamily [private]}}
+
+Rank of group-\/by columns \mbox{\Hypertarget{classGroupbyAggre_af878c48f34e97d8dcba5cda3645f613c}\label{classGroupbyAggre_af878c48f34e97d8dcba5cda3645f613c}} 
+\index{GroupbyAggre@{GroupbyAggre}!sum\_table@{sum\_table}}
+\index{sum\_table@{sum\_table}!GroupbyAggre@{GroupbyAggre}}
+\doxysubsubsection{\texorpdfstring{sum\_table}{sum\_table}}
+{\footnotesize\ttfamily void($\ast$ Groupby\+Aggre\+::sum\+\_\+table\mbox{[}\mbox{\hyperlink{datatype_8h_af14562a565b0f6fce9a146afe6dc0130a3e5ddaf723539b6280058dbd3868d79a}{MAXTYPE\+\_\+\+TC}}\mbox{]})(void $\ast$sum, void $\ast$\mbox{\hyperlink{classGroupbyAggre_a79982b0022f2427681fb243627e415b6}{count}}, void $\ast$x)\hspace{0.3cm}{\ttfamily [private]}}
+
+Search table for SUM 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{executor_8h}{executor.\+h}}\item 
+system/\mbox{\hyperlink{executor_8cc}{executor.\+cc}}\end{DoxyCompactItemize}

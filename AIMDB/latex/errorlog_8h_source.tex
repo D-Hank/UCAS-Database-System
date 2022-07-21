@@ -1,0 +1,183 @@
+\hypertarget{errorlog_8h_source}{}\doxysection{errorlog.\+h}
+\label{errorlog_8h_source}\index{system/errorlog.h@{system/errorlog.h}}
+\mbox{\hyperlink{errorlog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#ifndef \_ERRORLOG\_H}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define \_ERRORLOG\_H}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#include <pthread.h>}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{88 \textcolor{comment}{/* Error Logging Macros                                                   */}}
+\DoxyCodeLine{89 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define EL\_DEBUG          1     }}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define EL\_INFO           2     }}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define EL\_WARN           3     }}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define EL\_ERROR          4     }}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define EL\_SERIOUS        5     }}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{comment}{// errors < this level will not be compiled into the executable}}
+\DoxyCodeLine{98 \textcolor{comment}{// this can be from EL\_DEBUG to EL\_ERROR.}}
+\DoxyCodeLine{99 \textcolor{comment}{// Note that we will always report any EL\_ERROR and EL\_SERIOUS messages.}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define EL\_LEVEL\_COMPILE  EL\_DEBUG}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define EL\_LEVEL\_COMPILE  EL\_INFO}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#if EL\_DEBUG >= EL\_LEVEL\_COMPILE}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define EL\_LOG\_DEBUG(...)  \(\backslash\)}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{do\{ if (EL\_DEBUG>=ErrorLog::el\_level) \(\backslash\)}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{        thread\_el-\/>log(EL\_DEBUG,\_\_FILE\_\_,\_\_LINE\_\_,\_\_VA\_ARGS\_\_);\}while(0)}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define EL\_LOG\_DEBUG(...)}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#if EL\_INFO >= EL\_LEVEL\_COMPILE}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define EL\_LOG\_INFO(...)  \(\backslash\)}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{do\{ if (EL\_INFO>=ErrorLog::el\_level) \(\backslash\)}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{        thread\_el-\/>log(EL\_INFO,\_\_FILE\_\_,\_\_LINE\_\_,\_\_VA\_ARGS\_\_);\}while(0)}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define EL\_LOG\_INFO(...)}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#if EL\_WARN >= EL\_LEVEL\_COMPILE}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define EL\_LOG\_WARN(...)  \(\backslash\)}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{do\{ if (EL\_WARN>=ErrorLog::el\_level) \(\backslash\)}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{        thread\_el-\/>log(EL\_WARN,\_\_FILE\_\_,\_\_LINE\_\_,\_\_VA\_ARGS\_\_);\}while(0)}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define EL\_LOG\_WARN(...)}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define EL\_LOG\_ERROR(...)  \(\backslash\)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{        thread\_el-\/>log(EL\_ERROR,\_\_FILE\_\_,\_\_LINE\_\_,\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define EL\_LOG\_SERIOUS(...)  \(\backslash\)}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{        thread\_el-\/>log(EL\_SERIOUS,\_\_FILE\_\_,\_\_LINE\_\_,\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define EL\_RESET()     (thread\_el-\/>reset())}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define EL\_ERRCODE()   (thread\_el-\/>getErrorCode())}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define EL\_ERRMSG()    (thread\_el-\/>getErrorMsg())}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#if EL\_DEBUG >= EL\_LEVEL\_COMPILE}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define EL\_ASSERT(exp)   \(\backslash\)}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{do\{ if (!(exp)) EL\_LOG\_DEBUG("{}Assertion failed: \%s\(\backslash\)n"{}}, \#exp);\} while(0)}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define EL\_ASSERT(t)}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{151 \textcolor{comment}{/* Error Code                                                             */}}
+\DoxyCodeLine{152 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \textcolor{comment}{// Error code consists of 3 digits of file id and 5 digits of line number}}
+\DoxyCodeLine{155 \textcolor{comment}{// line number cannot }}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define EL\_ERROR\_CODE(fileid, lineno)    ((fileid)*100000 + (lineno))}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define EL\_GET\_FILEID(errcode)           ((errcode)/100000)}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define EL\_GET\_LINENO(errcode)           ((errcode)\%100000)}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define EL\_OK                            (0)}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define EL\_BAD\_FILEID                    (99999999)}}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define EL\_GET\_FILENAME(errcode) \(\backslash\)}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{        (ErrorLog::id2Name(EL\_GET\_FILEID(errcode)))}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 \textcolor{comment}{// source file names}}
+\DoxyCodeLine{167 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{errorlog_8h_a85b38bc0806c90d91d9cb7bb8a344a40}{EL\_src\_file\_name}}[];  }
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{170 \textcolor{comment}{/* class ErrorLog                                                         */}}
+\DoxyCodeLine{171 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{172 \textcolor{keyword}{class }\mbox{\hyperlink{classErrorLog}{ErrorLog}} \{}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174     \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{175     \textcolor{comment}{// class static}}
+\DoxyCodeLine{176     \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178   \textcolor{keyword}{public}:}
+\DoxyCodeLine{179     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{classErrorLog_a83eecfd0d8235ed9d60d345cb774a010}{el\_level}};        }
+\DoxyCodeLine{180     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classErrorLog_a0c235ac2408ef8b81dda42a25416a7cf}{el\_level\_name}}[\mbox{\hyperlink{errorlog_8h_a661825059d32a6648abcbe7ddbe4038e}{EL\_SERIOUS}} + 1];}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183   \textcolor{keyword}{private}:}
+\DoxyCodeLine{184     \textcolor{keyword}{static} pthread\_mutex\_t \mbox{\hyperlink{classErrorLog_a61706d666c3f71a7ac8d258f680189ac}{el\_lock}};     }
+\DoxyCodeLine{185     \textcolor{keyword}{static} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classErrorLog_aa6ba1cf0da7e20f0dd54843e5eb143c5}{el\_logfile}};    }
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187     \textcolor{keyword}{static} FILE *\mbox{\hyperlink{classErrorLog_a1731ca615dcff68df4e7888bc69f848a}{el\_fp}};         }
+\DoxyCodeLine{188     \textcolor{keyword}{static} std::unordered\_map < std::string, int >*\mbox{\hyperlink{classErrorLog_ab696de54dbb04e7e7c7915e6b141974a}{el\_name\_2\_id}};}
+\DoxyCodeLine{190   \textcolor{keyword}{public}:}
+\DoxyCodeLine{197     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classErrorLog_a62760139b8a7cc8075e3e1f5477e1207}{init}}(\textcolor{keywordtype}{int} level, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *logfile);}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{205     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classErrorLog_ae7fa7f3d060c15d0fb0801249e16028a}{setLevel}}(\textcolor{keywordtype}{int} level);}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{210     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classErrorLog_a5ad2be67100d49097713357937f54c47}{flushLog}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{211         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classErrorLog_a1731ca615dcff68df4e7888bc69f848a}{el\_fp}})}
+\DoxyCodeLine{212             fflush(\mbox{\hyperlink{classErrorLog_a1731ca615dcff68df4e7888bc69f848a}{el\_fp}});}
+\DoxyCodeLine{213     \} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classErrorLog_a764e480ee5b420c5be96ceaa732f407b}{closeLog}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{217         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classErrorLog_a1731ca615dcff68df4e7888bc69f848a}{el\_fp}})}
+\DoxyCodeLine{218             fclose(\mbox{\hyperlink{classErrorLog_a1731ca615dcff68df4e7888bc69f848a}{el\_fp}});}
+\DoxyCodeLine{219         \mbox{\hyperlink{classErrorLog_a1731ca615dcff68df4e7888bc69f848a}{el\_fp}} = NULL;}
+\DoxyCodeLine{220     \}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{230     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{classErrorLog_a1dd9b8de2db9cefd982b44b812739aa0}{name2Id}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *src\_name);}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{240     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classErrorLog_a193efa0876e80726154cce62f2dbf947}{id2Name}}(\textcolor{keywordtype}{int} src\_id);}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242     \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{243     \textcolor{comment}{// instance}}
+\DoxyCodeLine{244     \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246   \textcolor{keyword}{private}:}
+\DoxyCodeLine{247     \textcolor{keywordtype}{char} *\mbox{\hyperlink{classErrorLog_a2383e10edc4efebbe7a3e49fdb521fce}{el\_thread\_name}};       }
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249     \textcolor{keywordtype}{int} \mbox{\hyperlink{classErrorLog_afc70c62c20e58272e8e87a3c5d1c0500}{el\_err\_code}};            }
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251     \textcolor{keywordtype}{char} *\mbox{\hyperlink{classErrorLog_a44ac204d72a27fb5ef3d3342c3ba25f7}{el\_msg\_buf}};           }
+\DoxyCodeLine{252     \textcolor{keywordtype}{int} \mbox{\hyperlink{classErrorLog_ad24d9d9b750567c33a461c4808ca576c}{el\_msg\_cap}};             }
+\DoxyCodeLine{253     \textcolor{keywordtype}{char} *\mbox{\hyperlink{classErrorLog_a66168fa7406032e9c4e29ba01e3c0936}{el\_msg\_cur}};           }
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255     \textcolor{keywordtype}{char} *\mbox{\hyperlink{classErrorLog_a302f2e7de4cee9fd1f8fbbb68f6968cd}{el\_demangle\_buf}};      }
+\DoxyCodeLine{256     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classErrorLog_a272c4b4300fbf2de502edfa8c21d0f70}{el\_demangle\_len}};     }
+\DoxyCodeLine{257     \textcolor{keywordtype}{void} *\mbox{\hyperlink{classErrorLog_ada27280bb884ff3f151816d0bd5a13ee}{el\_bt\_buffer}}[256];    }
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260     time\_t \mbox{\hyperlink{classErrorLog_aec7fd8cbcffc66d22afbfc8b32577f9a}{el\_tloc}};             }
+\DoxyCodeLine{261     \textcolor{keyword}{struct }tm \mbox{\hyperlink{classErrorLog_aa4ba923182734bab4305926b58f0ebd1}{el\_tm}};            }
+\DoxyCodeLine{262 }
+\DoxyCodeLine{277     \textcolor{keywordtype}{int} \mbox{\hyperlink{classErrorLog_a89f52b1551b841e7d306df23d94e31f4}{getFuncNameGCC}}(\textcolor{keywordtype}{char} *bt\_symbol);}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279   \textcolor{keyword}{public}:}
+\DoxyCodeLine{287     \mbox{\hyperlink{classErrorLog_ae3e7d632730897f580d67c44bbbe2215}{ErrorLog}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *thread\_name, \textcolor{keywordtype}{int} msg\_cap = 256 * 1024);}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{292     \mbox{\hyperlink{classErrorLog_a54a16d175632adc35473c718d28e913f}{\string~ErrorLog}}();}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{297     \textcolor{keywordtype}{void} \mbox{\hyperlink{classErrorLog_a6f12d8ab52745568a9a98389cbd66c4f}{reset}}();}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{308     \textcolor{keywordtype}{void} \mbox{\hyperlink{classErrorLog_a1c6d3867fc36c07771eddd698d42695b}{log}}(\textcolor{keywordtype}{int} level, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *src\_name, \textcolor{keyword}{const} \textcolor{keywordtype}{int} lineno, ...);}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{313     \textcolor{keywordtype}{int} \mbox{\hyperlink{classErrorLog_a27cac5ff25c2ca8b2787c72587e7e852}{getErrorCode}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{314         \textcolor{keywordflow}{return} \mbox{\hyperlink{classErrorLog_afc70c62c20e58272e8e87a3c5d1c0500}{el\_err\_code}};}
+\DoxyCodeLine{315     \}}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{320     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classErrorLog_a7e79ae4b6e9417b2a8c09a0dac619743}{getErrorMsg}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{321         \textcolor{keywordflow}{return} \mbox{\hyperlink{classErrorLog_a44ac204d72a27fb5ef3d3342c3ba25f7}{el\_msg\_buf}};}
+\DoxyCodeLine{322     \}}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324 \};                              \textcolor{comment}{// ErrorLog}}
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#ifndef \_Thread\_local}}
+\DoxyCodeLine{327 \textcolor{preprocessor}{\#define \_Thread\_local \_\_thread}}
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{329 }
+\DoxyCodeLine{330 \textcolor{keyword}{extern} \mbox{\hyperlink{errorlog_8h_a6ee13d5bcebab292dbc98e06c6cf9fe7}{\_Thread\_local}} \mbox{\hyperlink{classErrorLog}{ErrorLog}} *\mbox{\hyperlink{errorlog_8h_a954738f0ea72f77905ae2b644042ae08}{thread\_el}};}
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

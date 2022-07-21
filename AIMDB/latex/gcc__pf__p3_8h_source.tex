@@ -1,0 +1,54 @@
+\hypertarget{gcc__pf__p3_8h_source}{}\doxysection{gcc\+\_\+pf\+\_\+p3.\+h}
+\label{gcc__pf__p3_8h_source}\index{system/gcc\_pf\_p3.h@{system/gcc\_pf\_p3.h}}
+\mbox{\hyperlink{gcc__pf__p3_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* File Name: gcc\_pf\_p3.h}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Author:    Shimin Chen}}
+\DoxyCodeLine{3 \textcolor{comment}{ */}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef \_GCC\_PREFETCH\_P3}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define \_GCC\_PREFETCH\_P3}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define prefetcht0(mem\_var)     \(\backslash\)}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{        \_\_asm\_\_ \_\_volatile\_\_ ("{}prefetcht0 \%0"{}}: :"{}m"{}(mem\_var))}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define prefetcht1(mem\_var)     \(\backslash\)}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{        \_\_asm\_\_ \_\_volatile\_\_ ("{}prefetcht1 \%0"{}}: :"{}m"{}(mem\_var))}
+\DoxyCodeLine{12 \textcolor{comment}{//\#define prefetcht2(mem\_var)   }}
+\DoxyCodeLine{13 \textcolor{comment}{//      \_\_asm\_\_ \_\_volatile\_\_ ("{}prefetcht2 \%0"{}: :"{}m"{}(mem\_var))}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define prefetchnta(mem\_var) \(\backslash\)}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{        \_\_asm\_\_ \_\_volatile\_\_ ("{}prefetchnta \%0"{}}: :"{}m"{}(mem\_var))}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{/*}}
+\DoxyCodeLine{18 \textcolor{comment}{   T0 (temporal data):}}
+\DoxyCodeLine{19 \textcolor{comment}{       prefetch data into all levels of the cache hierarchy.   }}
+\DoxyCodeLine{20 \textcolor{comment}{       Pentium III processor 1st-\/ or 2nd-\/level cache.   }}
+\DoxyCodeLine{21 \textcolor{comment}{       Pentium 4 and Intel Xeon processors 2nd-\/level cache.}}
+\DoxyCodeLine{22 \textcolor{comment}{}}
+\DoxyCodeLine{23 \textcolor{comment}{   T1 (temporal data with respect to first level cache) }}
+\DoxyCodeLine{24 \textcolor{comment}{       prefetch data into level 2 cache and higher.   }}
+\DoxyCodeLine{25 \textcolor{comment}{       Pentium III processor 2nd-\/level cache.   }}
+\DoxyCodeLine{26 \textcolor{comment}{       Pentium 4 and Intel Xeon processors 2nd-\/level cache.}}
+\DoxyCodeLine{27 \textcolor{comment}{}}
+\DoxyCodeLine{28 \textcolor{comment}{   T2 (temporal data with respect to second level cache) }}
+\DoxyCodeLine{29 \textcolor{comment}{       prefetch data into level 2 cache and higher.   }}
+\DoxyCodeLine{30 \textcolor{comment}{       Pentium III processor 2nd-\/level cache.   }}
+\DoxyCodeLine{31 \textcolor{comment}{       Pentium 4 and Intel Xeon processors 2nd-\/level cache.}}
+\DoxyCodeLine{32 \textcolor{comment}{}}
+\DoxyCodeLine{33 \textcolor{comment}{   NTA (non-\/temporal data with respect to all cache levels) }}
+\DoxyCodeLine{34 \textcolor{comment}{        prefetch data into non-\/temporal cache structure and }}
+\DoxyCodeLine{35 \textcolor{comment}{        into a location close to the processor, minimizing cache pollution.   }}
+\DoxyCodeLine{36 \textcolor{comment}{        Pentium III processor 1st-\/level cache   }}
+\DoxyCodeLine{37 \textcolor{comment}{        Pentium 4 and Intel Xeon processors 2nd-\/level cache}}
+\DoxyCodeLine{38 \textcolor{comment}{ */}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define pfld(mem\_var)      prefetcht0(mem\_var)}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define pfst(mem\_var)      prefetcht0(mem\_var)}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define pfldnta(mem\_var)   prefetchnta(mem\_var)}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define pfstnta(mem\_var)   prefetchnta(mem\_var)}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define ptouch(mem\_var) \(\backslash\)}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{        \_\_asm\_\_ \_\_volatile\_\_ ("{}movl \%0, \%\%eax"{}}: :"{}m"{}(mem\_var):"{}\%eax"{})}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_GCC\_PREFETCH\_P3 */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

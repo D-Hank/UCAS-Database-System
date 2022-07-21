@@ -1,0 +1,147 @@
+\hypertarget{classScan}{}\doxysection{Scan Class Reference}
+\label{classScan}\index{Scan@{Scan}}
+
+
+{\ttfamily \#include $<$executor.\+h$>$}
+
+Inheritance diagram for Scan\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classScan}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classScan_a23ff58993b04394f967eb63b4b31bce6}{Scan}} ()
+\item 
+\mbox{\hyperlink{classScan_a716764da76d1f5c172dbbf3391cfbad1}{$\sim$\+Scan}} ()
+\item 
+bool \mbox{\hyperlink{classScan_a0d6ccccd842e717a4facf1f8d705873d}{close}} ()
+\item 
+bool \mbox{\hyperlink{classScan_a4d2f13c66297091fd123b4721e6e867f}{get\+Next}} ()
+\item 
+bool \mbox{\hyperlink{classScan_a60b43ca2f86ac511d553dc5115a4a1ab}{open}} ()
+\item 
+void \mbox{\hyperlink{classScan_a32b047df5152236fc06039de81fd6e1f}{set\+Table}} (\mbox{\hyperlink{classTable}{Table}} $\ast$table)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classScan_a8ea8ad00f910f06f40e9c4ec71159262}{next\+\_\+record}}
+\item 
+\mbox{\hyperlink{classTable}{Table}} $\ast$ \mbox{\hyperlink{classScan_a5299da04a2d95c44d4610098d2c69886}{scan\+\_\+table}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classScan_a5a65d4acd469e994f74fd790de69a542}{total\+\_\+record}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+definition of the scan operator located at the buttom of the op-\/tree 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classScan_a23ff58993b04394f967eb63b4b31bce6}\label{classScan_a23ff58993b04394f967eb63b4b31bce6}} 
+\index{Scan@{Scan}!Scan@{Scan}}
+\index{Scan@{Scan}!Scan@{Scan}}
+\doxysubsubsection{\texorpdfstring{Scan()}{Scan()}}
+{\footnotesize\ttfamily Scan\+::\+Scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+next record to check Constructor \mbox{\Hypertarget{classScan_a716764da76d1f5c172dbbf3391cfbad1}\label{classScan_a716764da76d1f5c172dbbf3391cfbad1}} 
+\index{Scan@{Scan}!````~Scan@{$\sim$Scan}}
+\index{````~Scan@{$\sim$Scan}!Scan@{Scan}}
+\doxysubsubsection{\texorpdfstring{$\sim$Scan()}{~Scan()}}
+{\footnotesize\ttfamily Scan\+::$\sim$\+Scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classScan_a0d6ccccd842e717a4facf1f8d705873d}\label{classScan_a0d6ccccd842e717a4facf1f8d705873d}} 
+\index{Scan@{Scan}!close@{close}}
+\index{close@{close}!Scan@{Scan}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool Scan\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+close this operator, release all resources 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classOperator_a1db4a9736164f68e497e2f89d00473f1}{Operator}}.
+
+\mbox{\Hypertarget{classScan_a4d2f13c66297091fd123b4721e6e867f}\label{classScan_a4d2f13c66297091fd123b4721e6e867f}} 
+\index{Scan@{Scan}!getNext@{getNext}}
+\index{getNext@{getNext}!Scan@{Scan}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily bool Scan\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+get next record from the table iterately 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classOperator_ab9e6e455abb03bc86a18548b4e6b093b}{Operator}}.
+
+\mbox{\Hypertarget{classScan_a60b43ca2f86ac511d553dc5115a4a1ab}\label{classScan_a60b43ca2f86ac511d553dc5115a4a1ab}} 
+\index{Scan@{Scan}!open@{open}}
+\index{open@{open}!Scan@{Scan}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool Scan\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+open a scan operator 
+\begin{DoxyRetVals}{Return values}
+{\em true} & successfully opened \\
+\hline
+{\em false} & failed\\
+\hline
+\end{DoxyRetVals}
+Note\+: the dest buffer should be allocated when first opened and keep static 
+
+Reimplemented from \mbox{\hyperlink{classOperator_aaec459eabb9b23f5c2253e2ca355d665}{Operator}}.
+
+\mbox{\Hypertarget{classScan_a32b047df5152236fc06039de81fd6e1f}\label{classScan_a32b047df5152236fc06039de81fd6e1f}} 
+\index{Scan@{Scan}!setTable@{setTable}}
+\index{setTable@{setTable}!Scan@{Scan}}
+\doxysubsubsection{\texorpdfstring{setTable()}{setTable()}}
+{\footnotesize\ttfamily void Scan\+::set\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the table to scan should be called before open 
+\begin{DoxyParams}{Parameters}
+{\em table} & the designated table \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classScan_a8ea8ad00f910f06f40e9c4ec71159262}\label{classScan_a8ea8ad00f910f06f40e9c4ec71159262}} 
+\index{Scan@{Scan}!next\_record@{next\_record}}
+\index{next\_record@{next\_record}!Scan@{Scan}}
+\doxysubsubsection{\texorpdfstring{next\_record}{next\_record}}
+{\footnotesize\ttfamily int64\+\_\+t Scan\+::next\+\_\+record\hspace{0.3cm}{\ttfamily [private]}}
+
+total record num of this table when first opened \mbox{\Hypertarget{classScan_a5299da04a2d95c44d4610098d2c69886}\label{classScan_a5299da04a2d95c44d4610098d2c69886}} 
+\index{Scan@{Scan}!scan\_table@{scan\_table}}
+\index{scan\_table@{scan\_table}!Scan@{Scan}}
+\doxysubsubsection{\texorpdfstring{scan\_table}{scan\_table}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTable}{Table}}$\ast$ Scan\+::scan\+\_\+table\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classScan_a5a65d4acd469e994f74fd790de69a542}\label{classScan_a5a65d4acd469e994f74fd790de69a542}} 
+\index{Scan@{Scan}!total\_record@{total\_record}}
+\index{total\_record@{total\_record}!Scan@{Scan}}
+\doxysubsubsection{\texorpdfstring{total\_record}{total\_record}}
+{\footnotesize\ttfamily int64\+\_\+t Scan\+::total\+\_\+record\hspace{0.3cm}{\ttfamily [private]}}
+
+the designated table 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{executor_8h}{executor.\+h}}\item 
+system/\mbox{\hyperlink{executor_8cc}{executor.\+cc}}\end{DoxyCompactItemize}

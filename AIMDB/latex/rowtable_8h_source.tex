@@ -1,0 +1,235 @@
+\hypertarget{rowtable_8h_source}{}\doxysection{rowtable.\+h}
+\label{rowtable_8h_source}\index{system/rowtable.h@{system/rowtable.h}}
+\mbox{\hyperlink{rowtable_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef \_ROWTABLE\_H}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define \_ROWTABLE\_H}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mymemory_8h}{mymemory.h}}"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{schema_8h}{schema.h}}"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{extern} \mbox{\hyperlink{classMemory}{Memory}} \mbox{\hyperlink{rowtable_8h_ab02b3badee65de481b409f3887fb8691}{g\_memory}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{28 \textcolor{keyword}{class }\mbox{\hyperlink{classRPattern}{RPattern}} \{}
+\DoxyCodeLine{29   \textcolor{keyword}{private}:}
+\DoxyCodeLine{30     int64\_t \mbox{\hyperlink{classRPattern_a6c56ea9db92f00a9dd7e80fc179bf3cb}{rp\_colnum}};    }
+\DoxyCodeLine{31     int64\_t *\mbox{\hyperlink{classRPattern_a772900103eb3848a4c5f1cf3fc20d900}{rp\_offset}};   }
+\DoxyCodeLine{32     \mbox{\hyperlink{classBasicType}{BasicType}} **\mbox{\hyperlink{classRPattern_a006e0d4cef1c235c670df9c1f730997c}{rp\_dtype}}; }
+\DoxyCodeLine{33     \textcolor{keywordtype}{char} *\mbox{\hyperlink{classRPattern_a3e46c1ddb643beb5db01e2b16428c6d6}{rp\_memory}};      }
+\DoxyCodeLine{34     int64\_t \mbox{\hyperlink{classRPattern_a937d57b8b75ec41366fa589bd11e33b4}{rp\_mem\_sz}};    }
+\DoxyCodeLine{35     int64\_t \mbox{\hyperlink{classRPattern_ad90c55bae22e2d029676672dd78f5d47}{rp\_current}};   }
+\DoxyCodeLine{36     int64\_t \mbox{\hyperlink{classRPattern_a95a06233a4f677e2f554fee782a446ef}{rp\_row\_sz}};    }
+\DoxyCodeLine{37     \textcolor{keywordtype}{char} \mbox{\hyperlink{classRPattern_af5c2ab26354760d7980c50958dce7b2a}{par}}[128 -\/ 3 * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{void} *) -\/ 4 * \textcolor{keyword}{sizeof}(int64\_t)]; }
+\DoxyCodeLine{39   \textcolor{keyword}{public}:}
+\DoxyCodeLine{46      \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRPattern_acc0320eadcaeb2414a33a344fd8d6e9a}{init}}(int64\_t col\_num) \{}
+\DoxyCodeLine{47         \mbox{\hyperlink{classRPattern_a95a06233a4f677e2f554fee782a446ef}{rp\_row\_sz}} = 0L;}
+\DoxyCodeLine{48         \mbox{\hyperlink{classRPattern_ad90c55bae22e2d029676672dd78f5d47}{rp\_current}} = 0L;}
+\DoxyCodeLine{49         \mbox{\hyperlink{classRPattern_a6c56ea9db92f00a9dd7e80fc179bf3cb}{rp\_colnum}} = col\_num;}
+\DoxyCodeLine{50         int64\_t alloc\_size =}
+\DoxyCodeLine{51             \mbox{\hyperlink{classRPattern_a6c56ea9db92f00a9dd7e80fc179bf3cb}{rp\_colnum}} * (\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classBasicType}{BasicType}} *) + \textcolor{keyword}{sizeof}(int64\_t));}
+\DoxyCodeLine{52         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classRPattern_a937d57b8b75ec41366fa589bd11e33b4}{rp\_mem\_sz}} = 8L; \mbox{\hyperlink{classRPattern_a937d57b8b75ec41366fa589bd11e33b4}{rp\_mem\_sz}} < alloc\_size;}
+\DoxyCodeLine{53              \mbox{\hyperlink{classRPattern_a937d57b8b75ec41366fa589bd11e33b4}{rp\_mem\_sz}} = \mbox{\hyperlink{classRPattern_a937d57b8b75ec41366fa589bd11e33b4}{rp\_mem\_sz}} << 1);}
+\DoxyCodeLine{54          alloc\_size = \mbox{\hyperlink{rowtable_8h_ab02b3badee65de481b409f3887fb8691}{g\_memory}}.\mbox{\hyperlink{classMemory_a658ccab508b60c43fa12479348abcc5d}{alloc}}(\mbox{\hyperlink{classRPattern_a3e46c1ddb643beb5db01e2b16428c6d6}{rp\_memory}}, \mbox{\hyperlink{classRPattern_a937d57b8b75ec41366fa589bd11e33b4}{rp\_mem\_sz}});}
+\DoxyCodeLine{55         \textcolor{keywordflow}{if} (alloc\_size != \mbox{\hyperlink{classRPattern_a937d57b8b75ec41366fa589bd11e33b4}{rp\_mem\_sz}}) \{}
+\DoxyCodeLine{56             printf(\textcolor{stringliteral}{"{}[RPattern][ERROR][init]: alloc memory error! -\/1\(\backslash\)n"{}});}
+\DoxyCodeLine{57             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59         \mbox{\hyperlink{classRPattern_a772900103eb3848a4c5f1cf3fc20d900}{rp\_offset}} = (int64\_t *) \mbox{\hyperlink{classRPattern_a3e46c1ddb643beb5db01e2b16428c6d6}{rp\_memory}};}
+\DoxyCodeLine{60         \mbox{\hyperlink{classRPattern_a006e0d4cef1c235c670df9c1f730997c}{rp\_dtype}} = (\mbox{\hyperlink{classBasicType}{BasicType}} **) (\mbox{\hyperlink{classRPattern_a3e46c1ddb643beb5db01e2b16428c6d6}{rp\_memory}} + \mbox{\hyperlink{classRPattern_a937d57b8b75ec41366fa589bd11e33b4}{rp\_mem\_sz}} / 2);}
+\DoxyCodeLine{61         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{67     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRPattern_a6dc4c1c7d51e338ca49fcad0617f5fa2}{addColumn}}(\mbox{\hyperlink{classBasicType}{BasicType}} * col\_type) \{}
+\DoxyCodeLine{68         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classRPattern_ad90c55bae22e2d029676672dd78f5d47}{rp\_current}} >= \mbox{\hyperlink{classRPattern_a6c56ea9db92f00a9dd7e80fc179bf3cb}{rp\_colnum}})}
+\DoxyCodeLine{69             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{70         \mbox{\hyperlink{classRPattern_a006e0d4cef1c235c670df9c1f730997c}{rp\_dtype}}[\mbox{\hyperlink{classRPattern_ad90c55bae22e2d029676672dd78f5d47}{rp\_current}}] = col\_type;}
+\DoxyCodeLine{71         \mbox{\hyperlink{classRPattern_a772900103eb3848a4c5f1cf3fc20d900}{rp\_offset}}[\mbox{\hyperlink{classRPattern_ad90c55bae22e2d029676672dd78f5d47}{rp\_current}}] = \mbox{\hyperlink{classRPattern_a95a06233a4f677e2f554fee782a446ef}{rp\_row\_sz}};}
+\DoxyCodeLine{72         \mbox{\hyperlink{classRPattern_a95a06233a4f677e2f554fee782a446ef}{rp\_row\_sz}} += col\_type-\/>\mbox{\hyperlink{classBasicType_ab703e8f77c3001b08e64c430cf3e2e5e}{getTypeSize}}();}
+\DoxyCodeLine{73         \mbox{\hyperlink{classRPattern_ad90c55bae22e2d029676672dd78f5d47}{rp\_current}}++;}
+\DoxyCodeLine{74         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{75     \}}
+\DoxyCodeLine{82     int64\_t \mbox{\hyperlink{classRPattern_a797e7dc29c0f2818fd0c625971f88371}{getColumnOffset}}(int64\_t col\_rank) \{}
+\DoxyCodeLine{83         \textcolor{keywordflow}{return} col\_rank < \mbox{\hyperlink{classRPattern_a6c56ea9db92f00a9dd7e80fc179bf3cb}{rp\_colnum}} ? \mbox{\hyperlink{classRPattern_a772900103eb3848a4c5f1cf3fc20d900}{rp\_offset}}[col\_rank] : -\/1;}
+\DoxyCodeLine{84     \}}
+\DoxyCodeLine{91     \mbox{\hyperlink{classBasicType}{BasicType}} *\mbox{\hyperlink{classRPattern_ad2a8f818c7b708148cbf4ddf0052414d}{getColumnType}}(int64\_t col\_rank) \{}
+\DoxyCodeLine{92         \textcolor{keywordflow}{return} col\_rank < \mbox{\hyperlink{classRPattern_a6c56ea9db92f00a9dd7e80fc179bf3cb}{rp\_colnum}} ? \mbox{\hyperlink{classRPattern_a006e0d4cef1c235c670df9c1f730997c}{rp\_dtype}}[col\_rank] : NULL;}
+\DoxyCodeLine{93     \}}
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} \mbox{\hyperlink{classRPattern_a057a1adb3e39a44ac2aa7e6f4d92c093}{reset}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{98         \mbox{\hyperlink{classRPattern_a95a06233a4f677e2f554fee782a446ef}{rp\_row\_sz}} = 0L;}
+\DoxyCodeLine{99         \mbox{\hyperlink{classRPattern_ad90c55bae22e2d029676672dd78f5d47}{rp\_current}} = 0L;}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} \mbox{\hyperlink{classRPattern_aa0b2e1b2be2f951dd493dfbc2de9f772}{shut}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{105         \mbox{\hyperlink{rowtable_8h_ab02b3badee65de481b409f3887fb8691}{g\_memory}}.\mbox{\hyperlink{classMemory_a70d0a24eb2642a38dcb09e37e20033dc}{free}}(\mbox{\hyperlink{classRPattern_a3e46c1ddb643beb5db01e2b16428c6d6}{rp\_memory}}, \mbox{\hyperlink{classRPattern_a937d57b8b75ec41366fa589bd11e33b4}{rp\_mem\_sz}});}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{111     int64\_t \mbox{\hyperlink{classRPattern_af4ca48c64c6083c4658d52afb0e51659}{getRowSize}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{112         \textcolor{keywordflow}{return} \mbox{\hyperlink{classRPattern_a95a06233a4f677e2f554fee782a446ef}{rp\_row\_sz}};}
+\DoxyCodeLine{113     \}}
+\DoxyCodeLine{120     int64\_t \mbox{\hyperlink{classRPattern_aaed7216bc707968930adb23474da51df}{print}}(\textcolor{keywordtype}{char} *r\_ptr) \{}
+\DoxyCodeLine{121         int64\_t sz = 0;}
+\DoxyCodeLine{122         \textcolor{keywordflow}{for} (int64\_t ii = 0; ii < \mbox{\hyperlink{classRPattern_a6c56ea9db92f00a9dd7e80fc179bf3cb}{rp\_colnum}} -\/ 1; ii++) \{}
+\DoxyCodeLine{123             \textcolor{keywordtype}{char} buf[1024];}
+\DoxyCodeLine{124             sz += \mbox{\hyperlink{classRPattern_a006e0d4cef1c235c670df9c1f730997c}{rp\_dtype}}[ii]-\/>\mbox{\hyperlink{classBasicType_a049abd1fc9e6619071a99582cde3b5c7}{formatTxt}}(buf, r\_ptr + \mbox{\hyperlink{classRPattern_a772900103eb3848a4c5f1cf3fc20d900}{rp\_offset}}[ii]);}
+\DoxyCodeLine{125             printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)t"{}}, buf);}
+\DoxyCodeLine{126         \}}
+\DoxyCodeLine{127         printf(\textcolor{stringliteral}{"{}\%c"{}}, *(r\_ptr + \mbox{\hyperlink{classRPattern_a95a06233a4f677e2f554fee782a446ef}{rp\_row\_sz}} -\/ 1));  \textcolor{comment}{// label of validation}}
+\DoxyCodeLine{128         \textcolor{keywordflow}{return} sz;}
+\DoxyCodeLine{129     \}}
+\DoxyCodeLine{130     }
+\DoxyCodeLine{131 \};  \textcolor{comment}{// class RPattern}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{134 \textcolor{keyword}{class }\mbox{\hyperlink{classMStorage}{MStorage}} \{}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136   \textcolor{keyword}{private}:}
+\DoxyCodeLine{137     int64\_t  \mbox{\hyperlink{classMStorage_a15092b30c0024bfc767e97101a2104b2}{ms\_record\_size}};   }
+\DoxyCodeLine{138     int64\_t  \mbox{\hyperlink{classMStorage_a8f19246cb902429749e5ba0d51477229}{ms\_record\_num}};    }
+\DoxyCodeLine{139     int64\_t  \mbox{\hyperlink{classMStorage_a750877d1b75459d8ddf3e91e262c402f}{ms\_record\_max}};    }
+\DoxyCodeLine{140     \textcolor{keywordtype}{char}    *\mbox{\hyperlink{classMStorage_ab7c5ae7e76987267795f49b8ee4d5ddf}{ms\_memory}};        }
+\DoxyCodeLine{141     \textcolor{keywordtype}{char}    *\mbox{\hyperlink{classMStorage_a0e23713a8c006a02fe3c309e8c7f67fd}{ms\_memory\_cur}};    }
+\DoxyCodeLine{142     int64\_t  \mbox{\hyperlink{classMStorage_a01614aa6deaabf4cd1474948d0135c26}{ms\_memory\_size}};   }
+\DoxyCodeLine{143     \textcolor{keywordtype}{char}     \mbox{\hyperlink{classMStorage_a856e4a327f88c4b7f69d257c5edc32b3}{pad}}[128-\/4*\textcolor{keyword}{sizeof}(int64\_t)-\/\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{void} *)]; }
+\DoxyCodeLine{144   \textcolor{keyword}{public}:}
+\DoxyCodeLine{151     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMStorage_aa06543d04e2c4dddd2b1396051a67e74}{init}}(int64\_t record\_size) \{}
+\DoxyCodeLine{152         \mbox{\hyperlink{classMStorage_a8f19246cb902429749e5ba0d51477229}{ms\_record\_num}}  = 0L;}
+\DoxyCodeLine{153         \mbox{\hyperlink{classMStorage_a01614aa6deaabf4cd1474948d0135c26}{ms\_memory\_size}} = 0L;}
+\DoxyCodeLine{154         \mbox{\hyperlink{classMStorage_a750877d1b75459d8ddf3e91e262c402f}{ms\_record\_max}}  = 0L;}
+\DoxyCodeLine{155         \mbox{\hyperlink{classMStorage_a15092b30c0024bfc767e97101a2104b2}{ms\_record\_size}} = record\_size;}
+\DoxyCodeLine{156         \textcolor{keywordflow}{if}(\mbox{\hyperlink{rowtable_8h_ab02b3badee65de481b409f3887fb8691}{g\_memory}}.\mbox{\hyperlink{classMemory_a68a75d4bc70be9f75e04e5f5d74538fc}{allocTableAddr}} (\mbox{\hyperlink{classMStorage_ab7c5ae7e76987267795f49b8ee4d5ddf}{ms\_memory}})) \{}
+\DoxyCodeLine{157             printf (\textcolor{stringliteral}{"{}[Mstorage][ERROR][init]: allocTableAddr error!\(\backslash\)n"{}});}
+\DoxyCodeLine{158             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{159         \}}
+\DoxyCodeLine{160         \mbox{\hyperlink{classMStorage_a0e23713a8c006a02fe3c309e8c7f67fd}{ms\_memory\_cur}} = \mbox{\hyperlink{classMStorage_ab7c5ae7e76987267795f49b8ee4d5ddf}{ms\_memory}};}
+\DoxyCodeLine{161         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{162     \}}
+\DoxyCodeLine{169     int64\_t \mbox{\hyperlink{classMStorage_ae75e9c8581c3ef483e1a7d1a9ea6a1e8}{allocRow}}(\textcolor{keywordtype}{char} *\&pointer) \{}
+\DoxyCodeLine{170         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classMStorage_a8f19246cb902429749e5ba0d51477229}{ms\_record\_num}} >= \mbox{\hyperlink{classMStorage_a750877d1b75459d8ddf3e91e262c402f}{ms\_record\_max}}) \{}
+\DoxyCodeLine{171             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classMStorage_a661909a981f80e25b281bbb9966febb2}{expand}}()) \{}
+\DoxyCodeLine{172                 printf (\textcolor{stringliteral}{"{}[Mstorage][ERROR][allowRow]: expend error! -\/172\(\backslash\)n"{}});}
+\DoxyCodeLine{173                 \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{174             \}}
+\DoxyCodeLine{175         \}}
+\DoxyCodeLine{176         pointer = \mbox{\hyperlink{classMStorage_a0e23713a8c006a02fe3c309e8c7f67fd}{ms\_memory\_cur}};}
+\DoxyCodeLine{177         \mbox{\hyperlink{classMStorage_a0e23713a8c006a02fe3c309e8c7f67fd}{ms\_memory\_cur}} += \mbox{\hyperlink{classMStorage_a15092b30c0024bfc767e97101a2104b2}{ms\_record\_size}};}
+\DoxyCodeLine{178         \textcolor{keywordflow}{return} \mbox{\hyperlink{classMStorage_a8f19246cb902429749e5ba0d51477229}{ms\_record\_num}}++;}
+\DoxyCodeLine{179     \}}
+\DoxyCodeLine{186     \textcolor{keywordtype}{char} *\mbox{\hyperlink{classMStorage_ae32a4a8b9b301a650ead67aa95116a34}{getRow}}(int64\_t record\_rank) \{}
+\DoxyCodeLine{187         \textcolor{keywordflow}{if} (record\_rank >= \mbox{\hyperlink{classMStorage_a8f19246cb902429749e5ba0d51477229}{ms\_record\_num}}) \{}
+\DoxyCodeLine{188             printf(\textcolor{stringliteral}{"{}[MStorage][ERROR][getRow]: record\_rank exceed! -\/4\(\backslash\)n"{}});}
+\DoxyCodeLine{189             \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{190         \}}
+\DoxyCodeLine{191         \textcolor{keywordflow}{return} \mbox{\hyperlink{classMStorage_ab7c5ae7e76987267795f49b8ee4d5ddf}{ms\_memory}} + record\_rank*\mbox{\hyperlink{classMStorage_a15092b30c0024bfc767e97101a2104b2}{ms\_record\_size}};}
+\DoxyCodeLine{192     \}}
+\DoxyCodeLine{196     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMStorage_a7bcbc82e7067aa1e4ebd3d34383bf8e5}{shut}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{197         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{char} *mm= \mbox{\hyperlink{classMStorage_ab7c5ae7e76987267795f49b8ee4d5ddf}{ms\_memory}}; mm< \mbox{\hyperlink{classMStorage_a0e23713a8c006a02fe3c309e8c7f67fd}{ms\_memory\_cur}}; mm+= \mbox{\hyperlink{mymemory_8h_acc57172755f145fab81b5028e1be364c}{TABLE\_MEMORY\_ALLOC\_INC}}) \{}
+\DoxyCodeLine{198             \textcolor{keywordflow}{if} (munmap (mm, \mbox{\hyperlink{mymemory_8h_acc57172755f145fab81b5028e1be364c}{TABLE\_MEMORY\_ALLOC\_INC}})) \{}
+\DoxyCodeLine{199                 printf(\textcolor{stringliteral}{"{}[MStorage][ERROR][shut]: munmap non-\/table error!-\/50\(\backslash\)n"{}});}
+\DoxyCodeLine{200             \}}
+\DoxyCodeLine{201         \}}
+\DoxyCodeLine{202     \}}
+\DoxyCodeLine{206     int64\_t \mbox{\hyperlink{classMStorage_aaf2713e384af8571f1800c5eb53294e9}{getRecordNum}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{207         \textcolor{keywordflow}{return} \mbox{\hyperlink{classMStorage_a8f19246cb902429749e5ba0d51477229}{ms\_record\_num}};}
+\DoxyCodeLine{208     \}}
+\DoxyCodeLine{209   \textcolor{keyword}{private}:}
+\DoxyCodeLine{215     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMStorage_a661909a981f80e25b281bbb9966febb2}{expand}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{216         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classMStorage_a01614aa6deaabf4cd1474948d0135c26}{ms\_memory\_size}} > \mbox{\hyperlink{mymemory_8h_a59e83dde3540093959e7dfe7d55fb1d2}{TABLE\_MEMORY\_ALLOC\_MAX}}) \{}
+\DoxyCodeLine{217             printf(\textcolor{stringliteral}{"{}[Mstorage][ERROR][expend]: exceed maximux mmap fail! -\/218\(\backslash\)n"{}});}
+\DoxyCodeLine{218             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{219         \}}
+\DoxyCodeLine{220         \textcolor{keywordtype}{void}* addr = mmap (\mbox{\hyperlink{classMStorage_ab7c5ae7e76987267795f49b8ee4d5ddf}{ms\_memory}}+\mbox{\hyperlink{classMStorage_a01614aa6deaabf4cd1474948d0135c26}{ms\_memory\_size}}, \mbox{\hyperlink{mymemory_8h_acc57172755f145fab81b5028e1be364c}{TABLE\_MEMORY\_ALLOC\_INC}}, PROT\_READ|PROT\_WRITE, MAP\_PRIVATE|MAP\_ANONYMOUS|MAP\_FIXED, -\/1, 0);}
+\DoxyCodeLine{221         \textcolor{keywordflow}{if} (addr == MAP\_FAILED) \{}
+\DoxyCodeLine{222             printf(\textcolor{stringliteral}{"{}[Mstorage][ERROR][expend]: mmap fail! \(\backslash\)n"{}});}
+\DoxyCodeLine{223             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{224         \}}
+\DoxyCodeLine{225         \mbox{\hyperlink{classMStorage_a01614aa6deaabf4cd1474948d0135c26}{ms\_memory\_size}} += \mbox{\hyperlink{mymemory_8h_acc57172755f145fab81b5028e1be364c}{TABLE\_MEMORY\_ALLOC\_INC}};}
+\DoxyCodeLine{226         \mbox{\hyperlink{classMStorage_a750877d1b75459d8ddf3e91e262c402f}{ms\_record\_max}} = \mbox{\hyperlink{classMStorage_a01614aa6deaabf4cd1474948d0135c26}{ms\_memory\_size}} / \mbox{\hyperlink{classMStorage_a15092b30c0024bfc767e97101a2104b2}{ms\_record\_size}};}
+\DoxyCodeLine{227         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{228     \}}
+\DoxyCodeLine{229 \};  \textcolor{comment}{// class MStorage}}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{232 \textcolor{keyword}{class }\mbox{\hyperlink{classRowTable}{RowTable}}:\textcolor{keyword}{public} \mbox{\hyperlink{classTable}{Table}} \{}
+\DoxyCodeLine{233   \textcolor{keyword}{private}:}
+\DoxyCodeLine{234     \mbox{\hyperlink{classRPattern}{RPattern}} \mbox{\hyperlink{classRowTable_a89a54848ca52d03ac5c325a73aec43fa}{r\_pattern}};  }
+\DoxyCodeLine{235     \mbox{\hyperlink{classMStorage}{MStorage}} \mbox{\hyperlink{classRowTable_abce11b6c2baad257fbec26db95ee731c}{r\_storage}};  }
+\DoxyCodeLine{236   \textcolor{keyword}{public}:}
+\DoxyCodeLine{242     \mbox{\hyperlink{classRowTable_af5bb4f18249de594ca5a65fc1825ee6f}{RowTable}}(int64\_t r\_id, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *r\_name)}
+\DoxyCodeLine{243         :\mbox{\hyperlink{classTable}{Table}}(r\_id, r\_name,\mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142adbdabf31571efcd22dd915063d5c207f}{ROWTABLE}}) \{}
+\DoxyCodeLine{244     \}}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246     \textcolor{comment}{// schema operating method, if you call finish, you must not call init and add Column}}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{251     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a6f2e369777c11b9e64aec70808ed8edb}{init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{255     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_af7de8b13c57dd8fde1c41a2a34e4e774}{finish}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{259     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a08e7799429c049e9c36097318518461c}{shut}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261     \textcolor{comment}{// data   operating method}}
+\DoxyCodeLine{262     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{263     \textcolor{comment}{// select}}
+\DoxyCodeLine{264     \textcolor{comment}{// get data by record\_rank, mainly for OLAP to scan}}
+\DoxyCodeLine{273 \textcolor{comment}{}    \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a897196ce45a0e5243b62be1d9906a52b}{selectCol}}(int64\_t record\_rank, int64\_t column\_rank, \textcolor{keywordtype}{char} *dest);}
+\DoxyCodeLine{283     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a8880015b130367767a39aa966f624d19}{selectCols}}(int64\_t record\_rank, int64\_t column\_total,}
+\DoxyCodeLine{284                     int64\_t * column\_ranks, \textcolor{keywordtype}{char} *dest);}
+\DoxyCodeLine{292     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_aa07dff1269945f08e44ddf9c3ce4b3e5}{select}}(int64\_t record\_rank, \textcolor{keywordtype}{char} *dest);}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294     \textcolor{comment}{// if you know the pointer of row by index, for OLTP to copy out the data to dest}}
+\DoxyCodeLine{303 \textcolor{comment}{}    \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a897196ce45a0e5243b62be1d9906a52b}{selectCol}}(\textcolor{keywordtype}{char} *row\_pointer, int64\_t column\_rank, \textcolor{keywordtype}{char} *dest);}
+\DoxyCodeLine{313     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a8880015b130367767a39aa966f624d19}{selectCols}}(\textcolor{keywordtype}{char} *row\_pointer, int64\_t column\_total,}
+\DoxyCodeLine{314                     int64\_t * column\_ranks, \textcolor{keywordtype}{char} *dest);}
+\DoxyCodeLine{322     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_aa07dff1269945f08e44ddf9c3ce4b3e5}{select}}(\textcolor{keywordtype}{char} *row\_pointer, \textcolor{keywordtype}{char} *dest);}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324     \textcolor{comment}{// update}}
+\DoxyCodeLine{333 \textcolor{comment}{}    \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a0bb958b38ec20302cec20bcde9718d9f}{updateCol}}(\textcolor{keywordtype}{char} *row\_pointer, int64\_t column\_rank, \textcolor{keywordtype}{char} *source);}
+\DoxyCodeLine{342     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a0bb958b38ec20302cec20bcde9718d9f}{updateCol}}(int64\_t record\_rank, int64\_t column\_rank, \textcolor{keywordtype}{char} *source);}
+\DoxyCodeLine{352     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a6ae864a0caf01cf629299fbbb4eb7ee5}{updateCols}}(int64\_t record\_rank, int64\_t column\_total,}
+\DoxyCodeLine{353                     int64\_t * column\_ranks, \textcolor{keywordtype}{char} *source);}
+\DoxyCodeLine{363     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a6ae864a0caf01cf629299fbbb4eb7ee5}{updateCols}}(\textcolor{keywordtype}{char} *row\_pointer, int64\_t column\_total,}
+\DoxyCodeLine{364                     int64\_t * column\_ranks, \textcolor{keywordtype}{char} *source);}
+\DoxyCodeLine{374     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a6ae864a0caf01cf629299fbbb4eb7ee5}{updateCols}}(int64\_t record\_rank, int64\_t column\_total,}
+\DoxyCodeLine{375                     int64\_t * column\_ranks, \textcolor{keywordtype}{char} *source[]);}
+\DoxyCodeLine{385     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a6ae864a0caf01cf629299fbbb4eb7ee5}{updateCols}}(\textcolor{keywordtype}{char} *row\_pointer, int64\_t column\_total,}
+\DoxyCodeLine{386                     int64\_t * column\_ranks, \textcolor{keywordtype}{char} *source[]);}
+\DoxyCodeLine{387 }
+\DoxyCodeLine{388     \textcolor{comment}{// del}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{396     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a4cf86d02ab12b7bf36c0d87f0cc93bc8}{del}}(int64\_t record\_rank);}
+\DoxyCodeLine{403     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a4cf86d02ab12b7bf36c0d87f0cc93bc8}{del}}(\textcolor{keywordtype}{char} *row\_pointer);}
+\DoxyCodeLine{404 }
+\DoxyCodeLine{405     \textcolor{comment}{// insert}}
+\DoxyCodeLine{406 }
+\DoxyCodeLine{413     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a1f72ce755680f39a3b378ebde6abe192}{insert}}(\textcolor{keywordtype}{char} *source);}
+\DoxyCodeLine{420     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a1f72ce755680f39a3b378ebde6abe192}{insert}}(\textcolor{keywordtype}{char} *columns[]);}
+\DoxyCodeLine{421     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{422 }
+\DoxyCodeLine{426     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a1c905e531e152b7853cd77227c29614c}{printData}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{430     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a4915492db5b4ca19a4510280a39a4860}{loadData}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *filename);}
+\DoxyCodeLine{434     \mbox{\hyperlink{classRPattern}{RPattern}} \& \mbox{\hyperlink{classRowTable_a6a0599335bd3ea522d9d1b6fd76f849a}{getRPattern}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{435         \textcolor{keywordflow}{return} \mbox{\hyperlink{classRowTable_a89a54848ca52d03ac5c325a73aec43fa}{r\_pattern}};}
+\DoxyCodeLine{436     \}}
+\DoxyCodeLine{440     \mbox{\hyperlink{classMStorage}{MStorage}} \& \mbox{\hyperlink{classRowTable_a3fc8ed00173f80e739694a64595e03fb}{getMStorage}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{441         \textcolor{keywordflow}{return} \mbox{\hyperlink{classRowTable_abce11b6c2baad257fbec26db95ee731c}{r\_storage}};}
+\DoxyCodeLine{442     \}}
+\DoxyCodeLine{446     int64\_t \mbox{\hyperlink{classRowTable_a6b3b7c858bb144fe88880a0adfc39212}{getRecordNum}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{447         \textcolor{keywordflow}{return} \mbox{\hyperlink{classRowTable_abce11b6c2baad257fbec26db95ee731c}{r\_storage}}.\mbox{\hyperlink{classMStorage_aaf2713e384af8571f1800c5eb53294e9}{getRecordNum}}();}
+\DoxyCodeLine{448     \}}
+\DoxyCodeLine{455     \textcolor{keywordtype}{void} *\mbox{\hyperlink{classRowTable_a0ec2fc101060b53b24ada380bdec1d96}{getRecordPtr}}(int64\_t row\_rank) \{}
+\DoxyCodeLine{456         \textcolor{keywordtype}{char} *ptr = NULL;}
+\DoxyCodeLine{457         \textcolor{keywordflow}{return} \mbox{\hyperlink{classRowTable_a7871c771dac7cd538f94fcf972f9319e}{access}}(row\_rank, ptr) ? ptr : NULL;}
+\DoxyCodeLine{458     \}}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{460   \textcolor{keyword}{private}:}
+\DoxyCodeLine{468     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a7871c771dac7cd538f94fcf972f9319e}{access}}(int64\_t record\_rank, \textcolor{keywordtype}{char} *\&pointer);}
+\DoxyCodeLine{477     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_abdbb7245926c72641d9f69f8754b83ab}{accessCol}}(int64\_t record\_rank, int64\_t column\_rank,}
+\DoxyCodeLine{478                    \textcolor{keywordtype}{char} *\&pointer);}
+\DoxyCodeLine{485     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a8fa63eea46771c635e34b18e4b5be8b1}{isValid}}(\textcolor{keywordtype}{char} *record\_ptr) \{}
+\DoxyCodeLine{486         \textcolor{keywordflow}{return} *(record\_ptr + \mbox{\hyperlink{classRowTable_a89a54848ca52d03ac5c325a73aec43fa}{r\_pattern}}.\mbox{\hyperlink{classRPattern_af4ca48c64c6083c4658d52afb0e51659}{getRowSize}}() -\/ 1) ==}
+\DoxyCodeLine{487             \textcolor{charliteral}{'Y'} ? \textcolor{keyword}{true} : \textcolor{keyword}{false};}
+\DoxyCodeLine{488     \}}
+\DoxyCodeLine{495     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classRowTable_a6af721ff01ed540bd8521f8f914af4b3}{invalid}}(\textcolor{keywordtype}{char} *record\_ptr) \{}
+\DoxyCodeLine{496         \textcolor{keywordflow}{if} (*(record\_ptr + \mbox{\hyperlink{classRowTable_a89a54848ca52d03ac5c325a73aec43fa}{r\_pattern}}.\mbox{\hyperlink{classRPattern_af4ca48c64c6083c4658d52afb0e51659}{getRowSize}}() -\/ 1) == \textcolor{charliteral}{'N'})}
+\DoxyCodeLine{497             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{498         *(record\_ptr + \mbox{\hyperlink{classRowTable_a89a54848ca52d03ac5c325a73aec43fa}{r\_pattern}}.\mbox{\hyperlink{classRPattern_af4ca48c64c6083c4658d52afb0e51659}{getRowSize}}() -\/ 1) = \textcolor{charliteral}{'N'};}
+\DoxyCodeLine{499         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{500     \}}
+\DoxyCodeLine{501 \};  \textcolor{comment}{// class RowTable}}
+\DoxyCodeLine{502 }
+\DoxyCodeLine{503 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,346 @@
+\hypertarget{classCatalog}{}\doxysection{Catalog Class Reference}
+\label{classCatalog}\index{Catalog@{Catalog}}
+
+
+{\ttfamily \#include $<$catalog.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classCatalog_ac3fd61334f85197b7027f1e6815a4a6c}{create\+Column}} (const char $\ast$name, \mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267c}{Column\+Type}} type, int64\+\_\+t option\+\_\+size, int64\+\_\+t \&c\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classCatalog_ace3c05f5e57c4fe8c1a84060074c90e0}{create\+Database}} (const char $\ast$name, int64\+\_\+t \&d\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classCatalog_ae945ba8ac9426663d0635093563f5308}{create\+Index}} (const char $\ast$name, \mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}{Index\+Type}} type, \mbox{\hyperlink{classKey}{Key}} i\+\_\+key, int64\+\_\+t \&i\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classCatalog_ab257a4df2c3f9ad30b8e5ad36b221ab7}{create\+Table}} (const char $\ast$name, \mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}{Table\+Type}} type, int64\+\_\+t \&t\+\_\+id)
+\item 
+\mbox{\hyperlink{classObject}{Object}} $\ast$ \mbox{\hyperlink{classCatalog_a748adeec3dca0c776f74d891979e5225}{get\+Obj\+By\+Id}} (int64\+\_\+t o\+\_\+id)
+\item 
+\mbox{\hyperlink{classObject}{Object}} $\ast$ \mbox{\hyperlink{classCatalog_a3f121921956b5fd3ca04a7716ee63d6e}{get\+Obj\+By\+Name}} (char $\ast$o\+\_\+name)
+\item 
+void \mbox{\hyperlink{classCatalog_a32bfcf7bd5e25302542bb9a976c42d18}{init}} (void)
+\item 
+bool \mbox{\hyperlink{classCatalog_a618bbea429a377fae0a6bc46166e47fc}{init\+Database}} (int64\+\_\+t d\+\_\+id)
+\item 
+void \mbox{\hyperlink{classCatalog_a3d5837991139cedc94f9f2af3882e518}{print}} (void)
+\item 
+bool \mbox{\hyperlink{classCatalog_a02cf4c4d8d1980a9f1e5088f9f81b2fc}{shut}} (void)
+\item 
+bool \mbox{\hyperlink{classCatalog_a363d39f9b5dcf4d0615526cc90eb2509}{shut\+Database}} (int64\+\_\+t d\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classCatalog_a8652c2444c9e14ad25f92db6b53c5610}{init\+Column}} (int64\+\_\+t c\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classCatalog_adc2544112349dcb6172de2cd9026677f}{init\+Index}} (int64\+\_\+t i\+\_\+id, int64\+\_\+t t\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classCatalog_a9a00de39ffbcf9c425586b8937d7668e}{init\+Table}} (int64\+\_\+t t\+\_\+id)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classCatalog_a7b1d40d906a79269d2670001408ba4b0}{obtain\+Id}} (void)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classCatalog_aec7842d2c0210c16809b29c0d7ba091d}{register\+Obj}} (\mbox{\hyperlink{classObject}{Object}} $\ast$obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classObject}{Object}} $\ast$ $>$ \mbox{\hyperlink{classCatalog_abd597c866546c41b6652b7225672c0f4}{cl\+\_\+id\+\_\+obj}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classObject}{Object}} $\ast$ $>$ \mbox{\hyperlink{classCatalog_a635890564caed6d1f1a68ebf7f466c0d}{cl\+\_\+name\+\_\+obj}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of class \mbox{\hyperlink{classCatalog}{Catalog}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCatalog_ac3fd61334f85197b7027f1e6815a4a6c}\label{classCatalog_ac3fd61334f85197b7027f1e6815a4a6c}} 
+\index{Catalog@{Catalog}!createColumn@{createColumn}}
+\index{createColumn@{createColumn}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{createColumn()}{createColumn()}}
+{\footnotesize\ttfamily bool Catalog\+::create\+Column (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{schema_8h_a12a097aab61e653430d85fddbd53267c}{Column\+Type}}}]{type,  }\item[{int64\+\_\+t}]{option\+\_\+size,  }\item[{int64\+\_\+t \&}]{c\+\_\+id }\end{DoxyParamCaption})}
+
+create column. 
+\begin{DoxyParams}{Parameters}
+{\em name} & column name \\
+\hline
+{\em type} & column type\+: \mbox{[}INT8,INT16,...\mbox{]} \\
+\hline
+{\em option\+\_\+size} & only work for column type CHARN(option\+\_\+size) \\
+\hline
+{\em c\+\_\+id} & reference of column identifier, position in cl\+\_\+id\+\_\+obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_ace3c05f5e57c4fe8c1a84060074c90e0}\label{classCatalog_ace3c05f5e57c4fe8c1a84060074c90e0}} 
+\index{Catalog@{Catalog}!createDatabase@{createDatabase}}
+\index{createDatabase@{createDatabase}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{createDatabase()}{createDatabase()}}
+{\footnotesize\ttfamily bool Catalog\+::create\+Database (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{int64\+\_\+t \&}]{d\+\_\+id }\end{DoxyParamCaption})}
+
+create database. 
+\begin{DoxyParams}{Parameters}
+{\em name} & database name \\
+\hline
+{\em d\+\_\+id} & reference of database identifier, position in cl\+\_\+id\+\_\+obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_ae945ba8ac9426663d0635093563f5308}\label{classCatalog_ae945ba8ac9426663d0635093563f5308}} 
+\index{Catalog@{Catalog}!createIndex@{createIndex}}
+\index{createIndex@{createIndex}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{createIndex()}{createIndex()}}
+{\footnotesize\ttfamily bool Catalog\+::create\+Index (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{schema_8h_a2bfb0a0ff1c379a8b4e8f9d24fdd4839}{Index\+Type}}}]{type,  }\item[{\mbox{\hyperlink{classKey}{Key}}}]{i\+\_\+key,  }\item[{int64\+\_\+t \&}]{i\+\_\+id }\end{DoxyParamCaption})}
+
+create index. 
+\begin{DoxyParams}{Parameters}
+{\em name} & index name \\
+\hline
+{\em type} & index type\+: \mbox{[}HASHINDEX,BPTREEINDEX,ARTTREEINDEX\mbox{]} \\
+\hline
+{\em i\+\_\+key} & stores column identifiers of this index \\
+\hline
+{\em i\+\_\+id} & reference of index identifier, position in cl\+\_\+id\+\_\+obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_ab257a4df2c3f9ad30b8e5ad36b221ab7}\label{classCatalog_ab257a4df2c3f9ad30b8e5ad36b221ab7}} 
+\index{Catalog@{Catalog}!createTable@{createTable}}
+\index{createTable@{createTable}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{createTable()}{createTable()}}
+{\footnotesize\ttfamily bool Catalog\+::create\+Table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{schema_8h_aeb35fcdf8088909b3d8e18eaaad38142}{Table\+Type}}}]{type,  }\item[{int64\+\_\+t \&}]{t\+\_\+id }\end{DoxyParamCaption})}
+
+create table. 
+\begin{DoxyParams}{Parameters}
+{\em name} & table name \\
+\hline
+{\em type} & tabletype\+: \mbox{[}ROWTABLE,COLUMNTABLE\mbox{]} \\
+\hline
+{\em t\+\_\+id} & reference of table identifier, position in cl\+\_\+id\+\_\+obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_a748adeec3dca0c776f74d891979e5225}\label{classCatalog_a748adeec3dca0c776f74d891979e5225}} 
+\index{Catalog@{Catalog}!getObjById@{getObjById}}
+\index{getObjById@{getObjById}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{getObjById()}{getObjById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObject}{Object}} $\ast$ Catalog\+::get\+Obj\+By\+Id (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{o\+\_\+id }\end{DoxyParamCaption})}
+
+get object\mbox{[}DATABASE,TABLE,COLUMN,INDEX\mbox{]} by identifier 
+\begin{DoxyParams}{Parameters}
+{\em o\+\_\+id} & identifier of object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em !=} & NULL available \\
+\hline
+{\em ==} & NULL unavaliable, deleted or not exist \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_a3f121921956b5fd3ca04a7716ee63d6e}\label{classCatalog_a3f121921956b5fd3ca04a7716ee63d6e}} 
+\index{Catalog@{Catalog}!getObjByName@{getObjByName}}
+\index{getObjByName@{getObjByName}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{getObjByName()}{getObjByName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObject}{Object}} $\ast$ Catalog\+::get\+Obj\+By\+Name (\begin{DoxyParamCaption}\item[{char $\ast$}]{o\+\_\+name }\end{DoxyParamCaption})}
+
+get object\mbox{[}DATABASE,TABLE,COLUMN,INDEX\mbox{]} by object name 
+\begin{DoxyParams}{Parameters}
+{\em name} & of an object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em !=} & NULL available \\
+\hline
+{\em ==} & NULL unavaliable, deleted or not exist \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_a32bfcf7bd5e25302542bb9a976c42d18}\label{classCatalog_a32bfcf7bd5e25302542bb9a976c42d18}} 
+\index{Catalog@{Catalog}!init@{init}}
+\index{init@{init}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Catalog\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+init operation. \mbox{\Hypertarget{classCatalog_a8652c2444c9e14ad25f92db6b53c5610}\label{classCatalog_a8652c2444c9e14ad25f92db6b53c5610}} 
+\index{Catalog@{Catalog}!initColumn@{initColumn}}
+\index{initColumn@{initColumn}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{initColumn()}{initColumn()}}
+{\footnotesize\ttfamily bool Catalog\+::init\+Column (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{c\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+init column 
+\begin{DoxyParams}{Parameters}
+{\em c\+\_\+id} & which column to prepare \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_a618bbea429a377fae0a6bc46166e47fc}\label{classCatalog_a618bbea429a377fae0a6bc46166e47fc}} 
+\index{Catalog@{Catalog}!initDatabase@{initDatabase}}
+\index{initDatabase@{initDatabase}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{initDatabase()}{initDatabase()}}
+{\footnotesize\ttfamily bool Catalog\+::init\+Database (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{d\+\_\+id }\end{DoxyParamCaption})}
+
+init database, very important, after all setting, call init\+Database to get this database in work 
+\begin{DoxyParams}{Parameters}
+{\em d\+\_\+id} & which database to prepare \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_adc2544112349dcb6172de2cd9026677f}\label{classCatalog_adc2544112349dcb6172de2cd9026677f}} 
+\index{Catalog@{Catalog}!initIndex@{initIndex}}
+\index{initIndex@{initIndex}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{initIndex()}{initIndex()}}
+{\footnotesize\ttfamily bool Catalog\+::init\+Index (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{i\+\_\+id,  }\item[{int64\+\_\+t}]{t\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+init index 
+\begin{DoxyParams}{Parameters}
+{\em i\+\_\+id} & which index to prepare \\
+\hline
+{\em t\+\_\+id} & index in which table \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_a9a00de39ffbcf9c425586b8937d7668e}\label{classCatalog_a9a00de39ffbcf9c425586b8937d7668e}} 
+\index{Catalog@{Catalog}!initTable@{initTable}}
+\index{initTable@{initTable}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{initTable()}{initTable()}}
+{\footnotesize\ttfamily bool Catalog\+::init\+Table (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{t\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+init table 
+\begin{DoxyParams}{Parameters}
+{\em t\+\_\+id} & which table to prepare \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_a7b1d40d906a79269d2670001408ba4b0}\label{classCatalog_a7b1d40d906a79269d2670001408ba4b0}} 
+\index{Catalog@{Catalog}!obtainId@{obtainId}}
+\index{obtainId@{obtainId}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{obtainId()}{obtainId()}}
+{\footnotesize\ttfamily int64\+\_\+t Catalog\+::obtain\+Id (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+get a free object identifier 
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & success \\
+\hline
+{\em $<$=0} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_a3d5837991139cedc94f9f2af3882e518}\label{classCatalog_a3d5837991139cedc94f9f2af3882e518}} 
+\index{Catalog@{Catalog}!print@{print}}
+\index{print@{print}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Catalog\+::print (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+print the catalog \mbox{\Hypertarget{classCatalog_aec7842d2c0210c16809b29c0d7ba091d}\label{classCatalog_aec7842d2c0210c16809b29c0d7ba091d}} 
+\index{Catalog@{Catalog}!registerObj@{registerObj}}
+\index{registerObj@{registerObj}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{registerObj()}{registerObj()}}
+{\footnotesize\ttfamily int64\+\_\+t Catalog\+::register\+Obj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObject}{Object}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+put object in cl\+\_\+id\+\_\+obj and cl\+\_\+name\+\_\+obj 
+\begin{DoxyParams}{Parameters}
+{\em obj} & pointer of object to put \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & success \\
+\hline
+{\em $<$=0} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCatalog_a02cf4c4d8d1980a9f1e5088f9f81b2fc}\label{classCatalog_a02cf4c4d8d1980a9f1e5088f9f81b2fc}} 
+\index{Catalog@{Catalog}!shut@{shut}}
+\index{shut@{shut}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{shut()}{shut()}}
+{\footnotesize\ttfamily bool Catalog\+::shut (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+shut down, free all memory of Objects. \mbox{\Hypertarget{classCatalog_a363d39f9b5dcf4d0615526cc90eb2509}\label{classCatalog_a363d39f9b5dcf4d0615526cc90eb2509}} 
+\index{Catalog@{Catalog}!shutDatabase@{shutDatabase}}
+\index{shutDatabase@{shutDatabase}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{shutDatabase()}{shutDatabase()}}
+{\footnotesize\ttfamily bool Catalog\+::shut\+Database (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{d\+\_\+id }\end{DoxyParamCaption})}
+
+shutdowm database 
+\begin{DoxyParams}{Parameters}
+{\em d\+\_\+id} & which database to shut \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCatalog_abd597c866546c41b6652b7225672c0f4}\label{classCatalog_abd597c866546c41b6652b7225672c0f4}} 
+\index{Catalog@{Catalog}!cl\_id\_obj@{cl\_id\_obj}}
+\index{cl\_id\_obj@{cl\_id\_obj}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{cl\_id\_obj}{cl\_id\_obj}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classObject}{Object}} $\ast$$>$ Catalog\+::cl\+\_\+id\+\_\+obj\hspace{0.3cm}{\ttfamily [private]}}
+
+container of Objects ~\newline
+ \mbox{\Hypertarget{classCatalog_a635890564caed6d1f1a68ebf7f466c0d}\label{classCatalog_a635890564caed6d1f1a68ebf7f466c0d}} 
+\index{Catalog@{Catalog}!cl\_name\_obj@{cl\_name\_obj}}
+\index{cl\_name\_obj@{cl\_name\_obj}!Catalog@{Catalog}}
+\doxysubsubsection{\texorpdfstring{cl\_name\_obj}{cl\_name\_obj}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classObject}{Object}} $\ast$$>$ Catalog\+::cl\+\_\+name\+\_\+obj\hspace{0.3cm}{\ttfamily [private]}}
+
+name map of Objects ,name should not be the same in the whole \mbox{\hyperlink{classCatalog}{Catalog}} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{catalog_8h}{catalog.\+h}}\item 
+system/\mbox{\hyperlink{catalog_8cc}{catalog.\+cc}}\end{DoxyCompactItemize}

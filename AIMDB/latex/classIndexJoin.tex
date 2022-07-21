@@ -1,0 +1,193 @@
+\hypertarget{classIndexJoin}{}\doxysection{Index\+Join Class Reference}
+\label{classIndexJoin}\index{IndexJoin@{IndexJoin}}
+
+
+{\ttfamily \#include $<$executor.\+h$>$}
+
+Inheritance diagram for Index\+Join\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classIndexJoin}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIndexJoin_adc0248cd9ab9fa7edd3f703d7d427fbb}{Index\+Join}} ()
+\item 
+\mbox{\hyperlink{classIndexJoin_a3f531bdc08f02331b037083d848a12b0}{Index\+Join}} (std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classJoin_a674e003f67983c93809515554fad1b42}{left\+\_\+cid}}, std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classJoin_a93609b5330e1d25f071824cf531d69bf}{right\+\_\+cid}}, int64\+\_\+t \mbox{\hyperlink{classJoin_a9b1555b2d862a8b75d9f95c1176ff6d5}{left\+\_\+rank}}, int64\+\_\+t \mbox{\hyperlink{classJoin_a3a1de225bb90731c6d541fd2aecbd7dc}{right\+\_\+rank}})
+\item 
+\mbox{\hyperlink{classIndexJoin_a6c850b4e8d9fedcaf7aa79ab96de60f2}{$\sim$\+Index\+Join}} ()
+\item 
+bool \mbox{\hyperlink{classIndexJoin_a1fc6dbedb5f8c21f57c76c6be79b0f65}{close}} ()
+\item 
+bool \mbox{\hyperlink{classIndexJoin_ab14eaebc98de774cd8400a75f9c8023b}{get\+Next}} ()
+\item 
+bool \mbox{\hyperlink{classIndexJoin_a2a5bb5dddd347591cb98aaa75fd27473}{open}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{classIndexJoin_af11ff97c6ecfd36d0c2f7c6bbaafc000}{current\+\_\+key}}
+\item 
+char $\ast$ \mbox{\hyperlink{classIndexJoin_a3c8f9973a00372c855bdb93075f04dc3}{left\+\_\+buf}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classIndexJoin_a748ae615402149cccfe44f98e76f4174}{left\+\_\+buf\+\_\+size}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classIndexJoin_a6233f4d0de9429eaf4478e09f692168e}{left\+\_\+tuple\+\_\+size}}
+\item 
+char $\ast$ \mbox{\hyperlink{classIndexJoin_a9f5856560960b7cc795b8073aa8d1fbf}{right\+\_\+buf}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classIndexJoin_acf65bb5b746f589516eaf3317251ff0b}{right\+\_\+buf\+\_\+size}}
+\item 
+bool \mbox{\hyperlink{classIndexJoin_aecb2aadf6f232fab94115026c7b1e412}{right\+\_\+has\+\_\+next}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classIndexJoin_aadac74f2332aa7c78c9a920f097e3698}{right\+\_\+tuple\+\_\+size}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Definition of the class \mbox{\hyperlink{classIndexJoin}{Index\+Join}}, the {\ttfamily Index\+Nested\+Loop\+Join} operator 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIndexJoin_adc0248cd9ab9fa7edd3f703d7d427fbb}\label{classIndexJoin_adc0248cd9ab9fa7edd3f703d7d427fbb}} 
+\index{IndexJoin@{IndexJoin}!IndexJoin@{IndexJoin}}
+\index{IndexJoin@{IndexJoin}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{IndexJoin()}{IndexJoin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Index\+Join\+::\+Index\+Join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Whether read to the end of right input Constructor \mbox{\Hypertarget{classIndexJoin_a6c850b4e8d9fedcaf7aa79ab96de60f2}\label{classIndexJoin_a6c850b4e8d9fedcaf7aa79ab96de60f2}} 
+\index{IndexJoin@{IndexJoin}!````~IndexJoin@{$\sim$IndexJoin}}
+\index{````~IndexJoin@{$\sim$IndexJoin}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{$\sim$IndexJoin()}{~IndexJoin()}}
+{\footnotesize\ttfamily Index\+Join\+::$\sim$\+Index\+Join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor \mbox{\Hypertarget{classIndexJoin_a3f531bdc08f02331b037083d848a12b0}\label{classIndexJoin_a3f531bdc08f02331b037083d848a12b0}} 
+\index{IndexJoin@{IndexJoin}!IndexJoin@{IndexJoin}}
+\index{IndexJoin@{IndexJoin}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{IndexJoin()}{IndexJoin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Index\+Join\+::\+Index\+Join (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int64\+\_\+t $>$}]{left\+\_\+cid,  }\item[{std\+::vector$<$ int64\+\_\+t $>$}]{right\+\_\+cid,  }\item[{int64\+\_\+t}]{left\+\_\+rank,  }\item[{int64\+\_\+t}]{right\+\_\+rank }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overload constructor, set some attributes if already known 
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+cid} & column ID from left \\
+\hline
+{\em right\+\_\+cid} & column ID from left \\
+\hline
+{\em left\+\_\+rank} & rank of join key from left \\
+\hline
+{\em right\+\_\+rank} & rank of join key from right \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIndexJoin_a1fc6dbedb5f8c21f57c76c6be79b0f65}\label{classIndexJoin_a1fc6dbedb5f8c21f57c76c6be79b0f65}} 
+\index{IndexJoin@{IndexJoin}!close@{close}}
+\index{close@{close}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool Index\+Join\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Close this operator 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classJoin_a17937583484d82767f24e032497f9b97}{Join}}.
+
+\mbox{\Hypertarget{classIndexJoin_ab14eaebc98de774cd8400a75f9c8023b}\label{classIndexJoin_ab14eaebc98de774cd8400a75f9c8023b}} 
+\index{IndexJoin@{IndexJoin}!getNext@{getNext}}
+\index{getNext@{getNext}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily bool Index\+Join\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Generate next record 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classJoin_a4bef631fe8bd0cd7523f35560d8826e7}{Join}}.
+
+\mbox{\Hypertarget{classIndexJoin_a2a5bb5dddd347591cb98aaa75fd27473}\label{classIndexJoin_a2a5bb5dddd347591cb98aaa75fd27473}} 
+\index{IndexJoin@{IndexJoin}!open@{open}}
+\index{open@{open}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool Index\+Join\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Open a \mbox{\hyperlink{classIndexJoin}{Index\+Join}} operator 
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classJoin_a1bdda2e5254ccd8a98cae52cd892337b}{Join}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classIndexJoin_af11ff97c6ecfd36d0c2f7c6bbaafc000}\label{classIndexJoin_af11ff97c6ecfd36d0c2f7c6bbaafc000}} 
+\index{IndexJoin@{IndexJoin}!current\_key@{current\_key}}
+\index{current\_key@{current\_key}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{current\_key}{current\_key}}
+{\footnotesize\ttfamily void$\ast$ Index\+Join\+::current\+\_\+key\hspace{0.3cm}{\ttfamily [private]}}
+
+Right buffer size Note that we only support single-\/key index here Keeps static after opening \mbox{\Hypertarget{classIndexJoin_a3c8f9973a00372c855bdb93075f04dc3}\label{classIndexJoin_a3c8f9973a00372c855bdb93075f04dc3}} 
+\index{IndexJoin@{IndexJoin}!left\_buf@{left\_buf}}
+\index{left\_buf@{left\_buf}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{left\_buf}{left\_buf}}
+{\footnotesize\ttfamily char$\ast$ Index\+Join\+::left\+\_\+buf\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of each record from right \mbox{\Hypertarget{classIndexJoin_a748ae615402149cccfe44f98e76f4174}\label{classIndexJoin_a748ae615402149cccfe44f98e76f4174}} 
+\index{IndexJoin@{IndexJoin}!left\_buf\_size@{left\_buf\_size}}
+\index{left\_buf\_size@{left\_buf\_size}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{left\_buf\_size}{left\_buf\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Index\+Join\+::left\+\_\+buf\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Buffer for right child \mbox{\Hypertarget{classIndexJoin_a6233f4d0de9429eaf4478e09f692168e}\label{classIndexJoin_a6233f4d0de9429eaf4478e09f692168e}} 
+\index{IndexJoin@{IndexJoin}!left\_tuple\_size@{left\_tuple\_size}}
+\index{left\_tuple\_size@{left\_tuple\_size}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{left\_tuple\_size}{left\_tuple\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Index\+Join\+::left\+\_\+tuple\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classIndexJoin_a9f5856560960b7cc795b8073aa8d1fbf}\label{classIndexJoin_a9f5856560960b7cc795b8073aa8d1fbf}} 
+\index{IndexJoin@{IndexJoin}!right\_buf@{right\_buf}}
+\index{right\_buf@{right\_buf}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{right\_buf}{right\_buf}}
+{\footnotesize\ttfamily char$\ast$ Index\+Join\+::right\+\_\+buf\hspace{0.3cm}{\ttfamily [private]}}
+
+Buffer allocated for left child \mbox{\Hypertarget{classIndexJoin_acf65bb5b746f589516eaf3317251ff0b}\label{classIndexJoin_acf65bb5b746f589516eaf3317251ff0b}} 
+\index{IndexJoin@{IndexJoin}!right\_buf\_size@{right\_buf\_size}}
+\index{right\_buf\_size@{right\_buf\_size}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{right\_buf\_size}{right\_buf\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Index\+Join\+::right\+\_\+buf\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Left buffer size \mbox{\Hypertarget{classIndexJoin_aecb2aadf6f232fab94115026c7b1e412}\label{classIndexJoin_aecb2aadf6f232fab94115026c7b1e412}} 
+\index{IndexJoin@{IndexJoin}!right\_has\_next@{right\_has\_next}}
+\index{right\_has\_next@{right\_has\_next}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{right\_has\_next}{right\_has\_next}}
+{\footnotesize\ttfamily bool Index\+Join\+::right\+\_\+has\+\_\+next\hspace{0.3cm}{\ttfamily [private]}}
+
+Current key for searching, that is, data in join key \mbox{\Hypertarget{classIndexJoin_aadac74f2332aa7c78c9a920f097e3698}\label{classIndexJoin_aadac74f2332aa7c78c9a920f097e3698}} 
+\index{IndexJoin@{IndexJoin}!right\_tuple\_size@{right\_tuple\_size}}
+\index{right\_tuple\_size@{right\_tuple\_size}!IndexJoin@{IndexJoin}}
+\doxysubsubsection{\texorpdfstring{right\_tuple\_size}{right\_tuple\_size}}
+{\footnotesize\ttfamily int64\+\_\+t Index\+Join\+::right\+\_\+tuple\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+Size of each record from left 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{executor_8h}{executor.\+h}}\item 
+system/\mbox{\hyperlink{executor_8cc}{executor.\+cc}}\end{DoxyCompactItemize}

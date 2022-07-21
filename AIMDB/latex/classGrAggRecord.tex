@@ -1,0 +1,65 @@
+\hypertarget{classGrAggRecord}{}\doxysection{Gr\+Agg\+Record Class Reference}
+\label{classGrAggRecord}\index{GrAggRecord@{GrAggRecord}}
+
+
+{\ttfamily \#include $<$executor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGrAggRecord_a531138a0c9d66b2cb5bdeb6f37ff64c3}{Gr\+Agg\+Record}} (char $\ast$\mbox{\hyperlink{classGrAggRecord_ac82c1f08074df926a8803037b882c96b}{middle\+\_\+record}}, int64\+\_\+t num\+\_\+aggr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classGrAggRecord_a4a31bfef552443d0ef6b5e57d2c8517e}{count}}
+\item 
+char $\ast$ \mbox{\hyperlink{classGrAggRecord_ac82c1f08074df926a8803037b882c96b}{middle\+\_\+record}}
+\item 
+std\+::vector$<$ int64\+\_\+t $>$ \mbox{\hyperlink{classGrAggRecord_a74c3aa985e257191a0a01227fab17e7f}{sum}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of class \mbox{\hyperlink{classGrAggRecord}{Gr\+Agg\+Record}} an intermediate record of \mbox{\hyperlink{classGroupbyAggre}{Groupby\+Aggre}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGrAggRecord_a531138a0c9d66b2cb5bdeb6f37ff64c3}\label{classGrAggRecord_a531138a0c9d66b2cb5bdeb6f37ff64c3}} 
+\index{GrAggRecord@{GrAggRecord}!GrAggRecord@{GrAggRecord}}
+\index{GrAggRecord@{GrAggRecord}!GrAggRecord@{GrAggRecord}}
+\doxysubsubsection{\texorpdfstring{GrAggRecord()}{GrAggRecord()}}
+{\footnotesize\ttfamily Gr\+Agg\+Record\+::\+Gr\+Agg\+Record (\begin{DoxyParamCaption}\item[{char $\ast$}]{middle\+\_\+record,  }\item[{int64\+\_\+t}]{num\+\_\+aggr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Count of this class, use int64 to store Constructor 
+\begin{DoxyParams}{Parameters}
+{\em middle\+\_\+record} & initial middle\+\_\+record \\
+\hline
+{\em num\+\_\+aggr} & number of aggr, size of sum/count \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGrAggRecord_a4a31bfef552443d0ef6b5e57d2c8517e}\label{classGrAggRecord_a4a31bfef552443d0ef6b5e57d2c8517e}} 
+\index{GrAggRecord@{GrAggRecord}!count@{count}}
+\index{count@{count}!GrAggRecord@{GrAggRecord}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily std\+::vector$<$int64\+\_\+t$>$ Gr\+Agg\+Record\+::count}
+
+Sum of this class, use int64 to store \mbox{\Hypertarget{classGrAggRecord_ac82c1f08074df926a8803037b882c96b}\label{classGrAggRecord_ac82c1f08074df926a8803037b882c96b}} 
+\index{GrAggRecord@{GrAggRecord}!middle\_record@{middle\_record}}
+\index{middle\_record@{middle\_record}!GrAggRecord@{GrAggRecord}}
+\doxysubsubsection{\texorpdfstring{middle\_record}{middle\_record}}
+{\footnotesize\ttfamily char$\ast$ Gr\+Agg\+Record\+::middle\+\_\+record}
+
+\mbox{\Hypertarget{classGrAggRecord_a74c3aa985e257191a0a01227fab17e7f}\label{classGrAggRecord_a74c3aa985e257191a0a01227fab17e7f}} 
+\index{GrAggRecord@{GrAggRecord}!sum@{sum}}
+\index{sum@{sum}!GrAggRecord@{GrAggRecord}}
+\doxysubsubsection{\texorpdfstring{sum}{sum}}
+{\footnotesize\ttfamily std\+::vector$<$int64\+\_\+t$>$ Gr\+Agg\+Record\+::sum}
+
+Points to a class of middle record 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/\mbox{\hyperlink{executor_8h}{executor.\+h}}\end{DoxyCompactItemize}
