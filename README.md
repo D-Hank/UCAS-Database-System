@@ -13,3 +13,6 @@ Enter <localhost/welcome.html> in your browser
 ### Running Tips
 
 Run `runaimdb` or programs under ./debug/
+
+**Note**: Since the framework is private, we only include the code we wrote in this project (`executor.cc/h`).
+
